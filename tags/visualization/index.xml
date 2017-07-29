@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Visualization on Hong-Yu&#39;s Homepage</title>
-    <link>https://example.com/tags/visualization/index.xml</link>
+    <link>https://funnyzhou.github.io/tags/visualization/index.xml</link>
     <description>Recent content in Visualization on Hong-Yu&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,25 +11,25 @@
     
     <item>
       <title>Weakly Supervised CNN</title>
-      <link>https://example.com/project/weakly_supervised_cnn/</link>
+      <link>https://funnyzhou.github.io/project/weakly_supervised_cnn/</link>
       <pubDate>Sat, 29 Jul 2017 22:26:47 +0800</pubDate>
       
-      <guid>https://example.com/project/weakly_supervised_cnn/</guid>
+      <guid>https://funnyzhou.github.io/project/weakly_supervised_cnn/</guid>
       <description>&lt;p&gt;This is an implementation of the method in &lt;strong&gt;Is object localization for free? – Weakly-supervised learning with convolutional neural networks&lt;/strong&gt; using MatConvNet. For more details, please refer to &lt;a href=&#34;https://github.com/funnyzhou/weakcnn&#34; target=&#34;_blank&#34;&gt;this link&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/weakcnn.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/weakcnn.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>CAM in MatConvNet</title>
-      <link>https://example.com/project/cam_matconvnet/</link>
+      <link>https://funnyzhou.github.io/project/cam_matconvnet/</link>
       <pubDate>Sat, 29 Jul 2017 22:19:54 +0800</pubDate>
       
-      <guid>https://example.com/project/cam_matconvnet/</guid>
+      <guid>https://funnyzhou.github.io/project/cam_matconvnet/</guid>
       <description>&lt;p&gt;This is an implementation of the method in &lt;strong&gt;Learning Deep Features for Discriminative Localization&lt;/strong&gt; using MatConvNet. For more details, please refer to &lt;a href=&#34;https://github.com/funnyzhou/CAM_MatConvNet&#34; target=&#34;_blank&#34;&gt;this link&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/ex1.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/ex1.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

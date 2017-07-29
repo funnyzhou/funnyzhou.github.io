@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Object Detection on Hong-Yu&#39;s Homepage</title>
-    <link>https://example.com/tags/object-detection/index.xml</link>
+    <link>https://funnyzhou.github.io/tags/object-detection/index.xml</link>
     <description>Recent content in Object Detection on Hong-Yu&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,13 +11,13 @@
     
     <item>
       <title>Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors</title>
-      <link>https://example.com/project/adaptive_feeding/</link>
+      <link>https://funnyzhou.github.io/project/adaptive_feeding/</link>
       <pubDate>Sat, 29 Jul 2017 22:31:54 +0800</pubDate>
       
-      <guid>https://example.com/project/adaptive_feeding/</guid>
+      <guid>https://funnyzhou.github.io/project/adaptive_feeding/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/arch_af.png&#34; alt=&#34;image0&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/arch_af.png&#34; alt=&#34;image0&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
 
@@ -25,17 +25,17 @@
 
 &lt;h3 id=&#34;basic-idea&#34;&gt;Basic Idea&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/fig1.png&#34; alt=&#34;image1&#34; /&gt;&lt;img src=&#34;https://example.com/post/img/table2.png&#34; alt=&#34;image2&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/fig1.png&#34; alt=&#34;image1&#34; /&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/table2.png&#34; alt=&#34;image2&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;experimental-results&#34;&gt;Experimental Results&lt;/h3&gt;
 
 &lt;h4 id=&#34;pascal-voc-2007&#34;&gt;Pascal VOC 2007&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/table4.png&#34; alt=&#34;image3&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/table4.png&#34; alt=&#34;image3&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;pascal-voc-2012&#34;&gt;Pascal VOC 2012&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/table5.png&#34; alt=&#34;image4&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/table5.png&#34; alt=&#34;image4&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;publication&#34;&gt;Publication&lt;/h3&gt;
 
@@ -63,10 +63,10 @@
     
     <item>
       <title>Awesome object detection</title>
-      <link>https://example.com/post/awesome-object-detection/</link>
+      <link>https://funnyzhou.github.io/post/awesome-object-detection/</link>
       <pubDate>Thu, 30 Mar 2017 16:16:26 +0800</pubDate>
       
-      <guid>https://example.com/post/awesome-object-detection/</guid>
+      <guid>https://funnyzhou.github.io/post/awesome-object-detection/</guid>
       <description>
 
 &lt;p&gt;A curated list of resources I have read or used. Besides, each material is attached with a short piece of abstract.&lt;/p&gt;

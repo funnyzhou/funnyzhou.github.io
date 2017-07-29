@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deep Learning on Hong-Yu&#39;s Homepage</title>
-    <link>https://example.com/tags/deep-learning/index.xml</link>
+    <link>https://funnyzhou.github.io/tags/deep-learning/index.xml</link>
     <description>Recent content in Deep Learning on Hong-Yu&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title>Awesome object detection</title>
-      <link>https://example.com/post/awesome-object-detection/</link>
+      <link>https://funnyzhou.github.io/post/awesome-object-detection/</link>
       <pubDate>Thu, 30 Mar 2017 16:16:26 +0800</pubDate>
       
-      <guid>https://example.com/post/awesome-object-detection/</guid>
+      <guid>https://funnyzhou.github.io/post/awesome-object-detection/</guid>
       <description>
 
 &lt;p&gt;A curated list of resources I have read or used. Besides, each material is attached with a short piece of abstract.&lt;/p&gt;

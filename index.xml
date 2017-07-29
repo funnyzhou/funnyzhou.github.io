@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hong-Yu&#39;s Homepage on Hong-Yu&#39;s Homepage</title>
-    <link>https://example.com/index.xml</link>
+    <link>https://funnyzhou.github.io/index.xml</link>
     <description>Recent content in Hong-Yu&#39;s Homepage on Hong-Yu&#39;s Homepage</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,13 +12,13 @@
     
     <item>
       <title>Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors</title>
-      <link>https://example.com/project/adaptive_feeding/</link>
+      <link>https://funnyzhou.github.io/project/adaptive_feeding/</link>
       <pubDate>Sat, 29 Jul 2017 22:31:54 +0800</pubDate>
       
-      <guid>https://example.com/project/adaptive_feeding/</guid>
+      <guid>https://funnyzhou.github.io/project/adaptive_feeding/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/arch_af.png&#34; alt=&#34;image0&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/arch_af.png&#34; alt=&#34;image0&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
 
@@ -26,17 +26,17 @@
 
 &lt;h3 id=&#34;basic-idea&#34;&gt;Basic Idea&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/fig1.png&#34; alt=&#34;image1&#34; /&gt;&lt;img src=&#34;https://example.com/post/img/table2.png&#34; alt=&#34;image2&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/fig1.png&#34; alt=&#34;image1&#34; /&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/table2.png&#34; alt=&#34;image2&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;experimental-results&#34;&gt;Experimental Results&lt;/h3&gt;
 
 &lt;h4 id=&#34;pascal-voc-2007&#34;&gt;Pascal VOC 2007&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/table4.png&#34; alt=&#34;image3&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/table4.png&#34; alt=&#34;image3&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;pascal-voc-2012&#34;&gt;Pascal VOC 2012&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/table5.png&#34; alt=&#34;image4&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/table5.png&#34; alt=&#34;image4&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;publication&#34;&gt;Publication&lt;/h3&gt;
 
@@ -64,61 +64,61 @@
     
     <item>
       <title>Weakly Supervised CNN</title>
-      <link>https://example.com/project/weakly_supervised_cnn/</link>
+      <link>https://funnyzhou.github.io/project/weakly_supervised_cnn/</link>
       <pubDate>Sat, 29 Jul 2017 22:26:47 +0800</pubDate>
       
-      <guid>https://example.com/project/weakly_supervised_cnn/</guid>
+      <guid>https://funnyzhou.github.io/project/weakly_supervised_cnn/</guid>
       <description>&lt;p&gt;This is an implementation of the method in &lt;strong&gt;Is object localization for free? – Weakly-supervised learning with convolutional neural networks&lt;/strong&gt; using MatConvNet. For more details, please refer to &lt;a href=&#34;https://github.com/funnyzhou/weakcnn&#34; target=&#34;_blank&#34;&gt;this link&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/weakcnn.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/weakcnn.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>CAM in MatConvNet</title>
-      <link>https://example.com/project/cam_matconvnet/</link>
+      <link>https://funnyzhou.github.io/project/cam_matconvnet/</link>
       <pubDate>Sat, 29 Jul 2017 22:19:54 +0800</pubDate>
       
-      <guid>https://example.com/project/cam_matconvnet/</guid>
+      <guid>https://funnyzhou.github.io/project/cam_matconvnet/</guid>
       <description>&lt;p&gt;This is an implementation of the method in &lt;strong&gt;Learning Deep Features for Discriminative Localization&lt;/strong&gt; using MatConvNet. For more details, please refer to &lt;a href=&#34;https://github.com/funnyzhou/CAM_MatConvNet&#34; target=&#34;_blank&#34;&gt;this link&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/ex1.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/ex1.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors</title>
-      <link>https://example.com/publication/adaptive-feeding/</link>
+      <link>https://funnyzhou.github.io/publication/adaptive-feeding/</link>
       <pubDate>Sat, 29 Jul 2017 22:08:21 +0800</pubDate>
       
-      <guid>https://example.com/publication/adaptive-feeding/</guid>
+      <guid>https://funnyzhou.github.io/publication/adaptive-feeding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recognizing Subtle Differences: Sunrise or Sunset?</title>
-      <link>https://example.com/publication/sos/</link>
+      <link>https://funnyzhou.github.io/publication/sos/</link>
       <pubDate>Sat, 29 Jul 2017 21:59:30 +0800</pubDate>
       
-      <guid>https://example.com/publication/sos/</guid>
+      <guid>https://funnyzhou.github.io/publication/sos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Content-Based Image Recovery</title>
-      <link>https://example.com/publication/content-recovery/</link>
+      <link>https://funnyzhou.github.io/publication/content-recovery/</link>
       <pubDate>Sat, 29 Jul 2017 21:59:27 +0800</pubDate>
       
-      <guid>https://example.com/publication/content-recovery/</guid>
+      <guid>https://funnyzhou.github.io/publication/content-recovery/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Awesome object detection</title>
-      <link>https://example.com/post/awesome-object-detection/</link>
+      <link>https://funnyzhou.github.io/post/awesome-object-detection/</link>
       <pubDate>Thu, 30 Mar 2017 16:16:26 +0800</pubDate>
       
-      <guid>https://example.com/post/awesome-object-detection/</guid>
+      <guid>https://funnyzhou.github.io/post/awesome-object-detection/</guid>
       <description>
 
 &lt;p&gt;A curated list of resources I have read or used. Besides, each material is attached with a short piece of abstract.&lt;/p&gt;
@@ -191,10 +191,10 @@
     
     <item>
       <title>Example Talk</title>
-      <link>https://example.com/talk/example-talk/</link>
+      <link>https://funnyzhou.github.io/talk/example-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/talk/example-talk/</guid>
+      <guid>https://funnyzhou.github.io/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
