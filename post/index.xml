@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Hong-Yu&#39;s Homepage</title>
+    <link>https://example.com/post/index.xml</link>
+    <description>Recent content in Posts on Hong-Yu&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Your Name</copyright>
+    <lastBuildDate>Thu, 30 Mar 2017 16:16:26 +0800</lastBuildDate>
+    <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Awesome object detection</title>
+      <link>https://example.com/post/awesome-object-detection/</link>
+      <pubDate>Thu, 30 Mar 2017 16:16:26 +0800</pubDate>
+      
+      <guid>https://example.com/post/awesome-object-detection/</guid>
+      <description>
+
+&lt;p&gt;A curated list of resources I have read or used. Besides, each material is attached with a short piece of abstract.&lt;/p&gt;
+
+&lt;h1 id=&#34;updated-30-03-2017&#34;&gt;(updated 30/03/2017)&lt;/h1&gt;
+
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#papers&#34;&gt;Papers&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#r-cnn&#34;&gt;R-CNN Series&lt;/a&gt; (&lt;a href=&#34;#sec1_2017&#34;&gt;2017&lt;/a&gt; &lt;a href=&#34;#sec1_2016&#34;&gt;2016&lt;/a&gt; &lt;a href=&#34;#sec1_2015&#34;&gt;2015&lt;/a&gt; &lt;a href=&#34;#sec1_2014&#34;&gt;2014&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ssd&#34;&gt;Single Shot Detectors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#understanding&#34;&gt;Towards A Better Understanding&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#performance&#34;&gt;Performance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tutorials&#34;&gt;Tutorials&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;papers&#34;&gt;Papers&lt;/h2&gt;
+
+&lt;h3 id=&#34;r-cnn-series&#34;&gt;R-CNN Series&lt;/h3&gt;
+
+&lt;h4 id=&#34;2015&#34;&gt;2015&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Faster R-CNN&lt;a href=&#34;https://github.com/ShaoqingRen/faster_rcnn&#34; target=&#34;_blank&#34;&gt;[Code_Matlab]&lt;/a&gt;&lt;a href=&#34;https://github.com/rbgirshick/py-faster-rcnn&#34; target=&#34;_blank&#34;&gt;[Code_Python]&lt;/a&gt;&lt;a href=&#34;https://github.com/CharlesShang/TFFRCNN&#34; target=&#34;_blank&#34;&gt;[Code_Tensorflow]&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Shaoqing Ren, Kaiming He, Ross Girshick, Jian Sun. &lt;a href=&#34;https://arxiv.org/pdf/1506.01497.pdf&#34; target=&#34;_blank&#34;&gt;Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks&lt;/a&gt;, TPAMI, 2016. (An older version appeared in NIPS 2015)&lt;/li&gt;
+&lt;li&gt;Summary: &lt;strong&gt;A Region Proposal Network (RPN).&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Code note: The python version is mostly used.
+&lt;/br&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Fast R-CNN&lt;a href=&#34;https://github.com/rbgirshick/fast-rcnn&#34; target=&#34;_blank&#34;&gt;[Code_Python]&lt;/a&gt;&lt;a href=&#34;https://github.com/ShaoqingRen/faster_rcnn&#34; target=&#34;_blank&#34;&gt;[Code_Matlab]&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ross Girshick. &lt;a href=&#34;https://arxiv.org/pdf/1504.08083.pdf&#34; target=&#34;_blank&#34;&gt;Fast R-CNN&lt;/a&gt;, ICCV, 2015.&lt;/li&gt;
+&lt;li&gt;Summary: &lt;strong&gt;The basic network architecture for later R-CNN based researches.&lt;/strong&gt;
+&lt;/br&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Multibox_v2 &lt;a href=&#34;https://github.com/google/multibox&#34; target=&#34;_blank&#34;&gt;[Code]&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Christian Szegedy, Scott Reed, Dumitru Erhan, Dragomir Anguelov, Sergey Ioffe. &lt;a href=&#34;https://arxiv.org/pdf/1412.1441.pdf&#34; target=&#34;_blank&#34;&gt;Scalable High Quality Object Detection&lt;/a&gt;, CVPR, 2015.&lt;/li&gt;
+&lt;li&gt;Summary: &lt;strong&gt;The basic idea is similar to RPN&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2014&#34;&gt;2014&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;R-CNN &lt;a href=&#34;https://github.com/rbgirshick/rcnn&#34; target=&#34;_blank&#34;&gt;[Code]&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ross Girshick, Jeff Donahue, Trevor Darrell, Jitendra Malik. &lt;a href=&#34;https://arxiv.org/pdf/1311.2524.pdf&#34; target=&#34;_blank&#34;&gt;Rich feature hierarchies for accurate object detection and semantic segmentation&lt;/a&gt;, CVPR, 2014.&lt;/li&gt;
+&lt;li&gt;Summary: &lt;strong&gt;The first time object detection combined with deep learning.&lt;/strong&gt;
+&lt;/br&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Multibox_v1 &lt;a href=&#34;https://github.com/google/multibox&#34; target=&#34;_blank&#34;&gt;[Code]&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dumitru Erhan, Christian Szegedy, Alexander Toshev, Dragomir Anguelov. &lt;a href=&#34;https://arxiv.org/pdf/1312.2249.pdf&#34; target=&#34;_blank&#34;&gt;Scalable Object Detection using Deep Neural Networks&lt;/a&gt;, CVPR, 2014.&lt;/li&gt;
+&lt;li&gt;Summary: &lt;strong&gt;This paper tought us that we can generate proposals by using a deep neural network.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

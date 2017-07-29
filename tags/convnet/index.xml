@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Convnet on Hong-Yu&#39;s Homepage</title>
+    <link>https://example.com/tags/convnet/index.xml</link>
+    <description>Recent content in Convnet on Hong-Yu&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Your Name</copyright>
+    <atom:link href="/tags/convnet/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors</title>
+      <link>https://example.com/project/adaptive_feeding/</link>
+      <pubDate>Sat, 29 Jul 2017 22:31:54 +0800</pubDate>
+      
+      <guid>https://example.com/project/adaptive_feeding/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/arch_af.png&#34; alt=&#34;image0&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;
+
+&lt;p&gt;Object detection aims at high speed and accuracy simultaneously. However, fast models are usually less accurate, while accurate models cannot satisfy our need for speed. A fast model can be 10 times faster but 50% less accurate than an accurate model. In this paper, we propose Adaptive Feeding (AF) to combine a fast (but less accurate) detector and an accurate (but slow) detector, by adaptively determining whether an image is easy or hard and choosing an appropriate detector for it. In practice, we build a cascade of detectors, including the AF classifier which make the easy vs. hard decision and the two detectors. The AF classifier can be tuned to obtain different tradeoff between speed and accuracy, which has negligible training time and requires no additional training data. Experimental results on the PASCAL VOC, MS COCO and Caltech Pedestrian datasets confirm that AF has the ability to achieve comparable speed as the fast detector and comparable accuracy as the accurate one at the same time. As an example, by combining the fast SSD300 with the accurate SSD500 detector, AF leads to 50% speedup over SSD500 with the same precision on the VOC2007 test set.&lt;/p&gt;
+
+&lt;h3 id=&#34;basic-idea&#34;&gt;Basic Idea&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/fig1.png&#34; alt=&#34;image1&#34; /&gt;&lt;img src=&#34;https://example.com/post/img/table2.png&#34; alt=&#34;image2&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;experimental-results&#34;&gt;Experimental Results&lt;/h3&gt;
+
+&lt;h4 id=&#34;pascal-voc-2007&#34;&gt;Pascal VOC 2007&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/table4.png&#34; alt=&#34;image3&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;pascal-voc-2012&#34;&gt;Pascal VOC 2012&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/table5.png&#34; alt=&#34;image4&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;publication&#34;&gt;Publication&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  Hong-Yu Zhou, Bin-Bin Gao, Jianxin Wu&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  ICCV 2017　(poster) &lt;a href=&#34;https://arxiv.org/pdf/1707.06399.pdf&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt; | &lt;a href=&#34;https://arxiv.org/abs/1707.06399&#34; target=&#34;_blank&#34;&gt;arXiv&lt;/a&gt; | Slide | Video | Poster&lt;/p&gt;
+
+&lt;h3 id=&#34;downloads&#34;&gt;Downloads&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Code [coming soon]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This work was supported in part by the National Natural Science Foundation of China under Grant No. 61422203.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Weakly Supervised CNN</title>
+      <link>https://example.com/project/weakly_supervised_cnn/</link>
+      <pubDate>Sat, 29 Jul 2017 22:26:47 +0800</pubDate>
+      
+      <guid>https://example.com/project/weakly_supervised_cnn/</guid>
+      <description>&lt;p&gt;This is an implementation of the method in &lt;strong&gt;Is object localization for free? – Weakly-supervised learning with convolutional neural networks&lt;/strong&gt; using MatConvNet. For more details, please refer to &lt;a href=&#34;https://github.com/funnyzhou/weakcnn&#34; target=&#34;_blank&#34;&gt;this link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/weakcnn.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CAM in MatConvNet</title>
+      <link>https://example.com/project/cam_matconvnet/</link>
+      <pubDate>Sat, 29 Jul 2017 22:19:54 +0800</pubDate>
+      
+      <guid>https://example.com/project/cam_matconvnet/</guid>
+      <description>&lt;p&gt;This is an implementation of the method in &lt;strong&gt;Learning Deep Features for Discriminative Localization&lt;/strong&gt; using MatConvNet. For more details, please refer to &lt;a href=&#34;https://github.com/funnyzhou/CAM_MatConvNet&#34; target=&#34;_blank&#34;&gt;this link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://example.com/post/img/ex1.png&#34; alt=&#34;image1&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
