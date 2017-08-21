@@ -11,6 +11,57 @@
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Sunrise or Sunset: Selective Comparison Learning for Subtle Attribute Recognition</title>
+      <link>https://funnyzhou.github.io/project/sos/</link>
+      <pubDate>Mon, 21 Aug 2017 18:54:21 +0800</pubDate>
+      
+      <guid>https://funnyzhou.github.io/project/sos/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/SoSNet.png&#34; alt=&#34;image0&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;
+
+&lt;p&gt;&lt;font size=5&gt;The difficulty of image recognition has gradually increased from general category recognition to fine-grained recognition and to the recognition of some subtle attributes such as temperature and geolocation. In this paper, we try to focus on the classification between sunrise and sunset and hope to give a hint about how to tell the difference in subtle attributes. &lt;font color=blue&gt;&lt;strong&gt;Sunrise vs. sunset is a difficult recognition task, which is challenging even for humans. Towards understanding this new problem, we first collect a new dataset made up of over one hundred webcams from different places. Since existing algorithmic methods have poor accuracy, we propose a new pairwise learning strategy to learn features from selective pairs of images.&lt;/strong&gt;&lt;/font&gt; Experiments show that our approach surpasses baseline methods by a large margin and achieves better results even compared with humans. We also apply our approach to existing subtle attribute recognition problems, such as temperature estimation, and achieve state-of-the-art results.&lt;/font&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;subtle-attribute-recognition&#34;&gt;Subtle Attribute Recognition&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/comparison.png&#34; alt=&#34;image1&#34; /&gt;
+&lt;font size=5&gt;A comparison between subtle attributes and transient attributes is shown in the &lt;strong&gt;figure above&lt;/strong&gt;. We can see that compared with transient attribute, subtle attribute can be more detailed.&lt;/font&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;sos-a-new-benchmark&#34;&gt;SoS: A New Benchmark&lt;/h2&gt;
+
+&lt;p&gt;&lt;font size=5&gt;The dataset contains more 10k images from over 100 webcams. We randomly choose some images from SoS dataset which are displayed below.
+&lt;img src=&#34;https://funnyzhou.github.io/post/img/sos.png&#34; alt=&#34;image2&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;human-performance&#34;&gt;Human performance&lt;/h2&gt;
+
+&lt;p&gt;For a better study, we also construct two types of tasks: an &lt;strong&gt;easy&lt;/strong&gt; task and a &lt;strong&gt;hard&lt;/strong&gt; one. The performance of VGG models and human beings are also reported in Table 1.&lt;/font&gt;
+&lt;img src=&#34;https://funnyzhou.github.io/post/img/human.png&#34; alt=&#34;image3&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;experimental-results&#34;&gt;Experimental Results&lt;/h1&gt;
+
+&lt;h2 id=&#34;ablation-study&#34;&gt;Ablation Study&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/pair_constrains.png&#34; alt=&#34;image4&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;sosnet-performance&#34;&gt;SoSNet Performance&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://funnyzhou.github.io/post/img/experiments.png&#34; alt=&#34;image5&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;publication&#34;&gt;Publication&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Sunrise or Sunset: Selective Comparison Learning for Subtle Attribute Recognition&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  Hong-Yu Zhou, Bin-Bin Gao, Jianxin Wu&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  BMVC 2017　&amp;nbsp; &lt;a href=&#34;https://arxiv.org/pdf/1707.06335.pdf&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt; | &lt;a href=&#34;https://arxiv.org/abs/1707.06335&#34; target=&#34;_blank&#34;&gt;arXiv&lt;/a&gt; | &lt;a href=&#34;coming soon&#34; target=&#34;_blank&#34;&gt;Dataset&lt;/a&gt; | Slide | Video | Poster&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors</title>
       <link>https://funnyzhou.github.io/project/adaptive_feeding/</link>
       <pubDate>Sat, 29 Jul 2017 22:31:54 +0800</pubDate>
@@ -22,7 +73,8 @@
 
 &lt;h1 id=&#34;abstract&#34;&gt;Abstract&lt;/h1&gt;
 
-&lt;p&gt;Object detection aims at high speed and accuracy simultaneously. However, fast models are usually less accurate, while accurate models cannot satisfy our need for speed. A fast model can be 10 times faster but 50% less accurate than an accurate model. &lt;strong&gt;In this paper, we propose Adaptive Feeding (AF) to combine a fast (but less accurate) detector and an accurate (but slow) detector, by adaptively determining whether an image is easy or hard and choosing an appropriate detector for it.&lt;/strong&gt; In practice, we build a cascade of detectors, including the AF classifier which make the easy vs. hard decision and the two detectors. The AF classifier can be tuned to obtain different tradeoff between speed and accuracy, which has negligible training time and requires no additional training data. Experimental results on the PASCAL VOC, MS COCO and Caltech Pedestrian datasets confirm that AF has the ability to achieve comparable speed as the fast detector and comparable accuracy as the accurate one at the same time. As an example, by combining the fast SSD300 with the accurate SSD500 detector, AF leads to 50% speedup over SSD500 with the same precision on the VOC2007 test set.&lt;/p&gt;
+&lt;p&gt;&lt;font size=5&gt;
+Object detection aims at high speed and accuracy simultaneously. However, fast models are usually less accurate, while accurate models cannot satisfy our need for speed. A fast model can be 10 times faster but 50% less accurate than an accurate model. &lt;font color=blue&gt;&lt;strong&gt;In this paper, we propose Adaptive Feeding (AF) to combine a fast (but less accurate) detector and an accurate (but slow) detector, by adaptively determining whether an image is easy or hard and choosing an appropriate detector for it.&lt;/strong&gt;&lt;/font&gt; In practice, we build a cascade of detectors, including the AF classifier which make the easy vs. hard decision and the two detectors. The AF classifier can be tuned to obtain different tradeoff between speed and accuracy, which has negligible training time and requires no additional training data. Experimental results on the PASCAL VOC, MS COCO and Caltech Pedestrian datasets confirm that AF has the ability to achieve comparable speed as the fast detector and comparable accuracy as the accurate one at the same time. As an example, by combining the fast SSD300 with the accurate SSD500 detector, AF leads to 50% speedup over SSD500 with the same precision on the VOC2007 test set.&lt;/p&gt;
 
 &lt;h1 id=&#34;basic-idea&#34;&gt;Basic Idea&lt;/h1&gt;
 
@@ -51,9 +103,9 @@
 &lt;li&gt;Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  Hong-Yu Zhou, Bin-Bin Gao, Jianxin Wu&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  Hong-Yu Zhou, Bin-Bin Gao, Jianxin Wu&lt;/p&gt;
 
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  ICCV 2017　&amp;nbsp; &lt;a href=&#34;https://arxiv.org/pdf/1707.06399.pdf&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt; | &lt;a href=&#34;https://arxiv.org/abs/1707.06399&#34; target=&#34;_blank&#34;&gt;arXiv&lt;/a&gt; | Slide | Video | Poster&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  ICCV 2017　&amp;nbsp; &lt;a href=&#34;https://arxiv.org/pdf/1707.06399.pdf&#34; target=&#34;_blank&#34;&gt;paper&lt;/a&gt; | &lt;a href=&#34;https://arxiv.org/abs/1707.06399&#34; target=&#34;_blank&#34;&gt;arXiv&lt;/a&gt; | Slide | Video | Poster&lt;/p&gt;
 
 &lt;h1 id=&#34;downloads&#34;&gt;Downloads&lt;/h1&gt;
 
@@ -64,7 +116,7 @@
 &lt;h1 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;This work was supported in part by the National Natural Science Foundation of China under Grant No. 61422203.&lt;/li&gt;
+&lt;li&gt;This work was supported in part by the National Natural Science Foundation of China under Grant No. 61422203.&lt;/font&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -103,7 +155,7 @@
     </item>
     
     <item>
-      <title>Recognizing Subtle Differences: Sunrise or Sunset?</title>
+      <title>Sunrise or Sunset: Selective Comparison Learning for Subtle Attribute Recognition</title>
       <link>https://funnyzhou.github.io/publication/sos/</link>
       <pubDate>Sat, 29 Jul 2017 21:59:30 +0800</pubDate>
       
