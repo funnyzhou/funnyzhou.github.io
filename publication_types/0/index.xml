@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>0 on Hong-Yu&#39;s Homepage</title>
+    <link>https://funnyzhou.github.io/publication_types/0/index.xml</link>
+    <description>Recent content in 0 on Hong-Yu&#39;s Homepage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2016 Your Name</copyright>
+    <atom:link href="/publication_types/0/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Code Attention: Translating Code to Comments by Exploiting Domain Features</title>
+      <link>https://funnyzhou.github.io/publication/code/</link>
+      <pubDate>Wed, 27 Sep 2017 07:43:46 +0800</pubDate>
+      
+      <guid>https://funnyzhou.github.io/publication/code/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
