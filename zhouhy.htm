@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Hong-Yu Zhou</title>
+
+<link rel="stylesheet" href="./zhouhy_files/bootstrap.min.css">
+<style type="text/css">
+ @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+
+
+body
+{
+	font-family: 'Source Sans Pro', sans-serif;
+    background-color : #CDCDCD;
+    font-size: 19px;
+}
+    .content
+	{
+    		width : 900px;
+    		padding : 25px 30px;
+    		margin : 25px auto;
+    		background-color : #fff;
+    		box-shadow: 0px 0px 10px #999;
+    		border-radius: 15px; 
+	}	
+	table
+	{
+		padding: 5px;
+	}
+	
+	table.pub_table,td.pub_td1,td.pub_td2
+	{
+		padding: 8px;
+		width: 850px;
+        border-collapse: separate;
+        border-spacing: 15px;
+        margin-top: -5px;
+	}
+
+	td.pub_td1
+	{
+		width:50px;
+	}
+    td.pub_td1 img
+    {
+        height:120px;
+        width: 160px;
+    }
+	
+	div#container
+	{
+		margin-left: auto;
+		margin-right: auto;
+		width: 820px;
+		text-align: left;
+		position: relative;
+		background-color: #FFF;
+	}
+	div#DocInfo
+	{
+		color: #1367a7;
+		height: 158px;
+	}
+	h4,h3,h2,h1
+	{
+		color: #3B3B3B;
+	}
+	h2
+	{
+		font-size:130%;
+	}
+	p
+	{
+		color: #5B5B5B;
+		margin-bottom: 50px;
+	}
+	p.caption
+	{
+		color: #9B9B9B;
+		text-align: left;
+		width: 600px;
+	}
+	p.caption2
+	{
+		color: #9B9B9B;
+		text-align: left;
+		width: 800px;
+	}
+	#header_img
+	{
+		position: absolute;
+		top: 0px; right: 0px;
+    }
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+
+    #mit_logo {
+        position: absolute;
+        left: 646px;
+        top: 14px;
+        width: 200px;
+        height: 20px;
+    }
+   
+    table.pub_table tr {
+        outline: thin dotted #666666;
+    }
+    .papericon {
+        border-radius: 8px; 
+        -moz-box-shadow: 3px 3px 6px #888;
+        -webkit-box-shadow: 3px 3px 6px #888;
+        box-shadow: 3px 3px 6px #888;
+    }
+</style>
+
+<script type="text/javascript" async="" src="./zhouhy_files/ga.js"></script><script async="" src="./zhouhy_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+    var myPix = new Array("zhouhy_files/me_venice.jpg")
+    function choosePic() {
+        var randomNum = Math.floor(Math.random() * myPix.length);
+        document.getElementById("myPicture").src = myPix[randomNum];
+    };
+
+</script>
+</head>
+
+
+<body>
+<div class="content">
+	<div id="container">
+
+	<table>
+	<tbody><tr>
+	<td><img id="myPicture" src="./zhouhy_files/me_venice.jpg" style="float:left; padding-right:30px" height="200px"></td>
+	<td>
+	<div id="DocInfo">
+		<h1>Hong-Yu Zhou</h1>
+        Graduate Student<br>
+        Advisor:<a href="http://cs.nju.edu.cn/wujx"> Jianxin Wu</a><br>
+        Email: <a href="mailto:whuzhouhongyu@gmail.com"> whu... at gmail dot com</a><br>
+	</div><br>
+	</td>
+	</tr>
+	</tbody></table>
+
+	<h2>Bio</h2>
+    <ul>
+        <li>I am a final year graduate student in <a href="http://lamda.nju.edu.cn/">LAMDA Group</a> at <a href="http://www.nju.edu.cn/EN/">Nanjing University</a>, advised by Prof. <a href="http://cs.nju.edu.cn/wujx">Jianxin Wu</a>. </li>
+        <li>I am interested in algorithms for computer vision and deep learning. Nowadays, I have focused on object detection (both 2D and 3D), where I have been trying to improve the efficiency and generalization of modern detectors. Besides, I also hold interests in fine-grained classification problems and vision approaches in remote sensing.</li> 
+    </ul>
+	
+    <h2>Updates</h2>
+    <ul>
+        <li>[2018/04/09] PyTorch implementation of scene parsing networks trained on ADE20K is <a href="https://github.com/CSAILVision/semantic-segmentation-pytorch">released</a>.</li>
+        <li>[2017/12/09] I will organize the <a href="https://interpretablevision.github.io/">Tutorial on Interpretable Machine Learning at CVPR'18</a>.</li>
+        <li>[2017/12/03] <a href="http://moments.csail.mit.edu/">Moments in Time Dataset</a> with 1 million videos from 339 actions is online! </li>
+        <li>[2017/12/03] Latest work on <a href="http://relation.csail.mit.edu/">temporal reasoning</a> in videos. Relation is all you need. </li>
+        <li>[2017/12/02] I am invited as panelist for the <a href="http://interpretable.ml/">NIPS'17 Interpretable Machine Learning Symposium</a>.</li>
+        <li>[2017/11/15] <a href="http://cnnlocalization.csail.mit.edu/">Class Activation Mapping</a> is used to <a href="https://news.stanford.edu/2017/11/15/algorithm-outperforms-radiologists-diagnosing-pneumonia/?linkId=44774396&amp;linkId=44811912">interpret lung disease diagnosis</a> by researchers at Stanford.</li>
+        <li>[2017/09/04] <a href="http://places2.csail.mit.edu/demo.html">Demo of Places365-CNN</a> is updated, which could predict the scene categories, attributes, and the class activation map together. <a href="https://github.com/CSAILVision/places365/blob/master/run_placesCNN_unified.py">Source code in PyTorch</a> is available.</li>
+        <li>[2017/07/06] An invited talk at <a href="https://2017.icml.cc/">ICML'17</a> <a href="http://icmlviz.github.io/">Workshop on Visualization for Deep Learning</a> about interpreting deep visual representation. Here is the <a href="http://people.csail.mit.edu/bzhou/ppt/presentation_ICML_workshop.pdf">slide</a>. </li>
+        <li>[2017/07/01] <a href="http://news.mit.edu/2017/inner-workings-neural-networks-visual-data-0630">MIT News</a> and <a href="https://techcrunch.com/2017/06/30/mit-csail-research-offers-a-fully-automated-way-to-peer-inside-neural-nets/">Techcrunch</a> cover our Network Dissection work. </li>
+        <li>[2017/06/20] I am organizing the <a href="https://places-coco2017.github.io/">Joint Workshop for COCO and Places Challenge at ICCV'17</a>.</li>
+    </ul>
+
+	<h2>Projects and Publications</h2>
+	<table class="pub_table">
+	<tbody>
+
+       <tr>
+           <td class="pub_td1"><img src="./zhouhy_files/vortex.png" class="papericon"></td>
+           <td class="pub_td2">Chen-Wei Xie, <u>Hong-Yu Zhou</u>, and Jianxin Wu<br><b>Vortex Pooling: Improving Context Representation in Semantic Segmentation.</b><br> arXiv:1804.06242, 2018.<br>[<a href="https://arxiv.org/pdf/1804.06242.pdf">PDF</a>]
+         </td></tr>
+
+        <tr>
+           <td class="pub_td1"><img src="./zhouhy_files/ijcai18.png" class="papericon"></td>
+           <td class="pub_td2">Bin-Bin Gao, <u>Hong-Yu Zhou</u>, and Jianxin Wu<br><b>Age Estimation Using Expectation of Label Distribution Learning.</b><br>IJCAI-ECAI, 2018.<br>[<a href="">PDF (Coming soon)</a>]
+         </td></tr>
+
+        <tr>
+           <td class="pub_td1"><img src="./zhouhy_files/code_attention.png" class="papericon"></td>
+           <td class="pub_td2">Wen-Hao Zheng* , <u>Hong-Yu Zhou*</u>, Ming Li, and Jianxin Wu<br><b>Code Attention: Translating Code to Comments by Exploiting Domain Features</b><br>arXiv:1709.07642, 2017. (* the first two authors contributed equally)<br>[<a href="https://arxiv.org/pdf/1709.07642.pdf">PDF</a>]
+         </td></tr>
+
+        <tr>
+           <td class="pub_td1"><img src="./zhouhy_files/af.png" class="papericon"></td>
+           <td class="pub_td2"><u>Hong-Yu Zhou</u>, Bin-Bin Gao, and Jianxin Wu<br><b>Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors</b><br>ICCV, 2017.<br>[<a href="https://arxiv.org/pdf/1707.06399.pdf">PDF</a>][<a href="./Projects/AF.html">Project</a>]
+         </td></tr>          
+
+        <tr>
+           <td class="pub_td1"><img src="./zhouhy_files/ss.png" class="papericon"></td>
+           <td class="pub_td2"><u>Hong-Yu Zhou</u>, Bin-Bin Gao, and Jianxin Wu<br><b>Sunrise or Sunset: Selective Comparison Learning for Subtle Attribute Recognition</b><br>BMVC, 2017.<br>[<a href="https://arxiv.org/pdf/1707.06335.pdf">PDF</a>][<a href="https://mega.nz/#!s8IhgJCC!nSDluCHXNQddrb7Sh_JG3AvIeP2XwhAU66_im_7FByY">Dataset (2.12G)</a>][<a href="./Projects/sos.html">Project</a>]
+         </td></tr> 
+
+        <tr>
+           <td class="pub_td1"><img src="./zhouhy_files/image_recover.png" class="papericon"></td>
+           <td class="pub_td2"><u>Hong-Yu Zhou</u> and Jianxin Wu<br><b>Content-Based Image Recovery</b><br>The 2017 Pacific-Rim Conference on Multimedia, 2017.<br>[<a href="./pdf_files/image_recover.pdf">PDF</a>]
+         </td></tr> 
+
+	</tbody></table>
+    <h2>Academic activities</h2>
+    <ul>
+	    <li>Conference reviewer for NIPS'16, AAAI'18.</li>
+</div>
+</div>
+
+</body></html>
