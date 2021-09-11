@@ -96,7 +96,7 @@ body
 		text-decoration: none;
 	}
 
-    #nju_logo {
+    #hku_logo {
         position: absolute;
         left: 646px;
         top: 14px;
@@ -119,6 +119,19 @@ body
     .two{
         margin-top: 1em;
     }
+.papers-selected h5, .papers-selected h4 { display : none; }
+.papers-selected .publication { display : none; }
+.paperhi-only { display : none; }
+.papers-selected .paperhi { display : flex; }
+.papers-selected .paperlo { display : none; }
+
+.hidden>div {
+  display:none;
+}
+
+.visible>div {
+  display:block;
+}
 </style>
 
 <script type="text/javascript" async="" src="./zhouhy_files/ga.js"></script><script async="" src="./zhouhy_files/analytics.js"></script><script>
@@ -170,7 +183,7 @@ body
         <font size="4.5">Email Address:</font><br> 
         <a href="mailto:whuzhouhongyu@gmail.com"> <font size="4">whuzhouhongyu at gmail dot com </font></a><br>
 	</div><br>
-        <div id="nju_logo">
+        <div id="hku_logo">
         <a href="https://www.hku.hk/"><img src="./zhouhy_files/hku_icon.jpg" height="170px" class="papericon"></a>
     </div>
 	</td>
@@ -179,84 +192,510 @@ body
 
 	<h2>Bio</h2>
     <ul>
-        <li>From Sep. 2020, I will become a PhD candidate at <a href="https://www.cs.hku.hk/">Department of Computer Science</a>, <a href="">University of Hong Kong</a>. My advisor is Prof. <a href="https://i.cs.hku.hk/~yzyu/">Yizhou Yu</a>. My research interest is <b>Medical Image Analysis</b>.</li>
+        <li>Now, I am a second-year PhD study at <a href="https://www.cs.hku.hk/">Department of Computer Science</a>, <a href="">The University of Hong Kong</a>. My advisor is Prof. <a href="https://i.cs.hku.hk/~yzyu/">Yizhou Yu</a>. My research interest is <b>Medical Image Analysis</b>, where my main focus is how to learn transferable representations with fewer or even no labels.</li>
         <li>From Jul. 2018 to Jul. 2020, I was a senior researcher at Tencent focusing on <b>MedicalAI</b> applications. My group leader is Dr. <a href="https://sites.google.com/site/yefengzheng/">Yefeng Zheng</a>.</li>
         <li>I got my master degree from in <a href="http://www.lamda.nju.edu.cn/MainPage.ashx">LAMDA Group</a> at <a href="https://www.nju.edu.cn/en/main.psp">Nanjing University</a> in 2018, advised by Prof. <a href="https://cs.nju.edu.cn/wujx/">Jianxin Wu</a>. Before that, I received my bachelor degree from <a href="https://en.whu.edu.cn/">Wuhan University</a>.</li>
     </ul>
 	
-    <h2>Recent News</h2>
+<!--     <h2>Recent News</h2>
     <ul>
-      <li>[2020/07] Three papers have been accepted to MICCAI 2020.</li>
+      <li>[2020/08] Three papers have been accepted to MICCAI 2020.</li>
       <li>[2020/02] Our team has won 4 championships in 4 different global competitions in 2019!</li>
       <li>[2019/12] Second place in ODIR 2019, held by Peking University.</li>
       <li>[2019/11] First places in all three tracks in 2019 MICCAI AGE Challenge.</li>
       <li>[2019/10] We won the <b>championship</b> in AASCE 2019, held by MICCAI 2019. The proposed algorithm is able to estimate the spinal curvature in Adolescent Idiopathic Scoliosis (AIS) accurately. Press coverage: <a href="https://tech.china.com/article/20190929/kejiyuan0129377260.html">中华网</a> <a href="http://www.kejixun.com/article/190929/474694.shtml">科技讯</a> <a href=" http://yisheng.12120.net/news/jkpt/content_0910114529.html">中国好医生网</a> <a href="https://tech.ifeng.com/c/7qMGUlwISFH">凤凰网</a>.</li>
       <li>[2019/06] We won the <b>first place</b> in Segthor 2019 Challenge, held by ISBI 2019. The proposed approach aims at segmenting organs at risk segmentation in Computed Tomography (CT) images. We achieved the highest Dice scores on Esophagus, Heart and Trachea. Press coverage: <a href="https://tech.qq.com/a/20190619/003614.htm">腾讯科技</a> <a href="https://www.jiqizhixin.com/articles/2019-06-19-8">机器之心</a> <a href="https://tech.huanqiu.com/article/9CaKrnKl1aA">环球网</a> <a href="https://www.qbitai.com/2019/06/3231.html">量子位</a> <a href="https://www.sohu.com/a/322090752_610300">搜狐网</a>.</li>
       <li>[2019/05] Our team won the <b>first place</b> in AI4Health Challeng, held by Thales group which provides solutions for over 50% of worldwide radiology examinations. In this challenge, we proposed a novel methodology to detect key points in X-rays very accurately (the mean error is smaller than <b>0.3 pixel</b>). Press coverage: <a href="http://www.ce.cn/xwzx/gnsz/gdxw/201907/12/t20190712_32605039.shtml">中国经济网</a> <a href="https://tech.huanqiu.com/article/9CaKrnKluBC">环球网</a> <a href="https://cloud.tencent.com/developer/article/1600187">腾讯新闻</a> <a href=""> <a href="http://www.geekpark.net/news/244645">极客公园</a> <a href="http://news.eastday.com/eastday/13news/auto/news/china/20190712/u7ai8688252.html">东方网</a>.</li>
-    </ul>
+    </ul> -->
 
-	<h2>Projects and Publications</h2>
-	<table class="pub_table">
-	<tbody>
+<div class="papers-container papers-selected"> 
+  <h5 class="paperlo">All Publications<button type="button" class="ml-3 btn btn-light"> Show selected</button></h5>
+  <h5 class="paperhi paperhi-only">Selected Publications<button type="button" class="ml-3 btn btn-light"> Show all</button></h5>
+  <h6><a href="https://genforce.github.io/" target="_blank">GenForce</a> and <a href="https://decisionforce.github.io/" target="_blank">DecisionForce</a> contain more recent works on generative models and machine autonomy.</h6>
+  <h5 class="pt-2 pb-1">2021</h5> 
+  
+    <div class="publication media paperhi">
+           <img src="./Bolei Zhou_files/cover_hdsr.jpg" class="papericon">
+           <div class="media-body"><strong>DeepMiner: Discovering Interpretable Representations for Mammogram Classification and Explanation</strong><br>
+           Jimmy Wu, Bolei Zhou, Diondra Peck, Scott Hsieh, Vandana Dialani, Lester Mackey, and Genevieve Patterson.<br>Harvard Data Science Review (HDSR), 2021. [<a href="http://bzhou.ie.cuhk.edu.hk/publication/HDSR_deepminer.pdf" target="_blank">PDF</a>]
+       </div>
+    </div>
 
-       <tr>
-           <td class="pub_td1"><img src="./zhouhy_files/c2l.png" class="papericon"></td>
-           <td class="pub_td2"><u>Hong-Yu Zhou*</u>, Shuang Yu*, Cheng Bian, Yifan Hu, Kai Ma and Yefeng Zheng<br><b>Comparing to Learn: Surpassing ImageNet Pretraining on Radiographs By Comparing Image Representations</b><br>MICCAI 2020<br>[<a href="https://arxiv.org/abs/2007.07423">PDF</a>][<a href="https://github.com/funnyzhou/C2L_MICCAI2020">code</a>]
-         </td></tr>  
+    <div class="publication media paperhi">
+           <img src="./Bolei Zhou_files/cover_pgdrive.png" class="papericon">
+           <div class="media-body"><strong>Improving the Generalization of End-to-End Driving through Procedural Generation</strong><br>
+           Quanyi Li*, Zhenghao Peng*, Qihang Zhang, Cong Qiu, Chunxiao Liu, Bolei Zhou.<br>arXiv:2012.13681. [<a href="https://arxiv.org/pdf/2012.13681.pdf" target="_blank">PDF</a>][<a href="https://decisionforce.github.io/pgdrive/" target="_blank">Webpage</a>][<a href="https://github.com/decisionforce/pgdrive" target="_blank">Code</a>]
+       </div>
+    </div>
+  
+    <div class="publication media paperhi">
+           <img src="./Bolei Zhou_files/cover_sefa.png" class="papericon">
+           <div class="media-body"><b>Closed-Form Factorization of Latent Semantics in GANs</b><br>
+           Yujun Shen, Bolei Zhou.<br>CVPR 2021, Oral<br>
+           [<a href="https://arxiv.org/pdf/2007.06600.pdf">PDF</a>][<a href="https://genforce.github.io/sefa/">Webpage</a>][<a href="https://github.com/genforce/sefa">Code</a>]
+  </div></div>
 
-       <tr>
-           <td class="pub_td1"><img src="./zhouhy_files/miccai1015.png" class="papericon"></td>
-           <td class="pub_td2">Shuang Yu*, <u>Hong-Yu Zhou*</u>, Kai Ma, Cheng Bian, Chunyan Chu, Hanruo Liu and Yefeng Zheng<br><b>Difficulty-aware Glaucoma Classification with Multi-Rater Consensus Modeling</b><br>MICCAI 2020<br>[<a href="https://arxiv.org/abs/2007.14848">PDF</a>]
-         </td></tr>  
-       <tr>
-           <td class="pub_td1"><img src="./zhouhy_files/miccai1195.png" class="papericon"></td>
-           <td class="pub_td2">Munan Ning, Cheng Bian, Donghuan Lu, <u>Hong-Yu Zhou</u>, Shuang Yu, Chenglang Yuan, Yang Guo, Yaohua Wang, Kai Ma and Yefeng Zheng<br><b>A Macro-Micro Weakly-supervised Framework for AS-OCT Tissue Segmentation</b><br>MICCAI 2020<br>[<a href="https://arxiv.org/abs/2007.10007">PDF</a>]
-         </td></tr>  
-       <tr>
-           <td class="pub_td1"><img src="./zhouhy_files/ssl-vs-pretrained.png" class="papericon"></td>
-           <td class="pub_td2"><u>Hong-Yu Zhou</u>, Avital Oliver, Jianxin Wu, and Yefeng Zheng<br><b>When Semi-Supervised Learning Meets Transfer Learning: Training Strategies, Models and Datasets</b><br>arXiv, 2018<br>[<a href="https://arxiv.org/pdf/1812.05313.pdf">PDF</a>][<a href="https://github.com/funnyzhou/ssl-vs-pretrained-models">code</a>]
-         </td></tr>  
+  <div class="publication media paperhi">
+           <img src="./Bolei Zhou_files/cover_ghfeat.png" class="papericon">
+           <div class="media-body"><b>Generative Hierarchical Features from Synthesizing Images</b><br>
+           Yinghao Xu*, Yujun Shen*, Jiapeng Zhu, Ceyuan Yang, Bolei Zhou.<br>CVPR 2021, Oral<br>
+           [<a href="https://arxiv.org/pdf/2007.10379.pdf">PDF</a>][<a href="https://genforce.github.io/ghfeat/">Webpage</a>][<a href="https://github.com/genforce/ghfeat">Code</a>]
+  </div></div>
 
-        <tr>
-           <td class="pub_td1"><img src="./zhouhy_files/thinet.png" class="papericon"></td>
-           <td class="pub_td2">Jian-Hao Luo, Hao Zhang, <u>Hong-Yu Zhou</u>, Chen-Wei Xie, Jianxin Wu, and Weiyao Lin<br><b>ThiNet: Pruning CNN Filters for a Thinner Net</b><br> IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)<br>[<a href="https://ieeexplore.ieee.org/document/8416559/">PDF</a>] [<a href="http://lamda.nju.edu.cn/luojh/project/ThiNet_ICCV17/ThiNet_ICCV17.html">Project</a>]
-         </td></tr>
-       <tr>
-           <td class="pub_td1"><img src="./zhouhy_files/vortex.png" class="papericon"></td>
-           <td class="pub_td2">Chen-Wei Xie, <u>Hong-Yu Zhou</u>, and Jianxin Wu<br><b>Vortex Pooling: Improving Context Representation in Semantic Segmentation</b><br> arXiv:1804.06242, 2018<br>[<a href="https://arxiv.org/pdf/1804.06242.pdf">PDF</a>]
-         </td></tr>
+  <div class="publication media paperhi">
+           <img src="./Bolei Zhou_files/cover_multimodaltransformer.png" class="papericon">
+           <div class="media-body"><b>Multimodal Motion Prediction with Stacked Transformers</b><br>
+           Yicheng Liu*, Jinghuai Zhang*, Liangji Fang, Qinhong Jiang, Bolei Zhou.<br>CVPR 2021<br>
+           [<a href="http://bzhou.ie.cuhk.edu.hk/publication/cvpr2021_mmtransformer.pdf">PDF</a>][<a href="https://decisionforce.github.io/mmTransformer/">Webpage</a>]
+  </div></div>
 
-        <tr>
-           <td class="pub_td1"><img src="./zhouhy_files/ijcai18.png" class="papericon"></td>
-           <td class="pub_td2">Bin-Bin Gao, <u>Hong-Yu Zhou</u>, Jianxin Wu, and Xin Geng<br><b>Age Estimation Using Expectation of Label Distribution Learning</b><br>The 27th International Joint Conference on Artificial Intelligence and the 23rd European Conference on Artificial Intelligence (IJCAI-ECAI), 2018<br>[<a href="http://lamda.nju.edu.cn/gaobb/Projects/DLDL-v2.html">Project</a>]
-         </td></tr>
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_inductivebias.png" class="papericon">
+           <div class="media-body"><b>Positional Encoding as Spatial Inductive Bias in GANs</b><br>
+           Rui Xu, Xintao Wang, Kai Chen, Bolei Zhou, Chen Change Loy.<br>CVPR 2021<br>
+           [<a href="https://arxiv.org/pdf/2012.05217">PDF</a>]
+  </div></div>
 
-        <tr>
-           <td class="pub_td1"><img src="./zhouhy_files/code_attention.png" class="papericon"></td>
-           <td class="pub_td2">Wen-Hao Zheng, <u>Hong-Yu Zhou</u>, Ming Li, and Jianxin Wu<br><b>Code Attention: Translating Code to Comments by Exploiting Domain Features</b><br>Frontiers of Computer Science<br>[<a href="https://arxiv.org/pdf/1709.07642.pdf">PDF</a>]
-         </td></tr>
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_insloc.png" class="papericon">
+           <div class="media-body"><b>Instance Localization for Self-supervised Detection Pretraining</b><br>
+           Ceyuan Yang, Zhirong Wu, Bolei Zhou, Stephen Lin.<br>CVPR 2021<br>
+           [<a href="https://arxiv.org/pdf/2102.08318">PDF</a>]
+  </div></div>
 
-        <tr>
-           <td class="pub_td1"><img src="./zhouhy_files/af.png" class="papericon"></td>
-           <td class="pub_td2"><u>Hong-Yu Zhou</u>, Bin-Bin Gao, and Jianxin Wu<br><b>Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors</b><br>The IEEE International Conference on Computer Vision (ICCV), 2017<br>[<a href="https://arxiv.org/pdf/1707.06399.pdf">PDF</a>][<a href="./Projects/AF.html">Project</a>][<a href="./videos/skyfall_piece.mp4">Demo</a>]
-         </td></tr>          
 
-        <tr>
-           <td class="pub_td1"><img src="./zhouhy_files/ss.png" class="papericon"></td>
-           <td class="pub_td2"><u>Hong-Yu Zhou</u>, Bin-Bin Gao, and Jianxin Wu<br><b>Sunrise or Sunset: Selective Comparison Learning for Subtle Attribute Recognition</b><br>The 28th British Machine Vision Conference (BMVC), 2017<br>[<a href="https://arxiv.org/pdf/1707.06335.pdf">PDF</a>][<a href="https://mega.nz/#!s8IhgJCC!nSDluCHXNQddrb7Sh_JG3AvIeP2XwhAU66_im_7FByY">Dataset (2.12G)</a>][<a href="./Projects/sos.html">Project</a>]
-         </td></tr> 
+  <div class="publication media paperhi">
+           <img src="./Bolei Zhou_files/cover_mairl.png" class="papericon">
+           <div class="media-body"><strong>Adversarial Inverse Reinforcement Learning with Self-attention Dynamics Model</strong><br>
+           Jiankai Sun, Lantao Yu, Pinqian Dong, Bo Lu, Bolei Zhou.<br>ICRA 2021 and IEEE Robotics and Automation Letters (RA-L)[<a href="http://bzhou.ie.cuhk.edu.hk/robotics/MAIRL_draft.pdf" target="_blank">PDF</a>][<a href="https://decisionforce.github.io//" target="_blank">Webpage</a>][<a href="https://github.com/decisionforce/MAIRL" target="_blank">Code</a>]
+  </div></div>
 
-        <tr>
-           <td class="pub_td1"><img src="./zhouhy_files/image_recover.png" class="papericon"></td>
-           <td class="pub_td2"><u>Hong-Yu Zhou</u> and Jianxin Wu<br><b>Content-Based Image Recovery</b><br>The 2017 Pacific-Rim Conference on Multimedia (PCM), 2017<br>[<a href="./pdf_files/image_recover.pdf">PDF</a>]
-         </td></tr>
+  <div class="publication media">
+           <img src="http://bzhou.ie.cuhk.edu.hk/" class="papericon">
+           <div class="media-body"><b>HiABP: Hierarchical Initialized ABP for Unsupervised Representation Learning</b><br>
+           Jiankai Sun, Rui Liu, Bolei Zhou.<br>AAAI 2021<br>
+           [<a href="http://bzhou.ie.cuhk.edu.hk/publication/AAAI2021_ABP.pdf">PDF</a>]
+  </div></div>
 
-	</tbody></table>
-    <h2>Academic activities</h2>
-    <ul>
-	    <li>Conference reviewer for NIPS, AAAI, MICCAI, CVPR.</li>
-      <li>Journal reviewer for TMI, JBHI, TKDE, MIA.</li>
-</div>
+  <h5 class="pt-2 pb-1">2020</h5> 
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/ganfairness.png" class="papericon">
+           <div class="media-body"><strong>Improving the Fairness of Deep Generative Models without Retraining</strong><br>
+           Shuhan Tan, Yujun Shen, Bolei Zhou.<br>arXiv:2012.04842, 2020. [<a href="https://arxiv.org/pdf/2012.04842.pdf" target="_blank">PDF</a>][<a href="https://genforce.github.io/fairgen/" target="_blank">Webpage</a>]
+  </div></div>
+
+  <div class="publication media paperhi">
+           <img src="./Bolei Zhou_files/icon_deepdecision.png" class="papericon">
+           <div class="media-body"><strong>Learning a Decision Module by Imitating Driver Control Behaviors</strong><br>
+           Junning Huang, Sirui Xie, Jiankai Sun, Qiurui Ma, Chunxiao Liu, Dahua Lin, Bolei Zhou.<br>The Conference on Robot Learning (CoRL), 2020. [<a href="http://bzhou.ie.cuhk.edu.hk/robotics/corl2020_modulardecision.pdf" target="_blank">PDF</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/corl20_nsps.png" class="papericon">
+           <div class="media-body"><strong>Neural-Symbolic Program Search: Towards Automatic Autonomous Driving System Design</strong><br>
+           Jiankai Sun, Hao Sun, Tian Han, Bolei Zhou.<br>The Conference on Robot Learning (CoRL), 2020. [<a href="http://bzhou.ie.cuhk.edu.hk/robotics/corl2020_nsps.pdf" target="_blank">PDF</a>]
+  </div></div>
+
+  <div class="publication media paperhi">
+           <img src="./Bolei Zhou_files/tpami_interfacegan.png" class="papericon">
+           <div class="media-body"><b>InterFaceGAN: Interpreting the Disentangled Face Representation Learned by GANs</b><br>
+           Yujun Shen, Ceyuan Yang, Xiaoou Tang, Bolei Zhou<br>IEEE TPAMI, Oct 2020<br>[<a href="https://arxiv.org/pdf/2005.09635.pdf">PDF</a>][<a href="https://genforce.github.io/interfacegan/">Webpage</a>][<a href="https://colab.research.google.com/github/genforce/interfacegan/blob/master/docs/InterFaceGAN.ipynb">Colab</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_genforce.png" class="papericon">
+           <div class="media-body"><strong>GenForce: Generative Modeling for Everyone</strong><br>
+           Yujun Shen, Yinghao Xu, Ceyuan Yang, Jiapeng Zhu, Bolei Zhou.<br>Efficient PyTorch library for deep generative modeling. [<a href="https://github.com/genforce/genforce" target="_blank">Code</a>][<a href="https://colab.research.google.com/drive/1ytdR30L7uXLaG_4Iph331o70wZWA-bkd?usp=sharing" target="_blank">Colab</a>]
+  </div></div>
+
+  <div class="publication media paperhi">
+           <img src="./Bolei Zhou_files/icon_pnas.png" class="papericon">
+           <div class="media-body"><strong>Understanding the Role of Individual Units in a Deep Neural Network</strong><br>
+           David Bau, Jun-Yan Zhu, Hendrik Strobelt, Agata Lapedriza, Bolei Zhou, and Antonio Torralba.<br>Proceedings of the National Academy of Sciences (PNAS), 2020. [<a href="https://www.pnas.org/content/pnas/early/2020/08/31/1907375117.full.pdf" target="_blank">PDF</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_dice.png" class="papericon">
+           <div class="media-body"><b>Non-local Policy Optimization via Diversity-regularized Collaborative Exploration</b><br>
+           Zhenghao Peng,  Hao Sun,  Bolei Zhou<br>arXiv:2006.07781<br>
+           [<a href="https://arxiv.org/pdf/2006.07781.pdf">PDF</a>][<a href="https://decisionforce.github.io/DiCE/">Webpage</a>][<a href="https://github.com/decisionforce/DiCE">Code</a>]
+  </div></div>
+
+  <div class="publication media paperhi">
+           <img src="./Bolei Zhou_files/cover_higan.gif" class="papericon">
+           <div class="media-body"><b>Semantic Hierarchy Emerges in Deep Generative Representations for Scene Synthesis</b><br>
+           Ceyuan Yang*,  Yujun Shen*,  Bolei Zhou<br>International Journel on Computer Vision (IJCV), Dec. 2020<br>
+           [<a href="https://arxiv.org/pdf/1911.09267.pdf">PDF</a>][<a href="https://genforce.github.io/higan/">Webpage</a>][<a href="https://github.com/genforce/higan">Code</a>]
+  </div></div>
+
+  <div class="publication media paperhi">
+           <img src="./Bolei Zhou_files/cover_VPN.png" class="papericon">
+           <div class="media-body"><b>Cross-view Semantic Segmentation for Sensing Surroundings</b><br>
+           Bowen Pan, Jiankai Sun, Ho Yin Tiga Leung, Alex Andonian, Bolei Zhou<br>IROS 2020 and IEEE Robotics and Automation Letters (RA-L)<br>
+           [<a href="https://view-parsing-network.github.io/View_Parsing_Network_files/vpn_iros.pdf">PDF</a>][<a href="https://view-parsing-network.github.io/">Webpage</a>][<a href="https://github.com/pbw-Berwin/View-Parsing-Network">Code</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_NPS.png" class="papericon">
+           <div class="media-body"><b>Novel Policy Seeking with Constrained Optimization</b><br>
+           Hao Sun, Zhenghao Peng, Bo Dai, Jian Guo, Dahua Lin, Bolei Zhou<br>arXiv:2005.10696<br>
+           [<a href="https://arxiv.org/pdf/2005.10696.pdf">PDF</a>]
+  </div></div>
+
+  <div class="publication media paperhi">
+           <img src="./Bolei Zhou_files/icon_idinv.png" class="papericon">
+           <div class="media-body"><b>In-Domain GAN Inversion for Real Image Editing</b><br>
+           Jiapeng Zhu, Yujun Shen, Deli Zhao, Bolei Zhou<br>ECCV 2020<br>
+           [<a href="https://arxiv.org/pdf/2004.00049.pdf">PDF</a>][<a href="https://genforce.github.io/idinvert/">Webpage</a>][<a href="https://github.com/genforce/idinvert">Code</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="http://bzhou.ie.cuhk.edu.hk/" class="papericon">
+           <div class="media-body"><b>A Unified Framework for Shot Type Classification Based on Subject Centric Lens</b><br>
+           Anyi Rao, Jiaze Wang, Linning Xu, Xuekun Jiang, Qingqiu Huang, Bolei Zhou, Dahua Lin<br>ECCV 2020<br>
+           [<a href="https://anyirao.com/projects/ShotType.html">Webpage</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/icon_espn.png" class="papericon">
+           <div class="media-body"><b>Evolutionary Stochastic Policy Distillation</b><br>
+           Hao Sun, Xinyu Pan, Bo Dai, Dahua Lin, Bolei Zhou<br>arXiv:2004.12909<br>
+           [<a href="https://arxiv.org/pdf/2004.12909.pdf">PDF</a>][<a href="https://github.com/decisionforce/ESPD">Code</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/icon_tpn.png" class="papericon">
+           <div class="media-body"><b>Temporal Pyramid Network for Action Recognition</b><br>
+           Ceyuan Yang*, Yinghao Xu*, Jianping Shi, Bo Dai, Bolei Zhou<br>CVPR 2020<br>
+           [<a href="https://arxiv.org/pdf/2004.03548.pdf">PDF</a>][<a href="https://decisionforce.github.io/TPN/">Webpage</a>][<a href="https://github.com/decisionforce/TPN">Code</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/icon_interfacegan.png" class="papericon">
+           <div class="media-body"><b>Interpreting Latent Space of GANs for Semantic Face Editing</b><br>
+           Yujun Shen, Jinjin Gu, Xiaoou Tang, Bolei Zhou<br>CVPR 2020<br>[<a href="https://arxiv.org/pdf/1907.10786.pdf">PDF</a>][<a href="https://genforce.github.io/interfacegan/">Webpage</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/icon_imageprocessing.png" class="papericon">
+           <div class="media-body"><b>Image Processing Using Multi-Code GAN Prior</b><br>
+           Jinjin Gu, Yujun Shen, Bolei Zhou<br>CVPR 2020<br>[<a href="https://arxiv.org/pdf/1912.07116.pdf">PDF</a>][<a href="https://genforce.github.io/mganprior/">Webpage</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/icon_motionprediction.png" class="papericon">
+           <div class="media-body"><b>TPNet: Trajectory Proposal Network for Motion Prediction</b><br>
+           Liangji Fang, Qinhong Jiang, Jianping Shi, Bolei Zhou.<br>CVPR 2020<br>
+           [<a href="https://arxiv.org/pdf/2004.12255.pdf">PDF</a>][<a href="https://decisionforce.github.io/TPNet/">Webpage</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/icon_local.png" class="papericon">
+           <div class="media-body"><b>A Local-to-Global Approach to Multi-modal Movie Scene Segmentation</b><br>
+           Anyi Rao, Linning Xu, Yu Xiong, Guodong Xu, Qingqiu Huang, Bolei Zhou, Dahua Lin<br>CVPR 2020<br>
+           [<a href="https://arxiv.org/pdf/2004.02678.pdf">PDF</a>][<a href="https://anyirao.com/projects/SceneSeg.html">Webpage</a>][<a href="https://github.com/AnyiRao/SceneSeg">Code</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/icon_transmomo.png" class="papericon">
+           <div class="media-body"><b>Video Motion Retargeting via Invariance-Driven Unsupervised Representation Disentanglement</b><br>
+           Zhuoqian Yang, Wentao Zhu, Wayne Wu, Chen Qian, Qiang Zhou, Bolei Zhou, Chen Change Loy<br>CVPR 2020<br>
+           [<a href="https://arxiv.org/pdf/2003.14401.pdf">PDF</a>][<a href="https://yzhq97.github.io/transmomo/">Webpage</a>]
+  </div></div>
+
+
+  <div class="publication media">
+           <img src="http://bzhou.ie.cuhk.edu.hk/" class="papericon_blank">
+           <div class="media-body"><b>Every Frame Counts: Joint Learning of Video Segmentation and Optical Flow</b><br>
+           Mingyu Ding, Zhe Wang, Bolei Zhou, Jianping Shi, Zhiwu Lu, Ping Luo<br>AAAI 2020<br>[<a href="https://arxiv.org/pdf/1911.12739.pdf">PDF</a>]
+  </div></div>
+
+  <h5 class="pt-2 pb-1">2019</h5> 
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_neurips19.png" class="papericon">
+           <div class="media-body"><b>Policy Continuation with Hindsight Inverse Dynamics</b><br>
+           Hao Sun, Zhizhong Li, Xiaotong Liu, Dahua Lin, Bolei Zhou<br>NeurIPS 2019, Spotlight<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/neurips19_PCHID.pdf">PDF</a>][<a href="https://sites.google.com/view/neurips2019pchid">Webpage</a>]
+  </div></div>
+
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/snapshot_iccv19_see_gan.png" class="papericon">
+           <div class="media-body"><b>Seeing What a GAN Cannot Generate</b><br>
+           David Bau, Jun-Yan Zhu, Jonas Wulff, William Peebles, Hendrik Strobelt, Bolei Zhou, Antonio Torralba<br>ICCV 2019, Oral<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/iccv19_see_gan.pdf">PDF</a>][<a href="http://ganseeing.csail.mit.edu/">Webpage</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/snapshot_iccv19_movie_synopse.png" class="papericon">
+           <div class="media-body"><b>A Graph-Based Framework to Bridge Movies and Synopses</b><br>
+           Yu Xiong, Qingqiu Huang, Lingfen Guo, Hang Zhou, Bolei Zhou, Dahua Lin.<br>ICCV 2019, Oral<br>[<a href="http://bzhou.ie.cuhk.edu.hk/">PDF</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/snapshot_iccv19_hoi_dual.png" class="papericon">
+           <div class="media-body"><b>Reasoning About Human-Object Interactions Through Dual Attention Networks</b><br>
+           Tete Xiao, Quanfu Fan, Dan Gutfreund, Mathew Monfort, Aude Oliva, Bolei Zhou<br>ICCV 2019<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/iccv19_hoi_dual.pdf">PDF</a>][<a href="https://dual-attention-network.github.io/">Webpage</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/siggraph19_teaser.png" class="papericon">
+           <div class="media-body"><b>Semantic Photo Manipulation with a Generative Image Prior</b><br>
+           David Bau, Hendrik Strobelt, William Peebles, Jonas Wulff, Bolei Zhou, Jun-Yan Zhu, Antonio Torralba<br>SIGGRAPH 2019<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/siggraph19_preprint_small.pdf">PDF</a>][<a href="http://ganpaint.io/">Webpage</a>][<a href="http://ganpaint.io/demo/?project=church">Live Demo</a>][<a href="http://news.mit.edu/2019/teaching-artificial-intelligence-to-create-more-common-sense-visuals-0701">MIT News</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cvpr19_videoinpainting.png" class="papericon">
+           <div class="media-body"><b>Deep Flow-Guided Video Inpainting</b><br>
+           Rui Xu, Xiaoxiao Li, Bolei Zhou, Chen Change Loy<br>CVPR 2019<br>[<a href="https://arxiv.org/pdf/1905.02884.pdf">PDF</a>][<a href="https://nbei.github.io/video-inpainting.html">Webpage</a>][<a href="https://github.com/nbei/Deep-Flow-Guided-Video-Inpainting">Code</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cvpr19_drivingstereo.png" class="papericon">
+           <div class="media-body"><b>DrivingStereo: A large-scale dataset for stereo matching in autonomous driving scenarios.</b><br>
+           Guorun Yang*, Xiao Song*, Chaoqin Huang, Zhidong Deng, Jianping Shi, Bolei Zhou.<br>CVPR 2019<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/cvpr19_drivingstereo.pdf">PDF</a>][<a href="https://drivingstereo-dataset.github.io/">Dataset</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/iclr19_teaser.png" class="papericon">
+           <div class="media-body"><b>GAN Dissection: Visualizing and Understanding Generative Adversarial Networks.</b><br>David Bau, Jun-Yan Zhu, Hendrik Strobelt, Bolei Zhou, Joshua B. Tenenbaum, William T. Freeman, Antonio Torralba.<br>ICLR 2019.<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/iclr19_gandissection.pdf">PDF</a>][<a href="http://gandissect.csail.mit.edu/">Webpage</a>][<a href="https://github.com/CSAILVision/GANDissect">Code</a>]
+  </div></div>
+
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/rsos.png" class="papericon">
+           <div class="media-body"><b>Discovering place-informative scenes and objects using social media photos.</b><br>
+           Fan Zhang, Bolei Zhou, Carlo Ratti, Yu Liu.<br>Royal Society Open Science, 2019<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/rsos.181375.pdf">PDF</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/landscape.png" class="papericon">
+           <div class="media-body"><b>Measuring human perceptions of a large-scale urban region using machine learning.</b><br>
+           Fan Zhang, Bolei Zhou, Liu Liu, Yu Liu, Helene Fung, Hui Lin, Carlo Ratti.<br>Landscape and Urban Planning, 2018<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/landscape_urbanplanning.pdf">PDF</a>]
+  </div></div>
+
+
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_moments.png" class="papericon">
+           <div class="media-body"><b>Moments in Time Dataset: one million videos for event understanding.</b><br>
+           Mathew Monfort, Alex Andonian, Bolei Zhou, Sarah Adel Bargal, Tom Yan, Kandan Ramakrishnan, Lisa Brown, Quanfu Fan, Dan Gutfreund, Carl Vondrick, Aude Oliva.<br>IEEE Transaction on Pattern Analysis and Machine Intelligence, March 2019.<br>[<a href="https://arxiv.org/pdf/1801.03150.pdf">PDF</a>][<a href="http://moments.csail.mit.edu/">Website</a>][<a href="https://github.com/metalbubble/moments_models">Code+Model</a>]
+  </div></div>
+
+  <h5 class="pt-2 pb-1">2018</h5> 
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_sceneparsing.jpg" class="papericon">
+           <div class="media-body"><b>Semantic Understanding of Scenes through ADE20K Dataset.</b><br>
+     Bolei Zhou, Hang Zhao, Xavier Puig, Tete Xiao, Sanja Fidler, Adela Barriuso and Antonio Torralba.<br>International Journal on Computer Vision (IJCV), 2018. <br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/ADE20K_IJCV.pdf" target="_blank">PDF</a>][<a href="http://groups.csail.mit.edu/vision/datasets/ADE20K/" target="_blank">Dataset</a>][<a href="https://github.com/CSAILVision/semantic-segmentation-pytorch/" target="_blank">Pretrained Models</a>][<a href="http://sceneparsing.csail.mit.edu/">Benchmark Page</a>][<a href="http://scenesegmentation.csail.mit.edu/" target="_blank">Demo</a>]
+     </div>
+  </div>
+
+  <div class="publication media"> 
+           <img src="./Bolei Zhou_files/cover_unitablation.png" class="papericon">
+           <div class="media-body"> <b>Revisiting the Importance of Individual Units in CNNs via Ablation.</b><br>
+     Bolei Zhou, Yiyou Sun, David Bau, and Antonio Torralba<br>arXiv:1806.02891, 2018.<br>[<a href="https://arxiv.org/pdf/1806.02891.pdf">arXiv</a>]
+     </div> 
+  </div>
+       
+  <div class="publication media"> 
+           <img src="./Bolei Zhou_files/cover_trn_stop.gif" class="papericon">
+           <div class="media-body">
+      <strong>Temporal Relational Reasoning in Videos.</strong><br>
+           Bolei Zhou, Alex Andonian, Aude Oliva, and Antonio Torralba<br>ECCV 2018.<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/eccv18-TRN.pdf">PDF</a>][<a href="https://arxiv.org/pdf/1711.08496.pdf">arXiv</a>][<a href="http://relation.csail.mit.edu/">Webpage</a>][<a href="https://www.youtube.com/watch?v=D42erLb42_k">Demo Video</a>][<a href="https://github.com/metalbubble/TRN-pytorch">Code</a>][<a href="http://news.mit.edu/2018/machine-learning-video-activity-recognition-0914">MIT News</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_ibd.png" class="papericon">
+           <div class="media-body"><strong>Interpretable Basis Decomposition for Visual Explanation.</strong><br>
+           Bolei Zhou*, Yiyou Sun*, David Bau*, Antonio Torralba.<br>
+           ECCV 2018.<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/eccv18-IBD.pdf">PDF</a>][<a href="https://github.com/metalbubble/IBD">Code</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_upernet.png" class="papericon">
+           <div class="media-body">
+           <strong>Unified Perceptual Parsing for Scene Understanding.</strong><br>Tete Xiao*, Yingcheng Liu*, Bolei Zhou*, Yuning Jiang, Jian Sun<br>
+           ECCV 2018.<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/eccv18-segment.pdf">PDF</a>][<a href="https://github.com/CSAILVision/unifiedparsing">Code &amp; Data</a>]
+  </div></div>
+  
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_intrinsic.png" class="papericon">
+           <div class="media-body">
+           <strong>Single Image Intrinsic Decomposition without a Single Intrinsic Image.</strong><br>
+      Wei-Chiu Ma, Hang Chu, Bolei Zhou, Raquel Urtasun, Antonio Torralba.
+           <br>ECCV 2018.<br>[<a href="https://chuhang.github.io/files/publications/ECCV_18.pdf">PDF</a>]
+  </div></div>
+ 
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_factorcnn.png" class="papericon">
+           <div class="media-body">
+           <strong>Factorizable Net: An Efficient Subgraph based Framework for Scene Graph Generation.</strong><br>
+      Yikang Li, Wanli Ouyang, Bolei Zhou, Yawen Cui, Jianping Shi, Xiaogang Wang.<br>
+           ECCV 2018.<br>[<a href="https://arxiv.org/pdf/1806.11538.pdf">PDF</a>]
+  </div></div>
+           
+  <div class="publication media">
+    <img src="./Bolei Zhou_files/cover_iros18.png" class="papericon">
+           <div class="media-body"><strong>Real-Time Object Pose Estimation with Pose Interpreter Networks.</strong><br>
+          Jimmy Wu, Bolei Zhou, Rebecca Russell, Vincent Kee, Syler Wagner, Mitchell Hebert, Antonio Torralba, and David M.S. Johnson<br>IROS 2018.<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/iros18-pose.pdf">PDF</a>][<a href="https://github.com/jimmyyhwu/pose-interpreter-networks">Code</a>][<a href="https://www.youtube.com/watch?v=9QBw1NCOOR0">Video</a>]
+  </div></div>
+
+  <div class="publication media"> 
+           <img src="./Bolei Zhou_files/cover_thesis.png" class="papericon">
+           <div class="media-body"><b>Interpretable Representation Learning for Visual Intelligence.</b><br>
+           Bolei Zhou<br>PhD thesis submitted to MIT EECS, May 17, 2018.<br>Committee: Antonio Torralba, Aude Oliva, Bill Freeman.<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/thesis.pdf">PDF</a>][<a href="https://www.youtube.com/watch?v=J7Zz_33ZeJc">Defense Talk</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_deepminer.png" class="papericon">
+           <div class="media-body"><b>DeepMiner: Discovering Interpretable Representations for Mammogram Classification and Explanation.</b><br>
+           Jimmy Wu, Bolei Zhou, Diondra Peck, Scott Hsieh, Vandana Dialani, Vasilis Syrgkanis, Lester Mackey, and Genevieve Patterson<br>arXiv:1805.12323, 2018.<br>[<a href="https://arxiv.org/pdf/1805.12323.pdf">arXiv</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/SPIE.png" class="papericon">
+           <div class="media-body"><b>Expert identification of visual primitives used by CNNs during mammogram classification.</b><br>
+           Jimmy Wu, Diondra Peck, Scott Hsieh, Vandana Dialani, Constance D. Lehman, Bolei Zhou, Vasilis Syrgkanis, Lester Mackey, and Genevieve Patterson<br>SPIE Medical Imaging, 2018.<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/SPIE18.pdf">PDF</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_vqavqg.png" class="papericon">
+           <div class="media-body"><b>Visual Question Generation as Dual Task of Visual Question Answering.</b><br>
+           Yikang Li, Nan Duan, Bolei Zhou, Xiao Chu, Wanli Ouyang, and Xiaogang Wang<br>CVPR 2018, <b>spotlight</b>.<br>[<a href="https://arxiv.org/pdf/1709.07192.pdf">arXiv</a>][<a href="http://cvboy.com/publication/cvpr2018_iqan/">Webpage</a>][<a href="https://github.com/yikang-li/iQAN">Code</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/RRM.png" class="papericon">
+           <div class="media-body"><b>Recurrent Residual Module for Fast Inference in Videos.</b><br>
+           Bowen Pan, Wuwei Lin, Xiaolin Fang, Chaoqin Huang, Bolei Zhou, Cewu Lu<br>CVPR 2018.<br>[<a href="https://arxiv.org/pdf/1802.09723.pdf">arXiv</a>]
+  </div></div>
+
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/tpami_interpretation_screen.png" class="papericon">
+           <div class="media-body"><strong>Interpreting Deep Visual Representations via Network Dissection.</strong><br>
+           Bolei Zhou*, David Bau*, Aude Oliva, and Antonio Torralba.<br>IEEE Transactions on Pattern Analysis and Machine Intelligence, June 2018. *-indicates equal contributions <br>[<a href="https://arxiv.org/pdf/1711.05611.pdf" target="_blank">arXiv</a>][<a href="http://netdissect.csail.mit.edu/" target="_blank">Webpage</a>][<a href="https://github.com/CSAILVision/NetDissect">Code</a>]
+  </div></div>
+
+  <h5 class="pt-2 pb-1">2017</h5>
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_places2.png" class="papericon">
+           <div class="media-body"><b>Places: A 10 Million Image Database for Scene Recognition.</b><br>
+           Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude Oliva, and Antonio Torralba.<br>IEEE Transactions on Pattern Analysis and Machine Intelligence, July 2017. <br>[<a href="http://places2.csail.mit.edu/PAMI_places.pdf" target="_blank">PDF</a>][<a href="http://places2.csail.mit.edu/" target="_blank">Places2 Dataset</a>][<a href="http://places2.csail.mit.edu/challenge.html" target="_blank">Challenge Page</a>][<a href="https://github.com/metalbubble/places365" target="_blank">Places365 CNN models</a>][<a href="http://places2.csail.mit.edu/demo.html" target="_blank">Demo</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_scenegraph.png" class="papericon">
+           <div class="media-body"><b>Scene Graph Generation from Objects, Phrases and Region Captions.</b><br>
+           Yikang Li, Wanli Ouyang, Bolei Zhou, Kun Wang, and Xiaogang Wang<br>ICCV 2017.<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/ICCV_scenegraph.pdf">PDF</a>][<a href="https://github.com/yikang-li/MSDN">Code</a>]
+  </div></div>
+ 
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_openvoc.jpg" class="papericon">
+           <div class="media-body"><b>Open Vocabulary Scene Parsing.</b><br>
+           Hang Zhao, Xavier Puig, Bolei Zhou, Sanja Fidler, and Antonio Torralba<br>ICCV 2017.<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/ICCV_openvoc.pdf">PDF</a>][<a href="https://arxiv.org/pdf/1703.08769.pdf">arXiv</a>][<a href="http://sceneparsing.csail.mit.edu/openvoc/">Webpage</a>]
+  </div></div>
+    
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_sceneparsing_cvpr2017.png" class="papericon">
+           <div class="media-body"><b>Scene Parsing through ADE20K Dataset.</b><br>
+           Bolei Zhou, Hang Zhao, Xavier Puig, Sanja Fidler, Adela Barriuso and Antonio Torralba.<br>CVPR 2017. <br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/scene-parse-camera-ready.pdf">PDF</a>][<a href="http://groups.csail.mit.edu/vision/datasets/ADE20K/" target="_blank">Dataset</a>][<a href="http://sceneparsing.csail.mit.edu/">Benchmark Page</a>][<a href="http://sceneparsing.csail.mit.edu/index_challenge.html" target="_blank">Challenge Page</a>][<a href="https://github.com/CSAILVision/sceneparsing" target="_blank">Toolkit&amp;Code</a>][<a href="http://scenesegmentation.csail.mit.edu/" target="_blank">Demo</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_interpretability_cvpr2017.png" class="papericon">
+           <div class="media-body"><b>Network Dissection: Quantifying Interpretability of Deep Visual Representations.</b><br>
+           David Bau*, Bolei Zhou*, Aditya Khosla, Aude Oliva, and Antonio Torralba.<br>CVPR 2017. as <b>oral</b>. *-indicates equal contribution. <br>[<a href="http://netdissect.csail.mit.edu/final-network-dissection.pdf">PDF</a>][<a href="https://arxiv.org/pdf/1704.05796.pdf">arXiv</a>][<a href="http://netdissect.csail.mit.edu/">webpage</a>][<a href="http://bzhou.ie.cuhk.edu.hk/">code</a>][<a href="https://www.youtube.com/watch?v=Xy6RcjXMa2c">Talk Video</a>]<br>
+  </div></div>
+  
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_person_cvpr2017.png" class="papericon">
+           <div class="media-body"><b>Person Search with Natural Language Description.</b><br>
+           Shuang Li, Tong Xiao, Hongsheng Li, Bolei Zhou, Dayu Yue, and Xiaogang Wang.<br>CVPR 2017. <br>[<a href="https://arxiv.org/pdf/1702.05729.pdf">PDF</a>][<a href="http://xiaotong.me/static/projects/person-search-language/dataset.html">Dataset</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_segicp.png" class="papericon">
+           <div class="media-body"><b>SegICP: Integrated Deep Semantic Segmentation and Pose Estimation.</b><br>
+           J. Wong, V. Kee, T. Le, S.Wagner, G. Mariottini, A. Schneider, L. Hamilton, R. Chiaplkatty, M. Herbert, D. Johnson<br> J. Wu, B. Zhou, and A. Torralba.<br>IROS 2017, Oral<br>[<a href="https://arxiv.org/pdf/1703.01661.pdf">PDF</a>]
+  </div></div>
+   
+  <h5 class="pt-2 pb-1">2016</h5>
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_CAM.jpg" class="papericon">
+           <div class="media-body"><b>Learning Deep Features for Discriminative Localization.</b><br>
+           Bolei Zhou, Aditya Khosla, Agata Lapedriza, Aude Oliva, and Antonio Torralba<br>CVPR 2016.<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf" target="_blank">PDF</a>] [<a href="http://arxiv.org/pdf/1512.04150.pdf" target="_blank">arXiv</a>][<a href="http://cnnlocalization.csail.mit.edu/" target="_blank">Project Page</a>][<a href="https://www.youtube.com/watch?v=fZvOy0VXWAI" target="_blank">Video of CNN shifting its attention</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_zi.png" class="papericon">
+           <div class="media-body"><b>Optimization as Estimation with Gaussian Processes in Bandit Settings.</b><br>
+           Zi Wang, Bolei Zhou, Stephanie Jegelka<br>AISTATS 2016, Oral.<br>[<a href="http://arxiv.org/abs/1510.06423" target="_blank">PDF</a>][<a href="http://zi-wang.com/gp-est/" target="_blank">Project</a>][<a href="https://github.com/zi-w/GP-EST" target="_blank">Code</a>]
+  </div></div>
+
+
+  <h5 class="pt-2 pb-1">2015</h5>
+  <div class="publication media"> 
+           <img src="./Bolei Zhou_files/cover_intraclass.png" class="papericon">
+           <div class="media-body"><b>Understanding Intra-Class Knowledge inside CNN.</b><br>
+           Donglai Wei, Bolei Zhou, Antonio Torralba, William Freeman<br>arXiv:1507.02379, 2015. <br>[<a href="http://arxiv.org/pdf/1507.02379.pdf" target="_blank">PDF</a>][<a href="http://vision03.csail.mit.edu/cnn_art/index.html" target="_blank">Page</a>][<a href="https://github.com/donglaiw/mNeuron/" target="_blank">Code</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_vqa.jpg" class="papericon">
+           <div class="media-body"><b>Simple Baseline for Visual Question Answering.</b><br>
+           Bolei Zhou, Yuandong Tian, Sainbar Suhkbaatar, Arthur Szlam, Rob Fergus<br>arXiv:1512.02167, 2015. <br>[<a href="http://arxiv.org/pdf/1512.02167.pdf" target="_blank">PDF</a>][<a href="http://visualqa.csail.mit.edu/" target="_blank">Demo</a>][<a href="https://github.com/metalbubble/VQAbaseline/" target="_blank">Code</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_visualization.jpg" class="papericon">
+           <div class="media-body"><b>Object Detectors Emerge in Deep Scene CNNs.</b><br>
+           Bolei Zhou, Aditya Khosla, Agata Lapedriza, Aude Oliva, and Antonio Torralba<br>ICLR 2015, Oral.<br>[<a href="http://arxiv.org/pdf/1412.6856.pdf" target="_blank">PDF</a>][<a href="http://places.csail.mit.edu/" target="_blank">Project Page</a>][<a href="http://places.csail.mit.edu/visualization/" target="_blank">More Visualization</a>][<a href="https://github.com/metalbubble/unitvisseg">Code</a>]
+  </div></div>
+
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_concept.jpg" class="papericon">
+           <div class="media-body"><b>ConceptLearner: Discovering Visual Concepts from Weakly Labeled Image Collections.</b><br>
+           Bolei Zhou, Vignesh Jagadeesh, and Robinson Piramuthu<br>CVPR 2015.<br>[<a href="http://conceptlearner.csail.mit.edu/conceptlearner_final.pdf" target="_blank">PDF</a>][<a href="http://conceptlearner.csail.mit.edu/" target="_blank">Project Page &amp; Demo</a>]
+  </div></div>
+
+  <h5 class="pt-2 pb-1">2014</h5>
+  <div class="publication media">
+           <img src="./Bolei Zhou_files/cover_nips2014.jpg" class="papericon">
+           <div class="media-body"><b>Learning Deep Features for Scene Recognition using Places Database.</b><br>
+           Bolei Zhou, Agata Lapedriza, Jianxiong Xiao, Antonio Torralba, and Aude Oliva<br>NIPS 2014, Spotlight<br>[<a href="http://places.csail.mit.edu/places_NIPS14.pdf" target="_blank">PDF</a>][<a href="http://places.csail.mit.edu/" target="_blank">Project Page</a>][<a href="http://places2.csail.mit.edu/demo.html" target="_blank">Demo</a>]
+  </div></div>
+
+  <div class="publication media">
+     <img src="./Bolei Zhou_files/boston_perception.jpg" class="papericon">
+           <div class="media-body"><b>Recognizing City Identity via Attribute Analysis of Geo-tagged Images.</b><br>
+     Bolei Zhou, Liu Liu, Aude Oliva and Antonio Torralba<br>ECCV 2014<br>[<a href="http://bzhou.ie.cuhk.edu.hk/project/eccv2014/ECCV14_cityperception.pdf" target="_blank">PDF</a>][<a href="http://cityimage.csail.mit.edu/" target="_blank">Project Page</a>]<br>
+        Liu Liu, Bolei Zhou, Jinhua Zhao, Brent D. Ryan<br><b>C-IMAGE: City Cognitive Mapping through Geo-tagged Photos</b><br>GeoJournal, Springer, 2016.<br>[<a href="http://bzhou.ie.cuhk.edu.hk/project/eccv2014/c-image.pdf" target="_blank">PDF</a>]<br>
+  </div></div>
+
+  <div class="publication media">
+      <a href="http://mmlab.ie.cuhk.edu.hk/project/collectiveness/"><img src="./Bolei Zhou_files/cover_cvpr2013.jpg" class="papericon"></a>
+           <div class="media-body"><b>Measuring Crowd Collectiveness.</b><br>
+    Bolei Zhou, Xiaoou Tang, Hepeng Zhang and Xiaogang Wang<br> IEEE transaction on Pattern Analysis and Machine Intelligence (PAMI), 2014.<br> CVPR 2013, Oral<br>[<a href="http://bzhou.ie.cuhk.edu.hk/project/cvpr2013/final_collectiveness.pdf" target="_blank">PDF(CVPR)</a>][<a href="http://bzhou.ie.cuhk.edu.hk/project/cvpr2013/pami.pdf" target="_blank">PDF(TPAMI)</a>][<a href="http://mmlab.ie.cuhk.edu.hk/project/collectiveness/">Project Page</a>]
+  </div></div>
+
+  <h5 class="pt-2 pb-1">2013 and earlier</h5>
+  <div class="publication media">
+    <img src="./Bolei Zhou_files/cover_cvpr2012.jpg" class="papericon">
+           <div class="media-body"><b>Learning Collective Crowd Behaviors with Dynamic Pedestrian-Agents.</b><br>
+    Bolei Zhou, Xiaoou Tang and Xiaogang Wang.<br> International Journal of Computer Vision (IJCV), 2014.<br> CVPR 2012, Oral<br>[<a href="http://bzhou.ie.cuhk.edu.hk/project/cvpr2012/zhoucvpr2012.pdf">PDF(CVPR)</a>] [<a href="http://www.ee.cuhk.edu.hk/~xgwang/papers/zhouTWijcv14.pdf" target="_blank">PDF(IJCV)</a>][<a href="http://mmlab.ie.cuhk.edu.hk/project/dynamicagent/" target="_blank">Project Page</a>]
+  </div></div>
+
+  <div class="publication media"> 
+    <a href="http://mmlab.ie.cuhk.edu.hk/project/coherentfiltering/"><img src="./Bolei Zhou_files/cover_eccv2012.jpg" class="papericon"></a>
+           <div class="media-body"><b>Coherent Filtering: Detecting Coherent Motions from Crowd Clutters.</b><br>
+    Bolei Zhou, Xiaoou Tang and Xiaogang Wang.<br>ECCV 2012.<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/boleieccv2012.pdf">PDF</a>] [<a href="http://mmlab.ie.cuhk.edu.hk/project/coherentfiltering/">Project Page</a>]
+
+  </div></div>
+  
+  <div class="publication media">
+    <a href="http://mmlab.ie.cuhk.edu.hk/project/randomfield/"><img src="./Bolei Zhou_files/cover_cvpr2011.jpg" class="papericon"></a><a></a>
+           <div class="media-body"><b>Random Field Topic Model for Semantic Region Analysis in Crowded Scenes from Tracklets.</b><br>
+    Bolei Zhou, Xiaogang Wang and Xiaoou Tang.<br>CVPR 2011<br>[<a href="http://bzhou.ie.cuhk.edu.hk/publication/boleicvpr2011.pdf" target="_blank">PDF</a>][<a href="http://mmlab.ie.cuhk.edu.hk/project/randomfield/" target="_blank">Project Page</a>]
+  </div></div>
 </div>
 
 </body></html>
