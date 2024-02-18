@@ -17,13 +17,13 @@
   {
   	font-family: Sans-serif;
       background-color : #CDCDCD;
-      font-size: 18px;
+      font-size: 16px;
   }
       .content
   	{
-      		width : 900px;
+      		/* width : device-width; */
       		padding : 25px 30px;
-      		margin : 25px auto;
+      		margin : 0px auto;
       		background-color : #fff;
       		box-shadow: 0px 0px 10px #999;
       		border-radius: 15px; 
@@ -201,35 +201,6 @@
       }
 </style>
 
-<!-- <script type="text/javascript" async="" src="./zhouhy_files/ga.js"></script><script async="" src="./zhouhy_files/analytics.js"></script><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-23931362-2', 'nju.edu.cn');
-  ga('send', 'pageview');
-
-</script> -->
-<!-- <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-23931362-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-    var myPix = new Array("zhouhy_files/me_hk.png")
-    function choosePic() {
-        var randomNum = Math.floor(Math.random() * myPix.length);
-        document.getElementById("myPicture").src = myPix[randomNum];
-    };
-
-</script> -->
 <script>
   $(document).ready(function () {
             $('#show-selected').click(function () {
@@ -266,22 +237,21 @@
 </script>
 </head>
 
-
 <body>
 <div class="content">
 	<div id="container">
 
 	<table>
 	<tbody><tr>
-	<td><img id="myPicture" src="./zhouhy_files/me_hk.jpg" style="float:left; margin-right: 20px" height="190px" class="papericon"></td>
+	<td><img id="myPicture" src="./zhouhy_files/me_hk.jpg" style="float:left; margin-right: 20px; margin-bottom: 20px;" height="170px" class="papericon"></td>
 	<td>
 	<div id="DocInfo">
-		<h1>Hong-Yu Zhou</h1>
-        <font>Postdoctoral fellow</font><br>
-        <font>Department of Biomedical Informatics</font><br>
-        <font>Harvard Medical School</font><br> 
-        <font> Harvard University<font><br>
-        <font>Email:</font><a href="mailto:whuzhouhongyu@gmail.com"> <font>whuzhouhongyu at gmail.com </font></a> <br>
+		<font size="6" color="black">Hong-Yu Zhou</font><br>
+        <font color="black">Postdoctoral fellow</font><br>
+        <font color="black">Department of Biomedical Informatics</font><br>
+        <font color="black">Harvard Medical School</font><br> 
+        <font color="black"> Harvard University<font><br>
+        <font color="black">Email:</font><a href="mailto:whuzhouhongyu@gmail.com"> <font>whuzhouhongyu at gmail.com </font></a> <br>
         <a href="https://twitter.com/HongYuZhou14" alt="twitter"><img width="45" src="twitter.gif"></img></a><a href="https://scholar.google.com/citations?hl=zh-CN&user=aJnvh8gAAAAJ&view_op=list_works&sortby=pubdate" alt="gscholar"><img width="27" src="gscholar.png"></img></a><br> 
 	</div><br>
         <!-- <div id="hku_logo"> -->
@@ -291,18 +261,18 @@
 	</tr>
 	</tbody></table>
 
-	<h2>Bio</h2>
+	<!-- <h2>Bio</h2> -->
     <ul>
-        <li> I am a postdoctoral fellow at the <a href="https://dbmi.hms.harvard.edu/">Harvard DBMI</a>, working with <a href="https://pranavrajpurkar.com/">Pranav Rajpurkar</a>. I completed my PhD at <a href="https://www.hku.hk/">The University of Hong Kong</a> with <a href="https://i.cs.hku.hk/~yzyu/">Yizhou Yu</a>.</li>
+        <li> I am a postdoctoral fellow at the <a href="https://dbmi.hms.harvard.edu/">Harvard DBMI</a>, working with <a href="https://pranavrajpurkar.com/">Pranav Rajpurkar</a>.</li>
 		<li> My research lies in the intersection of artificial intelligence, medicine, and healthcare.
-        <li> Recently, I am developing generative AI to advance medical discovery, where topics that interest me the most involve:
+        <li> I build generative AI to foster generalist health prediction engines, therefore focusing on the following topics:
         <ul>
-            <li> Scalable, generalized learning algorithms/architectures,</li>
-            <li> Multimodal integration and learning,</li>
-            <li> Non-invasive early disease detection,</li>
-            <li> Longitudinal health monitoring.</li>
+            <li> Multimodal learning (e.g., vision-language models), </li>
+            <li> Generalized representation learning (e.g., self-supervised learning),</li>
+            <li> Scalable medical AI systems (e.g., large language models), </li>
+            <li> Sequential modeling for longitudinal problems (e.g., lifespan prediction).</li>
         </ul>
-        <li>I got my master degree from <a href="http://www.lamda.nju.edu.cn/MainPage.ashx">LAMDA Group</a> at <a href="https://www.nju.edu.cn/en/main.psp">Nanjing University</a>, advised by Prof. <a href="https://cs.nju.edu.cn/wujx/">Jianxin Wu</a>. Before that, I received my bachelor degree from <a href="https://en.whu.edu.cn/">Wuhan University</a>. I was a senior researcher at Tencent focusing on Medical x AI applications, where my group leader is Dr. <a href="https://sites.google.com/site/yefengzheng/">Yefeng Zheng</a>.</li>
+        <li>I finished my PhD at <a href="https://www.hku.hk/">The University of Hong Kong</a>, advised by <a href="https://i.cs.hku.hk/~yzyu/">Yizhou Yu</a> and my master degree at <a href="https://www.nju.edu.cn/en/">Nanjing University</a>, advised by <a href="https://cs.nju.edu.cn/wujx/">Jianxin Wu</a>. Before that, I received my undergraduate degree from <a href="https://en.whu.edu.cn/">Wuhan University</a>.</li>
     </ul>
 	
     <h2>Recent News</h2>
@@ -316,7 +286,7 @@
     </ul>
       <div class="papers-container">
           <div class="publication-anchor" id="publication-anchor"></div>
-          <h2 class="paperlo">Paper <span id="paper-show">(<span id="show-selected">Selected (Highlight)</span> /
+          <h2 class="paperlo">Paper <span id="paper-show">(<span id="show-selected">Selected</span> /
                   <span id="show-by-date">Full</span>)</span>
           </h2>
           <h3 class="pt-2 pb-1 paper-year"><p style="color:rgb(20, 68, 106); display:inline">2023</p></h3>
@@ -709,10 +679,9 @@
                         <div class="media-body ">
                             <a class="paper-title" href="">
                             <b> A Transformer-based Representation-learning Model with Unified Processing of Multimodal Input for Clinical Diagnostics.</b></a>
-                            <br> Hong-Yu Zhou*, Yizhou Yu*, Chengdi Wang*, Shu Zhang, Yuanxu Gao, Jia Pan, Jun Shao, Guangming Lu, Kang Zhang, Weimin Li.
-                            <br>[<a href="https://t.co/096K7GQf9B">Nature BME</a>, <a href="https://arxiv.org/abs/2306.00864">arXiv</a>, <a href="https://github.com/RL4M/IRENE" target="_blank">Code</a>]
-                            <br><i class="fa fa-lightbulb-o" style="font-size:24px"></i> <font color="red"> A multimodal transformer for clinical diagnostics.</font>
-                            <br><i>Nature Biomedical Engineering, 2023.</i>
+                            <br> <font color="grey">Hong-Yu Zhou*, Yizhou Yu*, Chengdi Wang*, Shu Zhang, Yuanxu Gao, Jia Pan, Jun Shao, Guangming Lu, Kang Zhang, Weimin Li.</font>
+                            <br><i class="fa fa-lightbulb-o" style="font-size:20px"></i> <font color="red"> A multimodal transformer for clinical diagnostics.</font>
+                            <br><a href="https://www.nature.com/natbiomedeng/?origen=app">Nature Biomedical Engineering 2023</a> | <a href="https://t.co/096K7GQf9B">Paper</a> | <a href="https://github.com/RL4M/IRENE" target="_blank">Code</a>
                             <br>
                         </div>
                     </div>
@@ -720,21 +689,9 @@
                         <div class="media-body ">
                             <a class="paper-title" href="https://arxiv.org/abs/2301.13155">
                             <b> Advancing Radiograph Representation Learning with Masked Record Modeling.</b></a>
-                            <br> Hong-Yu Zhou*, Chenyu Lian*, Liansheng Wang, Yizhou Yu.
-                            <br>[<a href="https://arxiv.org/abs/2301.13155">Paper</a>, <a href="https://github.com/RL4M/MRM-pytorch" target="_blank">Code</a>]
-                            <br><i class="fa fa-lightbulb-o" style="font-size:24px"></i> <font color="red"> Multimodal modeling for visual representation learning.</font>
-                            <br><i>International Conference on Learning Representations (ICLR), 2023.</i>
-                            <br>
-                        </div>
-                    </div>
-                    <div class="publication media paperhi">
-                        <div class="media-body ">
-                            <a class="paper-title" href="https://arxiv.org/abs/2206.02355">
-                            <b> A Unified Visual Information Preservation Framework for Self-supervised Pre-training in Medical Image Analysis.</b></a>
-                            <br> Hong-Yu Zhou*, Chixiang Lu*, Chaoqi Chen, Sibei Yang, Yizhou Yu.
-                            <br>[<a href="https://arxiv.org/abs/2301.00772">Paper</a>, <a href="https://github.com/RL4M/PCRLv2" target="_blank">Code</a>]
-                            <br><i class="fa fa-lightbulb-o" style="font-size:24px"></i><font color="red"> New state-of-the-arts of self-supervised learning on multimodal imaging data.</font>
-                            <br><i>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI), 2023.</i>
+                            <br> <font color="grey">Hong-Yu Zhou*, Chenyu Lian*, Liansheng Wang, Yizhou Yu.</font>
+                            <br><i class="fa fa-lightbulb-o" style="font-size:20px"></i> <font color="red"> Multimodal modeling for visual representation learning.</font>
+                            <br><a href="https://iclr.cc/Conferences/2023">ICLR 2023</a> | <a href="https://openreview.net/pdf?id=w-x7U26GM7j">Paper</a> | <a href="https://github.com/RL4M/MRM-pytorch?tab=readme-ov-file">Code</a>
                             <br>
                         </div>
                     </div>
@@ -742,10 +699,19 @@
                         <div class="media-body ">
                             <a class="paper-title" href="https://arxiv.org/abs/2109.03201">
                             <b> nnFormer: Volumetric Medical Image Segmentation via a 3D Transformer.</b></a>
-                            <br> Hong-Yu Zhou*, Jiansen Guo*, Yinghao Zhang*, Xiaoguang Han, Lequan Yu, Liansheng Wang, Yizhou Yu.
-                            <br>[<a href="https://arxiv.org/abs/2109.03201" target="_blank">Paper</a>, <a href="https://github.com/282857341/nnFormer" target="_blank">Code</a>]
-                            <br><i class="fa fa-lightbulb-o" style="font-size:24px"></i><font color="red"> A widely adopted baseline for 3D medical image segmentation.</font>
-                            <br><i> IEEE Transactions on Image Processing, 2023. </i>
+                            <br> <font color="grey">Hong-Yu Zhou*, Jiansen Guo*, Yinghao Zhang*, Xiaoguang Han, Lequan Yu, Liansheng Wang, Yizhou Yu.</font>
+                            <br><i class="fa fa-lightbulb-o" style="font-size:20px"></i><font color="red"> A widely adopted baseline for 3D medical image segmentation.</font>
+                            <br> <a href="https://ieeexplore.ieee.org/document/10183842?denied=">TIP 2023</a> | <a href="https://arxiv.org/abs/2109.03201">Paper</a> | <a href="https://github.com/282857341/nnFormer">Code</a>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="publication media paperhi">
+                        <div class="media-body ">
+                            <a class="paper-title" href="https://arxiv.org/abs/2206.02355">
+                            <b> A Unified Visual Information Preservation Framework for Self-supervised Pre-training in Medical Image Analysis.</b></a>
+                            <br> <font color="grey">Hong-Yu Zhou*, Chixiang Lu*, Chaoqi Chen, Sibei Yang, Yizhou Yu.</font>
+                            <!-- <br><i class="fa fa-lightbulb-o" style="font-size:20px"></i><font color="red"> New state-of-the-arts of self-supervised learning on multimodal imaging data.</font> -->
+                            <br> <a href="https://ieeexplore.ieee.org/document/10005161/">TPAMI 2023</a> | <a href="https://arxiv.org/pdf/2301.00772.pdf">Paper</a> | <a href="https://github.com/RL4M/PCRLv2">Code</a>
                             <br>
                         </div>
                     </div>
@@ -753,10 +719,10 @@
                         <div class="media-body ">
                             <a class="paper-title" href="https://arxiv.org/abs/2111.03452">
                             <b> Generalized Radiograph Representation Learning via Cross-supervision between Images and Free-text Radiology Reports.</b></a>
-                            <br> Hong-Yu Zhou*, Xiaoyu Chen*, Yinghao Zhang*, Ruibang Luo, Liansheng Wang, Yizhou Yu.
-                            <br>[<a href="https://www.nature.com/articles/s42256-021-00425-9">Nature MI</a>, <a href="https://arxiv.org/abs/2111.03452" target="_blank">arXiv</a>, <a href="https://github.com/funnyzhou/REFERS" target="_blank">Code</a>, <a href="https://www.asianscientist.com/2022/06/in-the-lab/revolutionizing-ai-enabled-medical-imaging" target="_blank">AsianScientist</a>, <a href="https://thepaper.cn/newsDetail_forward_17590325" target="_blank">ThePaper(澎湃新闻)</a>]
+                            <br> <font color="grey">Hong-Yu Zhou*, Xiaoyu Chen*, Yinghao Zhang*, Ruibang Luo, Liansheng Wang, Yizhou Yu.</font>
+                            <!-- <br>[<a href="https://www.nature.com/articles/s42256-021-00425-9">Nature MI</a>, <a href="https://arxiv.org/abs/2111.03452" target="_blank">arXiv</a>, <a href="https://github.com/funnyzhou/REFERS" target="_blank">Code</a>, <a href="https://www.asianscientist.com/2022/06/in-the-lab/revolutionizing-ai-enabled-medical-imaging" target="_blank">AsianScientist</a>, <a href="https://thepaper.cn/newsDetail_forward_17590325" target="_blank">ThePaper(澎湃新闻)</a>] -->
                             <!-- <br><font color="red">We propose cross-supervised learning to learn X-ray representations from associated radiology reports, which achieves great improvements over previous self-supervised methodologies.</font> -->
-                            <br><i> Nature Machine Intelligence, 2022</i>
+                            <br><a href="https://www.nature.com/natmachintell/">Nature Machine Intelligence 2023</a> | <a href="https://www.nature.com/articles/s42256-021-00425-9">Paper</a> | <a href="https://github.com/funnyzhou/REFERS">Code</a> 
                             <br>
                         </div>
                     </div>
@@ -764,10 +730,10 @@
                         <div class="media-body ">
                             <a class="paper-title" href="https://arxiv.org/abs/2109.03201">
                             <b> Preservational Learning Improves Self-supervised Medical Image Models by Reconstructing Diverse Contexts.</b></a>
-                            <br> Hong-Yu Zhou*, Chixiang Lu*, Sibei Yang, Xiaoguang Han, Yizhou Yu.
-                            <br>[<a href="https://arxiv.org/abs/2109.04379" target="_blank">Paper</a>, <a href="https://github.com/Luchixiang/PCRL" target="_blank">Code</a>]
+                            <br> <font color="grey">Hong-Yu Zhou*, Chixiang Lu*, Sibei Yang, Xiaoguang Han, Yizhou Yu.</font>
+                            <!-- <br>[<a href="https://arxiv.org/abs/2109.04379" target="_blank">Paper</a>, <a href="https://github.com/Luchixiang/PCRL" target="_blank">Code</a>] -->
                             <!-- <br><font color="red">New state-of-the-arts of self-supervised medical image pre-training on both 2D and 3D data.</font> -->
-                            <br><i> International Conference on Computer Vision (ICCV), 2021. </i>
+                            <br> <a href="https://iccv2021.thecvf.com/home"> ICCV 2021 </a> | <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Zhou_Preservational_Learning_Improves_Self-Supervised_Medical_Image_Models_by_Reconstructing_Diverse_ICCV_2021_paper.pdf">Paper</a> | <a href="https://github.com/Luchixiang/PCRL">Code</a>
                             <br>
                         </div>
                     </div>
@@ -775,10 +741,10 @@
                         <div class="media-body ">
                             <a class="paper-title" href="https://arxiv.org/abs/2007.07423">
                             <b> Comparing to Learn: Surpassing ImageNet Pretraining on Radiographs by Comparing Image Representations.</b></a>
-                            <br> Hong-Yu Zhou*, Shuang Yu*, Kai Ma, Cheng Bian, Chunyan Chu, Hanruo Liu, Yefeng Zheng.
-                            <br>[<a href="https://arxiv.org/abs/2007.07423" target="_blank">Paper</a>, <a href="https://github.com/funnyzhou/C2L_MICCAI2020" target="_blank">Code</a>]
+                            <br> <font color="grey">Hong-Yu Zhou*, Shuang Yu*, Kai Ma, Cheng Bian, Chunyan Chu, Hanruo Liu, Yefeng Zheng.</font>
+                            <!-- <br>[<a href="https://arxiv.org/abs/2007.07423" target="_blank">Paper</a>, <a href="https://github.com/funnyzhou/C2L_MICCAI2020" target="_blank">Code</a>] -->
                             <!-- <br><font color="red">The first contrastive pre-training method in medical image analysis.</font> -->
-                            <br><i> International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2020. </i>
+                            <br> <a href="https://miccai2020.org/en/">MICCAI 2020</a> | <a href="https://arxiv.org/abs/2007.07423">Paper</a> | <a href="https://github.com/funnyzhou/C2L_MICCAI2020">Code</a>
                             <br>
                         </div>
                     </div> 
@@ -789,9 +755,12 @@
         <h2 name='award' id='award'>Selected Awards</h2>
         <div>
             <ul>
-                <li><b>First place</b> in AASCE 2019, held in conjunction with MICCAI 2019. We proposed an approach to accurately estimate the spinal curvature in Adolescent Idiopathic Scoliosis (AIS). Press coverage: <a href="https://tech.china.com/article/20190929/kejiyuan0129377260.html">中华网</a> <a href="http://www.kejixun.com/article/190929/474694.shtml">科技讯</a> <a href=" http://yisheng.12120.net/news/jkpt/content_0910114529.html">中国好医生网</a> <a href="https://tech.ifeng.com/c/7qMGUlwISFH">凤凰网</a>.</li>
+                <!-- <li><b>First place</b> in AASCE 2019, held in conjunction with MICCAI 2019. We proposed an approach to accurately estimate the spinal curvature in Adolescent Idiopathic Scoliosis (AIS). Press coverage: <a href="https://tech.china.com/article/20190929/kejiyuan0129377260.html">中华网</a> <a href="http://www.kejixun.com/article/190929/474694.shtml">科技讯</a> <a href=" http://yisheng.12120.net/news/jkpt/content_0910114529.html">中国好医生网</a> <a href="https://tech.ifeng.com/c/7qMGUlwISFH">凤凰网</a>.</li>
                 <li><b>First place</b> in Segthor 2019 Challenge, held in conjunction with ISBI 2019. We proposed a method to segment organs at risk segmentation in Computed Tomography (CT) images. Press coverage: <a href="https://tech.qq.com/a/20190619/003614.htm">腾讯科技</a> <a href="https://www.jiqizhixin.com/articles/2019-06-19-8">机器之心</a> <a href="https://tech.huanqiu.com/article/9CaKrnKl1aA">环球网</a> <a href="https://www.qbitai.com/2019/06/3231.html">量子位</a> <a href="https://www.sohu.com/a/322090752_610300">搜狐网</a>.</li>
-                <li><b>First place</b> in AI4Health Challenge, held by Thales group which provides solutions for over 50% of worldwide radiology examinations. In this challenge, we proposed a novel methodology to accurately detect key points in X-rays with a mean error smaller than <b>0.3 pixels</b>). Press coverage: <a href="http://www.ce.cn/xwzx/gnsz/gdxw/201907/12/t20190712_32605039.shtml">中国经济网</a> <a href="https://tech.huanqiu.com/article/9CaKrnKluBC">环球网</a> <a href="https://cloud.tencent.com/developer/article/1600187">腾讯新闻</a> <a href=""> <a href="http://www.geekpark.net/news/244645">极客公园</a> <a href="http://news.eastday.com/eastday/13news/auto/news/china/20190712/u7ai8688252.html">东方网</a>. </li>
+                <li><b>First place</b> in AI4Health Challenge, held by Thales group which provides solutions for over 50% of worldwide radiology examinations. In this challenge, we proposed a novel methodology to accurately detect key points in X-rays with a mean error smaller than <b>0.3 pixels</b>). Press coverage: <a href="http://www.ce.cn/xwzx/gnsz/gdxw/201907/12/t20190712_32605039.shtml">中国经济网</a> <a href="https://tech.huanqiu.com/article/9CaKrnKluBC">环球网</a> <a href="https://cloud.tencent.com/developer/article/1600187">腾讯新闻</a> <a href=""> <a href="http://www.geekpark.net/news/244645">极客公园</a> <a href="http://news.eastday.com/eastday/13news/auto/news/china/20190712/u7ai8688252.html">东方网</a>. </li> -->
+                <li><b>First place</b> in AASCE 2019, held in conjunction with MICCAI 2019. We proposed an approach to accurately estimate the spinal curvature in Adolescent Idiopathic Scoliosis (AIS).</li>
+                <li><b>First place</b> in Segthor 2019 Challenge, held in conjunction with ISBI 2019. We proposed a method to segment organs at risk segmentation in Computed Tomography (CT) images.</li>
+                <li><b>First place</b> in AI4Health Challenge, held by Thales group which provides solutions for over 50% of worldwide radiology examinations. In this challenge, we proposed a novel methodology to accurately detect key points in X-rays with a mean error smaller than <b>0.3 pixels</b>.</li>
                 <li><b>Second place</b> in ODIR 2019, held by Peking University.</li>
             </ul>
         </div>
@@ -801,7 +770,7 @@
     <h2>Academic Service</h2>
     I regularly serve as reviewers for following conferences and journals.
     <ul>
-	    <li>Conference: for ICLR, ICML, NeurIPS, CVPR, ICCV, AAAI, MICCAI, etc.</li>
+	    <li>Conference: for ICLR, ICML, NeurIPS, CVPR, ICCV, ECCV, AAAI, MICCAI, etc.</li>
       <li>Journal: for Nature Machine Intelligence, TPAMI, TMI, MedIA, TKDE, TMM, TIP, Pattern Recognition, iScience (Cell family), and Scientific Reports.</li>
     </ul>
 </div>
