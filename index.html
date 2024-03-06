@@ -7,6 +7,20 @@
 
 <script src="./zhouhy_files/jquery-3.1.1.slim.min.js"></script>
 
+<style>
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: black; }
+    }
+    #autoTyping {
+      font-family: monospace;
+      border-right: 2px solid black;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: blink 0.75s step-end infinite;
+    }
+</style>
+
 <style type="text/css">
  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
  /* @font-face {
@@ -265,7 +279,7 @@
     <ul>
         <li> I am a postdoctoral fellow at the <a href="https://dbmi.hms.harvard.edu/">Harvard DBMI</a>, working with <a href="https://pranavrajpurkar.com/">Pranav Rajpurkar</a>.</li>
 		<li> My research lies in the intersection of artificial intelligence, medicine, and data science.
-        <li> These days, I am attracted to the advancement of Compound Medical AI (= specializing generalist). A few topics that I am actively exploring or working on:
+        <li> These days, I am attracted to the advancement of <span id="autoTyping">Compound Medical AI (= specializing generalist)</span>. A few topics that I am actively exploring or working on:
         <ul>
             <li> Generalist modeling, </li>
             <li> Generalized representation learning, </li>
@@ -781,5 +795,27 @@
     </ul>
 </div>
 </div>
+
+<script>
+const element = document.getElementById("autoTyping");
+const text = "Compound Medical AI (= specializing generalist)"; // Text to type
+let index = 0;
+
+function type() {
+  if (index < text.length) {
+    element.innerHTML += text.charAt(index);
+    index++;
+    setTimeout(type, 150); // Adjust typing speed
+  } else {
+    setTimeout(() => {
+      element.innerHTML = ""; // Clear the text
+      index = 0; // Reset index
+      type(); // Start typing again
+    }, 1000); // Wait a bit before restarting
+  }
+}
+
+type(); // Start typing effect
+</script>
 
 </body></html>
