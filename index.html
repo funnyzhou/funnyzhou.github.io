@@ -799,24 +799,28 @@
 
 <script>
     const element = document.getElementById("autoTyping");
-    const text = "Compound Medical AI Systems."; // Text to type and delete
-    let index = 0;
+    const texts = ["Compound Medical AI Systems.", "Medical Representation Learning.", "Scalable Medical AI."]; // Array of texts
+    let textIndex = 0; // Index to track which text is being typed
+    let charIndex = 0; // Index to track the current character position
     let deleting = false;
     
     function updateText() {
+      const currentText = texts[textIndex]; // Get the current text based on textIndex
+
       if (!deleting) {
-        if (index < text.length) {
-          element.innerHTML += text.charAt(index);
-          index++;
+        if (charIndex < currentText.length) {
+          element.innerHTML += currentText.charAt(charIndex);
+          charIndex++;
         } else {
           setTimeout(() => { deleting = true; }, 500); // Wait a bit before starting to delete
         }
       } else {
-        if (index > 0) {
+        if (charIndex > 0) {
           element.innerHTML = element.innerHTML.slice(0, -1);
-          index--;
+          charIndex--;
         } else {
           deleting = false; // Switch back to typing mode
+          textIndex = (textIndex + 1) % texts.length; // Move to the next text and loop back to the first after the last
         }
       }
       setTimeout(updateText, deleting ? 50 : 150); // Speed up deletion
