@@ -279,8 +279,8 @@
     <ul>
         <li> I am a postdoctoral fellow at the <a href="https://dbmi.hms.harvard.edu/">Harvard DBMI</a>, working with <a href="https://pranavrajpurkar.com/">Pranav Rajpurkar</a>.</li>
 		<li> My research lies in the intersection of artificial intelligence, medicine, and data science.
-        <li> These days, I am attracted to the advancement of <span id="autoTyping"></span></li>
-        <li>A few topics that I am actively exploring or working on:</li>
+        <li> I study <span id="autoTyping"></span></li>
+        <li> A few topics that I am actively exploring or working on:</li>
         <ul>
             <li> Generalist modeling, </li>
             <li> Generalized representation learning, </li>
@@ -799,7 +799,8 @@
 
 <script>
     const element = document.getElementById("autoTyping");
-    const texts = ["Compound Medical AI Systems.", "Medical Representation Learning.", "Scalable Medical AI."]; // Array of texts
+    // const texts = ["Compound Medical AI Systems.", "Medical Representation Learning.", "Scalable Medical AI."]; // Array of texts
+    const texts = ["autonomous medical AI systems that can generalize and scale."]
     let textIndex = 0; // Index to track which text is being typed
     let charIndex = 0; // Index to track the current character position
     let deleting = false;
@@ -812,7 +813,7 @@
           element.innerHTML += currentText.charAt(charIndex);
           charIndex++;
         } else {
-          setTimeout(() => { deleting = true; }, 500); // Wait a bit before starting to delete
+          setTimeout(() => { deleting = true; }, 5000); // Wait a bit before starting to delete
         }
       } else {
         if (charIndex > 0) {
