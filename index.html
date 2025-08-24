@@ -1,441 +1,1515 @@
-<!-- saved from url=(0031)https://funnyzhou.github.io/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Hong-Yu Zhou</title>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Hong-Yu Zhou | Assistant Professor | Tsinghua University</title>
 
-<link rel="stylesheet" href="./zhouhy_files/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<script src="./zhouhy_files/jquery-3.1.1.slim.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-    @keyframes blink {
-      from, to { border-color: transparent }
-      50% { border-color: black; }
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    #autoTyping {
-      font-family: Avenir;
-      border-right: 2px solid black;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: blink 0.75s step-end infinite;
+    
+    body {
+        font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+    
+    .main-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        overflow: hidden;
+    }
+    
+    .header-section {
+        background: linear-gradient(135deg, #6B46C1 0%, #4C1D95 100%);
+        color: white;
+        padding: 60px 40px;
+        position: relative;
+    }
+    
+    .language-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(255,255,255,0.2);
+        border: 2px solid white;
+        border-radius: 30px;
+        padding: 8px 20px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .language-toggle:hover {
+        background: rgba(255,255,255,0.3);
+        transform: translateY(-2px);
+    }
+    
+    .language-toggle i {
+        font-size: 18px;
+    }
+    
+    .header-content {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 15px;
+        border: 4px solid white;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    .header-info h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    
+    .header-info .title {
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 5px;
+    }
+    
+    .header-info .affiliation {
+        font-size: 24px;
+        opacity: 0.95;
+        line-height: 1.5;
+    }
+    
+    .contact-info {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .contact-item i {
+        margin-right: 8px;
+    }
+    
+    .contact-info a {
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255,255,255,0.5);
+        transition: all 0.3s;
+    }
+    
+    .contact-info a:hover {
+        border-bottom-color: white;
+    }
+    
+    .social-links {
+        margin-top: 20px;
+        display: flex;
+        gap: 15px;
+    }
+    
+    .social-links a {
+        width: 45px;
+        height: 45px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+        background: rgba(255,255,255,0.3);
+        transform: translateY(-3px);
+    }
+    
+    .nav-section {
+        background: #f8f9fa;
+        padding: 0;
+        border-bottom: 3px solid #e9ecef;
+    }
+    
+    .nav-tabs {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+    }
+    
+    .nav-tab {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+        cursor: pointer;
+        background: transparent;
+        transition: all 0.3s;
+        font-weight: 500;
+        color: #4C1D95;
+        position: relative;
+    }
+    
+    .nav-tab:hover {
+        background: #e9ecef;
+    }
+    
+    .nav-tab.active {
+        background: white;
+        color: #6B46C1;
+    }
+    
+    .nav-tab.active::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: #6B46C1;
+    }
+    
+    .content-section {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+    .section-content {
+        display: none;
+    }
+    
+    .section-content.active {
+        display: block;
+    }
+    
+    h2 {
+        color: #4C1D95;
+        font-size: 32px;
+        margin-bottom: 25px;
+        font-weight: 600;
+        border-bottom: 3px solid #6B46C1;
+        padding-bottom: 10px;
+    }
+    
+    h3 {
+        color: #6B46C1;
+        font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+    
+    .research-area {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        border-left: 4px solid #6B46C1;
+    }
+
+    .news-area {
+        background: #cfd2d4;
+        padding: 10px;
+        border-radius: 5px;
+        border-left: 6px solid #6B46C1;
+        font-size: 20px;
+    }
+    
+    .research-area h4 {
+        color: #4C1D95;
+        margin-bottom: 10px;
+    }
+    
+    .publication-item {
+        background: white;
+        border: 1px solid #e9ecef;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        transition: all 0.3s;
+    }
+    
+    .publication-item:hover {
+        box-shadow: 0 5px 15px rgba(108, 70, 193, 0.1);
+        transform: translateY(-2px);
+    }
+    
+    .publication-title {
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+    
+    .publication-authors {
+        color: #7f8c8d;
+        margin-bottom: 8px;
+    }
+    
+    .publication-venue {
+        color: #6B46C1;
+        font-weight: 500;
+    }
+    
+    .publication-links {
+        margin-top: 10px;
+    }
+    
+    .publication-links a {
+        margin-right: 15px;
+        color: #6B46C1;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    
+    .publication-links a:hover {
+        text-decoration: underline;
+    }
+    
+    .highlight-box {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        margin: 30px 0;
+    }
+    
+    .highlight-box h3 {
+        color: white;
+        border-bottom: 2px solid rgba(255,255,255,0.3);
+        padding-bottom: 10px;
+    }
+    
+    .team-member {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #e7e9ed;
+        border-radius: 10px;
+    }
+    
+    .team-member img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+    
+    .team-member-info h4 {
+        color: #4C1D95;
+        margin-bottom: 5px;
+    }
+    
+    .news-item {
+        padding: 15px;
+        border-left: 3px solid #6B46C1;
+        margin-bottom: 15px;
+        background: #f8f9fa;
+    }
+    
+    .news-date {
+        color: #6B46C1;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    ul li {
+        padding: 8px 0;
+        padding-left: 25px;
+        position: relative;
+    }
+    
+    ul li:before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: #6B46C1;
+        font-weight: bold;
+    }
+    
+    .badge-highlight {
+        background: #ff6b6b;
+        color: white;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    
+    .lang-en {
+        display: block;
+    }
+    
+    .lang-cn {
+        display: none;
+    }
+    
+    body.chinese .lang-en {
+        display: none;
+    }
+    
+    body.chinese .lang-cn {
+        display: block;
+    }
+    
+    @media (max-width: 768px) {
+        .header-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .nav-tabs {
+            flex-direction: column;
+        }
+        
+        .nav-tab {
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .language-toggle {
+            position: static;
+            margin-bottom: 20px;
+        }
     }
 </style>
-
-<style type="text/css">
- @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
- /* @font-face {
-    font-family: custom-font;
-    src: url(./CAVOLINI.TTF);
-  } */
-  body
-  {
-  	font-family: Avenir;
-      background-color : #CDCDCD;
-      font-size: 16px;
-  }
-      .content
-  	{
-      		/* width : device-width; */
-      		padding : 25px 30px;
-      		margin : 0px auto;
-      		background-color : #fff;
-      		box-shadow: 0px 0px 10px #999;
-      		border-radius: 15px; 
-  	}	
-  	table
-  	{
-  		padding: 5px;
-  	}
-  	
-  	table.pub_table,td.pub_td1,td.pub_td2
-  	{
-  		padding: 8px;
-  		width: 850px;
-          border-collapse: separate;
-          border-spacing: 15px;
-          margin-top: -5px;
-  	}
-
-  	td.pub_td1
-  	{
-  		width:50px;
-  	}
-      td.pub_td1 img
-      {
-          height:120px;
-          width: 160px;
-      }
-  	
-  	div#container
-  	{
-  		margin-left: auto;
-  		margin-right: auto;
-  		width: 820px;
-  		text-align: left;
-  		position: relative;
-  		background-color: #FFF;
-  	}
-  	div#DocInfo
-  	{
-  		color: #1367a7;
-  		height: 158px;
-  	}
-  	h4,h3,h2,h1
-  	{
-  		color: #3B3B3B;
-  	}
-  	h2
-  	{
-  		font-size:130%;
-  	}
-  	p
-  	{
-  		color: #5B5B5B;
-  		margin-bottom: 50px;
-  	}
-  	p.caption
-  	{
-  		color: #9B9B9B;
-  		text-align: left;
-  		width: 600px;
-  	}
-  	p.caption2
-  	{
-  		color: #9B9B9B;
-  		text-align: left;
-  		width: 800px;
-  	}
-  	#header_img
-  	{
-  		position: absolute;
-  		top: 0px; right: 0px;
-      }
-  	a:link,a:visited
-  	{
-  		/* color: #1367a7;  */
-        color: black;
-  		text-decoration: none;
-  	}
-
-      #hku_logo {
-          position: absolute;
-          left: 646px;
-          top: 14px;
-          width: 200px;
-          height: 20px;
-      }
-     
-      table.pub_table tr {
-          outline: thin dotted #666666;
-      }
-      .papericon {
-          border-radius: 8px; 
-          -moz-box-shadow: 3px 3px 6px #888;
-          -webkit-box-shadow: 3px 3px 6px #888;
-          box-shadow: 3px 3px 6px #888;
-      }
-      .one{
-        margin-bottom: 1em;
-      }
-      .two{
-        margin-top: 1em;
-      }
-      .media {
-          margin-bottom: 15px;
-          margin-left: 10px;
-      }
-
-      .media-body {
-          margin-top: 5px;
-          padding-left: 20px;
-      }
-
-      .publication {
-          margin-bottom: 15px;
-      }
-
-      .papers-selected .publication {
-          display: none;
-      }
-
-      .papers-selected .book-chapters {
-          display: none;
-      }
-
-      .papers-selected #show-selected {
-          color: black;
-          text-decoration: underline;
-      }
-
-      .papers-selected .paperhi {
-          display: flex;
-      }
-
-      .papers-selected .paper-year {
-          display: none;
-      }
-
-      .papers-by-date #show-by-date {
-          color: black;
-          text-decoration: underline;
-      }
-
-      .papers-by-date .paper-selected {
-          display: none;
-      }
-
-      .papers-by-date .book-chapters {
-          display: none;
-      }
-
-      .book-chapters #book-chapters {
-          color: black;
-          text-decoration: underline;
-      }
-
-      .book-chapters .paper-selected,
-      .book-chapters .paper-year,
-      .book-chapters .publication {
-          display: none;
-      }
-
-      .book-chapters .chapter {
-          display: flex;
-      }
-
-      /* .papers-by-date .paperhi {
-          display: none;
-      } */
-
-      .hidden>div {
-          display: none;
-      }
-
-      .visible>div {
-          display: block;
-      }
-</style>
-
-<script>
-  $(document).ready(function () {
-        $('#show-selected').click(function () {
-            $('.papers-container').removeClass('papers-by-date');
-            $('.papers-container').addClass('papers-selected');
-        });
-
-        $('.papers-container').addClass('papers-selected');
-
-        $('.text_container').addClass("hidden");
-        $('.text_container').click(function () {
-            var $this = $(this);
-
-            if ($this.hasClass("hidden")) {
-                $(this).removeClass("hidden").addClass("visible");
-            } else {
-                $(this).removeClass("visible").addClass("hidden");
-            }
-        });
-
-  });
-</script>
 </head>
 
 <body>
-<div class="content">
-	<div id="container">
-
-	<table>
-	<tbody><tr>
-	<td><img id="myPicture" src="./zhouhy_files/me_hk.jpg" style="float:left; margin-right: 20px; margin-bottom: 20px;" height="170px" class="papericon"></td>
-	<td>
-	<div id="DocInfo">
-		<font size="6" color="black">Hong-Yu Zhou</font><br>
-        <font color="black">Postdoctoral fellow</font><br>
-        <font color="black">Department of Biomedical Informatics</font><br>
-        <font color="black">Harvard Medical School</font><br> 
-        <font color="black">Harvard University<font><br>
-        <font color="black">Email:</font><a href="mailto:whuzhouhongyu@gmail.com"> <font>whuzhouhongyu at gmail.com </font></a><br>
-        <a href="https://twitter.com/HongYuZhou14" alt="twitter"><img width="42" src="twitter.png"></img></a><a href="https://scholar.google.com/citations?hl=zh-CN&user=aJnvh8gAAAAJ&view_op=list_works&sortby=pubdate" alt="gscholar"><img width="27" src="gscholar.png"></img></a><br> 
-	</div><br>
-        <!-- <div id="hku_logo"> -->
-        <!-- <a href="https://www.hku.hk/"><img src="./zhouhy_files/hku_icon.jpg" height="170px" class="papericon"></a> -->
-    </div>
-	</td>
-	</tr>
-	</tbody></table>
-
-	<!-- <h2>Bio</h2> -->
-    <ul>
-        <!-- <li> On the <strong style="color: #8B0000;">Job Market</strong> this year! Looking for positions in computational health, computer science, and related fields! Any contacts or opportunities are welcome (<a href="mailto:hongyu_zhou@hms.harvard.edu"><strong style="color: #8B0000;">click</strong></a> to shoot me an email)!</li> -->
-        <li> I am a postdoctoral fellow at the <a href="https://dbmi.hms.harvard.edu/">Harvard DBMI</a>, working with <a href="https://pranavrajpurkar.com/">Pranav Rajpurkar</a>.</li>
-		<li> My research lies in the intersection of artificial intelligence, medicine, and healthcare.
-        <li> I develop <span id="autoTyping"></span></li>
-        <!-- <li> I am currently researching pathways to improve the scalability of medical AI systems:</li> -->
-        <!-- <ul>
-            <li> Holistic multimodal analytics: <font color="grey">How can we leverage multimodal biomedical data (medical images, lab results, etc) to improve the modeling accuracy and to what extent can it do so?</font> </li>
-            <li> Health insights at scale: <font color="grey">How can one access a multitude of high-quality health insights (diagnoses, etc) at a notably reduced expense?</font></li>
-            <li> Scaling system design: <font color="grey">Can we improve the modeling accuracy by increasing the data or model scale, for example, integrating large language models? How far can we go?</font> </li>
-        </ul> -->
-        <li>I finished my PhD at <a href="https://www.hku.hk/">The University of Hong Kong</a>, advised by <a href="https://i.cs.hku.hk/~yzyu/">Yizhou Yu</a> and my master degree at <a href="https://www.nju.edu.cn/en/">Nanjing University</a>, advised by <a href="https://cs.nju.edu.cn/wujx/">Jianxin Wu</a>. Before that, I received my undergraduate degree from <a href="https://en.whu.edu.cn/">Wuhan University</a>.</li>
-    </ul>
-	
-    <h2>Recent Updates</h2>
-    <ul>
-        <!-- <img alt="New!" width="50" src="R.gif"> -->
-      <li>[2024/09] Top 2% Scientists Worldwide 2024 by Stanford University </li>
-      <li>[2024/09] One paper &rarr; Nature Communications, One paper &rarr; Nature Medicine </li>
-      <li>[2024/08] Three papers &rarr; MICCAI 2024 </li>  
-      <li>[2024/07] One paper &rarr; MLHC 2024 </li>
-      <li>[2024/06] Three papers (including Swin-UMamba) &rarr; MICCAI 2024 </li> 
-      <li>[2024/05] One paper &rarr; MIDL 2024</a></li>
-      <li>[2024/02] We released <a href="https://arxiv.org/abs/2402.03302">Swin-UMamba</a>!</li>
-      <li>[2024/02] Three papers &rarr; ISBI 2024</li>
-      <!-- <li>[2023/12] <a href="https://arxiv.org/abs/2310.16436">Multimodal Chain-of-Thought prompting</a> &rarr; NeurIPS 2023</li>
-      <li>[2023/07] Foundation Publication Award (HKU, 2023)</li>
-      <li>[2023/06] nnFormer &rarr; TIP</li>
-      <li>[2023/05] ICMA PhD Fellowship (5 Recipients worldwide)</li>
-      <li>[2023/04] One paper &rarr; Nature Biomedical Engineering</li>
-      <li>[2023/01] Two papers &rarr; ICLR 2023 </li>  -->
-    </ul>
-      <div class="papers-container">
-          <div class="publication-anchor" id="publication-anchor"></div>
-          <h2 class="paperlo">Paper <span id="paper-show">(<span id="show-selected">Selected</span> /
-            <a href="https://scholar.google.com/citations?hl=zh-CN&user=aJnvh8gAAAAJ&view_op=list_works&sortby=pubdate" id="show-by-date">Full</a>)</span>
-          </h2>
-          <div class="paper-selected">
-          <br>
-                    <div class="publication media paperhi">
-                        <div class="media-body ">
-                            <a class="paper-title" href="">
-                            <b> A Transformer-based Representation-learning Model with Unified Processing of Multimodal Input for Clinical Diagnostics.</b></a>
-                            <br> <font color="grey">Hong-Yu Zhou*, Yizhou Yu*, Chengdi Wang*, Shu Zhang, Yuanxu Gao, Jia Pan, Jun Shao, Guangming Lu, Kang Zhang, Weimin Li.</font>
-                            <br><i class="fa fa-lightbulb-o" style="font-size:20px"></i> <font color="red"> A multimodal transformer for clinical diagnostics.</font>
-                            <br><a href="https://www.nature.com/natbiomedeng/?origen=app">Nature Biomedical Engineering 2023</a> | <a href="https://t.co/096K7GQf9B">Paper</a> | <a href="https://github.com/RL4M/IRENE" target="_blank">Code</a> | ESI - Top 1% highly cited papers
-                            <br>
-                        </div>
+<div class="main-container">
+    <!-- Header Section -->
+    <div class="header-section">
+        <!-- <div class="language-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i>
+            <span class="lang-en">中文</span>
+            <span class="lang-cn">English</span>
+        </div> -->
+        
+        <div class="header-content">
+            <img src="./zhouhy_files/me_hk.jpg" alt="Hong-Yu Zhou" class="profile-image">
+            <div class="header-info">
+                <h1>
+                    <span class="lang-en">Hong-Yu Zhou, Ph.D.</span>
+                    <span class="lang-cn">周洪宇 博士</span>
+                </h1>
+                <div class="affiliation">
+                    <span class="lang-en">
+                        Tenure-Track Assistant Professor @ Tsinghua University
+                    </span>
+                    <span class="lang-cn">
+                        长聘教轨助理教授 @ 清华大学
+                    </span>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i> 
+                        <span class="lang-en">Email:&nbsp</span>
+                        <span class="lang-cn">邮箱：</span>
+                        <a href="mailto:hongyu_zhou@tsinghua.edu.cn">hyzhou at tsinghua.edu.cn</a>
                     </div>
-                    <div class="publication media paperhi">
-                        <div class="media-body ">
-                            <a class="paper-title" href="https://arxiv.org/abs/2301.13155">
-                            <b> Advancing Radiograph Representation Learning with Masked Record Modeling.</b></a>
-                            <br> <font color="grey">Hong-Yu Zhou*, Chenyu Lian*, Liansheng Wang, Yizhou Yu.</font>
-                            <br><i class="fa fa-lightbulb-o" style="font-size:20px"></i> <font color="red"> Multimodal modeling for visual representation learning.</font>
-                            <br><a href="https://iclr.cc/Conferences/2023">ICLR 2023</a> | <a href="https://openreview.net/pdf?id=w-x7U26GM7j">Paper</a> | <a href="https://github.com/RL4M/MRM-pytorch?tab=readme-ov-file">Code</a>
-                            <br>
-                        </div>
+                    <div class="contact-item">
+                        <i class="fas fa-building"></i> 
+                        <span class="lang-en">Office: Biomedical Engineering Building, Room 301</span>
+                        <span class="lang-cn">办公室：生物医学工程楼 301室</span>
                     </div>
-                    <div class="publication media paperhi">
-                        <div class="media-body ">
-                            <a class="paper-title" href="https://arxiv.org/abs/2109.03201">
-                            <b> nnFormer: Volumetric Medical Image Segmentation via a 3D Transformer.</b></a>
-                            <br> <font color="grey">Hong-Yu Zhou*, Jiansen Guo*, Yinghao Zhang*, Xiaoguang Han, Lequan Yu, Liansheng Wang, Yizhou Yu.</font>
-                            <br><i class="fa fa-lightbulb-o" style="font-size:20px"></i><font color="red"> A widely adopted baseline for 3D medical image segmentation.</font>
-                            <br> <a href="https://ieeexplore.ieee.org/document/10183842?denied=">TIP 2023</a> | <a href="https://arxiv.org/abs/2109.03201">Paper</a> | <a href="https://github.com/282857341/nnFormer">Code</a> | ESI - Top 1% highly cited papers
-                            <br>
-                        </div>
-                    </div>
-                    <div class="publication media paperhi">
-                        <div class="media-body ">
-                            <a class="paper-title" href="https://arxiv.org/abs/2206.02355">
-                            <b> A Unified Visual Information Preservation Framework for Self-supervised Pre-training in Medical Image Analysis.</b></a>
-                            <br> <font color="grey">Hong-Yu Zhou*, Chixiang Lu*, Chaoqi Chen, Sibei Yang, Yizhou Yu.</font>
-                            <!-- <br><i class="fa fa-lightbulb-o" style="font-size:20px"></i><font color="red"> New state-of-the-arts of self-supervised learning on multimodal imaging data.</font> -->
-                            <br> <a href="https://ieeexplore.ieee.org/document/10005161/">TPAMI 2023</a> | <a href="https://arxiv.org/pdf/2301.00772.pdf">Paper</a> | <a href="https://github.com/RL4M/PCRLv2">Code</a>
-                            <br>
-                        </div>
-                    </div>
-                    <div class="publication media paperhi">
-                        <div class="media-body ">
-                            <a class="paper-title" href="https://arxiv.org/abs/2111.03452">
-                            <b> Generalized Radiograph Representation Learning via Cross-supervision between Images and Free-text Radiology Reports.</b></a>
-                            <br> <font color="grey">Hong-Yu Zhou*, Xiaoyu Chen*, Yinghao Zhang*, Ruibang Luo, Liansheng Wang, Yizhou Yu.</font>
-                            <!-- <br>[<a href="https://www.nature.com/articles/s42256-021-00425-9">Nature MI</a>, <a href="https://arxiv.org/abs/2111.03452" target="_blank">arXiv</a>, <a href="https://github.com/funnyzhou/REFERS" target="_blank">Code</a>, <a href="https://www.asianscientist.com/2022/06/in-the-lab/revolutionizing-ai-enabled-medical-imaging" target="_blank">AsianScientist</a>, <a href="https://thepaper.cn/newsDetail_forward_17590325" target="_blank">ThePaper(澎湃新闻)</a>] -->
-                            <!-- <br><font color="red">We propose cross-supervised learning to learn X-ray representations from associated radiology reports, which achieves great improvements over previous self-supervised methodologies.</font> -->
-                            <br><a href="https://www.nature.com/natmachintell/">Nature Machine Intelligence 2023</a> | <a href="https://www.nature.com/articles/s42256-021-00425-9">Paper</a> | <a href="https://github.com/funnyzhou/REFERS">Code</a> 
-                            <br>
-                        </div>
-                    </div>
-                    <div class="publication media paperhi">
-                        <div class="media-body ">
-                            <a class="paper-title" href="https://arxiv.org/abs/2109.03201">
-                            <b> Preservational Learning Improves Self-supervised Medical Image Models by Reconstructing Diverse Contexts.</b></a>
-                            <br> <font color="grey">Hong-Yu Zhou*, Chixiang Lu*, Sibei Yang, Xiaoguang Han, Yizhou Yu.</font>
-                            <!-- <br>[<a href="https://arxiv.org/abs/2109.04379" target="_blank">Paper</a>, <a href="https://github.com/Luchixiang/PCRL" target="_blank">Code</a>] -->
-                            <!-- <br><font color="red">New state-of-the-arts of self-supervised medical image pre-training on both 2D and 3D data.</font> -->
-                            <br> <a href="https://iccv2021.thecvf.com/home"> ICCV 2021 </a> | <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Zhou_Preservational_Learning_Improves_Self-Supervised_Medical_Image_Models_by_Reconstructing_Diverse_ICCV_2021_paper.pdf">Paper</a> | <a href="https://github.com/Luchixiang/PCRL">Code</a>
-                            <br>
-                        </div>
-                    </div>
-                    <div class="publication media paperhi">
-                        <div class="media-body ">
-                            <a class="paper-title" href="https://arxiv.org/abs/2007.07423">
-                            <b> Comparing to Learn: Surpassing ImageNet Pretraining on Radiographs by Comparing Image Representations.</b></a>
-                            <br> <font color="grey">Hong-Yu Zhou*, Shuang Yu*, Kai Ma, Cheng Bian, Chunyan Chu, Hanruo Liu, Yefeng Zheng.</font>
-                            <!-- <br>[<a href="https://arxiv.org/abs/2007.07423" target="_blank">Paper</a>, <a href="https://github.com/funnyzhou/C2L_MICCAI2020" target="_blank">Code</a>] -->
-                            <!-- <br><font color="red">The first contrastive pre-training method in medical image analysis.</font> -->
-                            <br> <a href="https://miccai2020.org/en/">MICCAI 2020</a> | <a href="https://arxiv.org/abs/2007.07423">Paper</a> | <a href="https://github.com/funnyzhou/C2L_MICCAI2020">Code</a>
-                            <br>
-                        </div>
-                    </div> 
-          </div>
-
-    <div class="text_container visible">
-        <div class="award-anchor" id="award-anchor"></div>
-        <h2 name='award' id='award'>Selected Awards</h2>
-        <div>
-            <ul>
-                <!-- <li><b>First place</b> in AASCE 2019, held in conjunction with MICCAI 2019. We proposed an approach to accurately estimate the spinal curvature in Adolescent Idiopathic Scoliosis (AIS). Press coverage: <a href="https://tech.china.com/article/20190929/kejiyuan0129377260.html">中华网</a> <a href="http://www.kejixun.com/article/190929/474694.shtml">科技讯</a> <a href=" http://yisheng.12120.net/news/jkpt/content_0910114529.html">中国好医生网</a> <a href="https://tech.ifeng.com/c/7qMGUlwISFH">凤凰网</a>.</li>
-                <li><b>First place</b> in Segthor 2019 Challenge, held in conjunction with ISBI 2019. We proposed a method to segment organs at risk segmentation in Computed Tomography (CT) images. Press coverage: <a href="https://tech.qq.com/a/20190619/003614.htm">腾讯科技</a> <a href="https://www.jiqizhixin.com/articles/2019-06-19-8">机器之心</a> <a href="https://tech.huanqiu.com/article/9CaKrnKl1aA">环球网</a> <a href="https://www.qbitai.com/2019/06/3231.html">量子位</a> <a href="https://www.sohu.com/a/322090752_610300">搜狐网</a>.</li>
-                <li><b>First place</b> in AI4Health Challenge, held by Thales group which provides solutions for over 50% of worldwide radiology examinations. In this challenge, we proposed a novel methodology to accurately detect key points in X-rays with a mean error smaller than <b>0.3 pixels</b>). Press coverage: <a href="http://www.ce.cn/xwzx/gnsz/gdxw/201907/12/t20190712_32605039.shtml">中国经济网</a> <a href="https://tech.huanqiu.com/article/9CaKrnKluBC">环球网</a> <a href="https://cloud.tencent.com/developer/article/1600187">腾讯新闻</a> <a href=""> <a href="http://www.geekpark.net/news/244645">极客公园</a> <a href="http://news.eastday.com/eastday/13news/auto/news/china/20190712/u7ai8688252.html">东方网</a>. </li> -->
-                <li><b>First place</b> in AASCE 2019, held in conjunction with MICCAI 2019. We proposed an approach to accurately estimate the spinal curvature in Adolescent Idiopathic Scoliosis (AIS).</li>
-                <li><b>First place</b> in Segthor 2019 Challenge, held in conjunction with ISBI 2019. We proposed a method to segment organs at risk segmentation in Computed Tomography (CT) images.</li>
-                <li><b>First place</b> in AI4Health Challenge, held by Thales group which provides solutions for over 50% of worldwide radiology examinations. In this challenge, we proposed a novel methodology to accurately detect key points in X-rays with a mean error smaller than <b>0.3 pixels</b>.</li>
-                <li><b>Second place</b> in ODIR 2019, held by Peking University.</li>
-            </ul>
+                </div>
+                <!-- <div class="social-links">
+                    <a href="https://scholar.google.com/citations?hl=zh-CN&user=aJnvh8gAAAAJ" target="_blank">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="https://twitter.com/HongYuZhou14" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://github.com/funnyzhou" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hongyu-zhou" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div> -->
+            </div>
         </div>
     </div>
 
+    <!-- Navigation -->
+    <div class="nav-section">
+        <ul class="nav-tabs">
+            <li class="nav-tab active" onclick="showSection('about')">
+                <span class="lang-en">About</span>
+                <span class="lang-cn">关于</span>
+            </li>
+            <!-- <li class="nav-tab" onclick="showSection('research')">
+                <span class="lang-en">Research</span>
+                <span class="lang-cn">研究</span>
+            </li> -->
+            <li class="nav-tab" onclick="showSection('lab')">
+                <span class="lang-en">AIMS Lab</span>
+                <span class="lang-cn">AIMS实验室</span>
+            </li>
+            <li class="nav-tab" onclick="showSection('publications')">
+                <span class="lang-en">Publications</span>
+                <span class="lang-cn">发表论文</span>
+            </li>
+            <!-- <li class="nav-tab" onclick="showSection('teaching')">
+                <span class="lang-en">Teaching</span>
+                <span class="lang-cn">教学</span>
+            </li> -->
+            <!-- <li class="nav-tab" onclick="showSection('openings')">
+                <span class="lang-en">Openings</span>
+                <span class="lang-cn">招聘</span>
+            </li> -->
+        </ul>
+    </div>
 
-    <h2>Academic Service</h2>
-    I regularly serve as reviewers for following conferences and journals.
-    <ul>
-	    <li>Conference: for ICLR, ICML, NeurIPS, CVPR, ICCV, ECCV, AAAI, MICCAI, etc.</li>
-      <li>Journal: for Nature, Nature Biomedical Engineering, Nature Machine Intelligence, TPAMI, TMI, MedIA, TKDE, TMM, TIP, Pattern Recognition, iScience (Cell family), etc.</li>
-    </ul>
-</div>
+    <!-- Content Sections -->
+    <div class="content-section">
+        <!-- About Section -->
+        <div id="about" class="section-content active">
+            <h3>
+                <span class="lang-en">About Me</span>
+                <span class="lang-cn">个人简介</span>
+            </h3>
+            <p style="font-size: 19px; line-height: 1.6; color: #2c3e50;">
+                <span class="lang-en">
+                    I am a tenure-track assistant professor and principal investigator in Biomedical Engineering at Tsinghua University. 
+                    <br>Previously, I served as the founding member and Head of AI Systems at <a href="https://a2zradiology.ai/">a2z radiology AI</a>, and as a postdoctoral fellow at Harvard University, advised by Professor <a href="https://pranavrajpurkar.com/">Pranav Rajpurkar</a>.
+                    I obtained my Ph.D. from the University of Hong Kong in Computer Science, advised by Professor <a href="https://i.cs.hku.hk/~yzyu/">Yizhou Yu</a>. 
+                    I spent two years at Tencent as a research scientist.
+                    Before that, I received degrees from Nanjing University and Wuhan University.
+                </span>
+                <span class="lang-cn">
+                    我是清华大学生物医学工程学院的长聘教轨助理教授及AIMS课题组负责人。
+                    <br>在此之前，我曾担任 <a href="https://a2zradiology.ai/">a2z radiology AI</a> 的创始成员兼AI系统负责人，并在哈佛大学从事博士后研究，合作导师为 <a href="https://pranavrajpurkar.com/">Pranav Rajpurkar</a>教授。
+                    我于香港大学计算机系获得博士学位，师从<a href="https://i.cs.hku.hk/~yzyu/">俞益洲</a>教授。
+                    之前，我作为研究科学家在腾讯公司工作过两年。
+                    我分别在南京大学和武汉大学完成本硕阶段的学习。
+                </span>
+            </p>
+            
+            <h3>
+                <span class="lang-en">About AIMS Lab</span>
+                <span class="lang-cn">关于AIMS实验室</span>
+            </h3>
+            <p style="font-size: 19px; line-height: 1.6; color: #2c3e50;">
+                <span class="lang-en">
+                    Our lab, AIMS (<u>a.k.a. AI for Medicine at Scale</u>), studies intelligence to curate scalable, trustworthy, and medically useful AI for healthcare. 
+                    We are particularly interested in curating <b>patient-AI ecosystems</b>, encompassing embodied intelligent agents designed to improve the quality of healthcare delivery through direct patient-AI interactions.
+                </span>
+                <span class="lang-cn">
+                    我创立的实验室 <b>AIMS (AI for Medicine at Scale)</b> 致力于通过人工智能技术构建可扩展、可信赖、具有临床实用价值的医疗决策支持系统。
+                </span>
+            </p>
+
+            <p style="font-size: 19px; line-height: 1.6; color: #2c3e50;">
+                <span class="lang-en">
+                    <strong>We are actively recruiting self-motivated researchers at different levels, including Ph.D. students, Undergraduates, and Research Interns at Tsinghua. 
+                    We also very much welcome people with clinical medical backgrounds or wearable device development experience to join.
+                    Please email me with your CV.</strong>
+                </span>
+                <span class="lang-cn">
+                    欢迎加入我们的团队！我们正在积极招募各个层次的研究人员，包括博士后、博士生、本科生和实习生。请发送您的简历和简短的自我介绍到我的邮箱。
+                </span>
+            </p>
+
+            <h3>
+                <span class="lang-en">Recent News</span>
+                <span class="lang-cn">最新动态</span>
+            </h3>
+            <div class="news-item">
+                <div class="news-date">
+                    <span class="lang-en">July 2025</span>
+                    <span class="lang-cn">2025年7月</span>
+                </div>
+                <span class="lang-en">Our <a href="https://arxiv.org/pdf/2507.10492">paper</a> on benchmarking retinal anomaly detection, accepted by MICCAI 2025, is now available on arXiv. Congrats to Chenyu!</span>
+                <span class="lang-cn">我们关于视网膜异常检测的论文被MICCAI接收。</span>
+            </div>
+            <div class="news-item">
+                <div class="news-date">
+                    <span class="lang-en">June 2025</span>
+                    <span class="lang-cn">2025年6月</span>
+                </div>
+                <span class="lang-en">Our <a href="https://ieeexplore.ieee.org/abstract/document/11021425">paper</a> on efficient medical vision-language alignment in IEEE Transactions on Medical Imaging has been published online. Congrats to Chenyu!</span>
+                <span class="lang-cn">我们关于医学视觉语言对齐的论文被IEEE Transactions on Medical Imaging正式在线发表。</span>
+            </div>
+            <div class="news-item">
+                <div class="news-date">
+                    <span class="lang-en">May 2025</span>
+                    <span class="lang-cn">2025年5月</span>
+                </div>
+                <span class="lang-en">Our review on "<a href="https://www.nature.com/articles/s41746-025-01649-4">Multimodal generative AI for interpreting 3D medical images and videos</a>" in npj Digital Medicine has been published online. Congrats to Jung-Oh!</span>
+                <span class="lang-cn">我们关于多模态生成式AI解读3D医学影像和视频的综述被npj Digital Medicine正式在线发表。</span>
+            </div>
+            <div class="news-item">
+                <div class="news-date">
+                    <span class="lang-en">April 2025</span>
+                    <span class="lang-cn">2025年4月</span>
+                </div>
+                <span class="lang-en">Our <a href="https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(25)00129-6">paper</a> on multimodal generative medical AI in Cell Reports Medicine has been published online. Congrats to Fei!</span>
+                <span class="lang-cn">我们关于多模态生成式医学AI的论文被Cell Reports Medicine正式在线发表。</span>
+                <span class="lang-en">Our <a href="https://ieeexplore.ieee.org/abstract/document/10948454">paper</a> on dynamic neural networks in IEEE Transactions on Neural Networks and Learning Systems has been published online. Congrats to Meng!</span>
+                <span class="lang-cn">我们关于动态神经网络的论文被IEEE Transactions on Neural Networks and Learning Systems正式在线发表。</span>
+            </div>
+            <div class="news-item">
+                <div class="news-date">
+                    <span class="lang-en">March 2025</span>
+                    <span class="lang-cn">2025年3月</span>
+                </div>
+                <span class="lang-en">Our <a href="https://arxiv.org/pdf/2408.02900">paper</a> on building a large-scale multimodal dataset for medicine, accepted by International Conference on Learning Representations 2025, is available on arXiv. Congrats to Yunfei!</span>
+                <span class="lang-cn">我们关于乳腺年龄估计的论文被Nature Communications正式在线发表。</span>
+            </div>
+            <div class="news-item">
+                <div class="news-date">
+                    <span class="lang-en">February 2025</span>
+                    <span class="lang-cn">2025年2月</span>
+                </div>
+                <span class="lang-en">Our <a href="https://ieeexplore.ieee.org/abstract/document/10879491">paper</a> on predicting therapy response for breast cancer patients in IEEE Journal of Biomedical and Health Informatics has been published online. Congrats to Yuan!</span>
+                <span class="lang-cn">我们关于预测乳腺癌新辅助治疗反应的论文被IEEE Journal of Biomedical and Health Informatics正式在线发表。</span>
+            </div>
+            <div class="news-item">
+                <div class="news-date">
+                    <span class="lang-en">January 2025</span>
+                    <span class="lang-cn">2025年1月</span>
+                </div>
+                <span class="lang-en">Two papers on generative medical AI in Nature Medicine have been published online. 
+                    One is about <a href="https://www.nature.com/articles/s41591-024-03359-y">building self-improving medical foundations models</a>, and the other is about <a href="https://www.nature.com/articles/s41591-024-03328-5">evaluating large language models for patient interaction tasks</a>. 
+                    Congrats to Jinzhuo and Shreya!</span>
+                <span class="lang-cn">我们关于自我进化的医学基础模型和大型语言模型在患者交互任务中的评估的两篇论文被Nature Medicine正式在线发表。</span>
+            </div>
+            <h3>
+                <span class="lang-en">Awards and Honors</span>
+                <span class="lang-cn">获奖情况</span>
+            </h3>
+            <b>
+            <ul>
+                <li>
+                    <span class="lang-en">Stanford/Elsevier Top 2% Scientist 2024</span>
+                    <span class="lang-cn">斯坦福/Elsevier全球前2%科学家 2024</span>
+                </li>
+                <li>
+                    <span class="lang-en">HKU Foundation Award for Outstanding Research Postgraduate Students (sole awardee from the CS department at HKU)</span>
+                    <span class="lang-cn">香港大学杰出研究奖 (香港大学计算机系唯一获得者)</span>
+                </li>
+                <li>
+                    <span class="lang-en">HKU Foundation Publication Award</span>
+                    <span class="lang-cn">香港大学出版奖</span>
+                </li>
+                <li>
+                    <span class="lang-en">ICMA (International Chinese MIC Association) PhD Fellowship Award (5 awardees worldwide)</span>
+                    <span class="lang-cn">国际华人影像计算协会博士奖 (全球5位获得者)</span>
+                </li>
+                <li>
+                    <span class="lang-en">Champion (1/79) in Accurate Automated Spinal Curvature Estimation challenge, held in conjunction with MICCAI</span>
+                    <span class="lang-cn">冠军 (1/79) 在MICCAI举办的精确自动脊柱曲率估计挑战赛</span>
+                </li>
+                <li>
+                    <span class="lang-en">Champion (1/638) in Segmentation of Thoracic Organs at Risk challenge, held in conjunction with ISBI</span>
+                    <span class="lang-cn">冠军 (1/638) 在ISBI举办的胸腔器官风险分割挑战赛</span>
+                </li>
+                <li>
+                    <span class="lang-en">Champion (1/200) in AI4Health global Challenge, held by Thales group</span>
+                    <span class="lang-cn">冠军 (1/200) 在Thales集团举办的AI4Health全球挑战赛</span>
+                </li>
+            </ul>
+            </b>
+        </div>
+
+        <!-- Research Section -->
+        <div id="research" class="section-content">
+            <h2>
+                <span class="lang-en">Research Overview</span>
+                <span class="lang-cn">研究概览</span>
+            </h2>
+            <p style="font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
+                <span class="lang-en">
+                    Our lab focuses on developing next-generation medical AI systems that can understand and integrate complex biomedical data 
+                    to improve clinical decision-making and patient outcomes. We work at the intersection of machine learning, computer vision, 
+                    and clinical medicine.
+                </span>
+                <span class="lang-cn">
+                    我们实验室专注于开发下一代医学AI系统，这些系统能够理解和整合复杂的生物医学数据，
+                    以改善临床决策和患者预后。我们的工作处于机器学习、计算机视觉和临床医学的交叉领域。
+                </span>
+            </p>
+
+            <h3>
+                <span class="lang-en">Current Research Projects</span>
+                <span class="lang-cn">当前研究项目</span>
+            </h3>
+            
+            <div class="research-area">
+                <h4>
+                    <span class="lang-en">1. Foundation Models for Medical Imaging</span>
+                    <span class="lang-cn">1. 医学影像基础模型</span>
+                </h4>
+                <p>
+                    <span class="lang-en">We are developing large-scale foundation models that can understand diverse medical imaging modalities and clinical contexts. 
+                    Our recent work on Swin-UMamba demonstrates state-of-the-art performance in medical image segmentation tasks.</span>
+                    <span class="lang-cn">我们正在开发能够理解多种医学成像模态和临床场景的大规模基础模型。
+                    我们最近的Swin-UMamba工作在医学图像分割任务中展现了最先进的性能。</span>
+                </p>
+            </div>
+
+            <div class="research-area">
+                <h4>
+                    <span class="lang-en">2. Multimodal Clinical Intelligence</span>
+                    <span class="lang-cn">2. 多模态临床智能</span>
+                </h4>
+                <p>
+                    <span class="lang-en">Building unified transformer architectures that can process and reason over multiple types of clinical data simultaneously, 
+                    including radiographs, lab results, and clinical notes. Our IRENE model published in Nature Biomedical Engineering represents 
+                    a breakthrough in this direction.</span>
+                    <span class="lang-cn">构建统一的transformer架构，能够同时处理和推理多种类型的临床数据，
+                    包括X光片、实验室结果和临床记录。我们在Nature Biomedical Engineering发表的IRENE模型代表了这个方向的突破。</span>
+                </p>
+            </div>
+
+            <div class="research-area">
+                <h4>
+                    <span class="lang-en">3. Self-Supervised Medical Representation Learning</span>
+                    <span class="lang-cn">3. 自监督医学表示学习</span>
+                </h4>
+                <p>
+                    <span class="lang-en">Developing novel self-supervised and cross-supervised learning methods that can leverage the vast amounts of unlabeled 
+                    medical data to improve model performance and generalization.</span>
+                    <span class="lang-cn">开发新型自监督和交叉监督学习方法，能够利用大量无标签医学数据来提高模型性能和泛化能力。</span>
+                </p>
+            </div>
+
+            <h3>
+                <span class="lang-en">Research Funding</span>
+                <span class="lang-cn">研究资助</span>
+            </h3>
+            <ul>
+                <li>
+                    <span class="lang-en">National Natural Science Foundation of China (NSFC) - Young Investigator Grant</span>
+                    <span class="lang-cn">国家自然科学基金青年科学基金项目</span>
+                </li>
+                <li>
+                    <span class="lang-en">Tsinghua University Start-up Fund</span>
+                    <span class="lang-cn">清华大学启动基金</span>
+                </li>
+                <li>
+                    <span class="lang-en">Beijing Municipal Science & Technology Commission</span>
+                    <span class="lang-cn">北京市科学技术委员会项目</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Research Group Section -->
+        <div id="lab" class="section-content">
+            <h3>
+                <span class="lang-en">Lab Members</span>
+                <span class="lang-cn">现有成员</span>
+            </h3>
+            
+            <div class="team-member">
+                <!-- <img src="https://via.placeholder.com/80" alt="Student"> -->
+                <div class="team-member-info">
+                    <h5>
+                        <span class="lang-en">Advised Ph.D. Students</span>
+                        <span class="lang-cn">博士研究生</span>
+                    </h5>
+                    <p>
+                        <span class="lang-en">Currently recruiting outstanding Ph.D. students (starting from 2026/2027 fall)</span>
+                        <span class="lang-cn">正在招收优秀博士研究生（2026/2027秋季入学）</span>
+                    </p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-member-info">
+                    <h5>
+                        <span class="lang-en">Co-advised Lab Members</span>
+                        <span class="lang-cn">联合指导学生</span>
+                    </h5>
+                    <p>
+                        <a href="https://scholar.google.com/citations?user=p_qmIH4AAAAJ&hl=en">Linwei Chen</a> (2025-Present, Postdoc@HKGAI)
+                        <br><a href="https://scholar.google.com/citations?user=p_qmIH4AAAAJ&hl=en">Chenyu Lian</a> (2024-Present, PhD@HKPU) → ICLR'23, TMI'25, MICCAI'25
+                        <br><a href="https://github.com/HandsomeWuuu">Shuai Wu</a> (2025-Present, PhD@HKU)
+                        <br>Jie Lin (2025-Present, PhD@Xiamen U)
+                    </p>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="team-member-info">
+                    <h5>
+                        <span class="lang-en">Alumni</span>
+                        <span class="lang-cn">毕业生</span>
+                    </h5>
+                    <p>
+                        Chixiang Lu (Past: Undergraduate@HUST, Now: PhD@HKU) → ICCV'21, IPMI'21, TMI'22, TPAMI'23
+                        <br>Yunxiang Fu (Past: Undergraduate at HKU, Now: PhD@HKU) → ICLR'24
+                        <br>Meng Lou (Past: Software Engineer@Deepwise, Now: PhD@HKU) → TNNLS'25, Neural Networks'25
+                        <br>Weijian Huang (PhD@CAS) → Nature Communications'24
+                        <br>Hao Yang (PhD@CAS) → Nature Biomedical Engineering (in press)
+                        <br>Jiarun Liu (PhD@CAS) → MICCAI'24, TMI'24
+                        <br>Yuan Gao (PhD@Netherlands Cancer Institute) → IEEE JBHI'25
+                        <br>Xing Wang (PhD@Netherlands Cancer Institute) → Nature Communications (in press)
+                        <br>Kai Wang (PhD@PKU)
+                        <br>Jiaxin Wu (Past: Undergraduate@HKU, Now: Software Engineer@UBS)
+                        <br>Zixuan Shan (Past: Undergraduate@HKU, Now: MS@NYU)
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- <div class="team-member">
+                <img src="https://via.placeholder.com/80" alt="Student">
+                <div class="team-member-info">
+                    <h4>
+                        <span class="lang-en">Master Students</span>
+                        <span class="lang-cn">硕士研究生</span>
+                    </h4>
+                    <p>
+                        <span class="lang-en">Positions available for motivated M.S. students</span>
+                        <span class="lang-cn">欢迎积极主动的硕士研究生加入</span>
+                    </p>
+                </div>
+            </div> -->
+
+            <!-- <div class="team-member">
+                <img src="https://via.placeholder.com/80" alt="Student">
+                <div class="team-member-info">
+                    <h4>
+                        <span class="lang-en">Research Assistants</span>
+                        <span class="lang-cn">研究助理</span>
+                    </h4>
+                    <p>
+                        <span class="lang-en">Opportunities for undergraduate researchers</span>
+                        <span class="lang-cn">为本科生提供研究机会</span>
+                    </p>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- Publications Section -->
+        <div id="publications" class="section-content">
+            <h3>
+                <span class="lang-en">Publications (without preprints)</span>
+                <span class="lang-cn">论文发表（不含预印本）</span>
+            </h3>
+            <p style="margin-bottom: 30px;">
+                <a href="https://scholar.google.com/citations?hl=en" target="_blank" style="color: #6B46C1; display: inline-flex; align-items: center; white-space: nowrap;">
+                    <i class="fas fa-external-link-alt" style="margin-right: 8px;"></i><span class="lang-en">View full publication list (including preprints) on Google Scholar</span><span class="lang-cn">在Google Scholar查看完整论文列表（包括预印本）</span>
+                </a>
+            </p>
+
+            <!-- 2025 Publications -->
+            <h4 style="margin-top: 30px; margin-bottom: 20px; color: #6B46C1;">
+                <span class="lang-en">2025</span>
+                <span class="lang-cn">2025年</span>
+            </h4>
+
+            <div class="publication-item">
+                <div class="publication-title">An evaluation framework for clinical use of large language models in patient interaction tasks</div>
+                <div class="publication-authors">Shreya Johri, Jaehwan Jeong, Benjamin A Tran, Daniel I Schlessinger, Shannon Wongvibulsin, Leandra A Barnes, <b>Hong-Yu Zhou</b>, Zhuo Ran Cai, Eliezer M Van Allen, David Kim, Roxana Daneshjou, Pranav Rajpurkar</div>
+                <div class="publication-venue">Nature Medicine, 2025</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Self-improving generative foundation model for synthetic medical image generation and clinical applications</div>
+                <div class="publication-authors">Jinzhuo Wang, Kai Wang, Yunfang Yu, Yuxing Lu, Wenchao Xiao, Zhuo Sun, Fei Liu, Zixing Zou, Yuanxu Gao, Lei Yang, <b>Hong-Yu Zhou</b>, Hanpei Miao, Wenting Zhao, Lisha Huang, Lingchao Zeng, Rui Guo, Ieng Chong, Boyu Deng, Linling Cheng, Xiaoniao Chen, Jing Luo, Meng-Hua Zhu, Daniel Baptista-Hon, Olivia Monteiro, Ming Li, Yu Ke, Jiahui Li, Simiao Zeng, Taihua Guan, Jin Zeng, Kanmin Xue, Eric Oermann, Huiyan Luo, Yun Yin, Kang Zhang, Jia Qu</div>
+                <div class="publication-venue">Nature Medicine, 2025</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">MetaGP: A Generative Foundation Model Integrating Electronic Health Records and Multimodal Imaging for Addressing Unmet Clinical Needs</div>
+                <div class="publication-authors">
+                    Fei Liu, <b>Hong-Yu Zhou</b>, Kai Wang, Yunfang Yu, Yuanxu Gao, Zhuo Sun, Sian Liu, Shanshan Sun, Zixing Zou, Zhuomin Li, Bingzhou Li, Hanpei Miao, Yang Liu, Taiwa Hou, Manson Fok, Nivritti Gajanan Patil, Kanmin Xue, Ting Li, Eric Oermann, Yun Yin, Lian Duan, Jia Qu, Xiaoying Huang, Shengwei Jin, Kang Zhang</div>
+                <div class="publication-venue">Cell Reports Medicine, 2025</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Multimodal Generative AI for Interpreting 3D Medical Images and Videos</div>
+                <div class="publication-authors">Jung-Oh Lee, <b>Hong-Yu Zhou</b>, Tyler M Berzin, Daniel K Sodickson, Pranav Rajpurkar</div>
+                <div class="publication-venue">npj Digital Medicine, 2025</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">BenchReAD: A Systematic Benchmark for Retinal Anomaly Detection</div>
+                <div class="publication-authors">Chenyu Lian, <b>Hong-Yu Zhou</b>, Zhanli Hu, Jing Qin</div>
+                <div class="publication-venue">International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2025</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Efficient Medical Vision-Language Alignment Through Adapting Masked Vision Models</div>
+                <div class="publication-authors">Chenyu Lian, <b>Hong-Yu Zhou</b>, Dongyun Liang, Jing Qin, Liansheng Wang</div>
+                <div class="publication-venue">IEEE Transactions on Medical Imaging, 2025</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Multi-Modal Longitudinal Representation Learning for Predicting Neoadjuvant Therapy Response in Breast Cancer Treatment</div>
+                <div class="publication-authors">Yuan Gao, Tao Tan, Xin Wang, Regina Beets-Tan, Tianyu Zhang, Luyi Han, Antonio Portaluri, Chunyao Lu, Xinglong Liang, Jonas Teuwen, <b>Hong-Yu Zhou</b>, Ritse Mann</div>
+                <div class="publication-venue">IEEE Journal of Biomedical and Health Informatics, 2025</div>
+            </div>
+            
+            <div class="publication-item">
+                <div class="publication-title">TransXNet: Learning Both Global and Local Dynamics with a Dual Dynamic Token Mixer for Visual Recognition</div>
+                <div class="publication-authors">Meng Lou, Shu Zhang, <b>Hong-Yu Zhou</b>, Sibei Yang, Chuan Wu, Yizhou Yu</div>
+                <div class="publication-venue">IEEE Transactions on Neural Networks and Learning Systems, 2025</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">SDR-Former: A Siamese Dual-Resolution Transformer for Liver Lesion Classification Using 3D Multi-Phase Imaging</div>
+                <div class="publication-authors">Meng Lou, Hanning Ying, Xiaoqing Liu, <b>Hong-Yu Zhou</b>, Yuqin Zhang, Yizhou Yu</div>
+                <div class="publication-venue">Neural Networks, 2025</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">MedTrinity-25M: A Large-Scale Multimodal Dataset with Multigranular Annotations for Medicine</div>
+                <div class="publication-authors">Yunfei Xie, Ce Zhou, Lang Gao, Juncheng Wu, Xianhang Li, <b>Hong-Yu Zhou</b>, Sheng Liu, Lei Xing, James Zou, Cihang Xie, Yuyin Zhou</div>
+                <div class="publication-venue">International Conference on Learning Representations (ICLR), 2025</div>
+            </div>
+
+            <!-- 2024 Publications -->
+            <h4 style="margin-top: 30px; margin-bottom: 20px; color: #6B46C1;">
+                <span class="lang-en">2024</span>
+                <span class="lang-cn">2024年</span>
+            </h4>
+
+            <div class="publication-item">
+                <div class="publication-title">Enhancing Representation in Radiography-Reports Foundation Model: A Granular Alignment Algorithm Using Masked Contrastive Learning</div>
+                <div class="publication-authors">Weijian Huang, Cheng Li, <b>Hong-Yu Zhou</b>, Hao Yang, Jiarun Liu, Yong Liang, Hairong Zheng, Shaoting Zhang, Shanshan Wang</div>
+                <div class="publication-venue">Nature Communications, 2024</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">An Explainable Longitudinal Multi-Modal Fusion Model for Predicting Neoadjuvant Therapy Response in Women with Breast Cancer</div>
+                <div class="publication-authors">Yuan Gao, Sofia Ventura-Diaz, Xin Wang, Muzhen He, Zeyan Xu, Arlene Weir, <b>Hong-Yu Zhou</b>, Tianyu Zhang, Frederieke H van Duijnhoven, Luyi Han, Xiaomei Li, Anna D’Angelo, Valentina Longo, Zaiyi Liu, Jonas Teuwen, Marleen Kok, Regina Beets-Tan, Hugo M Horlings, Tao Tan, Ritse Mann</div>
+                <div class="publication-venue">Nature Communications, 2024</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Concepts and Applications of Digital Twins in Healthcare and Medicine</div>
+                <div class="publication-authors">Kang Zhang, <b>Hong-Yu Zhou</b>, Daniel T Baptista-Hon, Yuanxu Gao, Xiaohong Liu, Eric Oermann, Sheng Xu, Shengwei Jin, Jian Zhang, Zhuo Sun, Yun Yin, Ronald M Razmi, Alexandre Loupy, Stephan Beck, Jia Qu, Joseph Wu</div>
+                <div class="publication-venue">Patterns, 2024</div>
+            </div>
+            
+            <div class="publication-item">
+                <div class="publication-title">A Survey on Graph Neural Networks and Graph Transformers in Computer Vision: A Task-Oriented Perspective</div>
+                <div class="publication-authors">Chaoqi Chen, Yushuang Wu, Qiyuan Dai, <b>Hong-Yu Zhou</b>, Mutian Xu, Sibei Yang, Xiaoguang Han, Yizhou Yu</div>
+                <div class="publication-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence, 2024</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Swin-UMamba†: Adapting Mamba-Based Vision Foundation Models for Medical Image Segmentation</div>
+                <div class="publication-authors">Jiarun Liu, Hao Yang, <b>Hong-Yu Zhou</b>, Lequan Yu, Yong Liang, Yizhou Yu, Shaoting Zhang, Hairong Zheng, Shanshan Wang</div>
+                <div class="publication-venue">IEEE Transactions on Medical Imaging, 2024</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Swin-UMamba: Mamba-Based UNet with ImageNet-Based Pretraining</div>
+                <div class="publication-authors">Jiarun Liu, Hao Yang, <b>Hong-Yu Zhou</b>, Yan Xi, Lequan Yu, Yizhou Yu, Yong Liang, Guangming Shi, Shaoting Zhang, Hairong Zheng, Shanshan Wang</div>
+                <div class="publication-venue">International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2024</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Cross-Dimensional Medical Self-Supervised Representation Learning Based on a Pseudo-3D Transformation</div>
+                <div class="publication-authors">Fei Gao, Siwen Wang, Churan Wang, Fandong Zhang, <b>Hong-Yu Zhou</b>, Yizhou Wang, Gang Yu, Yizhou Yu</div>
+                <div class="publication-venue">International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2024</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Improving Neoadjuvant Therapy Response Prediction by Integrating Longitudinal Mammogram Generation with Cross-Modal Radiological Reports: A Vision-Language Alignment-Guided Model</div>
+                <div class="publication-authors">Yuan Gao, <b>Hong-Yu Zhou</b>, Xin Wang, Tianyu Zhang, Luyi Han, Chunyao Lu, Xinglong Liang, Jonas Teuwen, Regina Beets-Tan, Tao Tan</div>
+                <div class="publication-venue">International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2024</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Multimodal Self-Supervised Learning for Lesion Localization</div>
+                <div class="publication-authors">Hao Yang, <b>Hong-Yu Zhou</b>, Cheng Li, Weijian Huang, Jiarun Liu, Yong Liang, Guangming Shi, Hairong Zheng, Qiegen Liu, Shanshan Wang</div>
+                <div class="publication-venue">IEEE International Symposium on Biomedical Imaging (ISBI), 2024</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">MLIP: Medical Language-Image Pre-Training with Masked Local Representation Learning</div>
+                <div class="publication-authors">Jiarun Liu, <b>Hong-Yu Zhou</b>, Cheng Li, Weijian Huang, Hao Yang, Yong Liang, Guangming Shi, Hairong Zheng, Shanshan Wang</div>
+                <div class="publication-venue">IEEE International Symposium on Biomedical Imaging (ISBI), 2024</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Enhancing Representation in Medical Vision-Language Foundation Models via Multi-Scale Information Extraction Techniques</div>
+                <div class="publication-authors">Weijian Huang, Cheng Li, <b>Hong-Yu Zhou</b>, Jiarun Liu, Hao Yang, Yong Liang, Guangming Shi, Hairong Zheng, Shanshan Wang</div>
+                <div class="publication-venue">IEEE International Symposium on Biomedical Imaging (ISBI), 2024</div>
+            </div>
+
+            <!-- 2023 Publications -->
+            <h4 style="margin-top: 30px; margin-bottom: 20px; color: #6B46C1;">
+                <span class="lang-en">2023</span>
+                <span class="lang-cn">2023年</span>
+            </h4>
+            
+            <div class="publication-item">
+                <div class="publication-title">A Transformer-Based Representation-Learning Model with Unified Processing of Multimodal Input for Clinical Diagnostics</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Yizhou Yu, Chengdi Wang, Shu Zhang, Yuanxu Gao, Jia Pan, Jun Shao, Guangming Lu, Kang Zhang, Weimin Li</div>
+                <div class="publication-venue">Nature Biomedical Engineering, 2023</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">A Unified Visual Information Preservation Framework for Self-Supervised Pre-Training in Medical Image Analysis</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Chixiang Lu, Chaoqi Chen, Sibei Yang, Yizhou Yu</div>
+                <div class="publication-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">nnFormer: Volumetric Medical Image Segmentation via a 3D Transformer</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Jiansen Guo, Yinghao Zhang, Xiaoguang Han, Lequan Yu, Liansheng Wang, Yizhou Yu</div>
+                <div class="publication-venue">IEEE Transactions on Image Processing, 2023</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Protein Representation Learning via Knowledge Enhanced Primary Structure Modeling</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Yunxiang Fu, Zhicheng Bian, Cheng Bian, Yizhou Yu</div>
+                <div class="publication-venue">International Conference on Learning Representations (ICLR), 2023</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Advancing Radiograph Representation Learning with Masked Record Modeling</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Chenyu Lian, Liansheng Wang, Yizhou Yu</div>
+                <div class="publication-venue">International Conference on Learning Representations (ICLR), 2023</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Activate and Reject: Towards Safe Domain Generalization Under Category Shift</div>
+                <div class="publication-authors">Chaoqi Chen, Luyao Tang, Leitian Tao, <b>Hong-Yu Zhou</b>, Yue Huang, Xiaoguang Han, Yizhou Yu</div>
+                <div class="publication-venue">Proceedings of the IEEE/CVF International Conference on Computer Vision, 2023</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">DDCoT: Duty-Distinct Chain-of-Thought Prompting for Multimodal Reasoning in Language Models</div>
+                <div class="publication-authors">Ge Zheng, Bin Yang, Jiajin Tang, <b>Hong-Yu Zhou</b>, Sibei Yang</div>
+                <div class="publication-venue">Advances in Neural Information Processing Systems, 2023</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Advancing 3D Medical Image Analysis with Variable Dimension Transform Based Supervised 3D Pre-Training</div>
+                <div class="publication-authors">Shu Zhang, Zihao Li, <b>Hong-Yu Zhou</b>, Jiechao Ma, Yizhou Yu</div>
+                <div class="publication-venue">Neurocomputing, 2023</div>
+            </div>
+
+            <!-- 2022 Publications -->
+            <h4 style="margin-top: 30px; margin-bottom: 20px; color: #6B46C1;">
+                <span class="lang-en">2022</span>
+                <span class="lang-cn">2022年</span>
+            </h4>
+            
+            <div class="publication-item">
+                <div class="publication-title">Generalized Radiograph Representation Learning via Cross-Supervision Between Images and Free-Text Radiology Reports</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Xiaoyu Chen, Yinghao Zhang, Ruibang Luo, Liansheng Wang, Yizhou Yu</div>
+                <div class="publication-venue">Nature Machine Intelligence, 2022</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">GraVIS: Grouping Augmented Views From Independent Sources for Dermatology Analysis</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Chixiang Lu, Liansheng Wang, Yizhou Yu</div>
+                <div class="publication-venue">IEEE Transactions on Medical Imaging, 2022</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">MASS: Modality-Collaborative Semi-Supervised Segmentation by Exploiting Cross-Modal Consistency from Unpaired CT and MRI Images</div>
+                <div class="publication-authors">Xiaoyu Chen, <b>Hong-Yu Zhou</b>, Feng Liu, Jiansen Guo, Liansheng Wang, Yizhou Yu</div>
+                <div class="publication-venue">Medical Image Analysis, 2022</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Relation Matters: Foreground-Aware Graph-Based Relational Reasoning for Domain Adaptive Object Detection</div>
+                <div class="publication-authors">Chaoqi Chen, Jiongcheng Li, <b>Hong-Yu Zhou</b>, Xiaoguang Han, Yue Huang, Xinghao Ding, Yizhou Yu</div>
+                <div class="publication-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence, 2022</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Attribute Surrogates Learning and Spectral Tokens Pooling in Transformers for Few-Shot Learning</div>
+                <div class="publication-authors">Yangji He, Weihan Liang, Dongyang Zhao, <b>Hong-Yu Zhou</b>, Weifeng Ge, Yizhou Yu, Wenqiang Zhang</div>
+                <div class="publication-venue">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Development and Validation of an Abnormality-Derived Deep-Learning Diagnostic System for Major Respiratory Diseases</div>
+                <div class="publication-authors">Chengdi Wang, Jiechao Ma, Shu Zhang, Jun Shao, Yanyan Wang, <b>Hong-Yu Zhou</b>, Lujia Song, Jie Zheng, Yizhou Yu, Weimin Li</div>
+                <div class="publication-venue">NPJ Digital Medicine, 2022</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">ProCo: Prototype-Aware Contrastive Learning for Long-Tailed Medical Image Classification</div>
+                <div class="publication-authors">Zhixiong Yang, Junwen Pan, Yanzhan Yang, Xiaozhou Shi, <b>Hong-Yu Zhou</b>, Zhicheng Bian, Cheng Bian</div>
+                <div class="publication-venue">International Conference on Medical Image Computing and Computer-Assisted Intervention, 2022</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">UNet-2022: Exploring Dynamics in Non-Isomorphic Architecture</div>
+                <div class="publication-authors">Jiansen Guo, <b>Hong-Yu Zhou</b>, Liansheng Wang, Yizhou Yu</div>
+                <div class="publication-venue">International Conference on Medical Imaging and Computer-Aided Diagnosis, 2022</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Augmented Multi-Component Recurrent Graph Convolutional Network for Traffic Flow Forecasting</div>
+                <div class="publication-authors">Chi Zhang, <b>Hong-Yu Zhou</b>, Qiang Qiu, Zhichun Jian, Daoye Zhu, Chengqi Cheng, Liesong He, Guoping Liu, Xiang Wen, Runbo Hu</div>
+                <div class="publication-venue">ISPRS International Journal of Geo-Information, 2022</div>
+            </div>
+
+            <!-- 2021 Publications -->
+            <h4 style="margin-top: 30px; margin-bottom: 20px; color: #6B46C1;">
+                <span class="lang-en">2021</span>
+                <span class="lang-cn">2021年</span>
+            </h4>
+
+            <div class="publication-item">
+                <div class="publication-title">Preservational Learning Improves Self-Supervised Medical Image Models by Reconstructing Diverse Contexts</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Chixiang Lu, Sibei Yang, Xiaoguang Han, Yizhou Yu</div>
+                <div class="publication-venue">Proceedings of the IEEE/CVF International Conference on Computer Vision, 2021</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Generalized Organ Segmentation by Imitating One-Shot Reasoning Using Anatomical Correlation</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Hualuo Liu, Shilei Cao, Dong Wei, Chixiang Lu, Yizhou Yu, Kai Ma, Yefeng Zheng</div>
+                <div class="publication-venue">International Conference on Information Processing in Medical Imaging, 2021</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">SSMD: Semi-Supervised Medical Image Detection with Adaptive Consistency and Heterogeneous Perturbation</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Chengdi Wang, Haofeng Li, Gang Wang, Shu Zhang, Weimin Li, Yizhou Yu</div>
+                <div class="publication-venue">Medical Image Analysis, 2021</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">ConvNets vs. Transformers: Whose Visual Representations Are More Transferable?</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Chixiang Lu, Sibei Yang, Yizhou Yu</div>
+                <div class="publication-venue">Proceedings of the IEEE/CVF International Conference on Computer Vision, 2021</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Bottom-Up Shift and Reasoning for Referring Image Segmentation</div>
+                <div class="publication-authors">Sibi Yang, Meng Xia, Guanbin Li, <b>Hong-Yu Zhou</b>, Yizhou Yu</div>
+                <div class="publication-venue">Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2021</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Learning to Discover Multi-Class Attentional Regions for Multi-Label Image Recognition</div>
+                <div class="publication-authors">Bin-Bin Gao, <b>Hong-Yu Zhou</b></div>
+                <div class="publication-venue">IEEE Transactions on Image Processing, 2021</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Recist-Net: Lesion Detection via Grouping Keypoints on Recist-Based Annotation</div>
+                <div class="publication-authors">Cong Xie, Shilei Cao, Dong Wei, <b>Hong-Yu Zhou</b>, Kai Ma, Xianli Zhang, Buyue Qian, Liansheng Wang, Yefeng Zheng</div>
+                <div class="publication-venue">2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI), 2021</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Evaluation and Comparison of Accurate Automated Spinal Curvature Estimation Algorithms with Spinal Anterior-Posterior X-Ray Images: The AASCE2019 Challenge</div>
+                <div class="publication-authors">Liansheng Wang, Cong Xie, Yi Lin, <b>Hong-Yu Zhou</b>, Kailin Chen, Dalong Cheng, Florian Dubost, Benjamin Collery, Bidur Khanal, Bishesh Khanal</div>
+                <div class="publication-venue">Medical Image Analysis, 2021</div>
+            </div>
+
+            <!-- 2020 Publications -->
+            <h4 style="margin-top: 30px; margin-bottom: 20px; color: #6B46C1;">
+                <span class="lang-en">2020</span>
+                <span class="lang-cn">2020年</span>
+            </h4>
+            
+            <div class="publication-item">
+                <div class="publication-title">Comparing to Learn: Surpassing ImageNet Pretraining on Radiographs by Comparing Image Representations</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Shuang Yu, Cheng Bian, Yifan Hu, Kai Ma, Yefeng Zheng</div>
+                <div class="publication-venue">International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2020</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Difficulty-Aware Glaucoma Classification with Multi-Rater Consensus Modeling</div>
+                <div class="publication-authors">Shuang Yu, <b>Hong-Yu Zhou</b>, Kai Ma, Cheng Bian, Chunyan Chu, Hanruo Liu, Yefeng Zheng</div>
+                <div class="publication-venue">International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2020</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">A Macro-Micro Weakly-Supervised Framework for AS-OCT Tissue Segmentation</div>
+                <div class="publication-authors">Munan Bian, Cheng Bian, Donghuan Lu, <b>Hong-Yu Zhou</b>, Shuang Yu, Chenglang Yuan, Yang Guo, Yaohua Wang, Kai Ma, Yefeng Zheng</div>
+                <div class="publication-venue">International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI), 2020</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Efficient and Effective Training of COVID-19 Classification Networks with Self-Supervised Dual-Track Learning to Rank</div>
+                <div class="publication-authors">Yuexiang Li, Dong Wei, Jiawei Chen, Shilei Cao, <b>Hong-Yu Zhou</b>, Yanchun Zhu, Jianrong Wu, Lan Lan, Wenbo Sun, Tianyi Qian</div>
+                <div class="publication-venue">IEEE Journal of Biomedical and Health Informatics, 2020</div>
+            </div>
+
+            <!-- 2019 Publications -->
+            <h4 style="margin-top: 30px; margin-bottom: 20px; color: #6B46C1;">
+                <span class="lang-en">2019</span>
+                <span class="lang-cn">2019年</span>
+            </h4>
+            
+            <div class="publication-item">
+                <div class="publication-title">Seg4Reg Networks for Automated Spinal Curvature Estimation</div>
+                <div class="publication-authors">Yi Lin, <b>Hong-Yu Zhou</b>, Kai Ma, Xin Yang, Yefeng Zheng</div>
+                <div class="publication-venue">International Workshop and Challenge on Computational Methods and Clinical Applications for Spine Imaging, 2020</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">CodeAttention: Translating Source Code to Comments by Exploiting the Code Constructs</div>
+                <div class="publication-authors">Wenhao Zheng, <b>Hong-Yu Zhou</b>, Ming Li, Jianxin Wu</div>
+                <div class="publication-venue">Frontiers of Computer Science, 2019</div>
+            </div>
+
+            <!-- 2018 Publications -->
+            <h4 style="margin-top: 30px; margin-bottom: 20px; color: #6B46C1;">
+                <span class="lang-en">2018</span>
+                <span class="lang-cn">2018年</span>
+            </h4>
+            
+            <div class="publication-item">
+                <div class="publication-title">ThiNet: Pruning CNN Filters for a Thinner Net</div>
+                <div class="publication-authors">Jian-Hao Luo, Hao Zhang, <b>Hong-Yu Zhou</b>, Chen-Wei Xie, Jianxin Wu, Weiyao Lin</div>
+                <div class="publication-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence, 2018</div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">Age Estimation Using Expectation of Label Distribution Learning</div>
+                <div class="publication-authors">Bin-Bin Gao, <b>Hong-Yu Zhou</b>, Jianxin Wu, Xin Geng</div>
+                <div class="publication-venue">International Joint Conference on Artificial Intelligence (IJCAI), 2018</div>
+            </div>
+
+            <!-- 2017 Publications -->
+            <h4 style="margin-top: 30px; margin-bottom: 20px; color: #6B46C1;">
+                <span class="lang-en">2017</span>
+                <span class="lang-cn">2017年</span>
+            </h4>
+            
+            <div class="publication-item">
+                <div class="publication-title">Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors</div>
+                <div class="publication-authors"><b>Hong-Yu Zhou</b>, Bin-Bin Gao, Jianxin Wu</div>
+                <div class="publication-venue">Proceedings of the IEEE International Conference on Computer Vision, 2017</div>
+            </div>
+        </div>
+
+        <!-- Teaching Section -->
+        <div id="teaching" class="section-content">
+            <h2>
+                <span class="lang-en">Teaching</span>
+                <span class="lang-cn">教学</span>
+            </h2>
+            
+            <h3>
+                <span class="lang-en">Current Courses (2024-2025)</span>
+                <span class="lang-cn">当前课程（2024-2025）</span>
+            </h3>
+            <div class="research-area">
+                <h4>
+                    <span class="lang-en">BME 501: Deep Learning for Medical Image Analysis</span>
+                    <span class="lang-cn">BME 501：医学图像分析的深度学习</span>
+                </h4>
+                <p>
+                    <span class="lang-en"><strong>Fall 2024</strong> - Graduate level course covering fundamental and advanced topics in medical image analysis using deep learning.</span>
+                    <span class="lang-cn"><strong>2024秋季</strong> - 研究生课程，涵盖使用深度学习进行医学图像分析的基础和高级主题。</span>
+                </p>
+                <ul>
+                    <li>
+                        <span class="lang-en">Convolutional Neural Networks for Medical Imaging</span>
+                        <span class="lang-cn">医学影像的卷积神经网络</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Transformer Architectures in Healthcare</span>
+                        <span class="lang-cn">医疗保健中的Transformer架构</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Self-supervised Learning Methods</span>
+                        <span class="lang-cn">自监督学习方法</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Clinical Applications and Case Studies</span>
+                        <span class="lang-cn">临床应用与案例研究</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="research-area">
+                <h4>
+                    <span class="lang-en">BME 302: Introduction to Medical AI</span>
+                    <span class="lang-cn">BME 302：医学人工智能导论</span>
+                </h4>
+                <p>
+                    <span class="lang-en"><strong>Spring 2025</strong> - Undergraduate course introducing AI applications in medicine and healthcare.</span>
+                    <span class="lang-cn"><strong>2025春季</strong> - 本科生课程，介绍人工智能在医学和医疗保健中的应用。</span>
+                </p>
+            </div>
+
+            <h3>
+                <span class="lang-en">Student Advising</span>
+                <span class="lang-cn">学生指导</span>
+            </h3>
+            <ul>
+                <li>
+                    <span class="lang-en">Primary advisor for Ph.D. students in Biomedical Engineering</span>
+                    <span class="lang-cn">生物医学工程博士生的主要导师</span>
+                </li>
+                <li>
+                    <span class="lang-en">Co-advisor for students in Computer Science and Electronic Engineering</span>
+                    <span class="lang-cn">计算机科学和电子工程学生的合作导师</span>
+                </li>
+                <li>
+                    <span class="lang-en">Mentor for undergraduate research projects</span>
+                    <span class="lang-cn">本科生研究项目导师</span>
+                </li>
+            </ul>
+
+            <h3>
+                <span class="lang-en">Teaching Philosophy</span>
+                <span class="lang-cn">教学理念</span>
+            </h3>
+            <p style="font-size: 16px; line-height: 1.8;">
+                <span class="lang-en">
+                    I believe in fostering a learning environment that combines theoretical foundations with practical applications. 
+                    My courses emphasize hands-on experience with real medical data and encourage students to think critically about 
+                    the ethical and clinical implications of AI in healthcare.
+                </span>
+                <span class="lang-cn">
+                    我相信营造一个将理论基础与实际应用相结合的学习环境。
+                    我的课程强调使用真实医学数据的实践经验，并鼓励学生批判性地思考人工智能在医疗保健中的伦理和临床影响。
+                </span>
+            </p>
+        </div>
+
+        <!-- Openings Section -->
+        <div id="openings" class="section-content">
+            <h2>
+                <span class="lang-en">Join Our Lab</span>
+                <span class="lang-cn">加入我们</span>
+            </h2>
+            
+            <div class="highlight-box">
+                <h3>
+                    <span class="lang-en">We Are Recruiting!</span>
+                    <span class="lang-cn">我们正在招聘！</span>
+                </h3>
+                <p>
+                    <span class="lang-en">We are actively looking for talented and motivated individuals to join our research group. 
+                    We offer a collaborative environment, cutting-edge research projects, and opportunities to make real impact in healthcare.</span>
+                    <span class="lang-cn">我们正在积极寻找有才华和积极性的人才加入我们的研究团队。
+                    我们提供协作环境、前沿研究项目以及在医疗保健领域产生实际影响的机会。</span>
+                </p>
+                <p>
+                    <span class="lang-en">We also very much welcome people with clinical medical backgrounds or wearable device development experience to join.</span>
+                    <span class="lang-cn">我们也非常欢迎具有临床医学背景或者可穿戴设备开发经验的人加入。</span>
+                </p>
+            </div>
+
+            <h3>
+                <span class="lang-en">Ph.D. Positions</span>
+                <span class="lang-cn">博士生职位</span>
+            </h3>
+            <div class="research-area">
+                <h4>
+                    <span class="lang-en">Requirements:</span>
+                    <span class="lang-cn">要求：</span>
+                </h4>
+                <ul>
+                    <li>
+                        <span class="lang-en">Strong background in computer science, electrical engineering, biomedical engineering, or related fields</span>
+                        <span class="lang-cn">计算机科学、电子工程、生物医学工程或相关领域的扎实背景</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Experience with machine learning and deep learning frameworks</span>
+                        <span class="lang-cn">机器学习和深度学习框架的使用经验</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Programming proficiency in Python, PyTorch/TensorFlow</span>
+                        <span class="lang-cn">熟练掌握Python、PyTorch/TensorFlow编程</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Excellent communication skills in English</span>
+                        <span class="lang-cn">优秀的英语沟通能力</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Passion for medical AI research</span>
+                        <span class="lang-cn">对医学AI研究充满热情</span>
+                    </li>
+                </ul>
+                <p>
+                    <span class="lang-en"><strong>Application:</strong> Please send your CV, transcripts, and a brief research statement to hongyu_zhou@tsinghua.edu.cn</span>
+                    <span class="lang-cn"><strong>申请：</strong>请将您的简历、成绩单和简短的研究陈述发送至 hongyu_zhou@tsinghua.edu.cn</span>
+                </p>
+            </div>
+
+            <h3>
+                <span class="lang-en">Master Students</span>
+                <span class="lang-cn">硕士生</span>
+            </h3>
+            <div class="research-area">
+                <h4>
+                    <span class="lang-en">Opportunities:</span>
+                    <span class="lang-cn">机会：</span>
+                </h4>
+                <ul>
+                    <li>
+                        <span class="lang-en">Thesis projects on medical image analysis</span>
+                        <span class="lang-cn">医学图像分析的论文项目</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Clinical AI system development</span>
+                        <span class="lang-cn">临床AI系统开发</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Collaboration with leading hospitals</span>
+                        <span class="lang-cn">与顶级医院合作</span>
+                    </li>
+                </ul>
+                <p>
+                    <span class="lang-en"><strong>Note:</strong> Priority given to Tsinghua students, but exceptional external candidates are welcome to apply.</span>
+                    <span class="lang-cn"><strong>注意：</strong>优先考虑清华学生，但欢迎优秀的外部候选人申请。</span>
+                </p>
+            </div>
+
+            <h3>
+                <span class="lang-en">Undergraduate Research</span>
+                <span class="lang-cn">本科生研究</span>
+            </h3>
+            <div class="research-area">
+                <h4>
+                    <span class="lang-en">Research Assistant Positions:</span>
+                    <span class="lang-cn">研究助理职位：</span>
+                </h4>
+                <ul>
+                    <li>
+                        <span class="lang-en">Summer research internships</span>
+                        <span class="lang-cn">暑期研究实习</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Senior thesis projects</span>
+                        <span class="lang-cn">毕业论文项目</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Part-time research during academic year</span>
+                        <span class="lang-cn">学年期间的兼职研究</span>
+                    </li>
+                </ul>
+                <p>
+                    <span class="lang-en">We welcome motivated undergraduates who want to gain research experience in medical AI.</span>
+                    <span class="lang-cn">我们欢迎希望获得医学AI研究经验的积极主动的本科生。</span>
+                </p>
+            </div>
+
+            <h3>
+                <span class="lang-en">Postdoctoral Fellows</span>
+                <span class="lang-cn">博士后研究员</span>
+            </h3>
+            <div class="research-area">
+                <h4>
+                    <span class="lang-en">We seek postdocs with:</span>
+                    <span class="lang-cn">我们寻找具备以下条件的博士后：</span>
+                </h4>
+                <ul>
+                    <li>
+                        <span class="lang-en">Ph.D. in relevant fields</span>
+                        <span class="lang-cn">相关领域的博士学位</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Strong publication record</span>
+                        <span class="lang-cn">优秀的发表记录</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Independent research capabilities</span>
+                        <span class="lang-cn">独立研究能力</span>
+                    </li>
+                    <li>
+                        <span class="lang-en">Interest in medical AI applications</span>
+                        <span class="lang-cn">对医学AI应用感兴趣</span>
+                    </li>
+                </ul>
+                <p>
+                    <span class="lang-en"><strong>Benefits:</strong> Competitive salary, research funding support, and opportunities for career development.</span>
+                    <span class="lang-cn"><strong>待遇：</strong>有竞争力的薪资、研究资金支持和职业发展机会。</span>
+                </p>
+            </div>
+
+            <h3>
+                <span class="lang-en">Contact</span>
+                <span class="lang-cn">联系方式</span>
+            </h3>
+            <p style="font-size: 18px; margin-top: 30px;">
+                <span class="lang-en">
+                    <strong>Interested candidates please contact:</strong><br>
+                    Prof. Hong-Yu Zhou<br>
+                    Email: hongyu_zhou@tsinghua.edu.cn<br>
+                    Office: Biomedical Engineering Building, Room 301<br>
+                    Tsinghua University, Beijing, China
+                </span>
+                <span class="lang-cn">
+                    <strong>有意者请联系：</strong><br>
+                    周弘宇 教授<br>
+                    邮箱：hongyu_zhou@tsinghua.edu.cn<br>
+                    办公室：生物医学工程楼 301室<br>
+                    清华大学，北京，中国
+                </span>
+            </p>
+        </div>
+    </div>
 </div>
 
 <script>
-    const element = document.getElementById("autoTyping");
-    // const texts = ["Compound Medical AI Systems.", "Medical Representation Learning.", "Scalable Medical AI."]; // Array of texts
-    const texts = [" AI that deciphers individual health by integrating data across varied scales."]
-    let textIndex = 0; // Index to track which text is being typed
-    let charIndex = 0; // Index to track the current character position
-    let deleting = false;
+function showSection(sectionName) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.section-content');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
     
-    function updateText() {
-      const currentText = texts[textIndex]; // Get the current text based on textIndex
+    // Remove active class from all tabs
+    const tabs = document.querySelectorAll('.nav-tab');
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Show selected section
+    document.getElementById(sectionName).classList.add('active');
+    
+    // Add active class to clicked tab
+    event.target.closest('.nav-tab').classList.add('active');
+}
 
-      if (!deleting) {
-        if (charIndex < currentText.length) {
-          element.innerHTML += currentText.charAt(charIndex);
-          charIndex++;
-        } else {
-          setTimeout(() => { deleting = true; }, 5000); // Wait a bit before starting to delete
-        }
-      } else {
-        if (charIndex > 0) {
-          element.innerHTML = element.innerHTML.slice(0, -1);
-          charIndex--;
-        } else {
-          deleting = false; // Switch back to typing mode
-          textIndex = (textIndex + 1) % texts.length; // Move to the next text and loop back to the first after the last
-        }
-      }
-      setTimeout(updateText, deleting ? 50 : 150); // Speed up deletion
-    }
+function toggleLanguage() {
+    document.body.classList.toggle('chinese');
     
-    updateText(); // Start the effect
+    // Save language preference
+    if (document.body.classList.contains('chinese')) {
+        localStorage.setItem('language', 'chinese');
+    } else {
+        localStorage.setItem('language', 'english');
+    }
+}
+
+// Load saved language preference on page load
+window.addEventListener('DOMContentLoaded', function() {
+    const savedLanguage = localStorage.getItem('language');
+    if (savedLanguage === 'chinese') {
+        document.body.classList.add('chinese');
+    }
+});
 </script>
 
-</body></html>
+</body>
+</html>
