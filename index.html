@@ -433,7 +433,7 @@
                         <i class="fas fa-envelope"></i> 
                         <span class="lang-en">Email:&nbsp</span>
                         <span class="lang-cn">邮箱：</span>
-                        <a href="mailto:hongyu.zhou.ai@gmail.com">hongyu.zhou.ai at gmail.com</a>
+                        <a href="mailto:hongyu.zhou.ai@gmail.com">hongyu.zhou.ai at gmail.com (preferred)</a>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i> 
@@ -528,11 +528,30 @@
                 <span class="lang-en">
                     Our lab, AIMS (<u>a.k.a. AI for Medicine at Scale</u>), studies intelligence to curate scalable, trustworthy, and medically useful AI for healthcare. 
                     We are particularly interested in curating <b>patient-AI ecosystems</b>, encompassing embodied intelligent agents designed to improve the quality of healthcare delivery through direct patient-AI interactions.
+                    <a href="#" onclick="showVideoDemo(); return false;" style="color: #6B46C1; text-decoration: none; font-weight: 500; border-bottom: 2px solid #6B46C1; padding-bottom: 2px;">🎬 Explore what we have built.</a>
                 </span>
                 <span class="lang-cn">
                     我创立的实验室 <b>AIMS (AI for Medicine at Scale)</b> 致力于通过人工智能技术构建可扩展、可信赖、具有临床实用价值的医疗决策支持系统。
+                    <a href="#" onclick="showVideoDemo(); return false;" style="color: #6B46C1; text-decoration: none; font-weight: 500; border-bottom: 2px solid #6B46C1; padding-bottom: 2px;">🎬 查看我们最新工作的演示</a>
                 </span>
             </p>
+            
+            <!-- AIMS Lab Video -->
+            <div id="videoDemo" style="text-align: center; margin: 30px 0; display: none;">
+                <video 
+                    width="100%" 
+                    max-width="800px" 
+                    height="auto" 
+                    controls 
+                    autoplay 
+                    muted 
+                    style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <source src="./videos/medversa.mp4" type="video/mp4">
+                    <source src="./videos/medversa.webm" type="video/webm">
+                    <span class="lang-en">Your browser does not support the video tag.</span>
+                    <span class="lang-cn">您的浏览器不支持视频标签。</span>
+                </video>
+            </div>
 
             <p style="font-size: 19px; line-height: 1.6; color: #2c3e50;">
                 <span class="lang-en">
@@ -1505,6 +1524,27 @@ function toggleLanguage() {
         localStorage.setItem('language', 'chinese');
     } else {
         localStorage.setItem('language', 'english');
+    }
+}
+
+function showVideoDemo() {
+    const videoDemo = document.getElementById('videoDemo');
+    if (videoDemo) {
+        videoDemo.style.display = 'block';
+        // Scroll to video for better user experience
+        videoDemo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Get the video element
+        const video = videoDemo.querySelector('video');
+        if (video) {
+            // Add event listener for when video ends
+            video.addEventListener('ended', function() {
+                // Hide the video after a short delay (2 seconds)
+                setTimeout(() => {
+                    videoDemo.style.display = 'none';
+                }, 2000);
+            });
+        }
     }
 }
 
