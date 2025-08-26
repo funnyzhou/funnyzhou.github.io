@@ -537,7 +537,29 @@
             </p>
             
             <!-- AIMS Lab Video -->
-            <div id="videoDemo" style="text-align: center; margin: 30px 0; display: none;">
+            <div id="videoDemo" style="text-align: center; margin: 30px 0; display: none; position: relative;">
+                <!-- Close button -->
+                <button id="closeVideoBtn" onclick="closeVideoDemo()" style="
+                    position: absolute;
+                    top: -15px;
+                    right: -15px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #e74c3c;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 18px;
+                    font-weight: bold;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+                    z-index: 1000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.3s ease;">
+                    ×
+                </button>
                 <video 
                     width="100%" 
                     max-width="800px" 
@@ -1544,6 +1566,20 @@ function showVideoDemo() {
                     videoDemo.style.display = 'none';
                 }, 2000);
             });
+        }
+    }
+}
+
+function closeVideoDemo() {
+    const videoDemo = document.getElementById('videoDemo');
+    if (videoDemo) {
+        videoDemo.style.display = 'none';
+        
+        // Get the video element and pause it
+        const video = videoDemo.querySelector('video');
+        if (video) {
+            video.pause();
+            video.currentTime = 0; // Reset video to beginning
         }
     }
 }
