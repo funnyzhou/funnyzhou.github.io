@@ -365,6 +365,75 @@
         margin-left: 10px;
     }
     
+    /* Journal name styling */
+    .journal-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #6B46C1, #4C1D95);
+        color: white;
+        padding: 4px 10px;
+        border-radius: 15px;
+        font-size: 11px;
+        font-weight: 600;
+        margin: 2px 4px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(107, 70, 193, 0.3);
+    }
+    
+    .journal-badge:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(107, 70, 193, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+    
+    .journal-badge.nature {
+        background: linear-gradient(135deg, #e74c3c, #c0392b);
+        box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3);
+    }
+    
+    .journal-badge.nature:hover {
+        box-shadow: 0 4px 8px rgba(231, 76, 60, 0.4);
+    }
+    
+    .journal-badge.ieee {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        box-shadow: 0 2px 4px rgba(52, 152, 219, 0.3);
+    }
+    
+    .journal-badge.ieee:hover {
+        box-shadow: 0 4px 8px rgba(52, 152, 219, 0.4);
+    }
+    
+    .journal-badge.conference {
+        background: linear-gradient(135deg, #f39c12, #e67e22);
+        box-shadow: 0 2px 4px rgba(243, 156, 18, 0.3);
+    }
+    
+    .journal-badge.conference:hover {
+        box-shadow: 0 4px 8px rgba(243, 156, 18, 0.4);
+    }
+    
+    .journal-badge.other {
+        background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        box-shadow: 0 2px 4px rgba(155, 89, 182, 0.3);
+    }
+    
+    .journal-badge.other:hover {
+        box-shadow: 0 4px 8px rgba(155, 89, 182, 0.4);
+    }
+    
+    .publication-list {
+        margin-top: 5px;
+        display: inline-block;
+        line-height: 1.2;
+    }
+    
+    .publication-list .journal-badge {
+        margin: 2px 4px 2px 0;
+        display: inline-block;
+    }
+    
     .lang-en {
         display: block;
     }
@@ -775,8 +844,7 @@
             <h3>
                 <span class="lang-en">Lab Members</span>
                 <span class="lang-cn">现有成员</span>
-            </h3>
-            
+            </h3>          
             <div class="team-member">
                 <!-- <img src="https://via.placeholder.com/80" alt="Student"> -->
                 <div class="team-member-info">
@@ -793,12 +861,26 @@
             <div class="team-member">
                 <div class="team-member-info">
                     <h5>
+                        <span class="lang-en">Advisory Board / Scientific Advisors</span>
+                        <span class="lang-cn">顾问委员会 / 科学顾问</span>
+                    </h5>
+                    <p>
+                        <span class="lang-en"><a href="https://scholar.google.com/citations?user=f2XZEZ8AAAAJ&hl=en">Dr. Tien Yin Wong</a></span>
+                    </p>
+                </div>
+            </div>  
+            <div class="team-member">
+                <div class="team-member-info">
+                    <h5>
                         <span class="lang-en">Co-advised Lab Members</span>
                         <span class="lang-cn">联合指导学生</span>
                     </h5>
                     <p>
                         <a href="https://linwei-chen.github.io/">Linwei Chen</a> (2025-Present, Postdoc@HKGAI)
-                        <br><a href="https://scholar.google.com/citations?user=p_qmIH4AAAAJ&hl=en">Chenyu Lian</a> (2024-Present, PhD@HKPU) → ICLR'23, TMI'25, MICCAI'25
+                        <br>                        <a href="https://scholar.google.com/citations?user=p_qmIH4AAAAJ&hl=en">Chenyu Lian</a> (2024-Present, PhD@HKPU) → 
+                        <span class="journal-badge conference">ICLR'23</span>
+                        <span class="journal-badge ieee">TMI'25</span>
+                        <span class="journal-badge conference">MICCAI'25</span>
                         <br><a href="https://github.com/HandsomeWuuu">Shuai Wu</a> (2025-Present, PhD@HKU)
                         <br>Jie Lin (2025-Present, PhD@Xiamen U)
                     </p>
@@ -811,14 +893,29 @@
                         <span class="lang-cn">毕业生</span>
                     </h5>
                     <p>
-                        Hao Yang (PhD@CAS) → Nature Biomedical Engineering (in press)
-                        <br>Yuan Gao (PhD@Netherlands Cancer Institute) → Nature Communications'24, MICCAI'24, IEEE JBHI'25
-                        <br>Xing Wang (PhD@Netherlands Cancer Institute) → Nature Communications (in press)
-                        <br>Weijian Huang (PhD@CAS) → Nature Communications'24
-                        <br>Chixiang Lu (Past: Undergraduate@HUST, Now: PhD@HKU) → ICCV'21, IPMI'21, TMI'22, TPAMI'23
-                        <br>Meng Lou (Past: Software Engineer@Deepwise, Now: PhD@HKU) → TNNLS'25, Neural Networks'25
-                        <br>Jiarun Liu (PhD@CAS) → MICCAI'24, TMI'24
-                        <br>Yunxiang Fu (Past: Undergraduate at HKU, Now: PhD@HKU) → ICLR'24
+                        Hao Yang (PhD@CAS) → 
+                        <span class="journal-badge nature">Nature Biomedical Engineering (in press)</span>
+                        <br>Yuan Gao (PhD@Netherlands Cancer Institute) → 
+                        <span class="journal-badge nature">Nature Communications'24</span>
+                        <span class="journal-badge conference">MICCAI'24</span>
+                        <span class="journal-badge ieee">IEEE JBHI'25</span>
+                        <br>Xing Wang (PhD@Netherlands Cancer Institute) → 
+                        <span class="journal-badge nature">Nature Communications (in press)</span>
+                        <br>Weijian Huang (PhD@CAS) → 
+                        <span class="journal-badge nature">Nature Communications'24</span>
+                        <br>Chixiang Lu (Past: Undergraduate@HUST, Now: PhD@HKU) → 
+                        <span class="journal-badge conference">ICCV'21</span>
+                        <span class="journal-badge conference">IPMI'21</span>
+                        <span class="journal-badge ieee">TMI'22</span>
+                        <span class="journal-badge ieee">TPAMI'23</span>
+                        <br>Meng Lou (Past: Software Engineer@Deepwise, Now: PhD@HKU) → 
+                        <span class="journal-badge ieee">TNNLS'25</span>
+                        <span class="journal-badge ieee">Neural Networks'25</span>
+                        <br>Jiarun Liu (PhD@CAS) → 
+                        <span class="journal-badge conference">MICCAI'24</span>
+                        <span class="journal-badge ieee">TMI'24</span>
+                        <br>Yunxiang Fu (Past: Undergraduate at HKU, Now: PhD@HKU) → 
+                        <span class="journal-badge conference">ICLR'24</span>
                         <br>Kai Wang (PhD@PKU)
                         <br>Jiaxin Wu (Past: Undergraduate@HKU, Now: Software Engineer@UBS)
                         <br>Zixuan Shan (Past: Undergraduate@HKU, Now: MS@NYU)
