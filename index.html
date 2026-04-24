@@ -33,7 +33,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-size: 15.5px;
-  line-height: 1.7;
+  line-height: 1.62;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -47,15 +47,15 @@ body {
 .site-header {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 52px 24px 0;
+  padding: 42px 24px 0;
 }
 
 .profile-grid {
   display: grid;
   grid-template-columns: 148px 1fr;
-  gap: 40px;
+  gap: 32px;
   align-items: start;
-  padding-bottom: 40px;
+  padding-bottom: 28px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -113,6 +113,16 @@ body {
   gap: 8px;
   font-size: 13.5px;
   color: var(--text-muted);
+}
+
+.contact-row.links {
+  gap: 6px;
+}
+
+.contact-row .contact-sep {
+  color: var(--text-light);
+  font-size: 12px;
+  margin: 0 2px;
 }
 
 .contact-row i {
@@ -177,7 +187,7 @@ body {
 .site-main {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 48px 24px 80px;
+  padding: 36px 24px 64px;
 }
 
 .section-content { display: none; }
@@ -189,9 +199,9 @@ body {
   font-size: 22px;
   font-weight: 500;
   color: var(--text);
-  margin-bottom: 20px;
-  margin-top: 40px;
-  padding-bottom: 8px;
+  margin-bottom: 16px;
+  margin-top: 28px;
+  padding-bottom: 6px;
   border-bottom: 1px solid var(--border);
   letter-spacing: -0.01em;
 }
@@ -203,7 +213,7 @@ body {
   font-size: 17px;
   font-weight: 500;
   color: var(--text);
-  margin-top: 32px;
+  margin-top: 24px;
   margin-bottom: 12px;
   font-style: italic;
 }
@@ -211,9 +221,9 @@ body {
 /* ── BODY TEXT ── */
 .prose {
   font-size: 15.5px;
-  line-height: 1.8;
+  line-height: 1.68;
   color: #2e2c2a;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .prose a {
@@ -248,7 +258,7 @@ body {
   display: grid;
   grid-template-columns: 100px 1fr;
   gap: 16px;
-  padding: 14px 0;
+  padding: 12px 0;
   border-bottom: 1px solid var(--border);
   align-items: baseline;
 }
@@ -309,13 +319,13 @@ body {
   font-weight: 500;
   color: var(--border);
   letter-spacing: -0.02em;
-  margin: 44px 0 16px;
+  margin: 32px 0 12px;
   line-height: 1;
 }
 
 /* ── PUBLICATION ITEM ── */
 .pub-item {
-  padding: 18px 0;
+  padding: 14px 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -367,7 +377,7 @@ body {
 .badge-other  { background: #f5eef8; color: #7d3c98; }
 
 /* ── LAB MEMBERS ── */
-.member-section { margin-bottom: 28px; }
+.member-section { margin-bottom: 22px; }
 
 .member-section-title {
   font-size: 11px;
@@ -421,7 +431,7 @@ body {
   border: 1px solid var(--accent);
   padding: 6px 14px;
   border-radius: 2px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   transition: background 0.2s, color 0.2s;
 }
 
@@ -495,10 +505,9 @@ body {
           <i class="fas fa-envelope"></i>
           <a href="mailto:hyzhou@tsinghua.edu.cn">hyzhou@tsinghua.edu.cn</a>
         </div>
-        <div class="contact-row" style="margin-top:6px;">
+        <div class="contact-row links" style="margin-top:6px;">
           <!-- <i class="fas fa-graduation-cap"></i> -->
           <a href="https://scholar.google.com/citations?hl=en" target="_blank">Google Scholar</a>
-          &ensp;·&ensp;
           <i class="fab fa-x-twitter" style="width:auto;"></i>
           <a href="https://twitter.com/HongYuZhou14" target="_blank">X</a>
         </div>
@@ -522,7 +531,7 @@ body {
   <!-- ──────── ABOUT ──────── -->
   <section id="about" class="section-content active">
 
-    <h2 class="sec-title" style="margin-top:-20px;">Research</h2>
+    <h2 class="sec-title">Research</h2>
     <p class="prose">
       My current research interest is to build <span style="color: #b22222;"><b>co-evolving intelligence</b></span> to tackle health challenges.
       Health problems are inherently uncertain, rarely admitting a single fixed answer; they vary across individuals, 
@@ -533,7 +542,7 @@ body {
       growing in a way that is inseparable from the life it serves. Such a system is not merely built for lives; it itself lives. 
     </p>
 
-    <h2 class="sec-title" style="margin-top:36px;">Biography</h2>
+    <h2 class="sec-title">Biography</h2>
     <p class="prose">
       I joined Tsinghua University as a tenure-track assistant professor and principal investigator in biomedical AI.
       Previously, I served as the founding member and head of AI systems at <a href="https://a2zradiology.ai/">a2z Radiology AI</a>,
@@ -542,7 +551,7 @@ body {
       I spent two years at Tencent as a research scientist, and received degrees from Nanjing University and Wuhan University.
     </p>
 
-    <h2 class="sec-title" style="margin-top:36px;">Recent News</h2>
+    <h2 class="sec-title">Recent News</h2>
     <div class="news-list">
 
       <div class="news-item">
@@ -967,7 +976,7 @@ body {
 </main>
 
 <!-- ── FOOTER ── -->
-<footer class="site-footer" style="max-width: var(--max-w); margin: 0 auto; padding: 18px 24px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-light); display: flex; justify-content: space-between;">
+<footer class="site-footer" style="max-width: var(--max-w); margin: 0 auto; padding: 16px 24px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-light); display: flex; justify-content: space-between;">
   <span>Hong-Yu Zhou · Tsinghua University · AIMS Lab</span>
   <span>Beijing, China</span>
 </footer>
