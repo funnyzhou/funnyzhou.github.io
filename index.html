@@ -21,7 +21,8 @@
   --accent-light: #e8f0f7;
   --serif: 'EB Garamond', Georgia, serif;
   --sans: 'DM Sans', sans-serif;
-  --max-w: 860px;
+  --max-w: 1040px;
+  --page-pad: 18px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -47,7 +48,7 @@ body {
 .site-header {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 42px 24px 0;
+  padding: 42px var(--page-pad) 0;
 }
 
 .profile-grid {
@@ -145,7 +146,7 @@ body {
 .site-nav {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 var(--page-pad);
   position: sticky;
   top: 0;
   background: rgba(255,255,255,0.95);
@@ -187,7 +188,7 @@ body {
 .site-main {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 36px 24px 64px;
+  padding: 36px var(--page-pad) 64px;
 }
 
 .section-content { display: none; }
@@ -445,7 +446,7 @@ body {
   border-top: 1px solid var(--border);
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 20px 24px;
+  padding: 20px var(--page-pad);
   font-size: 12px;
   color: var(--text-light);
   display: flex;
@@ -455,6 +456,7 @@ body {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 620px) {
+  :root { --page-pad: 14px; }
   .profile-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -976,7 +978,7 @@ body {
 </main>
 
 <!-- ── FOOTER ── -->
-<footer class="site-footer" style="max-width: var(--max-w); margin: 0 auto; padding: 16px 24px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text-light); display: flex; justify-content: space-between;">
+<footer class="site-footer" style="max-width: var(--max-w); margin: 0 auto; padding: 16px var(--page-pad); border-top: 1px solid var(--border); font-size: 12px; color: var(--text-light); display: flex; justify-content: space-between;">
   <span>Hong-Yu Zhou · Tsinghua University · AIMS Lab</span>
   <span>Beijing, China</span>
 </footer>
