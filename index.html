@@ -857,7 +857,7 @@ function renderPublications(data) {
 
   if (data.scholar_url && scholarLink) scholarLink.href = data.scholar_url;
 
-  const pubs = (data.publications || []).slice();
+  const pubs = (data.publications || []).filter(p => p.venue && p.venue.trim());
   if (!pubs.length) {
     statusEl.textContent = 'No publications found.';
     return;
@@ -946,7 +946,7 @@ function renderHighlights(data) {
 
   const names = data.highlight_names || ['Hong-Yu Zhou'];
   const highlights = (data.publications || [])
-    .filter(p => p.is_highlight || isKeyAuthor(p.authors_html || '', names))
+    .filter(p => p.venue && p.venue.trim() && (p.is_highlight || isKeyAuthor(p.authors_html || '', names)))
     .slice(0, 5);
 
   if (!highlights.length) {
