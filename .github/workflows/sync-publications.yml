@@ -24,6 +24,8 @@ jobs:
 
       - name: Sync from Google Scholar
         run: python scripts/sync_scholar.py
+        timeout-minutes: 10
+        continue-on-error: true
 
       - name: Commit updated publications
         uses: stefanzweifel/git-auto-commit-action@v5

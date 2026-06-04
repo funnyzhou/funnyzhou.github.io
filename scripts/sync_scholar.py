@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync publications.json from Google Scholar profile."""
+"""Sync publications.json from Google Scholar profile via scholarly."""
 
 from __future__ import annotations
 
@@ -12,7 +12,6 @@ from pathlib import Path
 from urllib.parse import quote
 
 import requests
-from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / "publications.json"
@@ -26,13 +25,6 @@ HIGHLIGHT_NAMES = [
     "Hongyu Zhou",
     "HY Zhou",
 ]
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    ),
-    "Accept-Language": "en-US,en;q=0.9",
-}
 
 
 def highlight_authors(authors: str) -> str:
@@ -43,88 +35,12 @@ def highlight_authors(authors: str) -> str:
     return html
 
 
-def parse_year(cell, venue: str = "") -> int | None:
-    if cell:
-        text = cell.get_text(strip=True)
-        if text.isdigit():
-            return int(text)
-    match = re.search(r"\b(20\d{2})\b", venue)
-    return int(match.group(1)) if match else None
-
-
-def parse_publications(html: str) -> list[dict]:
-    soup = BeautifulSoup(html, "html.parser")
-    rows = soup.select("tr.gsc_a_tr")
-    publications = []
-
-    for row in rows:
-        title_el = row.select_one("a.gsc_a_at")
-        if not title_el:
-            continue
-        title = title_el.get_text(strip=True)
-        url = title_el.get("href", "")
-        if url and url.startswith("/"):
-            url = "https://scholar.google.com" + url
-
-        grays = row.select("div.gs_gray")
-        authors = grays[0].get_text(strip=True) if grays else ""
-        venue = grays[1].get_text(strip=True) if len(grays) > 1 else ""
-        year = parse_year(row.select_one("td.gsc_a_y"), venue)
-
-        publications.append(
-            {
-                "title": title,
-                "authors_html": highlight_authors(authors),
-                "venue": venue,
-                "year": year,
-                "url": url or None,
-            }
-        )
-
-    return publications
-
-
-def fetch_all_publications(user_id: str) -> list[dict]:
-    session = requests.Session()
-    session.trust_env = False  # ignore system proxy (often blocks Scholar)
-    session.headers.update(HEADERS)
-    all_pubs: list[dict] = []
-    cstart = 0
-    pagesize = 100
-
-    while True:
-        params = {
-            "user": user_id,
-            "hl": "en",
-            "view_op": "list_works",
-            "sortby": "pubdate",
-            "cstart": cstart,
-            "pagesize": pagesize,
-        }
-        resp = session.get(
-            "https://scholar.google.com/citations",
-            params=params,
-            timeout=60,
-        )
-        resp.raise_for_status()
-        batch = parse_publications(resp.text)
-        if not batch:
-            break
-        all_pubs.extend(batch)
-        if len(batch) < pagesize:
-            break
-        cstart += pagesize
-
-    return all_pubs
-
-
 def strip_tags(html: str) -> str:
     return re.sub(r"<[^>]+>", "", html)
 
 
 def is_key_author(authors_html: str) -> bool:
     """Return True if HY Zhou appears as 1st, 2nd, or last author."""
-    # Remove trailing "et al." and split
     text = strip_tags(authors_html)
     text = re.sub(r",?\s*et al\.?\s*$", "", text, flags=re.IGNORECASE)
     parts = [p.strip() for p in text.split(",") if p.strip()]
@@ -148,12 +64,11 @@ def fetch_abstract(title: str) -> str | None:
     try:
         resp = requests.get(url, timeout=15)
         resp.raise_for_status()
-        data = resp.json()
-        papers = data.get("data", [])
+        papers = resp.json().get("data", [])
         if papers and papers[0].get("abstract"):
             return papers[0]["abstract"]
     except Exception as exc:
-        print(f"  Semantic Scholar lookup failed for '{title[:50]}': {exc}", file=sys.stderr)
+        print(f"  abstract lookup failed for '{title[:50]}': {exc}", file=sys.stderr)
     return None
 
 
@@ -165,8 +80,6 @@ def enrich_abstracts(publications: list[dict], existing: dict | None) -> None:
             if pub.get("abstract"):
                 existing_map[pub["title"]] = pub["abstract"]
 
-    highlights = [p for p in publications if is_key_author(p["authors_html"])]
-    # Only fetch for the 10 most recent highlights (covers the 5 shown + buffer)
     for pub in publications:
         pub["is_highlight"] = is_key_author(pub["authors_html"])
 
@@ -178,7 +91,45 @@ def enrich_abstracts(publications: list[dict], existing: dict | None) -> None:
             print(f"  Fetching abstract: {pub['title'][:60]}…")
             abstract = fetch_abstract(pub["title"])
             pub["abstract"] = abstract
-            time.sleep(0.5)  # be polite to Semantic Scholar
+            time.sleep(1)
+
+
+def fetch_publications_scholarly() -> list[dict]:
+    """Fetch via the scholarly library (handles anti-bot measures)."""
+    from scholarly import scholarly as sc
+
+    author = sc.search_author_id(USER_ID)
+    author = sc.fill(author, sections=["publications"], sortby="year")
+
+    publications = []
+    for pub in author.get("publications", []):
+        bib = pub.get("bib", {})
+        title = bib.get("title", "")
+        if not title:
+            continue
+        authors_raw = bib.get("author", "")
+        venue = bib.get("venue", "") or bib.get("journal", "") or bib.get("booktitle", "")
+        year_raw = bib.get("pub_year")
+        try:
+            year = int(year_raw) if year_raw else None
+        except (ValueError, TypeError):
+            year = None
+
+        pub_url = pub.get("pub_url") or None
+
+        publications.append(
+            {
+                "title": title,
+                "authors_html": highlight_authors(authors_raw),
+                "venue": venue,
+                "year": year,
+                "url": pub_url,
+            }
+        )
+
+    # Sort by year descending
+    publications.sort(key=lambda p: p["year"] or 0, reverse=True)
+    return publications
 
 
 def load_existing() -> dict | None:
@@ -202,24 +153,24 @@ def write_output(publications: list[dict]) -> None:
 
 
 def main() -> int:
+    existing = load_existing()
+
     try:
-        publications = fetch_all_publications(USER_ID)
+        publications = fetch_publications_scholarly()
     except Exception as exc:
         print(f"Failed to fetch Google Scholar: {exc}", file=sys.stderr)
-        if OUTPUT.exists():
+        if existing:
             print("Keeping existing publications.json unchanged.", file=sys.stderr)
-            return 1
-        raise
+            return 0  # soft failure — don't break CI
+        return 1
 
     if not publications:
         print("No publications parsed from Google Scholar.", file=sys.stderr)
-        existing = load_existing()
         if existing:
             print("Keeping existing publications.json unchanged.", file=sys.stderr)
-            return 1
+            return 0
         return 1
 
-    existing = load_existing()
     enrich_abstracts(publications, existing)
     write_output(publications)
     n_highlights = sum(1 for p in publications if p.get("is_highlight"))
