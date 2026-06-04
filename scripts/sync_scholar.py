@@ -118,6 +118,9 @@ def fetch_publications_scholarly() -> list[dict]:
         if not title:
             continue
         authors_raw = bib.get("author", "")
+        # scholarly sometimes returns "A and B and C"; normalise to "A, B, C"
+        if " and " in authors_raw:
+            authors_raw = authors_raw.replace(" and ", ", ")
         venue = bib.get("venue", "") or bib.get("journal", "") or bib.get("booktitle", "")
         year_raw = bib.get("pub_year")
         try:
