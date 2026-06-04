@@ -6,9 +6,10 @@ from __future__ import annotations
 import json
 import re
 import sys
+import time
 from datetime import date
 from pathlib import Path
-from urllib.parse import urlencode
+from urllib.parse import quote
 
 import requests
 from bs4 import BeautifulSoup
@@ -117,6 +118,69 @@ def fetch_all_publications(user_id: str) -> list[dict]:
     return all_pubs
 
 
+def strip_tags(html: str) -> str:
+    return re.sub(r"<[^>]+>", "", html)
+
+
+def is_key_author(authors_html: str) -> bool:
+    """Return True if HY Zhou appears as 1st, 2nd, or last author."""
+    # Remove trailing "et al." and split
+    text = strip_tags(authors_html)
+    text = re.sub(r",?\s*et al\.?\s*$", "", text, flags=re.IGNORECASE)
+    parts = [p.strip() for p in text.split(",") if p.strip()]
+    if not parts:
+        return False
+    key_positions = {0, 1, len(parts) - 1}
+    for i, part in enumerate(parts):
+        if i in key_positions:
+            for name in HIGHLIGHT_NAMES:
+                if name.lower() in part.lower():
+                    return True
+    return False
+
+
+def fetch_abstract(title: str) -> str | None:
+    """Query Semantic Scholar for the abstract of a paper by title."""
+    url = (
+        "https://api.semanticscholar.org/graph/v1/paper/search"
+        f"?query={quote(title)}&fields=abstract&limit=1"
+    )
+    try:
+        resp = requests.get(url, timeout=15)
+        resp.raise_for_status()
+        data = resp.json()
+        papers = data.get("data", [])
+        if papers and papers[0].get("abstract"):
+            return papers[0]["abstract"]
+    except Exception as exc:
+        print(f"  Semantic Scholar lookup failed for '{title[:50]}': {exc}", file=sys.stderr)
+    return None
+
+
+def enrich_abstracts(publications: list[dict], existing: dict | None) -> None:
+    """Add abstract + is_highlight fields; reuse cached abstracts where available."""
+    existing_map: dict[str, str] = {}
+    if existing:
+        for pub in existing.get("publications", []):
+            if pub.get("abstract"):
+                existing_map[pub["title"]] = pub["abstract"]
+
+    highlights = [p for p in publications if is_key_author(p["authors_html"])]
+    # Only fetch for the 10 most recent highlights (covers the 5 shown + buffer)
+    for pub in publications:
+        pub["is_highlight"] = is_key_author(pub["authors_html"])
+
+    recent_highlights = [p for p in publications if p["is_highlight"]][:10]
+    for pub in recent_highlights:
+        if pub["title"] in existing_map:
+            pub["abstract"] = existing_map[pub["title"]]
+        else:
+            print(f"  Fetching abstract: {pub['title'][:60]}…")
+            abstract = fetch_abstract(pub["title"])
+            pub["abstract"] = abstract
+            time.sleep(0.5)  # be polite to Semantic Scholar
+
+
 def load_existing() -> dict | None:
     if OUTPUT.exists():
         return json.loads(OUTPUT.read_text(encoding="utf-8"))
@@ -155,8 +219,11 @@ def main() -> int:
             return 1
         return 1
 
+    existing = load_existing()
+    enrich_abstracts(publications, existing)
     write_output(publications)
-    print(f"Synced {len(publications)} publications -> {OUTPUT}")
+    n_highlights = sum(1 for p in publications if p.get("is_highlight"))
+    print(f"Synced {len(publications)} publications ({n_highlights} highlights) -> {OUTPUT}")
     return 0
 
 

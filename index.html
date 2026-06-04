@@ -381,6 +381,68 @@ body {
   margin-top: 20px;
 }
 
+/* ── HIGHLIGHT CARDS ── */
+.highlight-list { margin-top: 4px; }
+
+.highlight-card {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.highlight-card:last-child { border-bottom: none; }
+
+.highlight-title {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+.highlight-title a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.highlight-title a:hover { border-bottom-color: var(--accent); }
+
+.highlight-meta {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+.highlight-meta b { color: var(--text); font-weight: 600; }
+.highlight-venue {
+  font-style: italic;
+  font-family: var(--serif);
+  color: var(--accent);
+}
+
+.highlight-abstract {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-top: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.highlight-abstract.expanded {
+  display: block;
+}
+.highlight-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--sans);
+}
+.highlight-toggle:hover { text-decoration: underline; }
+
 /* ── JOURNAL BADGES ── */
 .badge {
   display: inline-block;
@@ -596,7 +658,13 @@ body {
       </div>
 
     </div>
-<!-- 
+
+    <h2 class="sec-title" style="margin-top:40px;">Highlights</h2>
+    <div class="highlight-list" id="highlights-list">
+      <p class="pubs-status" id="highlights-status">Loading…</p>
+    </div>
+
+<!--
     <h2 class="sec-title" style="margin-top:40px;">Honors &amp; Awards</h2>
     <ul class="award-list">
       <li class="award-item">Stanford / Elsevier Top 2% Scientist — 2024, 2025</li>
@@ -854,6 +922,71 @@ function renderPublications(data) {
   }
 }
 
+function renderHighlights(data) {
+  const listEl = document.getElementById('highlights-list');
+  const statusEl = document.getElementById('highlights-status');
+  if (!listEl) return;
+
+  const highlights = (data.publications || [])
+    .filter(p => p.is_highlight)
+    .slice(0, 5);
+
+  if (!highlights.length) {
+    if (statusEl) statusEl.textContent = 'No highlights available.';
+    return;
+  }
+  if (statusEl) statusEl.remove();
+
+  const frag = document.createDocumentFragment();
+  highlights.forEach(pub => {
+    const card = document.createElement('div');
+    card.className = 'highlight-card';
+
+    const titleEl = document.createElement('div');
+    titleEl.className = 'highlight-title';
+    if (pub.url) {
+      const a = document.createElement('a');
+      a.href = pub.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = pub.title;
+      titleEl.appendChild(a);
+    } else {
+      titleEl.textContent = pub.title;
+    }
+
+    const metaEl = document.createElement('div');
+    metaEl.className = 'highlight-meta';
+    const authorsSpan = document.createElement('span');
+    authorsSpan.innerHTML = pub.authors_html || '';
+    const venueSpan = document.createElement('span');
+    venueSpan.className = 'highlight-venue';
+    venueSpan.textContent = pub.venue ? ' · ' + pub.venue : '';
+    metaEl.append(authorsSpan, venueSpan);
+
+    card.append(titleEl, metaEl);
+
+    if (pub.abstract) {
+      const abstractEl = document.createElement('p');
+      abstractEl.className = 'highlight-abstract';
+      abstractEl.textContent = pub.abstract;
+      card.appendChild(abstractEl);
+
+      const toggle = document.createElement('button');
+      toggle.className = 'highlight-toggle';
+      toggle.textContent = 'Show more';
+      toggle.addEventListener('click', () => {
+        const expanded = abstractEl.classList.toggle('expanded');
+        toggle.textContent = expanded ? 'Show less' : 'Show more';
+      });
+      card.appendChild(toggle);
+    }
+
+    frag.appendChild(card);
+  });
+  listEl.appendChild(frag);
+}
+
 async function loadPublications() {
   const statusEl = document.getElementById('pubs-status');
   try {
@@ -861,8 +994,11 @@ async function loadPublications() {
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const data = await res.json();
     renderPublications(data);
+    renderHighlights(data);
   } catch (err) {
-    statusEl.textContent = 'Could not load publications. Please refresh or visit Google Scholar directly.';
+    if (statusEl) statusEl.textContent = 'Could not load publications. Please refresh or visit Google Scholar directly.';
+    const hStatus = document.getElementById('highlights-status');
+    if (hStatus) hStatus.textContent = 'Could not load highlights.';
     console.error('publications load failed:', err);
   }
 }
