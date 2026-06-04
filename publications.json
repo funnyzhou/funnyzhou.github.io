@@ -6,319 +6,619 @@
     "Hong-Yu Zhou",
     "Hong-Yu ZHOU",
     "H.-Y. Zhou",
-    "H. Y. Zhou"
+    "H. Y. Zhou",
+    "Hongyu Zhou",
+    "HY Zhou"
   ],
   "publications": [
     {
       "title": "Concept-Guided Noisy Negative Suppression for Zero-Shot Classification and Grounding of Chest X-Ray Findings",
-      "venue": "MICCAI, 2026",
+      "authors_html": "C Lian, <b>HY Zhou</b>, CK Wong, J Qin",
+      "venue": "International Conference on Medical Image Computing and Computer Assisted …, 2026",
       "year": 2026,
-      "url": null,
-      "authors_html": "C Lian, <b>Hong-Yu Zhou</b>, CK Wong, J Qin"
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:7BrZ7Jt4UNcC"
     },
     {
       "title": "Evidential Reasoning Advances Interpretable Real-World Disease Screening",
-      "venue": "ICML, 2026",
+      "authors_html": "C Lian, <b>HY Zhou</b>, J Qin",
+      "venue": "The International Conference on Machine Learning (ICML), 2026",
       "year": 2026,
-      "url": null,
-      "authors_html": "C Lian, <b>Hong-Yu Zhou</b>, J Qin"
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:nRpfm8aw39MC"
     },
     {
-      "title": "MedVersa: A Generalist Foundation Model for Diverse Medical Imaging Tasks",
-      "venue": "NEJM AI, 2026",
+      "title": "A multi-model study of diagnostic faithfulness in AI-generated histopathology images",
+      "authors_html": "<b>HY Zhou</b>, Q Wang, Y Jiang, F Yang, Y Cao, J Chang, P Ma, J Ji, YQ Che, ...",
+      "venue": "",
       "year": 2026,
-      "url": "https://ai.nejm.org/doi/full/10.1056/AIoa2500595",
-      "authors_html": "<b>Hong-Yu Zhou</b>, JN Acosta, S Adithan, S Datta, EJ Topol, P Rajpurkar"
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:PaBasH6fAo0C"
     },
     {
-      "title": "Incorporating Global-Local Tissue Changes to Predict Future Breast Cancer from Longitudinal Screening Mammograms",
-      "venue": "Medical Image Analysis, 2026",
+      "title": "MedVersa: a generalist foundation model for diverse medical imaging tasks",
+      "authors_html": "<b>HY Zhou</b>, JN Acosta, S Adithan, S Datta, EJ Topol, P Rajpurkar",
+      "venue": "NEJM AI 3 (4), AIoa2500595, 2026",
       "year": 2026,
-      "url": null,
-      "authors_html": "X Wang, T Tan, Y Gao, E Marcus, <b>Hong-Yu Zhou</b>, C Lu, L Han, A Portaluri, R Su, et al."
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:kVjdVfd2voEC"
+    },
+    {
+      "title": "Incorporating global-local tissue changes to predict future breast cancer from longitudinal screening mammograms",
+      "authors_html": "X Wang, T Tan, Y Gao, E Marcus, <b>HY Zhou</b>, C Lu, L Han, A Portaluri, R Su, ...",
+      "venue": "Medical Image Analysis, 103990, 2026",
+      "year": 2026,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:43bX7VzcjpAC"
     },
     {
       "title": "InstructDiff: Domain-Adaptive Data Selection via Differential Entropy for Efficient LLM Fine-Tuning",
-      "venue": "ACL, 2026",
+      "authors_html": "J Su, H Zhu, X Luo, L Zhang, <b>HY Zhou</b>, Y Chen, P Li, Y Liu, G Chen",
+      "venue": "Annual Meeting of the Association for Computational Linguistics (ACL), 2026",
       "year": 2026,
-      "url": null,
-      "authors_html": "J Su, H Zhu, X Luo, L Zhang, <b>Hong-Yu Zhou</b>, Y Chen, P Li, Y Liu, G Chen"
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:CB2v5VPnA5kC"
     },
     {
       "title": "SkinFlow: Efficient Information Transmission for Open Dermatological Diagnosis via Dynamic Visual Encoding and Staged RL",
-      "venue": "arXiv preprint, 2026",
+      "authors_html": "L Liu, L Chen, Z Zhang, M Tian, H Cui, R Li, Z Liu, Q Ju, Q Li, <b>HY Zhou</b>",
+      "venue": "arXiv preprint arXiv:2601.09136, 2026",
       "year": 2026,
-      "url": null,
-      "authors_html": "L Liu, L Chen, Z Zhang, M Tian, H Cui, R Li, Z Liu, Q Ju, Q Li, <b>Hong-Yu Zhou</b>"
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:1lhNe0rCu4AC"
     },
     {
-      "title": "A Multimodal Vision–Language Model for Generalizable Annotation-Free Pathology Localization",
-      "venue": "Nature Biomedical Engineering, 2026",
+      "title": "A multimodal vision–language model for generalizable annotation-free pathology localization",
+      "authors_html": "H Yang, <b>HY Zhou</b>, J Liu, W Huang, C Li, Z Li, Y Gao, Q Liu, Y Liang, ...",
+      "venue": "Nature Biomedical Engineering, 1-15, 2026",
       "year": 2026,
-      "url": "https://www.nature.com/articles/s41551-025-01574-7",
-      "authors_html": "H Yang, <b>Hong-Yu Zhou</b>, J Liu, W Huang, C Li, Z Li, Y Gao, Q Liu, Y Liang, et al."
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:lgwcVrK6X84C"
     },
     {
       "title": "Visualizing Radiologic Connections: An Explainable Coarse-to-Fine Foundation Model with Multiview Mammograms and Associated Reports",
-      "venue": "Radiology: Artificial Intelligence, 2026",
+      "authors_html": "Y Gao, <b>HY Zhou</b>, X Wang, A Portaluri, T Zhang, R Beets-Tan, L Han, C Lu, ...",
+      "venue": "Radiology: Artificial Intelligence 8 (1), e240646, 2026",
       "year": 2026,
-      "url": null,
-      "authors_html": "Y Gao, <b>Hong-Yu Zhou</b>, X Wang, A Portaluri, T Zhang, R Beets-Tan, L Han, C Lu, et al."
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:BzfGm06jWhQC"
     },
     {
-      "title": "International Retrospective Observational Study of Continual Learning for AI on Endotracheal Tube Placement from Chest Radiographs",
-      "venue": "NEJM AI, 2026",
+      "title": "International retrospective observational study of continual learning for AI on endotracheal tube placement from chest radiographs",
+      "authors_html": "E Chen, A Saenz, O Banerjee, H Marklund, X Zhang, S Johri, <b>HY Zhou</b>, ...",
+      "venue": "NEJM AI 3 (1), AIoa2500522, 2026",
       "year": 2026,
-      "url": null,
-      "authors_html": "E Chen, A Saenz, O Banerjee, H Marklund, X Zhang, S Johri, <b>Hong-Yu Zhou</b>, et al."
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:48xauSegjOkC"
     },
     {
       "title": "Automated Chest X-ray Report Generation Remains Unsolved",
-      "venue": "Biocomputing 2026: Proceedings of the Pacific Symposium, 2026",
+      "authors_html": "X Zhang, JN Acosta, X Yang, S Adithan, L Luo, <b>HY Zhou</b>, J Miller, ...",
+      "venue": "Biocomputing 2026: Proceedings of the Pacific Symposium, 236-250, 2026",
       "year": 2026,
-      "url": null,
-      "authors_html": "X Zhang, JN Acosta, X Yang, S Adithan, L Luo, <b>Hong-Yu Zhou</b>, J Miller, et al."
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:CaZNVDsoPx4C"
     },
     {
       "title": "A Clinician-Guided Framework for Endoscopic AI: Developing PanEndoAtlas and Benchmarking Foundation Models Across the Full GI Spectrum",
-      "venue": "Biocomputing 2026: Proceedings of the Pacific Symposium, 2026",
+      "authors_html": "S Johri, L Luo, <b>HY Zhou</b>, T Brenner, S Elamin, ME Geissler, TM Berzin, ...",
+      "venue": "Biocomputing 2026: Proceedings of the Pacific Symposium, 42-56, 2026",
       "year": 2026,
-      "url": null,
-      "authors_html": "S Johri, L Luo, <b>Hong-Yu Zhou</b>, T Brenner, S Elamin, ME Geissler, TM Berzin, et al."
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:buQ7SEKw-1sC"
     },
     {
-      "title": "An evaluation framework for clinical use of large language models in patient interaction tasks",
-      "authors_html": "Shreya Johri, Jaehwan Jeong, Benjamin A Tran, Daniel I Schlessinger, Shannon Wongvibulsin, Leandra A Barnes, <b>Hong-Yu Zhou</b>, Zhuo Ran Cai, Eliezer M Van Allen, David Kim, Roxana Daneshjou, Pranav Rajpurkar",
-      "venue": "Nature Medicine, 2025",
-      "year": 2025
+      "title": "Mammo-AGE: deep learning estimation of breast age from mammograms",
+      "authors_html": "X Wang, T Tan, Y Gao, <b>HY Zhou</b>, T Zhang, L Han, A Portaluri, E Marcus, ...",
+      "venue": "Nature Communications 16 (1), 10934, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:QD3KBmkZPeQC"
+    },
+    {
+      "title": "BioVFM-21M: Benchmarking and Scaling Self-supervised Vision Foundation Models for Biomedical Image Analysis",
+      "authors_html": "J Liu, <b>HY Zhou</b>, W Huang, H Yang, D Song, T Tan, Y Liang, S Wang",
+      "venue": "International Workshop on Foundation Models for General Medical AI, 23-33, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:Ak0FvsSvgGUC"
+    },
+    {
+      "title": "Systems and methods for performing medical tasks using a medical artificial intelligence system",
+      "authors_html": "P Rajpurkar, <b>HY Zhou</b>",
+      "venue": "US Patent App. 19/057,629, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:4xDN1ZYqzskC"
+    },
+    {
+      "title": "Evolutionary Paradigms in Histopathology Serial Sections technology",
+      "authors_html": "Z Zhuang, M Cen, L Jiang, Q Peng, Y Hu, <b>HY Zhou</b>, L Wang",
+      "venue": "arXiv preprint arXiv:2508.02423, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:uDGL6kOW6j0C"
+    },
+    {
+      "title": "Rexgroundingct: A 3d chest ct dataset for segmentation of findings from free-text reports",
+      "authors_html": "M Baharoon, L Luo, M Moritz, A Kumar, SE Kim, X Zhang, M Zhu, ...",
+      "venue": "arXiv preprint arXiv:2507.22030, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:NyGDZy8z5eUC"
+    },
+    {
+      "title": "BenchReAD: A systematic benchmark for retinal anomaly detection",
+      "authors_html": "C Lian, <b>HY Zhou</b>, Z Hu, J Qin",
+      "venue": "MICCAI 2025, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:6yz0xqPARnAC"
+    },
+    {
+      "title": "Efficient medical vision-language alignment through adapting masked vision models",
+      "authors_html": "C Lian, <b>HY Zhou</b>, D Liang, J Qin, L Wang",
+      "venue": "IEEE Transactions on Medical Imaging, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:AHdEip9mkN0C"
+    },
+    {
+      "title": "Multimodal generative AI for interpreting 3D medical images and videos",
+      "authors_html": "JO Lee, <b>HY Zhou</b>, TM Berzin, DK Sodickson, P Rajpurkar",
+      "venue": "NPJ digital medicine 8 (1), 273, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:vDZJ-YLwNdEC"
+    },
+    {
+      "title": "Sdr-former: A siamese dual-resolution transformer for liver lesion classification using 3d multi-phase imaging",
+      "authors_html": "M Lou, H Ying, X Liu, <b>HY Zhou</b>, Y Zhang, Y Yu",
+      "venue": "Neural Networks 185, 107228, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:cWzG1nlazyYC"
+    },
+    {
+      "title": "MetaGP: A generative foundation model integrating electronic health records and multimodal imaging for addressing unmet clinical needs",
+      "authors_html": "F Liu, <b>HY Zhou</b>, K Wang, Y Yu, Y Gao, Z Sun, S Liu, S Sun, Z Zou, Z Li, ...",
+      "venue": "Cell Reports Medicine 6 (4), 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:2tRrZ1ZAMYUC"
+    },
+    {
+      "title": "TransXNet: learning both global and local dynamics with a dual dynamic token mixer for visual recognition",
+      "authors_html": "M Lou, S Zhang, <b>HY Zhou</b>, S Yang, C Wu, Y Yu",
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:PoWvk5oyLR8C"
+    },
+    {
+      "title": "Medtrinity-25m: A large-scale multimodal dataset with multigranular annotations for medicine",
+      "authors_html": "Y Xie, C Zhou, L Gao, J Wu, X Li, <b>HY Zhou</b>, S Liu, L Xing, J Zou, C Xie, ...",
+      "venue": "ICLR 2025, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:OP4eGU-M3BUC"
+    },
+    {
+      "title": "Multi-modal longitudinal representation learning for predicting neoadjuvant therapy response in breast cancer treatment",
+      "authors_html": "Y Gao, T Tan, X Wang, R Beets-Tan, T Zhang, L Han, A Portaluri, C Lu, ...",
+      "venue": "IEEE Journal of Biomedical and Health Informatics, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:gKiMpY-AVTkC"
     },
     {
       "title": "Self-improving generative foundation model for synthetic medical image generation and clinical applications",
-      "authors_html": "Jinzhuo Wang, Kai Wang, Yunfang Yu, Yuxing Lu, ..., <b>Hong-Yu Zhou</b>, ..., Kang Zhang, Jia Qu",
-      "venue": "Nature Medicine, 2025",
-      "year": 2025
+      "authors_html": "J Wang, K Wang, Y Yu, Y Lu, W Xiao, Z Sun, F Liu, Z Zou, Y Gao, L Yang, ...",
+      "venue": "Nature Medicine 31 (2), 609-617, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:lvd772isFD0C"
     },
     {
-      "title": "MetaGP: A Generative Foundation Model Integrating Electronic Health Records and Multimodal Imaging for Addressing Unmet Clinical Needs",
-      "authors_html": "Fei Liu, <b>Hong-Yu Zhou</b>, Kai Wang, Yunfang Yu, ..., Kang Zhang",
-      "venue": "Cell Reports Medicine, 2025",
-      "year": 2025
+      "title": "An evaluation framework for clinical use of large language models in patient interaction tasks",
+      "authors_html": "S Johri, J Jeong, BA Tran, DI Schlessinger, S Wongvibulsin, LA Barnes, ...",
+      "venue": "Nature Medicine 31 (1), 77-86, 2025",
+      "year": 2025,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:gVv57TyPmFsC"
     },
     {
-      "title": "Multimodal Generative AI for Interpreting 3D Medical Images and Videos",
-      "authors_html": "Jung-Oh Lee, <b>Hong-Yu Zhou</b>, Tyler M Berzin, Daniel K Sodickson, Pranav Rajpurkar",
-      "venue": "npj Digital Medicine, 2025",
-      "year": 2025
+      "title": "Swin-UMamba†: Adapting Mamba-based vision foundation models for medical image segmentation",
+      "authors_html": "J Liu, H Yang, <b>HY Zhou</b>, L Yu, Y Liang, Y Yu, S Zhang, H Zheng, S Wang",
+      "venue": "IEEE Transactions on Medical Imaging 44 (10), 3898-3908, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:Aul-kAQHnToC"
     },
     {
-      "title": "BenchReAD: A Systematic Benchmark for Retinal Anomaly Detection",
-      "authors_html": "Chenyu Lian, <b>Hong-Yu Zhou</b>, Zhanli Hu, Jing Qin",
-      "venue": "MICCAI, 2025",
-      "year": 2025
+      "title": "An explainable longitudinal multi-modal fusion model for predicting neoadjuvant therapy response in women with breast cancer",
+      "authors_html": "Y Gao, S Ventura-Diaz, X Wang, M He, Z Xu, A Weir, <b>HY Zhou</b>, T Zhang, ...",
+      "venue": "Nature communications 15 (1), 9613, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:5icHVeHT4IsC"
     },
     {
-      "title": "Efficient Medical Vision-Language Alignment Through Adapting Masked Vision Models",
-      "authors_html": "Chenyu Lian, <b>Hong-Yu Zhou</b>, Dongyun Liang, Jing Qin, Liansheng Wang",
-      "venue": "IEEE Transactions on Medical Imaging, 2025",
-      "year": 2025
+      "title": "Improving neoadjuvant therapy response prediction by integrating longitudinal mammogram generation with cross-modal radiological reports: A vision-language alignment-guided model",
+      "authors_html": "Y Gao, <b>HY Zhou</b>, X Wang, T Zhang, L Han, C Lu, X Liang, J Teuwen, ...",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted …, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:fbc8zXXH2BUC"
     },
     {
-      "title": "Multi-Modal Longitudinal Representation Learning for Predicting Neoadjuvant Therapy Response in Breast Cancer Treatment",
-      "authors_html": "Yuan Gao, Tao Tan, Xin Wang, Regina Beets-Tan, Tianyu Zhang, ..., <b>Hong-Yu Zhou</b>, Ritse Mann",
-      "venue": "IEEE Journal of Biomedical and Health Informatics, 2025",
-      "year": 2025
+      "title": "Headct-one: Enabling granular and controllable automated evaluation of head ct radiology report generation",
+      "authors_html": "JN Acosta, X Zhang, S Dogra, <b>HY Zhou</b>, S Payabvash, GJ Falcone, ...",
+      "venue": "arXiv preprint arXiv:2409.13038, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:GFxP56DSvIMC"
     },
     {
-      "title": "TransXNet: Learning Both Global and Local Dynamics with a Dual Dynamic Token Mixer for Visual Recognition",
-      "authors_html": "Meng Lou, Shu Zhang, <b>Hong-Yu Zhou</b>, Sibei Yang, Chuan Wu, Yizhou Yu",
-      "venue": "IEEE Transactions on Neural Networks and Learning Systems, 2025",
-      "year": 2025
+      "title": "Enhancing representation in radiography-reports foundation model: a granular alignment algorithm using masked contrastive learning",
+      "authors_html": "W Huang, C Li, <b>HY Zhou</b>, H Yang, J Liu, Y Liang, H Zheng, S Zhang, ...",
+      "venue": "Nature Communications 15 (1), 7620, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:_OXeSy2IsFwC"
     },
     {
-      "title": "SDR-Former: A Siamese Dual-Resolution Transformer for Liver Lesion Classification Using 3D Multi-Phase Imaging",
-      "authors_html": "Meng Lou, Hanning Ying, Xiaoqing Liu, <b>Hong-Yu Zhou</b>, Yuqin Zhang, Yizhou Yu",
-      "venue": "Neural Networks, 2025",
-      "year": 2025
+      "title": "Uncovering knowledge gaps in radiology report generation models through knowledge graphs",
+      "authors_html": "X Zhang, JN Acosta, <b>HY Zhou</b>, P Rajpurkar",
+      "venue": "arXiv preprint arXiv:2408.14397, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:nZcligLrVowC"
     },
     {
-      "title": "MedTrinity-25M: A Large-Scale Multimodal Dataset with Multigranular Annotations for Medicine",
-      "authors_html": "Yunfei Xie, Ce Zhou, Lang Gao, ..., <b>Hong-Yu Zhou</b>, ..., Cihang Xie, Yuyin Zhou",
-      "venue": "ICLR, 2025",
-      "year": 2025
+      "title": "A survey on graph neural networks and graph transformers in computer vision: A task-oriented perspective",
+      "authors_html": "C Chen, Y Wu, Q Dai, <b>HY Zhou</b>, M Xu, S Yang, X Han, Y Yu",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence 46 (12 …, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:W5xh706n7nkC"
     },
     {
-      "title": "Enhancing Representation in Radiography-Reports Foundation Model: A Granular Alignment Algorithm Using Masked Contrastive Learning",
-      "authors_html": "Weijian Huang, Cheng Li, <b>Hong-Yu Zhou</b>, Hao Yang, Jiarun Liu, Yong Liang, Hairong Zheng, Shaoting Zhang, Shanshan Wang",
-      "venue": "Nature Communications, 2024",
-      "year": 2024
+      "title": "Concepts and applications of digital twins in healthcare and medicine",
+      "authors_html": "K Zhang, <b>HY Zhou</b>, DT Baptista-Hon, Y Gao, X Liu, E Oermann, S Xu, ...",
+      "venue": "Patterns 5 (8), 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:8xutWZnSdmoC"
     },
     {
-      "title": "An Explainable Longitudinal Multi-Modal Fusion Model for Predicting Neoadjuvant Therapy Response in Women with Breast Cancer",
-      "authors_html": "Yuan Gao, ..., <b>Hong-Yu Zhou</b>, ..., Tao Tan, Ritse Mann",
-      "venue": "Nature Communications, 2024",
-      "year": 2024
+      "title": "Uncertainty estimation of large language models in medical question answering",
+      "authors_html": "J Wu, Y Yu, <b>HY Zhou</b>",
+      "venue": "arXiv preprint arXiv:2407.08662, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:HeT0ZceujKMC"
     },
     {
-      "title": "Concepts and Applications of Digital Twins in Healthcare and Medicine",
-      "authors_html": "Kang Zhang, <b>Hong-Yu Zhou</b>, Daniel T Baptista-Hon, ..., Joseph Wu",
-      "venue": "Patterns, 2024",
-      "year": 2024
-    },
-    {
-      "title": "A Survey on Graph Neural Networks and Graph Transformers in Computer Vision: A Task-Oriented Perspective",
-      "authors_html": "Chaoqi Chen, Yushuang Wu, Qiyuan Dai, <b>Hong-Yu Zhou</b>, Mutian Xu, Sibei Yang, Xiaoguang Han, Yizhou Yu",
-      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence, 2024",
-      "year": 2024
-    },
-    {
-      "title": "Swin-UMamba†: Adapting Mamba-Based Vision Foundation Models for Medical Image Segmentation",
-      "authors_html": "Jiarun Liu, Hao Yang, <b>Hong-Yu Zhou</b>, Lequan Yu, Yong Liang, Yizhou Yu, Shaoting Zhang, Hairong Zheng, Shanshan Wang",
-      "venue": "IEEE Transactions on Medical Imaging, 2024",
-      "year": 2024
-    },
-    {
-      "title": "Swin-UMamba: Mamba-Based UNet with ImageNet-Based Pretraining",
-      "authors_html": "Jiarun Liu, Hao Yang, <b>Hong-Yu Zhou</b>, et al.",
-      "venue": "MICCAI, 2024",
-      "year": 2024
+      "title": "Direct preference optimization for suppressing hallucinated prior exams in radiology report generation",
+      "authors_html": "O Banerjee, <b>HY Zhou</b>, S Adithan, S Kwak, K Wu, P Rajpurkar",
+      "venue": "arXiv preprint arXiv:2406.06496, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:yMeIxYmEMEAC"
     },
     {
       "title": "Cross-Dimensional Medical Self-Supervised Representation Learning Based on a Pseudo-3D Transformation",
-      "authors_html": "Fei Gao, Siwen Wang, Churan Wang, Fandong Zhang, <b>Hong-Yu Zhou</b>, Yizhou Wang, Gang Yu, Yizhou Yu",
-      "venue": "MICCAI, 2024",
-      "year": 2024
+      "authors_html": "F Gao, S Wang, C Wang, F Zhang, <b>HY Zhou</b>, Y Wang, G Yu, Y Yu",
+      "venue": "MICCAI 2024, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:KbBQZpvPDL4C"
     },
     {
-      "title": "Improving Neoadjuvant Therapy Response Prediction by Integrating Longitudinal Mammogram Generation with Cross-Modal Radiological Reports",
-      "authors_html": "Yuan Gao, <b>Hong-Yu Zhou</b>, Xin Wang, et al.",
-      "venue": "MICCAI, 2024",
-      "year": 2024
+      "title": "Enhancing representation in medical vision-language foundation models via multi-scale information extraction techniques",
+      "authors_html": "W Huang, C Li, <b>HY Zhou</b>, J Liu, H Yang, Y Liang, G Shi, H Zheng, S Wang",
+      "venue": "2024 IEEE International Symposium on Biomedical Imaging (ISBI), 1-5, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:P7Ujq4OLJYoC"
     },
     {
-      "title": "A Transformer-Based Representation-Learning Model with Unified Processing of Multimodal Input for Clinical Diagnostics",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Yizhou Yu, Chengdi Wang, Shu Zhang, Yuanxu Gao, Jia Pan, Jun Shao, Guangming Lu, Kang Zhang, Weimin Li",
-      "venue": "Nature Biomedical Engineering, 2023",
-      "year": 2023
+      "title": "Mlip: medical language-image pre-training with masked local representation learning",
+      "authors_html": "J Liu, <b>HY Zhou</b>, C Li, W Huang, H Yang, Y Liang, G Shi, H Zheng, S Wang",
+      "venue": "2024 IEEE International Symposium on Biomedical Imaging (ISBI), 1-5, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:NXb4pA-qfm4C"
     },
     {
-      "title": "A Unified Visual Information Preservation Framework for Self-Supervised Pre-Training in Medical Image Analysis",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Chixiang Lu, Chaoqi Chen, Sibei Yang, Yizhou Yu",
-      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023",
-      "year": 2023
+      "title": "Multimodal self-supervised learning for lesion localization",
+      "authors_html": "H Yang, <b>HY Zhou</b>, C Li, W Huang, J Liu, Y Liang, G Shi, H Zheng, Q Liu, ...",
+      "venue": "2024 IEEE International Symposium on Biomedical Imaging (ISBI), 1-5, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:0izLItjtcgwC"
     },
     {
-      "title": "nnFormer: Volumetric Medical Image Segmentation via a 3D Transformer",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Jiansen Guo, Yinghao Zhang, Xiaoguang Han, Lequan Yu, Liansheng Wang, Yizhou Yu",
-      "venue": "IEEE Transactions on Image Processing, 2023",
-      "year": 2023
+      "title": "Swin-umamba: Mamba-based unet with imagenet-based pretraining",
+      "authors_html": "J Liu, H Yang, <b>HY Zhou</b>, Y Xi, L Yu, Y Yu, Y Liang, G Shi, S Zhang, ...",
+      "venue": "MICCAI 2024, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:QYdC8u9Cj1oC"
     },
     {
-      "title": "Protein Representation Learning via Knowledge Enhanced Primary Structure Modeling",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Yunxiang Fu, Zhicheng Bian, Cheng Bian, Yizhou Yu",
-      "venue": "ICLR, 2023",
-      "year": 2023
+      "title": "Less could be better: Parameter-efficient fine-tuning advances medical vision foundation models",
+      "authors_html": "C Lian, <b>HY Zhou</b>, Y Yu, L Wang",
+      "venue": "arXiv preprint arXiv:2401.12215, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:_5tno0g5mFcC"
+    },
+    {
+      "title": "Enhancing the medical foundation model with multi-scale and cross-modality feature learning.",
+      "authors_html": "W Huang, C Li, <b>HY Zhou</b>, J Liu, H Yang, Y Liang, S Wang",
+      "venue": "CoRR, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:HtEfBTGE9r8C"
+    },
+    {
+      "title": "Ddcot: Duty-distinct chain-of-thought prompting for multimodal reasoning in language models",
+      "authors_html": "G Zheng, B Yang, J Tang, <b>HY Zhou</b>, S Yang",
+      "venue": "Advances in Neural Information Processing Systems 36, 5168-5191, 2023",
+      "year": 2023,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:S16KYo8Pm5AC"
+    },
+    {
+      "title": "nnFormer: Volumetric medical image segmentation via a 3d transformer",
+      "authors_html": "<b>HY Zhou</b>, J Guo, Y Zhang, X Han, L Yu, L Wang, Y Yu",
+      "venue": "IEEE transactions on image processing 32, 4036-4045, 2023",
+      "year": 2023,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:EYYDruWGBe4C"
+    },
+    {
+      "title": "Visualize what you learn: a well-explainable joint-learning framework based on multi-view mammograms and associated reports",
+      "authors_html": "Y Gao, <b>HY Zhou</b>, X Wang, T Zhang, R Tan, L Han, L Estacio, A D’Angelo, ...",
+      "venue": "",
+      "year": 2023,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:Z5m8FVwuT1cC"
+    },
+    {
+      "title": "A transformer-based representation-learning model with unified processing of multimodal input for clinical diagnostics",
+      "authors_html": "<b>HY Zhou</b>, Y Yu, C Wang, S Zhang, Y Gao, J Pan, J Shao, G Lu, K Zhang, ...",
+      "venue": "Nature biomedical engineering 7 (6), 743-755, 2023",
+      "year": 2023,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:ML0RJ9NH7IQC"
+    },
+    {
+      "title": "Advancing 3D medical image analysis with variable dimension transform based supervised 3D pre-training",
+      "authors_html": "S Zhang, Z Li, <b>HY Zhou</b>, J Ma, Y Yu",
+      "venue": "Neurocomputing 529, 11-22, 2023",
+      "year": 2023,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:Mojj43d5GZwC"
     },
     {
       "title": "Advancing Radiograph Representation Learning with Masked Record Modeling",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Chenyu Lian, Liansheng Wang, Yizhou Yu",
-      "venue": "ICLR, 2023",
-      "year": 2023
+      "authors_html": "<b>HY Zhou</b>, C Lian, L Wang, Y Yu",
+      "venue": "International Conference on Learning Representations (ICLR) 2023., 2023",
+      "year": 2023,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:uJ-U7cs_P_0C"
     },
     {
-      "title": "Activate and Reject: Towards Safe Domain Generalization Under Category Shift",
-      "authors_html": "Chaoqi Chen, Luyao Tang, Leitian Tao, <b>Hong-Yu Zhou</b>, Yue Huang, Xiaoguang Han, Yizhou Yu",
-      "venue": "ICCV, 2023",
-      "year": 2023
+      "title": "A unified visual information preservation framework for self-supervised pre-training in medical image analysis",
+      "authors_html": "<b>HY Zhou</b>, C Lu, C Chen, S Yang, Y Yu",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence 45 (7), 8020-8035, 2023",
+      "year": 2023,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:-_dYPAW6P2MC"
     },
     {
-      "title": "DDCoT: Duty-Distinct Chain-of-Thought Prompting for Multimodal Reasoning in Language Models",
-      "authors_html": "Ge Zheng, Bin Yang, Jiajin Tang, <b>Hong-Yu Zhou</b>, Sibei Yang",
-      "venue": "NeurIPS, 2023",
-      "year": 2023
+      "title": "Activate and reject: Towards safe domain generalization under category shift",
+      "authors_html": "C Chen, L Tang, L Tao, <b>HY Zhou</b>, Y Huang, X Han, Y Yu",
+      "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision …, 2023",
+      "year": 2023,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:LI9QrySNdTsC"
     },
     {
-      "title": "Generalized Radiograph Representation Learning via Cross-Supervision Between Images and Free-Text Radiology Reports",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Xiaoyu Chen, Yinghao Zhang, Ruibang Luo, Liansheng Wang, Yizhou Yu",
-      "venue": "Nature Machine Intelligence, 2022",
-      "year": 2022
+      "title": "Protein Representation Learning via Knowledge Enhanced Primary Structure Modeling",
+      "authors_html": "<b>HY Zhou</b>, Y Fu, Z Zhang, C Bian, Y Yu",
+      "venue": "International Conference on Learning Representations (ICLR) 2023., 2023.01 …, 2023",
+      "year": 2023,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:j8SEvjWlNXcC"
     },
     {
       "title": "GraVIS: Grouping Augmented Views From Independent Sources for Dermatology Analysis",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Chixiang Lu, Liansheng Wang, Yizhou Yu",
-      "venue": "IEEE Transactions on Medical Imaging, 2022",
-      "year": 2022
+      "authors_html": "<b>HY Zhou</b>, C Lu, L Wang, Y Yu",
+      "venue": "IEEE Transactions on Medical Imaging 41 (12), 3498-3508, 2022",
+      "year": 2022,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:kzcrU_BdoSEC"
     },
     {
-      "title": "MASS: Modality-Collaborative Semi-Supervised Segmentation by Exploiting Cross-Modal Consistency from Unpaired CT and MRI Images",
-      "authors_html": "Xiaoyu Chen, <b>Hong-Yu Zhou</b>, Feng Liu, Jiansen Guo, Liansheng Wang, Yizhou Yu",
-      "venue": "Medical Image Analysis, 2022",
-      "year": 2022
+      "title": "Proco: Prototype-aware contrastive learning for long-tailed medical image classification",
+      "authors_html": "Z Yang, J Pan, Y Yang, X Shi, <b>HY Zhou</b>, Z Zhang, C Bian",
+      "venue": "International conference on medical image computing and computer-assisted …, 2022",
+      "year": 2022,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:JQOojiI6XY0C"
     },
     {
-      "title": "Relation Matters: Foreground-Aware Graph-Based Relational Reasoning for Domain Adaptive Object Detection",
-      "authors_html": "Chaoqi Chen, Jiongcheng Li, <b>Hong-Yu Zhou</b>, Xiaoguang Han, Yue Huang, Xinghao Ding, Yizhou Yu",
-      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence, 2022",
-      "year": 2022
+      "title": "Development and validation of an abnormality-derived deep-learning diagnostic system for major respiratory diseases",
+      "authors_html": "C Wang, J Ma, S Zhang, J Shao, Y Wang, <b>HY Zhou</b>, L Song, J Zheng, ...",
+      "venue": "NPJ digital medicine 5 (1), 124, 2022",
+      "year": 2022,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:dQ2og3OwTAUC"
     },
     {
-      "title": "Development and Validation of an Abnormality-Derived Deep-Learning Diagnostic System for Major Respiratory Diseases",
-      "authors_html": "Chengdi Wang, Jiechao Ma, Shu Zhang, ..., <b>Hong-Yu Zhou</b>, ..., Weimin Li",
-      "venue": "npj Digital Medicine, 2022",
-      "year": 2022
+      "title": "UNet-2022: Exploring dynamics in non-isomorphic architecture",
+      "authors_html": "J Guo, <b>HY Zhou</b>, L Wang, Y Yu",
+      "venue": "International conference on medical imaging and computer-aided diagnosis …, 2022",
+      "year": 2022,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:NJ774b8OgUMC"
     },
     {
-      "title": "Preservational Learning Improves Self-Supervised Medical Image Models by Reconstructing Diverse Contexts",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Chixiang Lu, Sibei Yang, Xiaoguang Han, Yizhou Yu",
-      "venue": "ICCV, 2021",
-      "year": 2021
+      "title": "MASS: Modality-collaborative semi-supervised segmentation by exploiting cross-modal consistency from unpaired CT and MRI images",
+      "authors_html": "X Chen, <b>HY Zhou</b>, F Liu, J Guo, L Wang, Y Yu",
+      "venue": "Medical Image Analysis, 102506, 2022",
+      "year": 2022,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:VL0QpB8kHFEC"
     },
     {
-      "title": "SSMD: Semi-Supervised Medical Image Detection with Adaptive Consistency and Heterogeneous Perturbation",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Chengdi Wang, Haofeng Li, Gang Wang, Shu Zhang, Weimin Li, Yizhou Yu",
-      "venue": "Medical Image Analysis, 2021",
-      "year": 2021
+      "title": "Relation matters: Foreground-aware graph-based relational reasoning for domain adaptive object detection",
+      "authors_html": "C Chen, J Li, <b>HY Zhou</b>, X Han, Y Huang, X Ding, Y Yu",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence 45 (3), 3677-3694, 2022",
+      "year": 2022,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:ye4kPcJQO24C"
     },
     {
-      "title": "ConvNets vs. Transformers: Whose Visual Representations Are More Transferable?",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Chixiang Lu, Sibei Yang, Yizhou Yu",
-      "venue": "ICCV, 2021",
-      "year": 2021
+      "title": "Augmented multi-component recurrent graph convolutional network for traffic flow forecasting",
+      "authors_html": "C Zhang, <b>HY Zhou</b>, Q Qiu, Z Jian, D Zhu, C Cheng, L He, G Liu, X Wen, ...",
+      "venue": "ISPRS International Journal of Geo-Information 11 (2), 88, 2022",
+      "year": 2022,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:ZfRJV9d4-WMC"
     },
     {
-      "title": "Generalized Organ Segmentation by Imitating One-Shot Reasoning Using Anatomical Correlation",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Hualuo Liu, Shilei Cao, Dong Wei, Chixiang Lu, Yizhou Yu, Kai Ma, Yefeng Zheng",
-      "venue": "IPMI, 2021",
-      "year": 2021
+      "title": "Attribute surrogates learning and spectral tokens pooling in transformers for few-shot learning",
+      "authors_html": "Y He, W Liang, D Zhao, <b>HY Zhou</b>, W Ge, Y Yu, W Zhang",
+      "venue": "Proceedings of the IEEE/CVF conference on computer vision and pattern …, 2022",
+      "year": 2022,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:dTyEYWd-f8wC"
     },
     {
-      "title": "Comparing to Learn: Surpassing ImageNet Pretraining on Radiographs by Comparing Image Representations",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Shuang Yu, Cheng Bian, Yifan Hu, Kai Ma, Yefeng Zheng",
-      "venue": "MICCAI, 2020",
-      "year": 2020
+      "title": "Generalized radiograph representation learning via cross-supervision between images and free-text radiology reports",
+      "authors_html": "<b>HY Zhou</b>, X Chen, Y Zhang, R Luo, L Wang, Y Yu",
+      "venue": "Nature Machine Intelligence 4 (1), 32-40, 2022",
+      "year": 2022,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:WA5NYHcadZ8C"
     },
     {
-      "title": "Difficulty-Aware Glaucoma Classification with Multi-Rater Consensus Modeling",
-      "authors_html": "Shuang Yu, <b>Hong-Yu Zhou</b>, Kai Ma, Cheng Bian, Chunyan Chu, Hanruo Liu, Yefeng Zheng",
-      "venue": "MICCAI, 2020",
-      "year": 2020
+      "title": "Transformer for polyp detection",
+      "authors_html": "S Liu, H Zhou, X Shi, J Pan",
+      "venue": "arXiv preprint arXiv:2111.07918, 2021",
+      "year": 2021,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:N5tVd3kTz84C"
     },
     {
-      "title": "ThiNet: Pruning CNN Filters for a Thinner Net",
-      "authors_html": "Jian-Hao Luo, Hao Zhang, <b>Hong-Yu Zhou</b>, Chen-Wei Xie, Jianxin Wu, Weiyao Lin",
-      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence, 2018",
-      "year": 2018
+      "title": "Evaluation and comparison of accurate automated spinal curvature estimation algorithms with spinal anterior-posterior X-Ray images: The AASCE2019 challenge",
+      "authors_html": "L Wang, C Xie, Y Lin, <b>HY Zhou</b>, K Chen, D Cheng, F Dubost, B Collery, ...",
+      "venue": "Medical image analysis 72, 102115, 2021",
+      "year": 2021,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:K3LRdlH-MEoC"
     },
     {
-      "title": "Age Estimation Using Expectation of Label Distribution Learning",
-      "authors_html": "Bin-Bin Gao, <b>Hong-Yu Zhou</b>, Jianxin Wu, Xin Geng",
-      "venue": "IJCAI, 2018",
-      "year": 2018
+      "title": "SSMD: semi-supervised medical image detection with adaptive consistency and heterogeneous perturbation",
+      "authors_html": "<b>HY Zhou</b>, C Wang, H Li, G Wang, S Zhang, W Li, Y Yu",
+      "venue": "Medical Image Analysis 72, 102117, 2021",
+      "year": 2021,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:WbkHhVStYXYC"
     },
     {
-      "title": "Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors",
-      "authors_html": "<b>Hong-Yu Zhou</b>, Bin-Bin Gao, Jianxin Wu",
-      "venue": "ICCV, 2017",
-      "year": 2017
+      "title": "Learning to discover multi-class attentional regions for multi-label image recognition",
+      "authors_html": "BB Gao, <b>HY Zhou</b>",
+      "venue": "IEEE Transactions on Image Processing 30, 5920-5932, 2021",
+      "year": 2021,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:5ugPr518TE4C"
+    },
+    {
+      "title": "Generalized Organ Segmentation by Imitating One-shot Reasoning using Anatomical Correlation",
+      "authors_html": "<b>HY Zhou</b>, H Liu, S Cao, D Wei, C Lu, Y Yu, K Ma, Y Zheng",
+      "venue": "International Conference on Information Processing in Medical Imaging, 452-464, 2021",
+      "year": 2021,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:XiSMed-E-HIC"
+    },
+    {
+      "title": "Recist-net: Lesion detection via grouping keypoints on recist-based annotation",
+      "authors_html": "C Xie, S Cao, D Wei, H Zhou, K Ma, X Zhang, B Qian, L Wang, Y Zheng",
+      "venue": "2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI), 921-924, 2021",
+      "year": 2021,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:738O_yMBCRsC"
+    },
+    {
+      "title": "Mixsearch: Searching for domain generalized medical image segmentation architectures",
+      "authors_html": "L Liu, Z Wen, S Liu, <b>HY Zhou</b>, H Zhu, W Xie, L Shen, K Ma, Y Zheng",
+      "venue": "arXiv preprint arXiv:2102.13280, 2021",
+      "year": 2021,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:uWQEDVKXjbEC"
+    },
+    {
+      "title": "Preservational learning improves self-supervised medical image models by reconstructing diverse contexts",
+      "authors_html": "<b>HY Zhou</b>, C Lu, S Yang, X Han, Y Yu",
+      "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision …, 2021",
+      "year": 2021,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:HE397vMXCloC"
+    },
+    {
+      "title": "Convnets vs. transformers: Whose visual representations are more transferable?",
+      "authors_html": "<b>HY Zhou</b>, C Lu, S Yang, Y Yu",
+      "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision …, 2021",
+      "year": 2021,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:XiVPGOgt02cC"
+    },
+    {
+      "title": "Bottom-up shift and reasoning for referring image segmentation",
+      "authors_html": "S Yang, M Xia, G Li, <b>HY Zhou</b>, Y Yu",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern …, 2021",
+      "year": 2021,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:J-pR_7NvFogC"
+    },
+    {
+      "title": "Difficulty-aware glaucoma classification with multi-rater consensus modeling",
+      "authors_html": "S Yu, <b>HY Zhou</b>, K Ma, C Bian, C Chu, H Liu, Y Zheng",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted …, 2020",
+      "year": 2020,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:P5F9QuxV20EC"
+    },
+    {
+      "title": "Comparing to learn: Surpassing imagenet pretraining on radiographs by comparing image representations",
+      "authors_html": "<b>HY Zhou</b>, S Yu, C Bian, Y Hu, K Ma, Y Zheng",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted …, 2020",
+      "year": 2020,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:1sJd4Hv_s6UC"
+    },
+    {
+      "title": "A macro-micro weakly-supervised framework for as-oct tissue segmentation",
+      "authors_html": "M Ning, C Bian, D Lu, <b>HY Zhou</b>, S Yu, C Yuan, Y Guo, Y Wang, K Ma, ...",
+      "venue": "International Conference on Medical Image Computing and Computer-Assisted …, 2020",
+      "year": 2020,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:nb7KW1ujOQ8C"
+    },
+    {
+      "title": "Efficient and effective training of COVID-19 classification networks with self-supervised dual-track learning to rank",
+      "authors_html": "Y Li, D Wei, J Chen, S Cao, H Zhou, Y Zhu, J Wu, L Lan, W Sun, T Qian, ...",
+      "venue": "IEEE Journal of Biomedical and Health Informatics 24 (10), 2787-2797, 2020",
+      "year": 2020,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:UxriW0iASnsC"
+    },
+    {
+      "title": "Learning expectation of label distribution for facial age and attractiveness estimation",
+      "authors_html": "BB Gao, XX Liu, <b>HY Zhou</b>, J Wu, X Geng",
+      "venue": "arXiv preprint arXiv:2007.01771, 2020",
+      "year": 2020,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:KxtntwgDAa4C"
+    },
+    {
+      "title": "Seg4Reg networks for automated spinal curvature estimation",
+      "authors_html": "Y Lin, <b>HY Zhou</b>, K Ma, X Yang, Y Zheng",
+      "venue": "International workshop and challenge on computational methods and clinical …, 2019",
+      "year": 2019,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:D03iK_w7-QYC"
+    },
+    {
+      "title": "CodeAttention: translating source code to comments by exploiting the code constructs",
+      "authors_html": "W Zheng, H Zhou, M Li, J Wu",
+      "venue": "Frontiers of Computer Science 13 (3), 565-578, 2019",
+      "year": 2019,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:t6usbXjVLHcC"
+    },
+    {
+      "title": "When semi-supervised learning meets transfer learning: Training strategies, models and datasets",
+      "authors_html": "<b>HY Zhou</b>, A Oliver, J Wu, Y Zheng",
+      "venue": "arXiv preprint arXiv:1812.05313, 2018",
+      "year": 2018,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:pyW8ca7W8N0C"
+    },
+    {
+      "title": "ThiNet: Pruning CNN filters for a thinner net",
+      "authors_html": "JH Luo, H Zhang, <b>HY Zhou</b>, CW Xie, J Wu, W Lin",
+      "venue": "IEEE transactions on pattern analysis and machine intelligence 41 (10), 2525 …, 2018",
+      "year": 2018,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:dfsIfKJdRG4C"
+    },
+    {
+      "title": "Age estimation using expectation of label distribution learning.",
+      "authors_html": "BB Gao, <b>HY Zhou</b>, J Wu, X Geng",
+      "venue": "IJCAI 1, 3, 2018",
+      "year": 2018,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:fPk4N6BV_jEC"
+    },
+    {
+      "title": "Vortex pooling: Improving context representation in semantic segmentation",
+      "authors_html": "CW Xie, <b>HY Zhou</b>, J Wu",
+      "venue": "arXiv preprint arXiv:1804.06242, 2018",
+      "year": 2018,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:4OULZ7Gr8RgC"
+    },
+    {
+      "title": "Sunrise or sunset: Selective comparison learning for subtle attribute recognition",
+      "authors_html": "<b>HY Zhou</b>, BB Gao, J Wu",
+      "venue": "arXiv preprint arXiv:1707.06335, 2017",
+      "year": 2017,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:rO6llkc54NcC"
+    },
+    {
+      "title": "Adaptive feeding: Achieving fast and accurate detections by adaptively combining object detectors",
+      "authors_html": "<b>HY Zhou</b>, BB Gao, J Wu",
+      "venue": "Proceedings of the IEEE International Conference on Computer Vision, 3505-3513, 2017",
+      "year": 2017,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:3s1wT3WcHBgC"
+    },
+    {
+      "title": "Swin-umamba: Mamba-based unet with imagenet-based pretraining 2024",
+      "authors_html": "J Liu, H Yang, <b>HY Zhou</b>, Y Xi, L Yu, Y Yu, Y Liang, G Shi, S Zhang, ...",
+      "venue": "arXiv preprint arXiv:2402.03302, 0",
+      "year": null,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:zCSUwVk65WsC"
+    },
+    {
+      "title": "ReXPref-Prior: A MIMIC-CXR Preference Dataset for Reducing Hallucinated Prior Exams in Radiology Report Generation}}",
+      "authors_html": "O Banerjee, <b>HY Zhou</b>, S Adithan, S Kwak, K Wu, P Rajpurkar",
+      "venue": "PhysioNet}}, 0",
+      "year": null,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:Ehil0879vHcC"
     }
   ]
 }
