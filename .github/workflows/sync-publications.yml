@@ -26,6 +26,8 @@ jobs:
         run: python scripts/sync_scholar.py
         timeout-minutes: 10
         continue-on-error: true
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
 
       - name: Commit updated publications
         uses: stefanzweifel/git-auto-commit-action@v5

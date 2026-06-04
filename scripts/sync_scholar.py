@@ -95,8 +95,18 @@ def enrich_abstracts(publications: list[dict], existing: dict | None) -> None:
 
 
 def fetch_publications_scholarly() -> list[dict]:
-    """Fetch via the scholarly library (handles anti-bot measures)."""
-    from scholarly import scholarly as sc
+    """Fetch via the scholarly library (uses SerpAPI if SERPAPI_KEY is set)."""
+    import os
+    from scholarly import scholarly as sc, ProxyGenerator
+
+    serpapi_key = os.environ.get("SERPAPI_KEY")
+    if serpapi_key:
+        pg = ProxyGenerator()
+        pg.SerpAPI(serpapi_key)
+        sc.use_proxy(pg)
+        print("Using SerpAPI backend.")
+    else:
+        print("No SERPAPI_KEY found, trying direct access.", file=sys.stderr)
 
     author = sc.search_author_id(USER_ID)
     author = sc.fill(author, sections=["publications"], sortby="year")
