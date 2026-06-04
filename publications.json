@@ -10,6 +10,83 @@
   ],
   "publications": [
     {
+      "title": "Concept-Guided Noisy Negative Suppression for Zero-Shot Classification and Grounding of Chest X-Ray Findings",
+      "venue": "MICCAI, 2026",
+      "year": 2026,
+      "url": null,
+      "authors_html": "C Lian, <b>Hong-Yu Zhou</b>, CK Wong, J Qin"
+    },
+    {
+      "title": "Evidential Reasoning Advances Interpretable Real-World Disease Screening",
+      "venue": "ICML, 2026",
+      "year": 2026,
+      "url": null,
+      "authors_html": "C Lian, <b>Hong-Yu Zhou</b>, J Qin"
+    },
+    {
+      "title": "MedVersa: A Generalist Foundation Model for Diverse Medical Imaging Tasks",
+      "venue": "NEJM AI, 2026",
+      "year": 2026,
+      "url": "https://ai.nejm.org/doi/full/10.1056/AIoa2500595",
+      "authors_html": "<b>Hong-Yu Zhou</b>, JN Acosta, S Adithan, S Datta, EJ Topol, P Rajpurkar"
+    },
+    {
+      "title": "Incorporating Global-Local Tissue Changes to Predict Future Breast Cancer from Longitudinal Screening Mammograms",
+      "venue": "Medical Image Analysis, 2026",
+      "year": 2026,
+      "url": null,
+      "authors_html": "X Wang, T Tan, Y Gao, E Marcus, <b>Hong-Yu Zhou</b>, C Lu, L Han, A Portaluri, R Su, et al."
+    },
+    {
+      "title": "InstructDiff: Domain-Adaptive Data Selection via Differential Entropy for Efficient LLM Fine-Tuning",
+      "venue": "ACL, 2026",
+      "year": 2026,
+      "url": null,
+      "authors_html": "J Su, H Zhu, X Luo, L Zhang, <b>Hong-Yu Zhou</b>, Y Chen, P Li, Y Liu, G Chen"
+    },
+    {
+      "title": "SkinFlow: Efficient Information Transmission for Open Dermatological Diagnosis via Dynamic Visual Encoding and Staged RL",
+      "venue": "arXiv preprint, 2026",
+      "year": 2026,
+      "url": null,
+      "authors_html": "L Liu, L Chen, Z Zhang, M Tian, H Cui, R Li, Z Liu, Q Ju, Q Li, <b>Hong-Yu Zhou</b>"
+    },
+    {
+      "title": "A Multimodal Vision–Language Model for Generalizable Annotation-Free Pathology Localization",
+      "venue": "Nature Biomedical Engineering, 2026",
+      "year": 2026,
+      "url": "https://www.nature.com/articles/s41551-025-01574-7",
+      "authors_html": "H Yang, <b>Hong-Yu Zhou</b>, J Liu, W Huang, C Li, Z Li, Y Gao, Q Liu, Y Liang, et al."
+    },
+    {
+      "title": "Visualizing Radiologic Connections: An Explainable Coarse-to-Fine Foundation Model with Multiview Mammograms and Associated Reports",
+      "venue": "Radiology: Artificial Intelligence, 2026",
+      "year": 2026,
+      "url": null,
+      "authors_html": "Y Gao, <b>Hong-Yu Zhou</b>, X Wang, A Portaluri, T Zhang, R Beets-Tan, L Han, C Lu, et al."
+    },
+    {
+      "title": "International Retrospective Observational Study of Continual Learning for AI on Endotracheal Tube Placement from Chest Radiographs",
+      "venue": "NEJM AI, 2026",
+      "year": 2026,
+      "url": null,
+      "authors_html": "E Chen, A Saenz, O Banerjee, H Marklund, X Zhang, S Johri, <b>Hong-Yu Zhou</b>, et al."
+    },
+    {
+      "title": "Automated Chest X-ray Report Generation Remains Unsolved",
+      "venue": "Biocomputing 2026: Proceedings of the Pacific Symposium, 2026",
+      "year": 2026,
+      "url": null,
+      "authors_html": "X Zhang, JN Acosta, X Yang, S Adithan, L Luo, <b>Hong-Yu Zhou</b>, J Miller, et al."
+    },
+    {
+      "title": "A Clinician-Guided Framework for Endoscopic AI: Developing PanEndoAtlas and Benchmarking Foundation Models Across the Full GI Spectrum",
+      "venue": "Biocomputing 2026: Proceedings of the Pacific Symposium, 2026",
+      "year": 2026,
+      "url": null,
+      "authors_html": "S Johri, L Luo, <b>Hong-Yu Zhou</b>, T Brenner, S Elamin, ME Geissler, TM Berzin, et al."
+    },
+    {
       "title": "An evaluation framework for clinical use of large language models in patient interaction tasks",
       "authors_html": "Shreya Johri, Jaehwan Jeong, Benjamin A Tran, Daniel I Schlessinger, Shannon Wongvibulsin, Leandra A Barnes, <b>Hong-Yu Zhou</b>, Zhuo Ran Cai, Eliezer M Van Allen, David Kim, Roxana Daneshjou, Pranav Rajpurkar",
       "venue": "Nature Medicine, 2025",

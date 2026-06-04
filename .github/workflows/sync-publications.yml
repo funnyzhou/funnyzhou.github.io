@@ -24,7 +24,6 @@ jobs:
 
       - name: Sync from Google Scholar
         run: python scripts/sync_scholar.py
-        continue-on-error: true
 
       - name: Commit updated publications
         uses: stefanzweifel/git-auto-commit-action@v5

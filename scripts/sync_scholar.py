@@ -23,6 +23,7 @@ HIGHLIGHT_NAMES = [
     "H.-Y. Zhou",
     "H. Y. Zhou",
     "Hongyu Zhou",
+    "HY Zhou",
 ]
 HEADERS = {
     "User-Agent": (
@@ -41,13 +42,13 @@ def highlight_authors(authors: str) -> str:
     return html
 
 
-def parse_year(cell) -> int | None:
-    if not cell:
-        return None
-    text = cell.get_text(strip=True)
-    if text.isdigit():
-        return int(text)
-    return None
+def parse_year(cell, venue: str = "") -> int | None:
+    if cell:
+        text = cell.get_text(strip=True)
+        if text.isdigit():
+            return int(text)
+    match = re.search(r"\b(20\d{2})\b", venue)
+    return int(match.group(1)) if match else None
 
 
 def parse_publications(html: str) -> list[dict]:
@@ -67,7 +68,7 @@ def parse_publications(html: str) -> list[dict]:
         grays = row.select("div.gs_gray")
         authors = grays[0].get_text(strip=True) if grays else ""
         venue = grays[1].get_text(strip=True) if len(grays) > 1 else ""
-        year = parse_year(row.select_one("td.gsc_a_y"))
+        year = parse_year(row.select_one("td.gsc_a_y"), venue)
 
         publications.append(
             {
@@ -84,6 +85,7 @@ def parse_publications(html: str) -> list[dict]:
 
 def fetch_all_publications(user_id: str) -> list[dict]:
     session = requests.Session()
+    session.trust_env = False  # ignore system proxy (often blocks Scholar)
     session.headers.update(HEADERS)
     all_pubs: list[dict] = []
     cstart = 0
@@ -93,6 +95,8 @@ def fetch_all_publications(user_id: str) -> list[dict]:
         params = {
             "user": user_id,
             "hl": "en",
+            "view_op": "list_works",
+            "sortby": "pubdate",
             "cstart": cstart,
             "pagesize": pagesize,
         }
