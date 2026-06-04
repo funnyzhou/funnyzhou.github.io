@@ -922,13 +922,31 @@ function renderPublications(data) {
   }
 }
 
+function isKeyAuthor(authorsHtml, names) {
+  // Strip HTML tags
+  const text = authorsHtml.replace(/<[^>]+>/g, '');
+  // Remove trailing "et al."
+  const clean = text.replace(/,?\s*et al\.?\s*$/i, '');
+  const parts = clean.split(',').map(s => s.trim()).filter(Boolean);
+  if (!parts.length) return false;
+  const keyPositions = new Set([0, 1, parts.length - 1]);
+  for (let i = 0; i < parts.length; i++) {
+    if (!keyPositions.has(i)) continue;
+    for (const name of names) {
+      if (parts[i].toLowerCase().includes(name.toLowerCase())) return true;
+    }
+  }
+  return false;
+}
+
 function renderHighlights(data) {
   const listEl = document.getElementById('highlights-list');
   const statusEl = document.getElementById('highlights-status');
   if (!listEl) return;
 
+  const names = data.highlight_names || ['Hong-Yu Zhou'];
   const highlights = (data.publications || [])
-    .filter(p => p.is_highlight)
+    .filter(p => p.is_highlight || isKeyAuthor(p.authors_html || '', names))
     .slice(0, 5);
 
   if (!highlights.length) {
