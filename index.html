@@ -360,6 +360,27 @@ body {
   color: var(--accent);
 }
 
+.pub-title a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.pub-title a:hover { border-bottom-color: var(--accent); }
+
+.pubs-status {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.pubs-meta {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 20px;
+}
+
 /* ── JOURNAL BADGES ── */
 .badge {
   display: inline-block;
@@ -509,7 +530,7 @@ body {
         </div>
         <div class="contact-row links" style="margin-top:6px;">
           <!-- <i class="fas fa-graduation-cap"></i> -->
-          <a href="https://scholar.google.com/citations?hl=en" target="_blank">Google Scholar</a>
+          <a href="https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en" target="_blank">Google Scholar</a>
           <i class="fab fa-x-twitter" style="width:auto;"></i>
           <a href="https://twitter.com/HongYuZhou14" target="_blank">X</a>
         </div>
@@ -716,267 +737,13 @@ body {
   <section id="publications" class="section-content">
 
     <h2 class="sec-title">Publications</h2>
-    <a class="scholar-link" href="https://scholar.google.com/citations?hl=en" target="_blank">
+    <a class="scholar-link" id="scholar-profile-link" href="https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en" target="_blank">
       <i class="fas fa-external-link-alt"></i> Full list on Google Scholar (incl. preprints)
     </a>
 
-    <!-- 2025 -->
-    <div class="year-divider" style="margin-top:0px;">2025</div>
-
-    <div class="pub-item">
-      <div class="pub-title">An evaluation framework for clinical use of large language models in patient interaction tasks</div>
-      <div class="pub-authors">Shreya Johri, Jaehwan Jeong, Benjamin A Tran, Daniel I Schlessinger, Shannon Wongvibulsin, Leandra A Barnes, <b>Hong-Yu Zhou</b>, Zhuo Ran Cai, Eliezer M Van Allen, David Kim, Roxana Daneshjou, Pranav Rajpurkar</div>
-      <div class="pub-venue">Nature Medicine, 2025</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Self-improving generative foundation model for synthetic medical image generation and clinical applications</div>
-      <div class="pub-authors">Jinzhuo Wang, Kai Wang, Yunfang Yu, Yuxing Lu, ..., <b>Hong-Yu Zhou</b>, ..., Kang Zhang, Jia Qu</div>
-      <div class="pub-venue">Nature Medicine, 2025</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">MetaGP: A Generative Foundation Model Integrating Electronic Health Records and Multimodal Imaging for Addressing Unmet Clinical Needs</div>
-      <div class="pub-authors">Fei Liu, <b>Hong-Yu Zhou</b>, Kai Wang, Yunfang Yu, ..., Kang Zhang</div>
-      <div class="pub-venue">Cell Reports Medicine, 2025</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Multimodal Generative AI for Interpreting 3D Medical Images and Videos</div>
-      <div class="pub-authors">Jung-Oh Lee, <b>Hong-Yu Zhou</b>, Tyler M Berzin, Daniel K Sodickson, Pranav Rajpurkar</div>
-      <div class="pub-venue">npj Digital Medicine, 2025</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">BenchReAD: A Systematic Benchmark for Retinal Anomaly Detection</div>
-      <div class="pub-authors">Chenyu Lian, <b>Hong-Yu Zhou</b>, Zhanli Hu, Jing Qin</div>
-      <div class="pub-venue">MICCAI, 2025</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Efficient Medical Vision-Language Alignment Through Adapting Masked Vision Models</div>
-      <div class="pub-authors">Chenyu Lian, <b>Hong-Yu Zhou</b>, Dongyun Liang, Jing Qin, Liansheng Wang</div>
-      <div class="pub-venue">IEEE Transactions on Medical Imaging, 2025</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Multi-Modal Longitudinal Representation Learning for Predicting Neoadjuvant Therapy Response in Breast Cancer Treatment</div>
-      <div class="pub-authors">Yuan Gao, Tao Tan, Xin Wang, Regina Beets-Tan, Tianyu Zhang, ..., <b>Hong-Yu Zhou</b>, Ritse Mann</div>
-      <div class="pub-venue">IEEE Journal of Biomedical and Health Informatics, 2025</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">TransXNet: Learning Both Global and Local Dynamics with a Dual Dynamic Token Mixer for Visual Recognition</div>
-      <div class="pub-authors">Meng Lou, Shu Zhang, <b>Hong-Yu Zhou</b>, Sibei Yang, Chuan Wu, Yizhou Yu</div>
-      <div class="pub-venue">IEEE Transactions on Neural Networks and Learning Systems, 2025</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">SDR-Former: A Siamese Dual-Resolution Transformer for Liver Lesion Classification Using 3D Multi-Phase Imaging</div>
-      <div class="pub-authors">Meng Lou, Hanning Ying, Xiaoqing Liu, <b>Hong-Yu Zhou</b>, Yuqin Zhang, Yizhou Yu</div>
-      <div class="pub-venue">Neural Networks, 2025</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">MedTrinity-25M: A Large-Scale Multimodal Dataset with Multigranular Annotations for Medicine</div>
-      <div class="pub-authors">Yunfei Xie, Ce Zhou, Lang Gao, ..., <b>Hong-Yu Zhou</b>, ..., Cihang Xie, Yuyin Zhou</div>
-      <div class="pub-venue">ICLR, 2025</div>
-    </div>
-
-    <!-- 2024 -->
-    <div class="year-divider">2024</div>
-
-    <div class="pub-item">
-      <div class="pub-title">Enhancing Representation in Radiography-Reports Foundation Model: A Granular Alignment Algorithm Using Masked Contrastive Learning</div>
-      <div class="pub-authors">Weijian Huang, Cheng Li, <b>Hong-Yu Zhou</b>, Hao Yang, Jiarun Liu, Yong Liang, Hairong Zheng, Shaoting Zhang, Shanshan Wang</div>
-      <div class="pub-venue">Nature Communications, 2024</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">An Explainable Longitudinal Multi-Modal Fusion Model for Predicting Neoadjuvant Therapy Response in Women with Breast Cancer</div>
-      <div class="pub-authors">Yuan Gao, ..., <b>Hong-Yu Zhou</b>, ..., Tao Tan, Ritse Mann</div>
-      <div class="pub-venue">Nature Communications, 2024</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Concepts and Applications of Digital Twins in Healthcare and Medicine</div>
-      <div class="pub-authors">Kang Zhang, <b>Hong-Yu Zhou</b>, Daniel T Baptista-Hon, ..., Joseph Wu</div>
-      <div class="pub-venue">Patterns, 2024</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">A Survey on Graph Neural Networks and Graph Transformers in Computer Vision: A Task-Oriented Perspective</div>
-      <div class="pub-authors">Chaoqi Chen, Yushuang Wu, Qiyuan Dai, <b>Hong-Yu Zhou</b>, Mutian Xu, Sibei Yang, Xiaoguang Han, Yizhou Yu</div>
-      <div class="pub-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence, 2024</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Swin-UMamba†: Adapting Mamba-Based Vision Foundation Models for Medical Image Segmentation</div>
-      <div class="pub-authors">Jiarun Liu, Hao Yang, <b>Hong-Yu Zhou</b>, Lequan Yu, Yong Liang, Yizhou Yu, Shaoting Zhang, Hairong Zheng, Shanshan Wang</div>
-      <div class="pub-venue">IEEE Transactions on Medical Imaging, 2024</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Swin-UMamba: Mamba-Based UNet with ImageNet-Based Pretraining</div>
-      <div class="pub-authors">Jiarun Liu, Hao Yang, <b>Hong-Yu Zhou</b>, et al.</div>
-      <div class="pub-venue">MICCAI, 2024</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Cross-Dimensional Medical Self-Supervised Representation Learning Based on a Pseudo-3D Transformation</div>
-      <div class="pub-authors">Fei Gao, Siwen Wang, Churan Wang, Fandong Zhang, <b>Hong-Yu Zhou</b>, Yizhou Wang, Gang Yu, Yizhou Yu</div>
-      <div class="pub-venue">MICCAI, 2024</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Improving Neoadjuvant Therapy Response Prediction by Integrating Longitudinal Mammogram Generation with Cross-Modal Radiological Reports</div>
-      <div class="pub-authors">Yuan Gao, <b>Hong-Yu Zhou</b>, Xin Wang, et al.</div>
-      <div class="pub-venue">MICCAI, 2024</div>
-    </div>
-
-    <!-- 2023 -->
-    <div class="year-divider">2023</div>
-
-    <div class="pub-item">
-      <div class="pub-title">A Transformer-Based Representation-Learning Model with Unified Processing of Multimodal Input for Clinical Diagnostics</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Yizhou Yu, Chengdi Wang, Shu Zhang, Yuanxu Gao, Jia Pan, Jun Shao, Guangming Lu, Kang Zhang, Weimin Li</div>
-      <div class="pub-venue">Nature Biomedical Engineering, 2023</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">A Unified Visual Information Preservation Framework for Self-Supervised Pre-Training in Medical Image Analysis</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Chixiang Lu, Chaoqi Chen, Sibei Yang, Yizhou Yu</div>
-      <div class="pub-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">nnFormer: Volumetric Medical Image Segmentation via a 3D Transformer</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Jiansen Guo, Yinghao Zhang, Xiaoguang Han, Lequan Yu, Liansheng Wang, Yizhou Yu</div>
-      <div class="pub-venue">IEEE Transactions on Image Processing, 2023</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Protein Representation Learning via Knowledge Enhanced Primary Structure Modeling</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Yunxiang Fu, Zhicheng Bian, Cheng Bian, Yizhou Yu</div>
-      <div class="pub-venue">ICLR, 2023</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Advancing Radiograph Representation Learning with Masked Record Modeling</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Chenyu Lian, Liansheng Wang, Yizhou Yu</div>
-      <div class="pub-venue">ICLR, 2023</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Activate and Reject: Towards Safe Domain Generalization Under Category Shift</div>
-      <div class="pub-authors">Chaoqi Chen, Luyao Tang, Leitian Tao, <b>Hong-Yu Zhou</b>, Yue Huang, Xiaoguang Han, Yizhou Yu</div>
-      <div class="pub-venue">ICCV, 2023</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">DDCoT: Duty-Distinct Chain-of-Thought Prompting for Multimodal Reasoning in Language Models</div>
-      <div class="pub-authors">Ge Zheng, Bin Yang, Jiajin Tang, <b>Hong-Yu Zhou</b>, Sibei Yang</div>
-      <div class="pub-venue">NeurIPS, 2023</div>
-    </div>
-
-    <!-- 2022 -->
-    <div class="year-divider">2022</div>
-
-    <div class="pub-item">
-      <div class="pub-title">Generalized Radiograph Representation Learning via Cross-Supervision Between Images and Free-Text Radiology Reports</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Xiaoyu Chen, Yinghao Zhang, Ruibang Luo, Liansheng Wang, Yizhou Yu</div>
-      <div class="pub-venue">Nature Machine Intelligence, 2022</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">GraVIS: Grouping Augmented Views From Independent Sources for Dermatology Analysis</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Chixiang Lu, Liansheng Wang, Yizhou Yu</div>
-      <div class="pub-venue">IEEE Transactions on Medical Imaging, 2022</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">MASS: Modality-Collaborative Semi-Supervised Segmentation by Exploiting Cross-Modal Consistency from Unpaired CT and MRI Images</div>
-      <div class="pub-authors">Xiaoyu Chen, <b>Hong-Yu Zhou</b>, Feng Liu, Jiansen Guo, Liansheng Wang, Yizhou Yu</div>
-      <div class="pub-venue">Medical Image Analysis, 2022</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Relation Matters: Foreground-Aware Graph-Based Relational Reasoning for Domain Adaptive Object Detection</div>
-      <div class="pub-authors">Chaoqi Chen, Jiongcheng Li, <b>Hong-Yu Zhou</b>, Xiaoguang Han, Yue Huang, Xinghao Ding, Yizhou Yu</div>
-      <div class="pub-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence, 2022</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Development and Validation of an Abnormality-Derived Deep-Learning Diagnostic System for Major Respiratory Diseases</div>
-      <div class="pub-authors">Chengdi Wang, Jiechao Ma, Shu Zhang, ..., <b>Hong-Yu Zhou</b>, ..., Weimin Li</div>
-      <div class="pub-venue">npj Digital Medicine, 2022</div>
-    </div>
-
-    <!-- 2021 -->
-    <div class="year-divider">2021</div>
-
-    <div class="pub-item">
-      <div class="pub-title">Preservational Learning Improves Self-Supervised Medical Image Models by Reconstructing Diverse Contexts</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Chixiang Lu, Sibei Yang, Xiaoguang Han, Yizhou Yu</div>
-      <div class="pub-venue">ICCV, 2021</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">SSMD: Semi-Supervised Medical Image Detection with Adaptive Consistency and Heterogeneous Perturbation</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Chengdi Wang, Haofeng Li, Gang Wang, Shu Zhang, Weimin Li, Yizhou Yu</div>
-      <div class="pub-venue">Medical Image Analysis, 2021</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">ConvNets vs. Transformers: Whose Visual Representations Are More Transferable?</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Chixiang Lu, Sibei Yang, Yizhou Yu</div>
-      <div class="pub-venue">ICCV, 2021</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Generalized Organ Segmentation by Imitating One-Shot Reasoning Using Anatomical Correlation</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Hualuo Liu, Shilei Cao, Dong Wei, Chixiang Lu, Yizhou Yu, Kai Ma, Yefeng Zheng</div>
-      <div class="pub-venue">IPMI, 2021</div>
-    </div>
-
-    <!-- 2020 -->
-    <div class="year-divider">2020</div>
-
-    <div class="pub-item">
-      <div class="pub-title">Comparing to Learn: Surpassing ImageNet Pretraining on Radiographs by Comparing Image Representations</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Shuang Yu, Cheng Bian, Yifan Hu, Kai Ma, Yefeng Zheng</div>
-      <div class="pub-venue">MICCAI, 2020</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Difficulty-Aware Glaucoma Classification with Multi-Rater Consensus Modeling</div>
-      <div class="pub-authors">Shuang Yu, <b>Hong-Yu Zhou</b>, Kai Ma, Cheng Bian, Chunyan Chu, Hanruo Liu, Yefeng Zheng</div>
-      <div class="pub-venue">MICCAI, 2020</div>
-    </div>
-
-    <!-- 2018 -->
-    <div class="year-divider">2018</div>
-
-    <div class="pub-item">
-      <div class="pub-title">ThiNet: Pruning CNN Filters for a Thinner Net</div>
-      <div class="pub-authors">Jian-Hao Luo, Hao Zhang, <b>Hong-Yu Zhou</b>, Chen-Wei Xie, Jianxin Wu, Weiyao Lin</div>
-      <div class="pub-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence, 2018</div>
-    </div>
-
-    <div class="pub-item">
-      <div class="pub-title">Age Estimation Using Expectation of Label Distribution Learning</div>
-      <div class="pub-authors">Bin-Bin Gao, <b>Hong-Yu Zhou</b>, Jianxin Wu, Xin Geng</div>
-      <div class="pub-venue">IJCAI, 2018</div>
-    </div>
-
-    <!-- 2017 -->
-    <div class="year-divider">2017</div>
-
-    <div class="pub-item">
-      <div class="pub-title">Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors</div>
-      <div class="pub-authors"><b>Hong-Yu Zhou</b>, Bin-Bin Gao, Jianxin Wu</div>
-      <div class="pub-venue">ICCV, 2017</div>
-    </div>
+    <p id="pubs-status" class="pubs-status">Loading publications…</p>
+    <div id="pubs-list"></div>
+    <p id="pubs-meta" class="pubs-meta"></p>
 
   </section><!-- /publications -->
 
@@ -996,6 +763,111 @@ function showSection(name, btn) {
   btn.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function highlightAuthors(authors, names) {
+  let html = escapeHtml(authors);
+  (names || []).slice().sort((a, b) => b.length - a.length).forEach((name) => {
+    const re = new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    html = html.replace(re, (m) => '<b>' + m + '</b>');
+  });
+  return html;
+}
+
+function renderPublications(data) {
+  const listEl = document.getElementById('pubs-list');
+  const statusEl = document.getElementById('pubs-status');
+  const metaEl = document.getElementById('pubs-meta');
+  const scholarLink = document.getElementById('scholar-profile-link');
+
+  if (data.scholar_url && scholarLink) scholarLink.href = data.scholar_url;
+
+  const pubs = (data.publications || []).slice();
+  if (!pubs.length) {
+    statusEl.textContent = 'No publications found.';
+    return;
+  }
+
+  statusEl.style.display = 'none';
+
+  const byYear = new Map();
+  pubs.forEach((pub) => {
+    const year = pub.year || 'Other';
+    if (!byYear.has(year)) byYear.set(year, []);
+    byYear.get(year).push(pub);
+  });
+
+  const years = [...byYear.keys()].sort((a, b) => {
+    if (a === 'Other') return 1;
+    if (b === 'Other') return -1;
+    return Number(b) - Number(a);
+  });
+
+  const frag = document.createDocumentFragment();
+  years.forEach((year, idx) => {
+    const divider = document.createElement('div');
+    divider.className = 'year-divider';
+    if (idx === 0) divider.style.marginTop = '0';
+    divider.textContent = year;
+    frag.appendChild(divider);
+
+    byYear.get(year).forEach((pub) => {
+      const item = document.createElement('div');
+      item.className = 'pub-item';
+
+      const titleEl = document.createElement('div');
+      titleEl.className = 'pub-title';
+      if (pub.url) {
+        const link = document.createElement('a');
+        link.href = pub.url;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.textContent = pub.title;
+        titleEl.appendChild(link);
+      } else {
+        titleEl.textContent = pub.title;
+      }
+
+      const authorsEl = document.createElement('div');
+      authorsEl.className = 'pub-authors';
+      authorsEl.innerHTML = pub.authors_html || highlightAuthors(pub.authors || '', data.highlight_names);
+
+      const venueEl = document.createElement('div');
+      venueEl.className = 'pub-venue';
+      venueEl.textContent = pub.venue || '';
+
+      item.append(titleEl, authorsEl, venueEl);
+      frag.appendChild(item);
+    });
+  });
+
+  listEl.appendChild(frag);
+  if (data.updated) {
+    metaEl.textContent = 'List synced from Google Scholar · last updated ' + data.updated;
+  }
+}
+
+async function loadPublications() {
+  const statusEl = document.getElementById('pubs-status');
+  try {
+    const res = await fetch('./publications.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    renderPublications(data);
+  } catch (err) {
+    statusEl.textContent = 'Could not load publications. Please refresh or visit Google Scholar directly.';
+    console.error('publications load failed:', err);
+  }
+}
+
+loadPublications();
 </script>
 </body>
 </html>
