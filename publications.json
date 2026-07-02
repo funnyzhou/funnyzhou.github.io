@@ -17,8 +17,7 @@
       "venue": "Nature Biomedical Engineering, 1-10, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:L1USKYWJimsC",
-      "is_highlight": true,
-      "abstract": null
+      "is_highlight": true
     },
     {
       "title": "Rexgroundingct: A 3d chest ct dataset for segmentation of findings from free-text reports",
@@ -34,8 +33,7 @@
       "venue": "International Conference on Medical Image Computing and Computer Assisted …, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:7BrZ7Jt4UNcC",
-      "is_highlight": true,
-      "abstract": null
+      "is_highlight": true
     },
     {
       "title": "Evidential Reasoning Advances Interpretable Real-World Disease Screening",
@@ -43,8 +41,7 @@
       "venue": "The International Conference on Machine Learning (ICML), 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:nRpfm8aw39MC",
-      "is_highlight": true,
-      "abstract": null
+      "is_highlight": true
     },
     {
       "title": "A multi-model study of diagnostic faithfulness in AI-generated histopathology images",
@@ -52,8 +49,7 @@
       "venue": "",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:PaBasH6fAo0C",
-      "is_highlight": true,
-      "abstract": null
+      "is_highlight": true
     },
     {
       "title": "MedVersa: a generalist foundation model for diverse medical imaging tasks",
@@ -61,8 +57,7 @@
       "venue": "NEJM AI 3 (4), AIoa2500595, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:kVjdVfd2voEC",
-      "is_highlight": true,
-      "abstract": null
+      "is_highlight": true
     },
     {
       "title": "Incorporating global-local tissue changes to predict future breast cancer from longitudinal screening mammograms",
@@ -86,8 +81,7 @@
       "venue": "arXiv preprint arXiv:2601.09136, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:1lhNe0rCu4AC",
-      "is_highlight": true,
-      "abstract": "General-purpose Large Vision-Language Models (LVLMs), despite their massive scale, often falter in dermatology due to\"diffuse attention\"- the inability to disentangle subtle pathological lesions from background noise. In this paper, we challenge the assumption that parameter scaling is the only path to medical precision. We introduce SkinFlow, a framework that treats diagnosis as an optimization of visual information transmission efficiency. Our approach utilizes a Virtual-Width Dynamic Vision Encoder (DVE) to\"unfold\"complex pathological manifolds without physical parameter expansion, coupled with a two-stage Reinforcement Learning strategy. This strategy sequentially aligns explicit medical descriptions (Stage I) and reconstructs implicit diagnostic textures (Stage II) within a constrained semantic space. Furthermore, we propose a clinically grounded evaluation protocol that prioritizes diagnostic safety and hierarchical relevance over rigid label matching. Empirical results are compelling: our 7B model establishes a new state-of-the-art on the Fitzpatrick17k benchmark, achieving a +12.06% gain in Top-1 accuracy and a +28.57% boost in Top-6 accuracy over the massive general-purpose models (e.g., Qwen3VL-235B and GPT-5.2). These findings demonstrate that optimizing geometric capacity and information flow yields superior diagnostic reasoning compared to raw parameter scaling."
+      "is_highlight": true
     },
     {
       "title": "A multimodal vision–language model for generalizable annotation-free pathology localization",
@@ -95,8 +89,7 @@
       "venue": "Nature Biomedical Engineering, 1-15, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:lgwcVrK6X84C",
-      "is_highlight": true,
-      "abstract": "Existing deep learning models for defining pathology from clinical imaging data rely on expert annotations and lack generalization capabilities in open clinical environments. Here we present a generalizable vision-language model for Annotation-Free pathology Localization (AFLoc). The core strength of AFLoc is extensive multilevel semantic structure-based contrastive learning, which comprehensively aligns multigranularity medical concepts with abundant image features to adapt to the diverse expressions of pathologies without the reliance on expert image annotations. We conducted primary experiments on a dataset of 220,000 pairs of image-report chest X-ray images and performed validation across 8 external datasets encompassing 34 types of chest pathology. The results demonstrate that AFLoc outperforms state-of-the-art methods in both annotation-free localization and classification tasks. In addition, we assessed the generalizability of AFLoc on other modalities, including histopathology and retinal fundus images. We show that AFLoc exhibits robust generalization capabilities, even surpassing human benchmarks in localizing five different types of pathological image. These results highlight the potential of AFLoc in reducing annotation requirements and its applicability in complex clinical environments."
+      "is_highlight": true
     },
     {
       "title": "Visualizing Radiologic Connections: An Explainable Coarse-to-Fine Foundation Model with Multiview Mammograms and Associated Reports",
@@ -104,8 +97,7 @@
       "venue": "Radiology: Artificial Intelligence 8 (1), e240646, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:BzfGm06jWhQC",
-      "is_highlight": true,
-      "abstract": null
+      "is_highlight": true
     },
     {
       "title": "International retrospective observational study of continual learning for AI on endotracheal tube placement from chest radiographs",
@@ -145,8 +137,7 @@
       "venue": "International Workshop on Foundation Models for General Medical AI, 23-33, 2025",
       "year": 2025,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:Ak0FvsSvgGUC",
-      "is_highlight": true,
-      "abstract": null
+      "is_highlight": true
     },
     {
       "title": "Systems and methods for performing medical tasks using a medical artificial intelligence system",
@@ -154,8 +145,7 @@
       "venue": "US Patent App. 19/057,629, 2025",
       "year": 2025,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:4xDN1ZYqzskC",
-      "is_highlight": true,
-      "abstract": null
+      "is_highlight": true
     },
     {
       "title": "Evolutionary Paradigms in Histopathology Serial Sections technology",
