@@ -667,7 +667,7 @@ body {
 
     </div>
 
-    <h2 class="sec-title" style="margin-top:40px;">Highlights</h2>
+    <h2 class="sec-title" style="margin-top:40px;">New publications</h2>
     <div class="highlight-list" id="highlights-list">
       <p class="pubs-status" id="highlights-status">Loading…</p>
     </div>
@@ -937,7 +937,7 @@ function isKeyAuthor(authorsHtml, names) {
   const clean = text.replace(/,?\s*et al\.?\s*$/i, '');
   const parts = clean.split(',').map(s => s.trim()).filter(Boolean);
   if (!parts.length) return false;
-  const keyPositions = new Set([0, 1, parts.length - 1]);
+  const keyPositions = new Set([0, 1, parts.length - 2, parts.length - 1]);
   for (let i = 0; i < parts.length; i++) {
     if (!keyPositions.has(i)) continue;
     for (const name of names) {
@@ -954,7 +954,11 @@ function renderHighlights(data) {
 
   const names = data.highlight_names || ['Hong-Yu Zhou'];
   const highlights = (data.publications || [])
-    .filter(p => p.venue && p.venue.trim() && (p.is_highlight || isKeyAuthor(p.authors_html || '', names)))
+    .filter(p => {
+      if (!p.venue || !p.venue.trim()) return false;
+      if (/arxiv|preprint/i.test(p.venue)) return false;
+      return p.is_highlight || isKeyAuthor(p.authors_html || '', names);
+    })
     .slice(0, 5);
 
   if (!highlights.length) {
