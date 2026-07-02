@@ -94,53 +94,64 @@ def enrich_abstracts(publications: list[dict], existing: dict | None) -> None:
             time.sleep(1)
 
 
-def fetch_publications_scholarly() -> list[dict]:
-    """Fetch via the scholarly library (uses SerpAPI if SERPAPI_KEY is set)."""
-    import os
-    from scholarly import scholarly as sc, ProxyGenerator
-
-    serpapi_key = os.environ.get("SERPAPI_KEY")
-    if serpapi_key:
-        pg = ProxyGenerator()
-        pg.SerpAPI(serpapi_key)
-        sc.use_proxy(pg)
-        print("Using SerpAPI backend.")
-    else:
-        print("No SERPAPI_KEY found, trying direct access.", file=sys.stderr)
-
-    author = sc.search_author_id(USER_ID)
-    author = sc.fill(author, sections=["publications"], sortby="year")
-
+def fetch_publications_serpapi(api_key: str) -> list[dict]:
+    """Fetch all publications via SerpAPI Google Scholar Author endpoint."""
     publications = []
-    for pub in author.get("publications", []):
-        bib = pub.get("bib", {})
-        title = bib.get("title", "")
-        if not title:
-            continue
-        authors_raw = bib.get("author", "")
-        # scholarly sometimes returns "A and B and C"; normalise to "A, B, C"
-        if " and " in authors_raw:
-            authors_raw = authors_raw.replace(" and ", ", ")
-        venue = bib.get("venue", "") or bib.get("journal", "") or bib.get("booktitle", "")
-        year_raw = bib.get("pub_year")
-        try:
-            year = int(year_raw) if year_raw else None
-        except (ValueError, TypeError):
-            year = None
+    start = 0
+    page_size = 100
 
-        pub_url = pub.get("pub_url") or None
+    while True:
+        params = {
+            "engine": "google_scholar_author",
+            "author_id": USER_ID,
+            "api_key": api_key,
+            "sort": "pubdate",
+            "num": page_size,
+            "start": start,
+            "hl": "en",
+        }
+        resp = requests.get("https://serpapi.com/search", params=params, timeout=60)
+        resp.raise_for_status()
+        data = resp.json()
 
-        publications.append(
-            {
-                "title": title,
-                "authors_html": highlight_authors(authors_raw),
-                "venue": venue,
-                "year": year,
-                "url": pub_url,
-            }
-        )
+        articles = data.get("articles", [])
+        if not articles:
+            break
 
-    # Sort by year descending
+        for article in articles:
+            title = article.get("title", "")
+            if not title:
+                continue
+            authors_raw = article.get("authors", "")
+            venue = article.get("publication", "") or ""
+            # publication field often looks like "Journal Name, 2024"
+            # extract year from it if not present separately
+            year = article.get("year")
+            if not year:
+                m = re.search(r"\b(20\d{2})\b", venue)
+                year = int(m.group(1)) if m else None
+            else:
+                try:
+                    year = int(year)
+                except (ValueError, TypeError):
+                    year = None
+
+            pub_url = article.get("link") or None
+
+            publications.append(
+                {
+                    "title": title,
+                    "authors_html": highlight_authors(authors_raw),
+                    "venue": venue,
+                    "year": year,
+                    "url": pub_url,
+                }
+            )
+
+        if len(articles) < page_size:
+            break
+        start += page_size
+
     publications.sort(key=lambda p: p["year"] or 0, reverse=True)
     return publications
 
@@ -166,10 +177,19 @@ def write_output(publications: list[dict]) -> None:
 
 
 def main() -> int:
+    import os
     existing = load_existing()
 
+    api_key = os.environ.get("SERPAPI_KEY")
+    if not api_key:
+        print("No SERPAPI_KEY set — cannot sync.", file=sys.stderr)
+        if existing:
+            print("Keeping existing publications.json unchanged.", file=sys.stderr)
+            return 0
+        return 1
+
     try:
-        publications = fetch_publications_scholarly()
+        publications = fetch_publications_serpapi(api_key)
     except Exception as exc:
         print(f"Failed to fetch Google Scholar: {exc}", file=sys.stderr)
         if existing:
