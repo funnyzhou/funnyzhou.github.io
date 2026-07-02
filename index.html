@@ -992,22 +992,6 @@ function renderHighlights(data) {
 
     card.append(titleEl, metaEl);
 
-    if (pub.abstract) {
-      const abstractEl = document.createElement('p');
-      abstractEl.className = 'highlight-abstract';
-      abstractEl.textContent = pub.abstract;
-      card.appendChild(abstractEl);
-
-      const toggle = document.createElement('button');
-      toggle.className = 'highlight-toggle';
-      toggle.textContent = 'Show more';
-      toggle.addEventListener('click', () => {
-        const expanded = abstractEl.classList.toggle('expanded');
-        toggle.textContent = expanded ? 'Show less' : 'Show more';
-      });
-      card.appendChild(toggle);
-    }
-
     frag.appendChild(card);
   });
   listEl.appendChild(frag);

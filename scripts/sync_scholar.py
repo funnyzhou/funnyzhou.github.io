@@ -6,10 +6,8 @@ from __future__ import annotations
 import json
 import re
 import sys
-import time
 from datetime import date
 from pathlib import Path
-from urllib.parse import quote
 
 import requests
 
@@ -55,51 +53,9 @@ def is_key_author(authors_html: str) -> bool:
     return False
 
 
-def fetch_abstract(title: str) -> str | None:
-    """Query Semantic Scholar for the abstract of a paper by title, with retry on 429."""
-    url = (
-        "https://api.semanticscholar.org/graph/v1/paper/search"
-        f"?query={quote(title)}&fields=abstract&limit=1"
-    )
-    for attempt in range(3):
-        try:
-            resp = requests.get(url, timeout=15)
-            if resp.status_code == 429:
-                wait = 30 * (attempt + 1)
-                print(f"  rate limited, waiting {wait}s…", file=sys.stderr)
-                time.sleep(wait)
-                continue
-            resp.raise_for_status()
-            papers = resp.json().get("data", [])
-            if papers and papers[0].get("abstract"):
-                return papers[0]["abstract"]
-            return None
-        except Exception as exc:
-            print(f"  abstract lookup failed for '{title[:50]}': {exc}", file=sys.stderr)
-            return None
-    return None
-
-
-def enrich_abstracts(publications: list[dict], existing: dict | None) -> None:
-    """Add abstract + is_highlight fields; reuse cached abstracts where available."""
-    existing_map: dict[str, str] = {}
-    if existing:
-        for pub in existing.get("publications", []):
-            if pub.get("abstract"):
-                existing_map[pub["title"]] = pub["abstract"]
-
+def tag_highlights(publications: list[dict]) -> None:
     for pub in publications:
         pub["is_highlight"] = is_key_author(pub["authors_html"])
-
-    recent_highlights = [p for p in publications if p["is_highlight"]][:10]
-    for pub in recent_highlights:
-        if pub["title"] in existing_map:
-            pub["abstract"] = existing_map[pub["title"]]
-        else:
-            print(f"  Fetching abstract: {pub['title'][:60]}…")
-            abstract = fetch_abstract(pub["title"])
-            pub["abstract"] = abstract
-            time.sleep(3)
 
 
 def fetch_publications_serpapi(api_key: str) -> list[dict]:
@@ -212,7 +168,7 @@ def main() -> int:
             return 0
         return 1
 
-    enrich_abstracts(publications, existing)
+    tag_highlights(publications)
     write_output(publications)
     n_highlights = sum(1 for p in publications if p.get("is_highlight"))
     print(f"Synced {len(publications)} publications ({n_highlights} highlights) -> {OUTPUT}")
