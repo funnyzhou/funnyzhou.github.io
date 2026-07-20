@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13",
+  "updated": "2026-07-20",
   "scholar_user_id": "aJnvh8gAAAAJ",
   "scholar_url": "https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en",
   "highlight_names": [
@@ -698,14 +698,6 @@
       "year": 2017,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:3s1wT3WcHBgC",
       "is_highlight": true
-    },
-    {
-      "title": "Swin-umamba: Mamba-based unet with imagenet-based pretraining 2024",
-      "authors_html": "J Liu, H Yang, <b>HY Zhou</b>, Y Xi, L Yu, Y Yu, Y Liang, G Shi, S Zhang, ...",
-      "venue": "arXiv preprint arXiv:2402.03302, 0",
-      "year": null,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:zCSUwVk65WsC",
-      "is_highlight": false
     },
     {
       "title": "ReXPref-Prior: A MIMIC-CXR Preference Dataset for Reducing Hallucinated Prior Exams in Radiology Report Generation}}",
