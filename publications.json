@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20",
+  "updated": "2026-07-27",
   "scholar_user_id": "aJnvh8gAAAAJ",
   "scholar_url": "https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en",
   "highlight_names": [
@@ -12,20 +12,28 @@
   ],
   "publications": [
     {
+      "title": "Small language models in medicine",
+      "authors_html": "Y Qin, T Yan, MYH Wong, S Srinivasan, <b>HY Zhou</b>, R Eils, YC Tham, ...",
+      "venue": "Nature Biomedical Engineering, 1-5, 2026",
+      "year": 2026,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:XUvXOeBm_78C",
+      "is_highlight": false
+    },
+    {
+      "title": "Rexgroundingct: A 3d chest ct dataset for segmentation of findings from free-text reports",
+      "authors_html": "M Baharoon, L Luo, M Moritz, A Kumar, SE Kim, X Zhang, M Zhu, ...",
+      "venue": "NEJM AI 3 (7), AIdbp2501220, 2026",
+      "year": 2026,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:jU7OWUQzBzMC",
+      "is_highlight": false
+    },
+    {
       "title": "Large reasoning models as thinking machines for medicine",
       "authors_html": "<b>HY Zhou</b>, A Rodman, P Liu, P Rajpurkar, TY Hu, TY Wong, EJ Topol",
       "venue": "Nature Biomedical Engineering, 1-10, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:L1USKYWJimsC",
       "is_highlight": true
-    },
-    {
-      "title": "Rexgroundingct: A 3d chest ct dataset for segmentation of findings from free-text reports",
-      "authors_html": "M Baharoon, L Luo, M Moritz, A Kumar, SE Kim, X Zhang, M Zhu, ...",
-      "venue": "NEJM AI, AIdbp2501220, 2026",
-      "year": 2026,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:jU7OWUQzBzMC",
-      "is_highlight": false
     },
     {
       "title": "Concept-Guided Noisy Negative Suppression for Zero-Shot Classification and Grounding of Chest X-Ray Findings",
