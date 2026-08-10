@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27",
+  "updated": "2026-08-03",
   "scholar_user_id": "aJnvh8gAAAAJ",
   "scholar_url": "https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en",
   "highlight_names": [
@@ -140,7 +140,7 @@
       "is_highlight": false
     },
     {
-      "title": "BioVFM-21M: Benchmarking and Scaling Self-supervised Vision Foundation Models for Biomedical Image Analysis",
+      "title": "BioVFM-21M: Benchmarking and scaling self-supervised vision foundation models for biomedical image analysis",
       "authors_html": "J Liu, <b>HY Zhou</b>, W Huang, H Yang, D Song, T Tan, Y Liang, S Wang",
       "venue": "International Workshop on Foundation Models for General Medical AI, 23-33, 2025",
       "year": 2025,
@@ -174,7 +174,7 @@
     {
       "title": "Efficient medical vision-language alignment through adapting masked vision models",
       "authors_html": "C Lian, <b>HY Zhou</b>, D Liang, J Qin, L Wang",
-      "venue": "IEEE Transactions on Medical Imaging, 2025",
+      "venue": "IEEE Transactions on Medical Imaging 44 (11), 4499-4510, 2025",
       "year": 2025,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:AHdEip9mkN0C",
       "is_highlight": true
@@ -206,7 +206,7 @@
     {
       "title": "TransXNet: learning both global and local dynamics with a dual dynamic token mixer for visual recognition",
       "authors_html": "M Lou, S Zhang, <b>HY Zhou</b>, S Yang, C Wu, Y Yu",
-      "venue": "IEEE Transactions on Neural Networks and Learning Systems, 2025",
+      "venue": "IEEE Transactions on Neural Networks and Learning Systems 36 (6), 11534-11547, 2025",
       "year": 2025,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:PoWvk5oyLR8C",
       "is_highlight": false
@@ -222,7 +222,7 @@
     {
       "title": "Multi-modal longitudinal representation learning for predicting neoadjuvant therapy response in breast cancer treatment",
       "authors_html": "Y Gao, T Tan, X Wang, R Beets-Tan, T Zhang, L Han, A Portaluri, C Lu, ...",
-      "venue": "IEEE Journal of Biomedical and Health Informatics, 2025",
+      "venue": "IEEE Journal of Biomedical and Health Informatics 29 (12), 9041-9050, 2025",
       "year": 2025,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:gKiMpY-AVTkC",
       "is_highlight": false
@@ -244,11 +244,11 @@
       "is_highlight": false
     },
     {
-      "title": "Swin-UMamba†: Adapting Mamba-based vision foundation models for medical image segmentation",
+      "title": "Swin-umamba†: Adapting mamba-based vision foundation models for medical image segmentation",
       "authors_html": "J Liu, H Yang, <b>HY Zhou</b>, L Yu, Y Liang, Y Yu, S Zhang, H Zheng, S Wang",
       "venue": "IEEE Transactions on Medical Imaging 44 (10), 3898-3908, 2024",
       "year": 2024,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:Aul-kAQHnToC",
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:yxmsSjX2EkcC",
       "is_highlight": false
     },
     {
@@ -268,7 +268,7 @@
       "is_highlight": true
     },
     {
-      "title": "Headct-one: Enabling granular and controllable automated evaluation of head ct radiology report generation",
+      "title": "HeadCT-ONE: Enabling granular and controllable automated evaluation of head CT radiology report generation",
       "authors_html": "JN Acosta, X Zhang, S Dogra, <b>HY Zhou</b>, S Payabvash, GJ Falcone, ...",
       "venue": "arXiv preprint arXiv:2409.13038, 2024",
       "year": 2024,
@@ -340,7 +340,7 @@
       "is_highlight": false
     },
     {
-      "title": "Mlip: medical language-image pre-training with masked local representation learning",
+      "title": "Mlip: Medical language-image pre-training with masked local representation learning",
       "authors_html": "J Liu, <b>HY Zhou</b>, C Li, W Huang, H Yang, Y Liang, G Shi, H Zheng, S Wang",
       "venue": "2024 IEEE International Symposium on Biomedical Imaging (ISBI), 1-5, 2024",
       "year": 2024,
@@ -388,6 +388,14 @@
       "is_highlight": false
     },
     {
+      "title": "Activate and reject: towards safe domain generalization under category shift",
+      "authors_html": "C Chen, L Tang, L Tao, <b>HY Zhou</b>, Y Huang, X Han, Y Yu",
+      "venue": "2023 IEEE/CVF International Conference on Computer Vision (ICCV), 11518-11529, 2023",
+      "year": 2023,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:LI9QrySNdTsC",
+      "is_highlight": false
+    },
+    {
       "title": "nnFormer: Volumetric medical image segmentation via a 3d transformer",
       "authors_html": "<b>HY Zhou</b>, J Guo, Y Zhang, X Han, L Yu, L Wang, Y Yu",
       "venue": "IEEE transactions on image processing 32, 4036-4045, 2023",
@@ -397,11 +405,11 @@
     },
     {
       "title": "Visualize what you learn: a well-explainable joint-learning framework based on multi-view mammograms and associated reports",
-      "authors_html": "Y Gao, <b>HY Zhou</b>, X Wang, T Zhang, R Tan, L Han, L Estacio, A D’Angelo, ...",
+      "authors_html": "Y Gao, H Zhou, X Wang, T Zhang, R Tan, L Han, L Estacio, A D’Angelo, ...",
       "venue": "",
       "year": 2023,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:Z5m8FVwuT1cC",
-      "is_highlight": true
+      "is_highlight": false
     },
     {
       "title": "A transformer-based representation-learning model with unified processing of multimodal input for clinical diagnostics",
@@ -436,14 +444,6 @@
       "is_highlight": true
     },
     {
-      "title": "Activate and reject: Towards safe domain generalization under category shift",
-      "authors_html": "C Chen, L Tang, L Tao, <b>HY Zhou</b>, Y Huang, X Han, Y Yu",
-      "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision …, 2023",
-      "year": 2023,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:LI9QrySNdTsC",
-      "is_highlight": false
-    },
-    {
       "title": "Protein Representation Learning via Knowledge Enhanced Primary Structure Modeling",
       "authors_html": "<b>HY Zhou</b>, Y Fu, Z Zhang, C Bian, Y Yu",
       "venue": "International Conference on Learning Representations (ICLR) 2023., 2023.01 …, 2023",
@@ -473,6 +473,14 @@
       "venue": "NPJ digital medicine 5 (1), 124, 2022",
       "year": 2022,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:dQ2og3OwTAUC",
+      "is_highlight": false
+    },
+    {
+      "title": "Attribute surrogates learning and spectral tokens pooling in transformers for few-shot learning",
+      "authors_html": "Y He, W Liang, D Zhao, <b>HY Zhou</b>, W Ge, Y Yu, W Zhang",
+      "venue": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR …, 2022",
+      "year": 2022,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:dTyEYWd-f8wC",
       "is_highlight": false
     },
     {
@@ -506,14 +514,6 @@
       "year": 2022,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:ZfRJV9d4-WMC",
       "is_highlight": true
-    },
-    {
-      "title": "Attribute surrogates learning and spectral tokens pooling in transformers for few-shot learning",
-      "authors_html": "Y He, W Liang, D Zhao, <b>HY Zhou</b>, W Ge, Y Yu, W Zhang",
-      "venue": "Proceedings of the IEEE/CVF conference on computer vision and pattern …, 2022",
-      "year": 2022,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:dTyEYWd-f8wC",
-      "is_highlight": false
     },
     {
       "title": "Generalized radiograph representation learning via cross-supervision between images and free-text radiology reports",
@@ -692,19 +692,19 @@
       "is_highlight": true
     },
     {
+      "title": "Adaptive feeding: Achieving fast and accurate detections by adaptively combining object detectors",
+      "authors_html": "<b>HY Zhou</b>, BB Gao, J Wu",
+      "venue": "2017 IEEE International Conference on Computer Vision (ICCV), 3525-3533, 2017",
+      "year": 2017,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:3s1wT3WcHBgC",
+      "is_highlight": true
+    },
+    {
       "title": "Sunrise or sunset: Selective comparison learning for subtle attribute recognition",
       "authors_html": "<b>HY Zhou</b>, BB Gao, J Wu",
       "venue": "arXiv preprint arXiv:1707.06335, 2017",
       "year": 2017,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:rO6llkc54NcC",
-      "is_highlight": true
-    },
-    {
-      "title": "Adaptive feeding: Achieving fast and accurate detections by adaptively combining object detectors",
-      "authors_html": "<b>HY Zhou</b>, BB Gao, J Wu",
-      "venue": "Proceedings of the IEEE International Conference on Computer Vision, 3505-3513, 2017",
-      "year": 2017,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:3s1wT3WcHBgC",
       "is_highlight": true
     },
     {
