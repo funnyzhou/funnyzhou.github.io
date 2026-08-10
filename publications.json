@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03",
+  "updated": "2026-08-10",
   "scholar_user_id": "aJnvh8gAAAAJ",
   "scholar_url": "https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en",
   "highlight_names": [
@@ -366,7 +366,7 @@
     {
       "title": "Less could be better: Parameter-efficient fine-tuning advances medical vision foundation models",
       "authors_html": "C Lian, <b>HY Zhou</b>, Y Yu, L Wang",
-      "venue": "arXiv preprint arXiv:2401.12215, 2024",
+      "venue": "MIDL (Medical Imaging with Deep Learning) 2024, 2024",
       "year": 2024,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:_5tno0g5mFcC",
       "is_highlight": true
@@ -405,11 +405,11 @@
     },
     {
       "title": "Visualize what you learn: a well-explainable joint-learning framework based on multi-view mammograms and associated reports",
-      "authors_html": "Y Gao, H Zhou, X Wang, T Zhang, R Tan, L Han, L Estacio, A D’Angelo, ...",
+      "authors_html": "Y Gao, <b>HY Zhou</b>, X Wang, T Zhang, R Tan, L Han, L Estacio, A D’Angelo, ...",
       "venue": "",
       "year": 2023,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:Z5m8FVwuT1cC",
-      "is_highlight": false
+      "is_highlight": true
     },
     {
       "title": "A transformer-based representation-learning model with unified processing of multimodal input for clinical diagnostics",
