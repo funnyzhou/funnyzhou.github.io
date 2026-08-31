@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24",
+  "updated": "2026-08-31",
   "scholar_user_id": "aJnvh8gAAAAJ",
   "scholar_url": "https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en",
   "highlight_names": [
@@ -11,6 +11,14 @@
     "HY Zhou"
   ],
   "publications": [
+    {
+      "title": "An open AI system for dermatology tasks",
+      "authors_html": "<b>HY Zhou</b>, L Chen, L Liu, Y Fu, M Tian, Z Zhang, H Cui, Q Ju, Q Li, J Han, ...",
+      "venue": "",
+      "year": 2026,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:Br1UauaknNIC",
+      "is_highlight": true
+    },
     {
       "title": "Small language models in medicine",
       "authors_html": "Y Qin, T Yan, MYH Wong, S Srinivasan, <b>HY Zhou</b>, R Eils, YC Tham, ...",
