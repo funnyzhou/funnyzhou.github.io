@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-09-21",
   "scholar_user_id": "aJnvh8gAAAAJ",
   "scholar_url": "https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en",
   "highlight_names": [
@@ -298,6 +298,14 @@
       "year": 2024,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:W5xh706n7nkC",
       "is_highlight": false
+    },
+    {
+      "title": "ReXPref-Prior: A MIMIC-CXR Preference Dataset for Reducing Hallucinated Prior Exams in Radiology Report Generation",
+      "authors_html": "O Banerjee, <b>HY Zhou</b>, S Adithan, S Kwak, K Wu, P Rajpurkar",
+      "venue": "PhysioNet, 2024",
+      "year": 2024,
+      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:Ehil0879vHcC",
+      "is_highlight": true
     },
     {
       "title": "Concepts and applications of digital twins in healthcare and medicine",
@@ -705,14 +713,6 @@
       "venue": "arXiv preprint arXiv:1707.06335, 2017",
       "year": 2017,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:rO6llkc54NcC",
-      "is_highlight": true
-    },
-    {
-      "title": "ReXPref-Prior: A MIMIC-CXR Preference Dataset for Reducing Hallucinated Prior Exams in Radiology Report Generation}}",
-      "authors_html": "O Banerjee, <b>HY Zhou</b>, S Adithan, S Kwak, K Wu, P Rajpurkar",
-      "venue": "PhysioNet}}, 0",
-      "year": null,
-      "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:Ehil0879vHcC",
       "is_highlight": true
     }
   ]
