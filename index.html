@@ -372,6 +372,10 @@ a { color: var(--accent); }
   text-wrap: pretty;
 }
 
+#about .prose {
+  max-width: none;
+}
+
 .prose a {
   color: var(--accent);
   text-decoration: none;
@@ -451,30 +455,6 @@ a { color: var(--accent); }
   color: var(--text-light);
   flex-shrink: 0;
   font-size: 12px;
-}
-
-/* ── PUBLICATION STATS ── */
-.pub-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 28px;
-  padding: 16px 0 20px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 8px;
-}
-.pub-stat-num {
-  font-family: var(--serif);
-  font-size: 26px;
-  font-weight: 500;
-  color: var(--text);
-  line-height: 1;
-}
-.pub-stat-label {
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-light);
-  margin-top: 5px;
 }
 
 /* ── YEAR DIVIDER (Publications) ── */
@@ -680,7 +660,6 @@ a { color: var(--accent); }
   .nav-inner { gap: 0; overflow-x: auto; }
   .nav-btn { padding: 13px 12px 11px; font-size: 11.5px; }
   .year-divider, .site-nav { top: 0; }
-  .pub-stats { gap: 20px; }
 }
 
 /* ── MOTION ── */
@@ -775,14 +754,20 @@ a { color: var(--accent); }
     <h2 class="sec-title">Biography</h2>
     <p class="prose">
       I joined Tsinghua University as a tenure-track assistant professor and principal investigator in biomedical AI.
-      Previously, I served as the founding member and head of AI systems at <a href="https://a2zradiology.ai/" target="_blank" rel="noopener noreferrer">a2z Radiology AI</a>,
-      and as a postdoctoral fellow at Harvard University with Professor <a href="https://pranavrajpurkar.com/" target="_blank" rel="noopener noreferrer">Pranav Rajpurkar</a>.
+      Previously, I was a postdoctoral fellow at Harvard University with Professor <a href="https://pranavrajpurkar.com/" target="_blank" rel="noopener noreferrer">Pranav Rajpurkar</a>.
       I obtained my Ph.D. in Computer Science from the University of Hong Kong, advised by Professor <a href="https://i.cs.hku.hk/~yzyu/" target="_blank" rel="noopener noreferrer">Yizhou Yu</a>.
       I spent two years at Tencent as a research scientist, and received degrees from Nanjing University and Wuhan University.
+      I also served as the founding member and head of AI systems at <a href="https://a2zradiology.ai/" target="_blank" rel="noopener noreferrer">a2z Radiology AI</a>.
     </p>
 
     <h2 class="sec-title">Recent News</h2>
-    <div class="news-list">
+    <template id="publication-news-template">
+      <div class="news-item">
+        <div class="news-date tnum"></div>
+        <div class="news-text">Our paper &ldquo;<a target="_blank" rel="noopener noreferrer"></a>&rdquo; was published in <i></i>.</div>
+      </div>
+    </template>
+    <div class="news-list" id="recent-news" data-manual-through="2026-06">
       <div class="news-item">
         <div class="news-date tnum">June 2026</div>
         <div>
@@ -963,8 +948,6 @@ a { color: var(--accent); }
       <i class="fas fa-external-link-alt" aria-hidden="true"></i> Full list on Google Scholar (incl. preprints)
     </a>
 
-    <div id="pub-stats" class="pub-stats" hidden></div>
-
     <p id="pubs-status" class="pubs-status">Loading publications…</p>
     <div id="pubs-list"></div>
     <p id="pubs-meta" class="pubs-meta"></p>
@@ -1069,25 +1052,6 @@ function cleanVenue(venue) {
   return first || v;
 }
 
-function renderStats(pubs) {
-  var el = document.getElementById('pub-stats');
-  if (!el || !pubs.length) return;
-  var years = pubs.map(function (p) { return p.year; }).filter(Boolean);
-  var minY = Math.min.apply(null, years), maxY = Math.max.apply(null, years);
-  var firstAuthor = pubs.filter(function (p) {
-    return /^\s*(<b>)?\s*(HY Zhou|Hong-?Yu Zhou|H\.?-?Y\.? Zhou)/i.test(p.authors_html || '');
-  }).length;
-  var items = [
-    [pubs.length, 'Publications listed'],
-    [firstAuthor, 'First / co-first author'],
-    [(minY && maxY ? minY + '–' + maxY : '—'), 'Span']
-  ];
-  el.innerHTML = items.map(function (it) {
-    return '<div><div class="pub-stat-num tnum">' + it[0] + '</div><div class="pub-stat-label">' + it[1] + '</div></div>';
-  }).join('');
-  el.hidden = false;
-}
-
 function renderPublications(data) {
   var listEl = document.getElementById('pubs-list');
   var statusEl = document.getElementById('pubs-status');
@@ -1100,7 +1064,6 @@ function renderPublications(data) {
   if (!pubs.length) { statusEl.textContent = 'No publications found.'; return; }
 
   statusEl.style.display = 'none';
-  renderStats(pubs);
 
   var byYear = new Map();
   pubs.forEach(function (pub) {
@@ -1223,6 +1186,41 @@ function renderHighlights(data) {
   listEl.appendChild(frag);
 }
 
+function renderPublicationNews(data) {
+  var list = document.getElementById('recent-news');
+  var template = document.getElementById('publication-news-template');
+  if (!list || !template) return;
+
+  var today = new Date().toISOString().slice(0, 10);
+  var seen = new Set();
+  var publications = (data.publications || []).filter(function (pub) {
+    return pub.published_date && pub.published_date <= today &&
+      pub.published_date.slice(0, 7) > list.dataset.manualThrough &&
+      pub.venue && !/arxiv|preprint/i.test(pub.venue) && (pub.doi || pub.url) &&
+      (pub.is_highlight || isKeyAuthor(pub.authors_html || '', data.highlight_names || ['Hong-Yu Zhou']));
+  }).sort(function (a, b) {
+    return b.published_date.localeCompare(a.published_date);
+  }).filter(function (pub) {
+    var key = pub.doi ? pub.doi.toLowerCase() : pub.title.toLowerCase();
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  }).slice(0, 5);
+
+  var monthFormat = new Intl.DateTimeFormat('en', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+  var news = document.createDocumentFragment();
+  publications.forEach(function (pub) {
+    var row = template.content.cloneNode(true);
+    row.querySelector('.news-date').textContent = monthFormat.format(new Date(pub.published_date.slice(0, 7) + '-01'));
+    var link = row.querySelector('a');
+    link.href = pub.doi ? 'https://doi.org/' + pub.doi : pub.url;
+    link.textContent = pub.title;
+    row.querySelector('i').textContent = cleanVenue(pub.venue);
+    news.appendChild(row);
+  });
+  list.prepend(news);
+}
+
 async function loadPublications() {
   var statusEl = document.getElementById('pubs-status');
   try {
@@ -1231,6 +1229,7 @@ async function loadPublications() {
     var data = await res.json();
     renderPublications(data);
     renderHighlights(data);
+    renderPublicationNews(data);
   } catch (err) {
     if (statusEl) statusEl.textContent = 'Could not load publications. Please refresh or visit Google Scholar directly.';
     var hStatus = document.getElementById('highlights-status');

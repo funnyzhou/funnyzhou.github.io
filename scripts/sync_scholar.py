@@ -57,16 +57,16 @@ def normalize(text: str) -> str:
     return re.sub(r"[\W_]+", "", unescape(strip_tags(text))).casefold()
 
 
-def crossref_authors(pub: dict, session: requests.Session) -> str:
+def crossref_work(pub: dict, session: requests.Session) -> dict:
     venue = normalize(pub["venue"])
     if not venue or re.search(r"arxiv|preprint", pub["venue"], re.IGNORECASE):
-        return ""
+        return {}
     response = session.get(
         "https://api.crossref.org/works",
         params={
             "query.bibliographic": f"{pub['title']} {pub['venue']}",
             "rows": 5,
-            "select": "title,container-title,author",
+            "select": "title,container-title,author,DOI,type,published-online,published-print,published",
         },
         timeout=5,
     )
@@ -80,12 +80,31 @@ def crossref_authors(pub: dict, session: requests.Session) -> str:
             for container in work.get("container-title", [])
         )
     ]
-    if len(matches) != 1:
-        return ""
+    return matches[0] if len(matches) == 1 else {}
+
+
+def add_crossref_publication_date(pub: dict, work: dict) -> None:
+    if work.get("type") not in {"journal-article", "proceedings-article"}:
+        return
+    for field in ("published-online", "published-print", "published"):
+        parts = (work.get(field, {}).get("date-parts") or [[]])[0]
+        if len(parts) < 2:
+            continue
+        try:
+            publication_date = date(parts[0], parts[1], parts[2] if len(parts) >= 3 else 1)
+        except (TypeError, ValueError):
+            continue
+        pub["published_date"] = str(publication_date)[:10 if len(parts) == 3 else 7]
+        if work.get("DOI"):
+            pub["doi"] = work["DOI"]
+        return
+
+
+def crossref_author_names(work: dict) -> str:
     authors = [
         " ".join(filter(None, (author.get("given"), author.get("family"))))
         or author.get("name", "")
-        for author in matches[0].get("author", [])
+        for author in work.get("author", [])
     ]
     return ", ".join(authors) if all(authors) else ""
 
@@ -120,30 +139,38 @@ def has_complete_authors(authors: str, current: str) -> bool:
 
 
 def enrich_authors(publications: list[dict], existing: dict | None, api_key: str = "") -> None:
-    # Reuse resolved lists for the same Scholar record and publication version.
+    # Reuse metadata for the same Scholar record and publication version.
     cached = {
         (pub["url"], pub["title"], pub["venue"]): pub
         for pub in (existing or {}).get("publications", [])
-        if pub.get("url") and pub.get("author_source")
+        if pub.get("url") and (pub.get("author_source") or pub.get("published_date"))
     }
     with requests.Session() as session:
         for pub in publications:
             previous = cached.get((pub["url"], pub["title"], pub["venue"]))
             if previous:
-                pub["authors_html"] = previous["authors_html"]
-                pub["author_source"] = previous["author_source"]
-                continue
+                for field in ("published_date", "doi"):
+                    if field in previous:
+                        pub[field] = previous[field]
+                if previous.get("author_source"):
+                    pub["authors_html"] = previous["authors_html"]
+                    pub["author_source"] = previous["author_source"]
+                    # Older publications predate the automatic news feed.
+                    if pub.get("published_date") or (pub.get("year") or 0) < 2026:
+                        continue
 
             authors = ""
             source = "Crossref"
             try:
-                authors = crossref_authors(pub, session)
+                work = crossref_work(pub, session)
+                add_crossref_publication_date(pub, work)
+                authors = crossref_author_names(work)
             except (requests.RequestException, ValueError, KeyError):
                 print(f"Crossref lookup failed: {pub['title']}", file=sys.stderr)
 
             current = strip_tags(pub["authors_html"])
             incomplete = not current.strip() or TRUNCATED_AUTHORS.search(current)
-            if api_key and not has_complete_authors(authors, current):
+            if api_key and not pub.get("author_source") and not has_complete_authors(authors, current):
                 source = "Google Scholar citation"
                 try:
                     authors = scholar_citation_authors(pub, session, api_key)

@@ -18,7 +18,9 @@
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:1yWc8FF-_SYC",
       "is_highlight": true,
-      "author_source": "Crossref"
+      "author_source": "Crossref",
+      "published_date": "2026-10-29",
+      "doi": "10.1038/s41467-026-78520-x"
     },
     {
       "title": "An open AI system for dermatology tasks",
