@@ -17,10 +17,10 @@
       "venue": "Nature Communications, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:1yWc8FF-_SYC",
-      "is_highlight": true,
-      "author_source": "Crossref",
       "published_date": "2026-10-29",
-      "doi": "10.1038/s41467-026-78520-x"
+      "doi": "10.1038/s41467-026-78520-x",
+      "author_source": "Crossref",
+      "is_highlight": true
     },
     {
       "title": "An open AI system for dermatology tasks",
@@ -38,15 +38,19 @@
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:XUvXOeBm_78C",
       "author_source": "Crossref",
+      "published_date": "2026-07-13",
+      "doi": "10.1038/s41551-026-01734-3",
       "is_highlight": false
     },
     {
       "title": "Rexgroundingct: A 3d chest ct dataset for segmentation of findings from free-text reports",
-      "authors_html": "Mohammed Baharoon, Luyang Luo, Michael Moritz, Abhinav Kumar, Sung Eun Kim, Xiaoman Zhang, Miao Zhu, Mahmoud H Alabbad, Maha S Alhazmi, Neel P Mistry, Lucas Bijnens, Kent R Kleinschmidt, Brady Chrisler, Sathvik Suryadevara, Sri Sai Dinesh Jaliparthi, Noah M Prudlo, Mark D Marino, Jeremy Palacio, Rithvik Akula, Di Zhou, <b>Hong-Yu Zhou</b>, Ibrahim E Hamamci, Scott J Adams, Hassan R Alomaish, Pranav Rajpurkar",
+      "authors_html": "Mohammed Baharoon, Luyang Luo, Michael Moritz, Abhinav Kumar, Sung Eun Kim, Xiaoman Zhang, Miao Zhu, Mahmoud H. Alabbad, Maha S. Alhazmi, Neel P. Mistry, Lucas Bijnens, Kent R. Kleinschmidt, Brady Chrisler, Sathvik Suryadevara, Sri Sai Dinesh Jaliparthi, Noah M. Prudlo, Mark D. Marino, Jeremy Palacio, Rithvik Akula, Di Zhou, <b>Hong-Yu Zhou</b>, Ibrahim E. Hamamci, Scott J. Adams, Hassan R. Alomaish, Pranav Rajpurkar",
       "venue": "NEJM AI 3 (7), AIdbp2501220, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:jU7OWUQzBzMC",
-      "author_source": "https://pubmed.ncbi.nlm.nih.gov/42932673/",
+      "author_source": "Crossref",
+      "published_date": "2026-06-25",
+      "doi": "10.1056/aidbp2501220",
       "is_highlight": false
     },
     {
@@ -92,6 +96,8 @@
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:43bX7VzcjpAC",
       "author_source": "Crossref",
+      "published_date": "2026-05",
+      "doi": "10.1016/j.media.2026.103990",
       "is_highlight": false
     },
     {
@@ -128,6 +134,8 @@
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:BzfGm06jWhQC",
       "author_source": "Crossref",
+      "published_date": "2026-01-01",
+      "doi": "10.1148/ryai.240646",
       "is_highlight": true
     },
     {
