@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync publications.json from Google Scholar profile via scholarly."""
+"""Sync Google Scholar publications and enrich their author lists."""
 
 from __future__ import annotations
 
@@ -7,7 +7,9 @@ import json
 import re
 import sys
 from datetime import date
+from html import escape, unescape
 from pathlib import Path
+from urllib.parse import parse_qs, urlsplit
 
 import requests
 
@@ -23,14 +25,12 @@ HIGHLIGHT_NAMES = [
     "Hongyu Zhou",
     "HY Zhou",
 ]
+TRUNCATED_AUTHORS = re.compile(r"\.{3}|…|\bet\s+al\b", re.IGNORECASE)
+HIGHLIGHT_AUTHOR = re.compile("|".join(map(re.escape, HIGHLIGHT_NAMES)), re.IGNORECASE)
 
 
 def highlight_authors(authors: str) -> str:
-    html = authors
-    for name in sorted(HIGHLIGHT_NAMES, key=len, reverse=True):
-        pattern = re.compile(re.escape(name), re.IGNORECASE)
-        html = pattern.sub(lambda m: f"<b>{m.group(0)}</b>", html)
-    return html
+    return HIGHLIGHT_AUTHOR.sub(lambda m: f"<b>{m.group(0)}</b>", escape(authors))
 
 
 def strip_tags(html: str) -> str:
@@ -40,22 +40,121 @@ def strip_tags(html: str) -> str:
 def is_key_author(authors_html: str) -> bool:
     """Return True if HY Zhou appears as 1st, 2nd, or last author."""
     text = strip_tags(authors_html)
-    text = re.sub(r",?\s*et al\.?\s*$", "", text, flags=re.IGNORECASE)
-    parts = [p.strip() for p in text.split(",") if p.strip()]
-    if not parts:
-        return False
-    key_positions = {0, 1, len(parts) - 1}
-    for i, part in enumerate(parts):
-        if i in key_positions:
-            for name in HIGHLIGHT_NAMES:
-                if name.lower() in part.lower():
-                    return True
-    return False
+    leading_authors = TRUNCATED_AUTHORS.split(text, maxsplit=1)[0]
+    parts = [p.strip() for p in leading_authors.split(",") if p.strip()]
+    key_authors = parts[:2]
+    if not TRUNCATED_AUTHORS.search(text):
+        key_authors += parts[-1:]
+    return any(HIGHLIGHT_AUTHOR.fullmatch(name) for name in key_authors)
 
 
 def tag_highlights(publications: list[dict]) -> None:
     for pub in publications:
         pub["is_highlight"] = is_key_author(pub["authors_html"])
+
+
+def normalize(text: str) -> str:
+    return re.sub(r"[\W_]+", "", unescape(strip_tags(text))).casefold()
+
+
+def crossref_authors(pub: dict, session: requests.Session) -> str:
+    venue = normalize(pub["venue"])
+    if not venue or re.search(r"arxiv|preprint", pub["venue"], re.IGNORECASE):
+        return ""
+    response = session.get(
+        "https://api.crossref.org/works",
+        params={
+            "query.bibliographic": f"{pub['title']} {pub['venue']}",
+            "rows": 5,
+            "select": "title,container-title,author",
+        },
+        timeout=5,
+    )
+    response.raise_for_status()
+    title = normalize(pub["title"])
+    matches = [
+        work for work in response.json()["message"]["items"]
+        if any(normalize(value) == title for value in work.get("title", []))
+        and any(
+            normalize(container) and venue.startswith(normalize(container))
+            for container in work.get("container-title", [])
+        )
+    ]
+    if len(matches) != 1:
+        return ""
+    authors = [
+        " ".join(filter(None, (author.get("given"), author.get("family"))))
+        or author.get("name", "")
+        for author in matches[0].get("author", [])
+    ]
+    return ", ".join(authors) if all(authors) else ""
+
+
+def scholar_citation_authors(pub: dict, session: requests.Session, api_key: str) -> str:
+    citation_ids = parse_qs(urlsplit(pub["url"] or "").query).get("citation_for_view")
+    if not citation_ids:
+        return ""
+    response = session.get(
+        "https://serpapi.com/search",
+        params={
+            "engine": "google_scholar_author",
+            "view_op": "view_citation",
+            "citation_id": citation_ids[0],
+            "api_key": api_key,
+        },
+        timeout=10,
+    )
+    response.raise_for_status()
+    citation = response.json().get("citation", {})
+    if normalize(citation.get("title", "")) == normalize(pub["title"]):
+        return citation.get("authors") or ""
+    return ""
+
+
+def has_complete_authors(authors: str, current: str) -> bool:
+    if not authors.strip() or TRUNCATED_AUTHORS.search(authors):
+        return False
+    visible, *truncation = TRUNCATED_AUTHORS.split(current, maxsplit=1)
+    visible_count = sum(bool(name.strip()) for name in visible.split(","))
+    return len(authors.split(",")) >= visible_count + bool(truncation)
+
+
+def enrich_authors(publications: list[dict], existing: dict | None, api_key: str = "") -> None:
+    # Reuse resolved lists for the same Scholar record and publication version.
+    cached = {
+        (pub["url"], pub["title"], pub["venue"]): pub
+        for pub in (existing or {}).get("publications", [])
+        if pub.get("url") and pub.get("author_source")
+    }
+    with requests.Session() as session:
+        for pub in publications:
+            previous = cached.get((pub["url"], pub["title"], pub["venue"]))
+            if previous:
+                pub["authors_html"] = previous["authors_html"]
+                pub["author_source"] = previous["author_source"]
+                continue
+
+            authors = ""
+            source = "Crossref"
+            try:
+                authors = crossref_authors(pub, session)
+            except (requests.RequestException, ValueError, KeyError):
+                print(f"Crossref lookup failed: {pub['title']}", file=sys.stderr)
+
+            current = strip_tags(pub["authors_html"])
+            incomplete = not current.strip() or TRUNCATED_AUTHORS.search(current)
+            if api_key and not has_complete_authors(authors, current):
+                source = "Google Scholar citation"
+                try:
+                    authors = scholar_citation_authors(pub, session, api_key)
+                except (requests.RequestException, ValueError):
+                    print(f"Scholar citation lookup failed: {pub['title']}", file=sys.stderr)
+
+            if has_complete_authors(authors, current):
+                pub["authors_html"] = highlight_authors(authors)
+                pub["author_source"] = source
+            elif incomplete:
+                print(f"Complete author list unavailable: {pub['title']}", file=sys.stderr)
 
 
 def fetch_publications_serpapi(api_key: str) -> list[dict]:
@@ -168,6 +267,7 @@ def main() -> int:
             return 0
         return 1
 
+    enrich_authors(publications, existing, api_key)
     tag_highlights(publications)
     write_output(publications)
     n_highlights = sum(1 for p in publications if p.get("is_highlight"))

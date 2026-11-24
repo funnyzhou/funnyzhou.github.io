@@ -1,80 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Hong-Yu Zhou | Assistant Professor | Tsinghua University</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hong-Yu Zhou — Assistant Professor, Tsinghua University</title>
+
+<meta name="description" content="Hong-Yu Zhou is a tenure-track Assistant Professor in the School of Biomedical Engineering at Tsinghua University, working on AI for Life Engineering and biomedical foundation models.">
+<meta name="author" content="Hong-Yu Zhou">
+<meta name="keywords" content="Hong-Yu Zhou, Tsinghua University, biomedical AI, medical imaging, foundation models, AIMS Lab, machine learning for medicine">
+<link rel="canonical" href="https://zhouhy.org/">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Hong-Yu Zhou — Assistant Professor, Tsinghua University">
+<meta property="og:description" content="AI for Life Engineering. Biomedical foundation models, medical imaging, and reasoning for medicine.">
+<meta property="og:url" content="https://zhouhy.org/">
+<meta property="og:image" content="https://zhouhy.org/zhouhy_files/me_hk.jpg">
+<meta property="profile:first_name" content="Hong-Yu">
+<meta property="profile:last_name" content="Zhou">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@HongYuZhou14">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231c4a6e'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='white' text-anchor='middle'%3EZ%3C/text%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hong-Yu Zhou",
+  "givenName": "Hong-Yu",
+  "familyName": "Zhou",
+  "jobTitle": "Assistant Professor",
+  "url": "https://zhouhy.org/",
+  "image": "https://zhouhy.org/zhouhy_files/me_hk.jpg",
+  "email": "mailto:hongyu.zhou.ai@gmail.com",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Tsinghua University",
+    "department": "School of Biomedical Engineering"
+  },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "The University of Hong Kong" },
+    { "@type": "CollegeOrUniversity", "name": "Nanjing University" },
+    { "@type": "CollegeOrUniversity", "name": "Wuhan University" }
+  ],
+  "knowsAbout": ["Biomedical Artificial Intelligence", "Medical Imaging", "Foundation Models", "Machine Learning for Medicine"],
+  "sameAs": [
+    "https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en",
+    "https://twitter.com/HongYuZhou14"
+  ]
+}
+</script>
+
+<script>
+/* Set theme before first paint to avoid a flash. */
+(function () {
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+})();
+</script>
+
 <style>
 :root {
-  --bg: #ffffff;
-  --bg-soft: #f8f8f6;
-  --bg-tint: #f2f1ee;
-  --border: #e0ded9;
+  --bg: #fffefb;
+  --bg-soft: #f7f6f2;
+  --bg-tint: #f1efe9;
+  --border: #e4e1da;
+  --border-strong: #d3cfc6;
   --text: #1a1917;
+  --text-body: #2e2c2a;
   --text-muted: #6b6762;
   --text-light: #9b9895;
   --accent: #1c4a6e;
+  --accent-hover: #163a58;
   --accent-warm: #8b5e3c;
   --accent-light: #e8f0f7;
-  --serif: 'EB Garamond', Georgia, serif;
-  --sans: 'DM Sans', sans-serif;
-  --max-w: 1040px;
-  --page-pad: 18px;
+  --shadow: 0 1px 2px rgba(20, 22, 26, 0.04), 0 8px 24px rgba(20, 22, 26, 0.05);
+
+  --serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --max-w: 1000px;
+  --page-pad: 22px;
+}
+
+:root[data-theme="dark"] {
+  --bg: #14161a;
+  --bg-soft: #1b1e23;
+  --bg-tint: #21252b;
+  --border: #2b2f36;
+  --border-strong: #3a3f47;
+  --text: #f0efec;
+  --text-body: #d6d4cf;
+  --text-muted: #a4a09a;
+  --text-light: #757067;
+  --accent: #7db3d8;
+  --accent-hover: #9cc7e4;
+  --accent-warm: #c99a72;
+  --accent-light: #1e2c38;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14161a;
+    --bg-soft: #1b1e23;
+    --bg-tint: #21252b;
+    --border: #2b2f36;
+    --border-strong: #3a3f47;
+    --text: #f0efec;
+    --text-body: #d6d4cf;
+    --text-muted: #a4a09a;
+    --text-light: #757067;
+    --accent: #7db3d8;
+    --accent-hover: #9cc7e4;
+    --accent-warm: #c99a72;
+    --accent-light: #1e2c38;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 body {
   font-family: var(--sans);
   background: var(--bg);
-  color: var(--text);
-  font-size: 15.5px;
-  line-height: 1.62;
+  color: var(--text-body);
+  font-size: 16px;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* ── TOP RULE ── */
-.top-rule {
-  height: 3px;
-  background: var(--accent);
+::selection { background: var(--accent); color: #fff; }
+
+a { color: var(--accent); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
+
+.tnum { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+
+/* ── SKIP LINK ── */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  z-index: 999;
+  border-radius: 0 0 4px 0;
+  font-size: 13px;
+}
+.skip-link:focus { left: 0; }
+
+/* ── TOP RULE ── */
+.top-rule { height: 3px; background: var(--accent); }
 
 /* ── SITE HEADER ── */
 .site-header {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 42px var(--page-pad) 0;
+  padding: 48px var(--page-pad) 0;
 }
 
 .profile-grid {
   display: grid;
-  grid-template-columns: 148px 1fr;
-  gap: 32px;
+  grid-template-columns: 150px 1fr;
+  gap: 36px;
   align-items: start;
-  padding-bottom: 28px;
+  padding-bottom: 30px;
   border-bottom: 1px solid var(--border);
 }
 
 .profile-photo {
-  width: 148px;
-  height: 148px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  border-radius: 4px;
-  filter: grayscale(12%);
+  border-radius: 5px;
+  filter: grayscale(10%);
   display: block;
+  border: 1px solid var(--border);
 }
 
 .profile-photo-placeholder {
-  width: 148px;
-  height: 148px;
-  border-radius: 4px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
   background: var(--bg-tint);
-  border: 1px dashed var(--border);
+  border: 1px dashed var(--border-strong);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,55 +211,53 @@ body {
   font-size: 13px;
 }
 
+.profile-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
 .profile-name {
   font-family: var(--serif);
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 500;
-  letter-spacing: -0.01em;
-  line-height: 1.15;
-  margin-bottom: 4px;
+  letter-spacing: -0.012em;
+  line-height: 1.12;
+  margin-bottom: 6px;
   color: var(--text);
+  text-wrap: balance;
 }
 
 .profile-title {
   font-family: var(--sans);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   color: var(--text-muted);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
-.profile-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
+.profile-contact { display: flex; flex-direction: column; gap: 6px; }
 
 .contact-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13.5px;
+  gap: 9px;
+  font-size: 14px;
   color: var(--text-muted);
 }
 
-.contact-row.links {
-  gap: 6px;
-}
-
-.contact-row .contact-sep {
-  color: var(--text-light);
-  font-size: 12px;
-  margin: 0 2px;
-}
+.contact-row.links { gap: 14px; flex-wrap: wrap; margin-top: 8px; }
 
 .contact-row i {
-  width: 14px;
+  width: 15px;
   color: var(--accent);
-  font-size: 11px;
+  font-size: 12px;
   flex-shrink: 0;
+  text-align: center;
 }
 
 .contact-row a {
@@ -139,33 +266,61 @@ body {
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s;
 }
-
 .contact-row a:hover { border-bottom-color: var(--accent); }
+
+.contact-note { color: var(--text-light); font-size: 12px; }
+
+/* ── THEME TOGGLE ── */
+.theme-toggle {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: var(--bg-soft);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.theme-toggle .fa-moon { display: inline; }
+.theme-toggle .fa-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .fa-moon { display: none; }
+:root[data-theme="dark"] .theme-toggle .fa-sun { display: inline; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .fa-moon { display: none; }
+  :root:not([data-theme="light"]) .theme-toggle .fa-sun { display: inline; }
+}
 
 /* ── NAVIGATION ── */
 .site-nav {
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 0 var(--page-pad);
   position: sticky;
   top: 0;
-  background: rgba(255,255,255,0.95);
-  backdrop-filter: blur(8px);
   z-index: 100;
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
 
 .nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--page-pad);
   display: flex;
-  gap: 0;
+  gap: 4px;
 }
 
 .nav-btn {
-  padding: 14px 20px 13px;
+  padding: 15px 18px 13px;
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-muted);
   cursor: pointer;
@@ -175,10 +330,8 @@ body {
   transition: color 0.2s, border-color 0.2s;
   white-space: nowrap;
 }
-
 .nav-btn:hover { color: var(--text); }
-
-.nav-btn.active {
+.nav-btn[aria-selected="true"] {
   color: var(--accent);
   border-bottom-color: var(--accent);
   font-weight: 500;
@@ -188,52 +341,43 @@ body {
 .site-main {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 36px var(--page-pad) 64px;
+  padding: 44px var(--page-pad) 72px;
 }
 
 .section-content { display: none; }
-.section-content.active { display: block; }
+.section-content.active { display: block; animation: fadeUp 0.4s ease both; }
 
 /* ── SECTION HEADINGS ── */
 .sec-title {
   font-family: var(--serif);
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 500;
   color: var(--text);
-  margin-bottom: 16px;
-  margin-top: 28px;
-  padding-bottom: 6px;
+  margin-bottom: 18px;
+  margin-top: 44px;
+  padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
-
 .sec-title:first-child { margin-top: 0; }
-
-.sub-title {
-  font-family: var(--serif);
-  font-size: 17px;
-  font-weight: 500;
-  color: var(--text);
-  margin-top: 24px;
-  margin-bottom: 12px;
-  font-style: italic;
-}
 
 /* ── BODY TEXT ── */
 .prose {
-  font-size: 15.5px;
-  line-height: 1.68;
-  color: #2e2c2a;
-  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.72;
+  color: var(--text-body);
+  margin-bottom: 14px;
+  max-width: 64ch;
+  text-wrap: pretty;
 }
 
 .prose a {
   color: var(--accent);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
   transition: border-color 0.2s;
 }
-
 .prose a:hover { border-bottom-color: var(--accent); }
 
 /* ── RECRUITMENT BANNER ── */
@@ -242,14 +386,14 @@ body {
   border-left: 3px solid var(--accent);
   padding: 16px 20px;
   border-radius: 0 4px 4px 0;
-  margin: 20px 0;
+  margin: 22px 0;
+  max-width: 64ch;
 }
-
 .recruit-box p {
   font-size: 14.5px;
   line-height: 1.7;
-  color: var(--accent);
-  font-weight: 500;
+  color: var(--text-body);
+  font-weight: 400;
 }
 
 /* ── NEWS ITEMS ── */
@@ -257,55 +401,51 @@ body {
 
 .news-item {
   display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 16px;
-  padding: 12px 0;
+  grid-template-columns: 108px 1fr;
+  gap: 20px;
+  padding: 13px 0;
   border-bottom: 1px solid var(--border);
   align-items: baseline;
 }
-
 .news-item:last-child { border-bottom: none; }
 
 .news-date {
   font-size: 12px;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--text-light);
   flex-shrink: 0;
-  padding-top: 1px;
+  padding-top: 2px;
 }
 
 .news-text {
   font-size: 14.5px;
-  line-height: 1.65;
-  color: #3a3836;
+  line-height: 1.68;
+  color: var(--text-body);
 }
+.news-text + .news-text { margin-top: 4px; }
 
 .news-text a {
   color: var(--accent);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
   transition: border-color 0.2s;
 }
-
 .news-text a:hover { border-bottom-color: var(--accent); }
 
 /* ── AWARDS ── */
 .award-list { list-style: none; margin: 0; }
-
 .award-item {
   padding: 10px 0;
   border-bottom: 1px solid var(--border);
   font-size: 14.5px;
-  color: #3a3836;
+  color: var(--text-body);
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: baseline;
 }
-
 .award-item:last-child { border-bottom: none; }
-
 .award-item::before {
   content: '—';
   color: var(--text-light);
@@ -313,45 +453,78 @@ body {
   font-size: 12px;
 }
 
+/* ── PUBLICATION STATS ── */
+.pub-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 16px 0 20px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+.pub-stat-num {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1;
+}
+.pub-stat-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-top: 5px;
+}
+
 /* ── YEAR DIVIDER (Publications) ── */
 .year-divider {
   font-family: var(--serif);
-  font-size: 28px;
-  font-weight: 500;
-  color: var(--border);
-  letter-spacing: -0.02em;
-  margin: 32px 0 12px;
-  line-height: 1;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  margin: 30px 0 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-strong);
+  position: sticky;
+  top: 48px;
+  background: var(--bg);
 }
 
 /* ── PUBLICATION ITEM ── */
 .pub-item {
-  padding: 14px 0;
+  padding: 15px 0;
   border-bottom: 1px solid var(--border);
+  counter-increment: pub;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 8px;
 }
-
 .pub-item:last-child { border-bottom: none; }
+.pub-item::before {
+  content: counter(pub);
+  font-size: 11.5px;
+  color: var(--text-light);
+  padding-top: 3px;
+  font-variant-numeric: tabular-nums;
+}
 
 .pub-title {
   font-family: var(--serif);
-  font-size: 16.5px;
+  font-size: 17px;
   font-weight: 500;
   color: var(--text);
-  line-height: 1.45;
+  line-height: 1.4;
   margin-bottom: 5px;
 }
-
 .pub-authors {
   font-size: 13.5px;
   color: var(--text-muted);
   line-height: 1.55;
   margin-bottom: 4px;
 }
-
-.pub-authors b {
-  color: var(--text);
-  font-weight: 600;
-}
+.pub-authors b { color: var(--text); font-weight: 600; }
 
 .pub-venue {
   font-size: 13px;
@@ -366,24 +539,15 @@ body {
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s;
 }
-
 .pub-title a:hover { border-bottom-color: var(--accent); }
 
-.pubs-status {
-  font-size: 14px;
-  color: var(--text-muted);
-  margin-bottom: 16px;
-}
+.pubs-status { font-size: 14px; color: var(--text-muted); margin-bottom: 16px; }
+.pubs-meta { font-size: 12px; color: var(--text-light); margin-top: 24px; }
 
-.pubs-meta {
-  font-size: 12px;
-  color: var(--text-light);
-  margin-top: 20px;
-}
+#pubs-list { counter-reset: pub; }
 
 /* ── HIGHLIGHT CARDS ── */
 .highlight-list { margin-top: 4px; }
-
 .highlight-card {
   padding: 16px 0;
   border-bottom: 1px solid var(--border);
@@ -392,10 +556,10 @@ body {
 
 .highlight-title {
   font-family: var(--serif);
-  font-size: 16px;
+  font-size: 16.5px;
   font-weight: 500;
   color: var(--text);
-  line-height: 1.45;
+  line-height: 1.42;
   margin-bottom: 4px;
 }
 .highlight-title a {
@@ -406,67 +570,42 @@ body {
 }
 .highlight-title a:hover { border-bottom-color: var(--accent); }
 
-.highlight-meta {
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-bottom: 6px;
-}
+.highlight-meta { font-size: 13px; color: var(--text-muted); }
 .highlight-meta b { color: var(--text); font-weight: 600; }
-.highlight-venue {
-  font-style: italic;
-  font-family: var(--serif);
-  color: var(--accent);
-}
-
-.highlight-abstract {
-  font-size: 13.5px;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-top: 6px;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.highlight-abstract.expanded {
-  display: block;
-}
-.highlight-toggle {
-  background: none;
-  border: none;
-  padding: 0;
-  margin-top: 4px;
-  font-size: 12px;
-  color: var(--accent);
-  cursor: pointer;
-  font-family: var(--sans);
-}
-.highlight-toggle:hover { text-decoration: underline; }
+.highlight-venue { font-style: italic; font-family: var(--serif); color: var(--accent); }
 
 /* ── JOURNAL BADGES ── */
 .badge {
   display: inline-block;
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 2px 7px;
-  border-radius: 2px;
+  border-radius: 3px;
   margin: 1px 3px 1px 0;
 }
-
 .badge-nature { background: #fde8e8; color: #c0392b; }
 .badge-ieee   { background: #e8f0fb; color: #2471a3; }
 .badge-conf   { background: #fef5e7; color: #ca6f1e; }
 .badge-other  { background: #f5eef8; color: #7d3c98; }
+:root[data-theme="dark"] .badge-nature { background: #3a2020; color: #e8a0a0; }
+:root[data-theme="dark"] .badge-ieee   { background: #1e2c3a; color: #8fb8d8; }
+:root[data-theme="dark"] .badge-conf   { background: #362a1a; color: #d8ac7a; }
+:root[data-theme="dark"] .badge-other  { background: #2f2438; color: #c298d8; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .badge-nature { background: #3a2020; color: #e8a0a0; }
+  :root:not([data-theme="light"]) .badge-ieee   { background: #1e2c3a; color: #8fb8d8; }
+  :root:not([data-theme="light"]) .badge-conf   { background: #362a1a; color: #d8ac7a; }
+  :root:not([data-theme="light"]) .badge-other  { background: #2f2438; color: #c298d8; }
+}
 
 /* ── LAB MEMBERS ── */
-.member-section { margin-bottom: 22px; }
-
+.member-section { margin-bottom: 26px; }
 .member-section-title {
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-light);
   margin-bottom: 10px;
@@ -475,126 +614,138 @@ body {
 }
 
 .member-row {
-  padding: 8px 0;
+  padding: 9px 0;
   font-size: 14.5px;
-  color: #3a3836;
+  color: var(--text-body);
   display: flex;
   align-items: baseline;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
   border-bottom: 1px solid var(--bg-tint);
 }
-
 .member-row:last-child { border-bottom: none; }
 
+.member-name { font-weight: 500; color: var(--text); }
 .member-name a {
   color: var(--accent);
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s;
 }
-
 .member-name a:hover { border-bottom-color: var(--accent); }
 
-.member-role {
-  font-size: 12.5px;
-  color: var(--text-light);
-  font-style: italic;
-}
-
+.member-role { font-size: 12.5px; color: var(--text-light); font-style: italic; }
 .member-badges { display: flex; flex-wrap: wrap; gap: 2px; }
 
 /* ── SCHOLAR LINK ── */
 .scholar-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-size: 13px;
   color: var(--accent);
   text-decoration: none;
   border: 1px solid var(--accent);
-  padding: 6px 14px;
-  border-radius: 2px;
-  margin-bottom: 20px;
+  padding: 7px 15px;
+  border-radius: 3px;
+  margin-bottom: 8px;
   transition: background 0.2s, color 0.2s;
 }
-
-.scholar-link:hover {
-  background: var(--accent);
-  color: white;
-}
+.scholar-link:hover { background: var(--accent); color: var(--bg); }
 
 /* ── FOOTER ── */
 .site-footer {
   border-top: 1px solid var(--border);
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 20px var(--page-pad);
+  padding: 22px var(--page-pad);
   font-size: 12px;
   color: var(--text-light);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 620px) {
-  :root { --page-pad: 14px; }
-  .profile-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .profile-photo, .profile-photo-placeholder {
-    width: 100px;
-    height: 100px;
-  }
-  .news-item {
-    grid-template-columns: 1fr;
-    gap: 4px;
-  }
-  .nav-btn { padding: 12px 10px 11px; font-size: 11.5px; }
+@media (max-width: 640px) {
+  :root { --page-pad: 16px; }
+  .site-header { padding-top: 34px; }
+  .profile-grid { grid-template-columns: 1fr; gap: 22px; }
+  .profile-photo, .profile-photo-placeholder { width: 104px; height: 104px; }
+  .profile-name { font-size: 28px; }
+  .news-item { grid-template-columns: 1fr; gap: 4px; }
+  .news-date { padding-top: 0; }
+  .nav-inner { gap: 0; overflow-x: auto; }
+  .nav-btn { padding: 13px 12px 11px; font-size: 11.5px; }
+  .year-divider, .site-nav { top: 0; }
+  .pub-stats { gap: 20px; }
 }
 
-/* ── PAGE LOAD ANIMATION ── */
-.site-header, .site-main {
-  animation: fadeUp 0.5s ease both;
-}
-
-.site-main { animation-delay: 0.08s; }
-
+/* ── MOTION ── */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+.site-header { animation: fadeUp 0.45s ease both; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* ── PRINT ── */
+@media print {
+  .site-nav, .theme-toggle, .top-rule, .scholar-link { display: none !important; }
+  .section-content { display: block !important; }
+  body { font-size: 11pt; color: #000; background: #fff; }
+  a { color: #000; text-decoration: underline; }
+  .sec-title { page-break-after: avoid; }
+  .pub-item, .news-item, .member-row { page-break-inside: avoid; }
 }
 </style>
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <div class="top-rule"></div>
 
 <!-- ── HEADER ── -->
 <header class="site-header">
   <div class="profile-grid">
-    <img src="./zhouhy_files/me_hk.jpg" alt="Hong-Yu Zhou" class="profile-photo"
+    <img src="./zhouhy_files/me_hk.jpg" alt="Portrait of Hong-Yu Zhou" class="profile-photo"
          onerror="this.outerHTML='<div class=\'profile-photo-placeholder\'><i class=\'fas fa-user\'></i></div>'">
     <div>
-      <h1 class="profile-name">Hong-Yu Zhou, Ph.D.</h1>
-      <p class="profile-title">Assistant Professor · School of Biomedical Engineering · Tsinghua University</p>
+      <div class="profile-head">
+        <div>
+          <h1 class="profile-name">Hong-Yu Zhou, Ph.D.</h1>
+          <p class="profile-title">Assistant Professor · School of Biomedical Engineering · Tsinghua University</p>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+          <i class="fas fa-sun" aria-hidden="true"></i>
+        </button>
+      </div>
       <div class="profile-contact">
         <div class="contact-row">
-          <i class="fas fa-envelope"></i>
+          <i class="fas fa-envelope" aria-hidden="true"></i>
           <a href="mailto:hongyu.zhou.ai@gmail.com">hongyu.zhou.ai@gmail.com</a>
-          <span style="color: var(--text-light); font-size: 12px;">(preferred)</span>
+          <span class="contact-note">(preferred)</span>
         </div>
         <div class="contact-row">
-          <i class="fas fa-envelope"></i>
+          <i class="fas fa-envelope" aria-hidden="true"></i>
           <a href="mailto:hyzhou@tsinghua.edu.cn">hyzhou@tsinghua.edu.cn</a>
         </div>
-        <div class="contact-row links" style="margin-top:6px;">
-          <!-- <i class="fas fa-graduation-cap"></i> -->
-          <a href="https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en" target="_blank">Google Scholar</a>
-          <i class="fab fa-x-twitter" style="width:auto;"></i>
-          <a href="https://twitter.com/HongYuZhou14" target="_blank">X (twitter)</a>
+        <div class="contact-row">
+          <i class="fas fa-location-dot" aria-hidden="true"></i>
+          <span>School of Biomedical Engineering, Tsinghua University, Beijing, China</span>
+        </div>
+        <div class="contact-row links">
+          <span><i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            <a href="https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></span>
+          <span><i class="fab fa-x-twitter" aria-hidden="true"></i>
+            <a href="https://twitter.com/HongYuZhou14" target="_blank" rel="noopener noreferrer">X (Twitter)</a></span>
         </div>
       </div>
     </div>
@@ -602,117 +753,112 @@ body {
 </header>
 
 <!-- ── NAVIGATION ── -->
-<nav class="site-nav">
-  <div class="nav-inner">
-    <button class="nav-btn active" onclick="showSection('about', this)">About</button>
-    <button class="nav-btn" onclick="showSection('lab', this)">AIMS Lab</button>
-    <button class="nav-btn" onclick="showSection('publications', this)">Publications</button>
+<nav class="site-nav" aria-label="Sections">
+  <div class="nav-inner" role="tablist">
+    <button class="nav-btn" role="tab" id="tab-about" aria-controls="about" aria-selected="true" onclick="showSection('about', this)">About</button>
+    <button class="nav-btn" role="tab" id="tab-lab" aria-controls="lab" aria-selected="false" onclick="showSection('lab', this)">AIMS Lab</button>
+    <button class="nav-btn" role="tab" id="tab-publications" aria-controls="publications" aria-selected="false" onclick="showSection('publications', this)">Publications</button>
   </div>
 </nav>
 
 <!-- ── MAIN ── -->
-<main class="site-main">
+<main class="site-main" id="main">
 
   <!-- ──────── ABOUT ──────── -->
-  <section id="about" class="section-content active">
+  <section id="about" class="section-content active" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
 
     <h2 class="sec-title">Research</h2>
     <p class="prose">
-      We develop AI for Life Engineering. Our research investigates the extent to which an individual’s behavior can be computationally modeled and reproduced across scales, contexts, and over time. These efforts involve building AI models to characterize the mechanisms underlying individual behavior and enable its faithful emulation.
+      We develop AI for Life Engineering. Our research investigates the extent to which an individual's behavior can be computationally modeled and reproduced across scales, contexts, and over time. These efforts involve building AI models to characterize the mechanisms underlying individual behavior and enable its faithful emulation.
     </p>
 
     <h2 class="sec-title">Biography</h2>
     <p class="prose">
       I joined Tsinghua University as a tenure-track assistant professor and principal investigator in biomedical AI.
-      Previously, I served as the founding member and head of AI systems at <a href="https://a2zradiology.ai/">a2z Radiology AI</a>,
-      and as a postdoctoral fellow at Harvard University with Professor <a href="https://pranavrajpurkar.com/">Pranav Rajpurkar</a>.
-      I obtained my Ph.D. in Computer Science from the University of Hong Kong, advised by Professor <a href="https://i.cs.hku.hk/~yzyu/">Yizhou Yu</a>.
+      Previously, I served as the founding member and head of AI systems at <a href="https://a2zradiology.ai/" target="_blank" rel="noopener noreferrer">a2z Radiology AI</a>,
+      and as a postdoctoral fellow at Harvard University with Professor <a href="https://pranavrajpurkar.com/" target="_blank" rel="noopener noreferrer">Pranav Rajpurkar</a>.
+      I obtained my Ph.D. in Computer Science from the University of Hong Kong, advised by Professor <a href="https://i.cs.hku.hk/~yzyu/" target="_blank" rel="noopener noreferrer">Yizhou Yu</a>.
       I spent two years at Tencent as a research scientist, and received degrees from Nanjing University and Wuhan University.
     </p>
 
     <h2 class="sec-title">Recent News</h2>
     <div class="news-list">
       <div class="news-item">
-        <div class="news-date">June 2026</div>
+        <div class="news-date tnum">June 2026</div>
         <div>
-          <div class="news-text">Our paper "<a href="https://www.nature.com/articles/s41551-026-01701-y">Large reasoning models as thinking machines for medicine</a>" is online in Nature Biomedical Engineering.</div>
-          <div class="news-text">Our paper "<a href="https://www.nature.com/articles/s41551-026-01701-y">ReXGroundingCT: A 3D Chest CT Dataset for Segmentation of Findings from Free-Text Reports</a>" is online in NEJM AI.</div>
+          <div class="news-text">Our paper &ldquo;<a href="https://www.nature.com/articles/s41551-026-01701-y" target="_blank" rel="noopener noreferrer">Large reasoning models as thinking machines for medicine</a>&rdquo; is online in <i>Nature Biomedical Engineering</i>.</div>
+          <div class="news-text">Our paper &ldquo;<a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&citation_for_view=aJnvh8gAAAAJ:jU7OWUQzBzMC" target="_blank" rel="noopener noreferrer">ReXGroundingCT: A 3D Chest CT Dataset for Segmentation of Findings from Free-Text Reports</a>&rdquo; is online in <i>NEJM AI</i>.</div>
         </div>
       </div>
 
       <div class="news-item">
-        <div class="news-date">May 2026</div>
-        <div class="news-text">One paper was accepted by NEJM AI.</div>
+        <div class="news-date tnum">May 2026</div>
+        <div class="news-text">One paper was accepted by <i>NEJM AI</i>.</div>
       </div>
 
       <div class="news-item">
-        <div class="news-date">April 2026</div>
-        <div class="news-text">One paper was accepted by ICML. One paper was accepted by ACL 2026.</div>
+        <div class="news-date tnum">April 2026</div>
+        <div class="news-text">One paper was accepted by ICML 2026. One paper was accepted by ACL 2026.</div>
       </div>
 
       <div class="news-item">
-        <div class="news-date">Mar 2026</div>
-        <div class="news-text"><a href="https://ai.nejm.org/doi/full/10.1056/AIoa2500595">MedVersa</a> was published online in NEJM AI. MedVersa is a multimodal generalist model for diverse medical imaging tasks.</div>
-      </div>
- 
-      <div class="news-item">
-        <div class="news-date">Feb 2026</div>
-        <div class="news-text">One paper was accepted by Nature Biomedical Engineering. Stay tuned for more details.</div>
+        <div class="news-date tnum">March 2026</div>
+        <div class="news-text"><a href="https://ai.nejm.org/doi/full/10.1056/AIoa2500595" target="_blank" rel="noopener noreferrer">MedVersa</a> was published online in <i>NEJM AI</i>&mdash;a multimodal generalist model for diverse medical imaging tasks.</div>
       </div>
 
       <div class="news-item">
-        <div class="news-date">Jan 2026</div>
-        <div class="news-text"><a href="https://www.nature.com/articles/s41551-025-01574-7">AFLoc</a> was published online in Nature Biomedical Engineering. AFLoc is a multimodal vision–language model for generalizable annotation-free pathology localization.</div>
+        <div class="news-date tnum">February 2026</div>
+        <div class="news-text">One paper was accepted by <i>Nature Biomedical Engineering</i>. Stay tuned for more details.</div>
       </div>
 
+      <div class="news-item">
+        <div class="news-date tnum">January 2026</div>
+        <div class="news-text"><a href="https://www.nature.com/articles/s41551-025-01574-7" target="_blank" rel="noopener noreferrer">AFLoc</a> was published online in <i>Nature Biomedical Engineering</i>&mdash;a multimodal vision–language model for generalizable annotation-free pathology localization.</div>
+      </div>
     </div>
 
-    <h2 class="sec-title" style="margin-top:40px;">New publications</h2>
+    <h2 class="sec-title">Selected Recent Publications</h2>
     <div class="highlight-list" id="highlights-list">
       <p class="pubs-status" id="highlights-status">Loading…</p>
     </div>
-
-<!--
-    <h2 class="sec-title" style="margin-top:40px;">Honors &amp; Awards</h2>
-    <ul class="award-list">
-      <li class="award-item">Stanford / Elsevier Top 2% Scientist — 2024, 2025</li>
-      <li class="award-item">HKU Foundation Award for Outstanding Research Postgraduate Students (sole awardee from CS at HKU)</li>
-      <li class="award-item">HKU Foundation Publication Award</li>
-      <li class="award-item">ICMA PhD Fellowship Award (5 awardees worldwide)</li>
-      <li class="award-item">Champion (1 / 79) — Accurate Automated Spinal Curvature Estimation challenge, MICCAI</li>
-      <li class="award-item">Champion (1 / 638) — Segmentation of Thoracic Organs at Risk challenge, ISBI</li>
-      <li class="award-item">Champion (1 / 200) — AI4Health Global Challenge, Thales Group</li>
-    </ul> -->
 
   </section><!-- /about -->
 
 
   <!-- ──────── LAB ──────── -->
-  <section id="lab" class="section-content">
+  <section id="lab" class="section-content" role="tabpanel" aria-labelledby="tab-lab" tabindex="0">
 
-    <h2 class="sec-title">Lab Members</h2>
+    <h2 class="sec-title">AIMS Lab</h2>
+    <p class="prose">
+      The AI for Medical Science (AIMS) Lab studies biomedical foundation models, multimodal
+      clinical reasoning, and trustworthy AI for real-world medical practice. We welcome
+      motivated students and collaborators; please reach out by email with a CV and a brief
+      statement of interest.
+    </p>
+
+    <h2 class="sec-title">Members</h2>
 
     <div class="member-section">
       <p class="member-section-title">Research Students &amp; Staff (Tsinghua)</p>
       <div class="member-row">
         <span class="member-name">Bohan Xia</span>
-        <span class="member-role">2026–Present · PhD @ THU</span>
+        <span class="member-role">2026–Present · Ph.D. @ THU</span>
       </div>
       <div class="member-row">
         <span class="member-name">Mingrui Shao</span>
-        <span class="member-role">2026–Present · MS @ THU</span>
+        <span class="member-role">2026–Present · M.S. @ THU</span>
       </div>
     </div>
 
     <div class="member-section">
       <p class="member-section-title">Co-advised Members</p>
       <div class="member-row">
-        <span class="member-name"><a href="https://linwei-chen.github.io/">Linwei Chen</a></span>
+        <span class="member-name"><a href="https://linwei-chen.github.io/" target="_blank" rel="noopener noreferrer">Linwei Chen</a></span>
         <span class="member-role">2025–Present · Postdoc @ HKGAI</span>
       </div>
       <div class="member-row">
-        <span class="member-name"><a href="https://scholar.google.com/citations?user=p_qmIH4AAAAJ&hl=en">Chenyu Lian</a></span>
-        <span class="member-role">2024–Present · PhD @ HKPU</span>
+        <span class="member-name"><a href="https://scholar.google.com/citations?user=p_qmIH4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Chenyu Lian</a></span>
+        <span class="member-role">2024–Present · Ph.D. @ HKPU</span>
         <div class="member-badges">
           <span class="badge badge-conf">ICLR'23</span>
           <span class="badge badge-ieee">TMI'25</span>
@@ -722,12 +868,12 @@ body {
         </div>
       </div>
       <div class="member-row">
-        <span class="member-name"><a href="https://github.com/HandsomeWuuu">Shuai Wu</a></span>
-        <span class="member-role">2025–Present · PhD @ HKU</span>
+        <span class="member-name"><a href="https://github.com/HandsomeWuuu" target="_blank" rel="noopener noreferrer">Shuai Wu</a></span>
+        <span class="member-role">2025–Present · Ph.D. @ HKU</span>
       </div>
       <div class="member-row">
         <span class="member-name">Jie Lin</span>
-        <span class="member-role">2025–Present · PhD @ Xiamen University</span>
+        <span class="member-role">2025–Present · Ph.D. @ Xiamen University</span>
       </div>
     </div>
 
@@ -735,37 +881,37 @@ body {
       <p class="member-section-title">Alumni</p>
       <div class="member-row">
         <span class="member-name">Hao Yang</span>
-        <span class="member-role">PhD @ CAS</span>
+        <span class="member-role">Ph.D. @ CAS</span>
         <div class="member-badges">
-          <span class="badge badge-nature">Nature Biomedical Engineering'26</span>
+          <span class="badge badge-nature">Nat. Biomed. Eng. '26</span>
         </div>
       </div>
       <div class="member-row">
         <span class="member-name">Yuan Gao</span>
-        <span class="member-role">PhD @ Netherlands Cancer Institute</span>
+        <span class="member-role">Ph.D. @ Netherlands Cancer Institute</span>
         <div class="member-badges">
-          <span class="badge badge-nature">Nature Communications'24</span>
+          <span class="badge badge-nature">Nat. Commun. '24</span>
           <span class="badge badge-conf">MICCAI'24</span>
           <span class="badge badge-ieee">JBHI'25</span>
         </div>
       </div>
       <div class="member-row">
         <span class="member-name">Xing Wang</span>
-        <span class="member-role">PhD @ Netherlands Cancer Institute</span>
+        <span class="member-role">Ph.D. @ Netherlands Cancer Institute</span>
         <div class="member-badges">
-          <span class="badge badge-nature">Nature Communications'25</span>
+          <span class="badge badge-nature">Nat. Commun. '25</span>
         </div>
       </div>
       <div class="member-row">
         <span class="member-name">Weijian Huang</span>
-        <span class="member-role">PhD @ CAS</span>
+        <span class="member-role">Ph.D. @ CAS</span>
         <div class="member-badges">
-          <span class="badge badge-nature">Nature Communications'24</span>
+          <span class="badge badge-nature">Nat. Commun. '24</span>
         </div>
       </div>
       <div class="member-row">
         <span class="member-name">Chixiang Lu</span>
-        <span class="member-role">Past: UG @ HUST · Now: PhD @ HKU</span>
+        <span class="member-role">Past: UG @ HUST · Now: Ph.D. @ HKU</span>
         <div class="member-badges">
           <span class="badge badge-conf">ICCV'21</span>
           <span class="badge badge-conf">IPMI'21</span>
@@ -775,15 +921,15 @@ body {
       </div>
       <div class="member-row">
         <span class="member-name">Meng Lou</span>
-        <span class="member-role">Past: Deepwise · Now: PhD @ HKU</span>
+        <span class="member-role">Past: Deepwise · Now: Ph.D. @ HKU</span>
         <div class="member-badges">
           <span class="badge badge-ieee">TNNLS'25</span>
-          <span class="badge badge-ieee">Neural Netw.'25</span>
+          <span class="badge badge-ieee">Neural Netw. '25</span>
         </div>
       </div>
       <div class="member-row">
         <span class="member-name">Jiarun Liu</span>
-        <span class="member-role">PhD @ CAS</span>
+        <span class="member-role">Ph.D. @ CAS</span>
         <div class="member-badges">
           <span class="badge badge-conf">MICCAI'24</span>
           <span class="badge badge-ieee">TMI'25</span>
@@ -791,7 +937,7 @@ body {
       </div>
       <div class="member-row">
         <span class="member-name">Yunxiang Fu</span>
-        <span class="member-role">Past: UG @ HKU · Now: PhD @ HKU</span>
+        <span class="member-role">Past: UG @ HKU · Now: Ph.D. @ HKU</span>
         <div class="member-badges">
           <span class="badge badge-conf">ICLR'23</span>
         </div>
@@ -802,7 +948,7 @@ body {
       </div>
       <div class="member-row">
         <span class="member-name">Zixuan Shan</span>
-        <span class="member-role">Past: UG @ HKU · Now: MS @ NYU</span>
+        <span class="member-role">Past: UG @ HKU · Now: M.S. @ NYU</span>
       </div>
     </div>
 
@@ -810,12 +956,14 @@ body {
 
 
   <!-- ──────── PUBLICATIONS ──────── -->
-  <section id="publications" class="section-content">
+  <section id="publications" class="section-content" role="tabpanel" aria-labelledby="tab-publications" tabindex="0">
 
     <h2 class="sec-title">Publications</h2>
-    <a class="scholar-link" id="scholar-profile-link" href="https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en" target="_blank">
-      <i class="fas fa-external-link-alt"></i> Full list on Google Scholar (incl. preprints)
+    <a class="scholar-link" id="scholar-profile-link" href="https://scholar.google.com/citations?user=aJnvh8gAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-external-link-alt" aria-hidden="true"></i> Full list on Google Scholar (incl. preprints)
     </a>
+
+    <div id="pub-stats" class="pub-stats" hidden></div>
 
     <p id="pubs-status" class="pubs-status">Loading publications…</p>
     <div id="pubs-list"></div>
@@ -826,192 +974,266 @@ body {
 </main>
 
 <!-- ── FOOTER ── -->
-<footer class="site-footer" style="max-width: var(--max-w); margin: 0 auto; padding: 16px var(--page-pad); border-top: 1px solid var(--border); font-size: 12px; color: var(--text-light); display: flex; justify-content: space-between;">
-  <span>Hong-Yu Zhou · Tsinghua University · AIMS Lab</span>
-  <span>Beijing, China</span>
+<footer class="site-footer">
+  <span>Hong-Yu Zhou · AIMS Lab · Tsinghua University</span>
+  <span>Beijing, China · <span id="foot-year" class="tnum"></span></span>
 </footer>
 
 <script>
-function showSection(name, btn) {
-  document.querySelectorAll('.section-content').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+var SECTIONS = ['about', 'lab', 'publications'];
+
+function showSection(name, btn, opts) {
+  opts = opts || {};
+  if (SECTIONS.indexOf(name) === -1) name = 'about';
+
+  document.querySelectorAll('.section-content').forEach(function (s) { s.classList.remove('active'); });
+  document.querySelectorAll('.nav-btn').forEach(function (b) { b.setAttribute('aria-selected', 'false'); });
+
   document.getElementById(name).classList.add('active');
-  btn.classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  var tab = btn || document.getElementById('tab-' + name);
+  if (tab) tab.setAttribute('aria-selected', 'true');
+
+  if (opts.updateHash !== false && ('#' + name) !== location.hash) {
+    history.replaceState(null, '', '#' + name);
+  }
+  if (opts.scroll !== false) window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+/* Keyboard navigation across tabs (Left/Right/Home/End). */
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.nav-btn'));
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('keydown', function (e) {
+      var idx = null;
+      if (e.key === 'ArrowRight') idx = (i + 1) % tabs.length;
+      else if (e.key === 'ArrowLeft') idx = (i - 1 + tabs.length) % tabs.length;
+      else if (e.key === 'Home') idx = 0;
+      else if (e.key === 'End') idx = tabs.length - 1;
+      if (idx === null) return;
+      e.preventDefault();
+      tabs[idx].focus();
+      showSection(SECTIONS[idx], tabs[idx]);
+    });
+  });
+})();
+
+/* Deep-linking: open the section named in the URL hash, and react to back/forward. */
+function syncFromHash(scroll) {
+  var name = (location.hash || '').replace('#', '');
+  if (SECTIONS.indexOf(name) === -1) name = 'about';
+  showSection(name, null, { updateHash: false, scroll: !!scroll });
+}
+window.addEventListener('hashchange', function () { syncFromHash(false); });
+syncFromHash(false);
+
+/* Theme toggle. */
+(function () {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var root = document.documentElement;
+    var current = root.getAttribute('data-theme');
+    if (!current) {
+      current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    var next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+
+document.getElementById('foot-year').textContent = new Date().getFullYear();
+
+/* ─────────────  PUBLICATIONS  ───────────── */
 function escapeHtml(text) {
   return String(text)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
 function highlightAuthors(authors, names) {
-  let html = escapeHtml(authors);
-  (names || []).slice().sort((a, b) => b.length - a.length).forEach((name) => {
-    const re = new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-    html = html.replace(re, (m) => '<b>' + m + '</b>');
+  var html = escapeHtml(authors);
+  (names || []).slice().sort(function (a, b) { return b.length - a.length; }).forEach(function (name) {
+    var re = new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+    html = html.replace(re, function (m) { return '<b>' + m + '</b>'; });
   });
   return html;
 }
 
+function cleanVenue(venue) {
+  var v = String(venue || '').trim();
+  if (/arxiv/i.test(v)) return 'arXiv preprint';
+  var first = v.split(',')[0].trim();          // drop trailing volume/pages/year segments
+  first = first.replace(/\s+\d+\s*(\(\d+\))?\s*$/, ''); // drop trailing "8 (1)" / "15"
+  first = first.replace(/\s*[…·-]\s*$/, '').trim();
+  return first || v;
+}
+
+function renderStats(pubs) {
+  var el = document.getElementById('pub-stats');
+  if (!el || !pubs.length) return;
+  var years = pubs.map(function (p) { return p.year; }).filter(Boolean);
+  var minY = Math.min.apply(null, years), maxY = Math.max.apply(null, years);
+  var firstAuthor = pubs.filter(function (p) {
+    return /^\s*(<b>)?\s*(HY Zhou|Hong-?Yu Zhou|H\.?-?Y\.? Zhou)/i.test(p.authors_html || '');
+  }).length;
+  var items = [
+    [pubs.length, 'Publications listed'],
+    [firstAuthor, 'First / co-first author'],
+    [(minY && maxY ? minY + '–' + maxY : '—'), 'Span']
+  ];
+  el.innerHTML = items.map(function (it) {
+    return '<div><div class="pub-stat-num tnum">' + it[0] + '</div><div class="pub-stat-label">' + it[1] + '</div></div>';
+  }).join('');
+  el.hidden = false;
+}
+
 function renderPublications(data) {
-  const listEl = document.getElementById('pubs-list');
-  const statusEl = document.getElementById('pubs-status');
-  const metaEl = document.getElementById('pubs-meta');
-  const scholarLink = document.getElementById('scholar-profile-link');
+  var listEl = document.getElementById('pubs-list');
+  var statusEl = document.getElementById('pubs-status');
+  var metaEl = document.getElementById('pubs-meta');
+  var scholarLink = document.getElementById('scholar-profile-link');
 
   if (data.scholar_url && scholarLink) scholarLink.href = data.scholar_url;
 
-  const pubs = (data.publications || []).filter(p => p.venue && p.venue.trim());
-  if (!pubs.length) {
-    statusEl.textContent = 'No publications found.';
-    return;
-  }
+  var pubs = (data.publications || []).filter(function (p) { return p.venue && p.venue.trim(); });
+  if (!pubs.length) { statusEl.textContent = 'No publications found.'; return; }
 
   statusEl.style.display = 'none';
+  renderStats(pubs);
 
-  const byYear = new Map();
-  pubs.forEach((pub) => {
-    const year = pub.year || 'Other';
+  var byYear = new Map();
+  pubs.forEach(function (pub) {
+    var year = pub.year || 'Other';
     if (!byYear.has(year)) byYear.set(year, []);
     byYear.get(year).push(pub);
   });
 
-  const years = [...byYear.keys()].sort((a, b) => {
+  var years = Array.from(byYear.keys()).sort(function (a, b) {
     if (a === 'Other') return 1;
     if (b === 'Other') return -1;
     return Number(b) - Number(a);
   });
 
-  const frag = document.createDocumentFragment();
-  years.forEach((year, idx) => {
-    const divider = document.createElement('div');
-    divider.className = 'year-divider';
-    if (idx === 0) divider.style.marginTop = '0';
-    divider.textContent = year;
+  var frag = document.createDocumentFragment();
+  years.forEach(function (year) {
+    var divider = document.createElement('div');
+    divider.className = 'year-divider tnum';
+    divider.textContent = year + ' · ' + byYear.get(year).length + (byYear.get(year).length === 1 ? ' paper' : ' papers');
     frag.appendChild(divider);
 
-    byYear.get(year).forEach((pub) => {
-      const item = document.createElement('div');
+    byYear.get(year).forEach(function (pub) {
+      var item = document.createElement('div');
       item.className = 'pub-item';
+      var body = document.createElement('div');
 
-      const titleEl = document.createElement('div');
+      var titleEl = document.createElement('div');
       titleEl.className = 'pub-title';
       if (pub.url) {
-        const link = document.createElement('a');
-        link.href = pub.url;
-        link.target = '_blank';
-        link.rel = 'noopener';
+        var link = document.createElement('a');
+        link.href = pub.url; link.target = '_blank'; link.rel = 'noopener noreferrer';
         link.textContent = pub.title;
         titleEl.appendChild(link);
       } else {
         titleEl.textContent = pub.title;
       }
 
-      const authorsEl = document.createElement('div');
+      var authorsEl = document.createElement('div');
       authorsEl.className = 'pub-authors';
       authorsEl.innerHTML = pub.authors_html || highlightAuthors(pub.authors || '', data.highlight_names);
 
-      const venueEl = document.createElement('div');
+      var venueEl = document.createElement('div');
       venueEl.className = 'pub-venue';
-      venueEl.textContent = pub.venue || '';
+      venueEl.textContent = cleanVenue(pub.venue);
 
-      item.append(titleEl, authorsEl, venueEl);
+      body.append(titleEl, authorsEl, venueEl);
+      item.appendChild(body);
       frag.appendChild(item);
     });
   });
 
   listEl.appendChild(frag);
   if (data.updated) {
-    metaEl.textContent = 'List synced from Google Scholar · last updated ' + data.updated;
+    metaEl.textContent = 'Synced from Google Scholar · last updated ' + data.updated;
   }
 }
 
 function isKeyAuthor(authorsHtml, names) {
-  // Strip HTML tags
-  const text = authorsHtml.replace(/<[^>]+>/g, '');
-  // Remove trailing "et al."
-  const clean = text.replace(/,?\s*et al\.?\s*$/i, '');
-  const parts = clean.split(',').map(s => s.trim()).filter(Boolean);
+  var text = authorsHtml.replace(/<[^>]+>/g, '');
+  var partsBeforeTruncation = text.split(/\.{3}|…|\bet\s+al\b/i);
+  var parts = partsBeforeTruncation[0].split(',').map(function (s) { return s.trim(); }).filter(Boolean);
   if (!parts.length) return false;
-  const keyPositions = new Set([0, 1, parts.length - 2, parts.length - 1]);
-  for (let i = 0; i < parts.length; i++) {
+  var keyPositions = new Set([0, 1]);
+  if (partsBeforeTruncation.length === 1) {
+    keyPositions.add(parts.length - 2);
+    keyPositions.add(parts.length - 1);
+  }
+  for (var i = 0; i < parts.length; i++) {
     if (!keyPositions.has(i)) continue;
-    for (const name of names) {
-      if (parts[i].toLowerCase().includes(name.toLowerCase())) return true;
+    for (var j = 0; j < names.length; j++) {
+      if (parts[i].toLowerCase().indexOf(names[j].toLowerCase()) !== -1) return true;
     }
   }
   return false;
 }
 
 function renderHighlights(data) {
-  const listEl = document.getElementById('highlights-list');
-  const statusEl = document.getElementById('highlights-status');
+  var listEl = document.getElementById('highlights-list');
+  var statusEl = document.getElementById('highlights-status');
   if (!listEl) return;
 
-  const names = data.highlight_names || ['Hong-Yu Zhou'];
-  const highlights = (data.publications || [])
-    .filter(p => {
-      if (!p.venue || !p.venue.trim()) return false;
-      if (/arxiv|preprint/i.test(p.venue)) return false;
-      return p.is_highlight || isKeyAuthor(p.authors_html || '', names);
-    })
-    .slice(0, 5);
+  var names = data.highlight_names || ['Hong-Yu Zhou'];
+  var highlights = (data.publications || []).filter(function (p) {
+    if (!p.venue || !p.venue.trim()) return false;
+    if (/arxiv|preprint/i.test(p.venue)) return false;
+    return p.is_highlight || isKeyAuthor(p.authors_html || '', names);
+  }).slice(0, 5);
 
-  if (!highlights.length) {
-    if (statusEl) statusEl.textContent = 'No highlights available.';
-    return;
-  }
+  if (!highlights.length) { if (statusEl) statusEl.textContent = 'No highlights available.'; return; }
   if (statusEl) statusEl.remove();
 
-  const frag = document.createDocumentFragment();
-  highlights.forEach(pub => {
-    const card = document.createElement('div');
+  var frag = document.createDocumentFragment();
+  highlights.forEach(function (pub) {
+    var card = document.createElement('div');
     card.className = 'highlight-card';
 
-    const titleEl = document.createElement('div');
+    var titleEl = document.createElement('div');
     titleEl.className = 'highlight-title';
     if (pub.url) {
-      const a = document.createElement('a');
-      a.href = pub.url;
-      a.target = '_blank';
-      a.rel = 'noopener';
+      var a = document.createElement('a');
+      a.href = pub.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
       a.textContent = pub.title;
       titleEl.appendChild(a);
     } else {
       titleEl.textContent = pub.title;
     }
 
-    const metaEl = document.createElement('div');
+    var metaEl = document.createElement('div');
     metaEl.className = 'highlight-meta';
-    const authorsSpan = document.createElement('span');
+    var authorsSpan = document.createElement('span');
     authorsSpan.innerHTML = pub.authors_html || '';
-    const venueSpan = document.createElement('span');
+    var venueSpan = document.createElement('span');
     venueSpan.className = 'highlight-venue';
-    venueSpan.textContent = pub.venue ? ' · ' + pub.venue : '';
+    venueSpan.textContent = pub.venue ? ' · ' + cleanVenue(pub.venue) : '';
     metaEl.append(authorsSpan, venueSpan);
 
     card.append(titleEl, metaEl);
-
     frag.appendChild(card);
   });
   listEl.appendChild(frag);
 }
 
 async function loadPublications() {
-  const statusEl = document.getElementById('pubs-status');
+  var statusEl = document.getElementById('pubs-status');
   try {
-    const res = await fetch('./publications.json', { cache: 'no-store' });
+    var res = await fetch('./publications.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
+    var data = await res.json();
     renderPublications(data);
     renderHighlights(data);
   } catch (err) {
     if (statusEl) statusEl.textContent = 'Could not load publications. Please refresh or visit Google Scholar directly.';
-    const hStatus = document.getElementById('highlights-status');
+    var hStatus = document.getElementById('highlights-status');
     if (hStatus) hStatus.textContent = 'Could not load highlights.';
     console.error('publications load failed:', err);
   }
