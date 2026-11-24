@@ -368,12 +368,7 @@ a { color: var(--accent); }
   line-height: 1.72;
   color: var(--text-body);
   margin-bottom: 14px;
-  max-width: 64ch;
   text-wrap: pretty;
-}
-
-#about .prose {
-  max-width: none;
 }
 
 .prose a {
@@ -383,6 +378,32 @@ a { color: var(--accent); }
   transition: border-color 0.2s;
 }
 .prose a:hover { border-bottom-color: var(--accent); }
+
+.lab-research-directions {
+  margin-block-start: 22px;
+  padding-inline-start: 1.75rem;
+}
+
+.lab-research-directions > li {
+  padding: 16px 0 16px 0.35rem;
+  border-top: 1px solid var(--border);
+}
+
+.lab-research-directions > li::marker {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.lab-research-directions h3 {
+  margin-bottom: 6px;
+  color: var(--text);
+  font: 500 20px/1.35 var(--serif);
+  text-wrap: pretty;
+}
+
+.lab-research-directions .prose {
+  margin-bottom: 0;
+}
 
 /* ── RECRUITMENT BANNER ── */
 .recruit-box {
@@ -813,13 +834,53 @@ a { color: var(--accent); }
   <!-- ──────── LAB ──────── -->
   <section id="lab" class="section-content" role="tabpanel" aria-labelledby="tab-lab" tabindex="0">
 
-    <h2 class="sec-title">AIMS Lab</h2>
+    <h2 class="sec-title">AI for Medicine at Scale (AIMS) Lab</h2>
     <p class="prose">
-      The AI for Medical Science (AIMS) Lab studies biomedical foundation models, multimodal
-      clinical reasoning, and trustworthy AI for real-world medical practice. We welcome
-      motivated students and collaborators; please reach out by email with a CV and a brief
-      statement of interest.
+      Evolution over time is a defining feature of life. Diseases progress, cells respond to perturbations,
+      and individuals continually shape their behavior through accumulated experience. Yet most existing AI
+      systems are trained on static, isolated data and struggle to capture how living systems change over time.
     </p>
+    <p class="prose">
+      Our group has focused on <strong>AI for Life Engineering</strong>, organized around a shared scientific question:
+      continual learning and dynamic state modeling from temporal multimodal data. We study how AI can keep
+      updating its representation of a system’s internal state as new data arrive, and how that representation
+      can support prediction, decision–making, and intervention. This agenda comprises the following research
+      directions:
+    </p>
+    <ol class="lab-research-directions">
+      <li>
+        <h3>Computational models of the dynamic states of the human body and their evolution.</h3>
+        <p class="prose">
+          Drawing on longitudinal medical data and patient trajectories, we learn dynamic representations of
+          patient states and the mechanisms by which they evolve. These models predict how external interventions
+          affect physiological states and health outcomes, enabling prospective simulation, comparison, and
+          optimization of alternative intervention strategies. We systematically validate model predictions
+          through retrospective and prospective clinical studies, with the aim of providing a reliable basis
+          for individualized precision medicine.
+        </p>
+      </li>
+      <li>
+        <h3>From analytical tool to autonomous scientific agent.</h3>
+        <p class="prose">
+          We aim to transform AI from a tool that assists with data analysis into an active agent of scientific
+          discovery. To this end, we are building biomedical autonomous laboratories that integrate computational
+          modeling, hypothesis generation, experimental design, robotic execution, and multimodal measurement,
+          progressively enabling accurate prediction of responses to perturbations, targeted optimization of
+          biological states and functions, and autonomous discovery of biological mechanisms.
+        </p>
+      </li>
+      <li>
+        <h3>Enminded AI.</h3>
+        <p class="prose">
+          The mind is shaped by experience and, in turn, drives behavior. Building on long–term, real–world data
+          from individuals, we investigate how experience shapes the internal states that drive cognition,
+          decision–making, and behavior, and we probe the limits to which individual behavior can be
+          computationally modeled and reproduced. From these insights, we develop agents and robotic systems
+          that continually accumulate experience and keep evolving through interaction with people and the
+          physical world.
+        </p>
+      </li>
+    </ol>
 
     <h2 class="sec-title">Members</h2>
 
@@ -831,6 +892,10 @@ a { color: var(--accent); }
       </div>
       <div class="member-row">
         <span class="member-name">Mingrui Shao</span>
+        <span class="member-role">2026–Present · M.S. @ THU</span>
+      </div>
+      <div class="member-row">
+        <span class="member-name">Yuwei Hsu</span>
         <span class="member-role">2026–Present · M.S. @ THU</span>
       </div>
     </div>
@@ -855,6 +920,9 @@ a { color: var(--accent); }
       <div class="member-row">
         <span class="member-name"><a href="https://github.com/HandsomeWuuu" target="_blank" rel="noopener noreferrer">Shuai Wu</a></span>
         <span class="member-role">2025–Present · Ph.D. @ HKU</span>
+        <div class="member-badges">
+          <span class="badge badge-nature">Nat. Commun. '26</span>
+        </div>
       </div>
       <div class="member-row">
         <span class="member-name">Jie Lin</span>
