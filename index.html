@@ -1115,6 +1115,9 @@ function cleanVenue(venue) {
   var v = String(venue || '').trim();
   if (/arxiv/i.test(v)) return 'arXiv preprint';
   var first = v.split(',')[0].trim();          // drop trailing volume/pages/year segments
+  if (/^International Conference on Medical Image Computing and Computer[-\s]+Assisted(?:\s*(?:…|\.{3}))?$/i.test(first)) {
+    return 'International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI)';
+  }
   first = first.replace(/\s+\d+\s*(\(\d+\))?\s*$/, ''); // drop trailing "8 (1)" / "15"
   first = first.replace(/\s*[…·-]\s*$/, '').trim();
   return first || v;
