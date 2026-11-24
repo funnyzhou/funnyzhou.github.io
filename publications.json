@@ -37,9 +37,9 @@
       "venue": "Nature Biomedical Engineering, 1-5, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:XUvXOeBm_78C",
-      "author_source": "Crossref",
       "published_date": "2026-07-13",
       "doi": "10.1038/s41551-026-01734-3",
+      "author_source": "Crossref",
       "is_highlight": false
     },
     {
@@ -48,9 +48,9 @@
       "venue": "NEJM AI 3 (7), AIdbp2501220, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:jU7OWUQzBzMC",
-      "author_source": "Crossref",
       "published_date": "2026-06-25",
       "doi": "10.1056/aidbp2501220",
+      "author_source": "Crossref",
       "is_highlight": false
     },
     {
@@ -60,6 +60,8 @@
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:L1USKYWJimsC",
       "author_source": "Crossref",
+      "published_date": "2026-06-23",
+      "doi": "10.1038/s41551-026-01701-y",
       "is_highlight": true
     },
     {
@@ -95,9 +97,9 @@
       "venue": "Medical Image Analysis, 103990, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:43bX7VzcjpAC",
-      "author_source": "Crossref",
       "published_date": "2026-05",
       "doi": "10.1016/j.media.2026.103990",
+      "author_source": "Crossref",
       "is_highlight": false
     },
     {
@@ -133,9 +135,9 @@
       "venue": "Radiology: Artificial Intelligence 8 (1), e240646, 2026",
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:BzfGm06jWhQC",
-      "author_source": "Crossref",
       "published_date": "2026-01-01",
       "doi": "10.1148/ryai.240646",
+      "author_source": "Crossref",
       "is_highlight": true
     },
     {
@@ -145,6 +147,8 @@
       "year": 2026,
       "url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aJnvh8gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aJnvh8gAAAAJ:48xauSegjOkC",
       "author_source": "Crossref",
+      "published_date": "2026-01-01",
+      "doi": "10.1056/aioa2500522",
       "is_highlight": false
     },
     {
